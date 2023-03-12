@@ -1115,6 +1115,31 @@ nav.navbar {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .mentors__title.title {
+    font-size: 16px;
+  }
+  .mentors__header .title__more {
+    top: 30px;
+  }
+  .mentors__header .title__more span i {
+    margin-left: 15px;
+  }
+  .mentors__card {
+    background-color: #f00;
+    max-width: calc(100% - 20px);
+    margin: 10px;
+    padding: 15px 10px;
+    background: #FFFFFF;
+    border: 1px solid #DCE7FC;
+    border-radius: 10px;
+  }
+  .mentors__card > div img {
+    display: block;
+    padding-bottom: 24px;
+  }
+}
+
 .study {
   margin-bottom: 120px;
 }
@@ -1247,6 +1272,13 @@ nav.navbar {
   color: #fff;
   font-size: 36px;
   text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 22px;
+    line-height: 23px;
+  }
 }
 
 @media screen and (max-width: 480px) {
