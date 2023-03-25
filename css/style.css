@@ -1157,6 +1157,104 @@ html, body {
     margin: auto;
   }
 }
+.study {
+  margin-bottom: 120px;
+}
+.study__wrapper {
+  display: flex;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.study__wrapper-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+  justify-content: space-between;
+}
+.study__position {
+  margin-left: 10px;
+  border: 1px solid #000;
+}
+.study__card {
+  display: flex;
+  width: 100%;
+  min-height: 120px;
+  max-height: 120px;
+  height: 120px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.study__card:hover {
+  box-sizing: border-box;
+  border: 1px solid #297ABF;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(0, 0, 0, 0.1);
+}
+.study__card__icon {
+  padding: 2px;
+  overflow: hidden;
+  margin: 19px 21px 19px 31px;
+  background: rgb(11, 34, 53);
+  background: radial-gradient(circle, rgb(11, 34, 53) 83%, rgb(255, 255, 255) 99%);
+}
+.study__card__icon img {
+  width: 71px;
+  height: 71px;
+}
+.study__wrapper-right {
+  padding: 52px 61px;
+  width: 50%;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.study__wrapper-right:hover {
+  border: 1px solid #297ABF;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+.study__wrapper-right ul {
+  margin-bottom: 40px;
+}
+.study__wrapper-right ul, .study__wrapper-right ul li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+.study__wrapper-right ul li {
+  margin-left: 37px;
+}
+.study__card__text {
+  margin: 24px 0;
+}
+.study__title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #BDBDBD;
+  margin-bottom: 5px;
+}
+.study__subtitile {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #232523;
+}
+
+.stydy__wrapper-left {
+  display: flex;
+}
 .button {
   max-width: 584px;
   padding: 19px 95px;
