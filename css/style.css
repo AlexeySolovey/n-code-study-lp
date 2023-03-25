@@ -1,3 +1,10 @@
+/*!
+ * Bootstrap Reboot v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
+ */
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -1179,9 +1186,7 @@ html, body {
 .study__card {
   display: flex;
   width: 100%;
-  min-height: 120px;
   max-height: 120px;
-  height: 120px;
   border: 1px solid #000;
   border-radius: 10px;
   box-sizing: border-box;
@@ -1252,8 +1257,116 @@ html, body {
   color: #232523;
 }
 
-.stydy__wrapper-left {
+.study__wrapper-left {
   display: flex;
+}
+.study__wrapper-mobile {
+  margin-top: 10px;
+  text-align: center;
+}
+.study__wrapper-mobile p {
+  font-family: "Roboto";
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 22px;
+  color: #000;
+  padding: 52px 61px;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #DCE7FC;
+  box-sizing: border-box;
+}
+.study__wrapper-mobile p:hover {
+  border: 2px solid #297ABF;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.study__wrapper-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .study__wrapper {
+    flex-direction: column;
+  }
+  .study__wrapper-left {
+    width: 100%;
+  }
+  .study__wrapper-right {
+    display: none;
+    padding: 40px 30px;
+    width: 100%;
+  }
+  .study__position {
+    margin-left: 0px;
+  }
+  .study__wrapper-mobile {
+    display: block;
+  }
+  .study__card__icon {
+    margin: 26px 15px 38px 15px;
+    background: #0b2235;
+  }
+  .study__card__icon img {
+    width: 50px;
+    height: 50px;
+  }
+  .study__wrapper-right ul, .study__wrapper-right ul li {
+    font-size: 21px;
+    line-height: 22px;
+  }
+  .study__title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .study__subtitile {
+    font-size: 20px;
+    line-height: 22px;
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .study__card {
+    max-height: 80px;
+  }
+  .study__card__icon {
+    margin: 17px 15px 17px 15px;
+  }
+  .study__card__icon img {
+    width: 37px;
+    height: 38px;
+  }
+  .study__title {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .study__subtitile {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .study__wrapper-mobile p {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 48px 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #DCE7FC;
+    box-sizing: border-box;
+  }
+  .study__wrapper-mobile p:hover {
+    border: 2px solid #297ABF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), -23px 0 20px -23px rgba(0, 0, 0, 0.6), 23px 0 20px -23px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  .mentors__wrapper-btn .button-mobile {
+    padding: 10px 40px;
+  }
 }
 .button {
   max-width: 584px;
@@ -1366,5 +1479,6 @@ html, body {
   .title {
     font-size: 16px;
     line-height: 19px;
+    padding-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
