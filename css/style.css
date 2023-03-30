@@ -371,8 +371,7 @@ html, body {
   align-items: center;  
 }
 .header__wrapper__logo img {
-  max-width: 100%;
-  display: block;
+  max-width: 100%;  
 }
 .header__wrapper__contacts {
   position: relative;
@@ -482,16 +481,21 @@ html, body {
   .nav-item:hover {
     text-decoration: none;
   }
+  .header__wrapper {
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding-top: 20px;
+  }
   .header__wrapper__body {
-    font-family: "Venus Rising";
-    height: 120px;
+    font-family: "Venus Rising";   
     justify-content: space-between;
     display: flex;
     flex-direction: row-reverse;
-  }
-  .header__wrapper__logo {
-    flex: 0 0 50px;
-    left: 0;
   }
   .nav-item.header__contacts {
     padding-right: 10px;
@@ -602,39 +606,14 @@ html, body {
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 630px) {
-  .header__wrapper {
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-  }
-  .header__wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%;
-    background-color: rgb(254, 255, 255);
-    z-index: 2;
-  }
+
   .header__wrapper .container {
     max-width: 1174px;
     margin: 0 auto;
   }
-  .header__wrapper__body {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-  }
+
   .header__wrapper__logo {
-    flex: 0 0 30px;
-    width: 25px;
+    width: 24px;
     height: 30px;
   }
   .promo__wrapper {
@@ -648,53 +627,7 @@ html, body {
     padding: 5px 35px;
   }
 }
-@media screen and (max-width: 1024px) and (max-width: 630px) {
-  .header__wrapper {
-    position: fixed;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-  }
-  .header__wrapper::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75%;
-    background-color: rgb(254, 255, 255);
-    z-index: 2;
-  }
-  .header__wrapper .container {
-    max-width: 1174px;
-    margin: 0 auto;
-  }
-  .header__wrapper__body {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-  }
-  .header__wrapper__logo {
-    flex: 0 0 30px;
-    width: 25px;
-    height: 30px;
-  }
-  .promo__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 100px;
-  }
-  .container {
-    padding: 5px 35px;
-  }
-}
+
 @media screen and (max-width: 480px) {
   .promo .promo__wrapper {
     margin-top: 120px;
