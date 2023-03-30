@@ -60,10 +60,6 @@ address {
   line-height: inherit;
 }
 
-dl, ol, ul {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
 
 ol ol, ol ul, ul ol, ul ul {
   margin-bottom: 0;
@@ -388,15 +384,10 @@ html, body {
 }
 .header__wrapper__list {
   display: flex;
-  position: relative;
-  z-index: 2;
+  gap: 20px;
 }
 .header__wrapper__list li {
-  list-style: none;
-  margin: 0 0 0 20px;
-}
-.header__wrapper__list li:hover {
-  background-color: #fff;
+  list-style: none; 
 }
 .header__wrapper__link {
   color: #000;
