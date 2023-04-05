@@ -34,7 +34,8 @@ a {
 menu,
 ul {
     margin: 0;
-    padding: 0
+    padding: 0;
+    list-style: none
 }
 
 .content-container {
@@ -107,6 +108,7 @@ ul {
 
 .header {
     padding-top: 20px;
+    padding-bottom: 5px;
     position: fixed;
     z-index: 99999;
     background-color: #fff;
@@ -122,6 +124,51 @@ ul {
     padding: 0 20px;
     max-width: 1174px;
     margin: 0 auto
+}
+
+.header .mob-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: none
+}
+
+.header .mob-menu.active {
+    display: block
+}
+
+.header .mob-menu .menu__nav {
+    display: grid;
+    font-family: "Venus Rising";
+    font-size: 10px;
+    line-height: 12px
+}
+
+.header .mob-menu .menu__nav a {
+    color: #232523
+}
+
+.header .mob-menu .menu__nav li {
+    padding: 14px 0 14px 25px;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.header .mob-menu .menu__nav li:not(:last-child) {
+    border-bottom: 1px solid rgba(11, 34, 53, .1)
+}
+
+.header .mob-menu .menu-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/mob-menu-close-ico.svg);
+    background-repeat: no-repeat;
+    background-size: contain
 }
 
 .menu__nav {
