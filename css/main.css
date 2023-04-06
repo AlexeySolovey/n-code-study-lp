@@ -1,20 +1,20 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
 
 @font-face {
-    font-family: "Venus Rising";
-    src: url(../fonts/VenusRisingCyrillic.woff2) format("woff2"), url(../fonts/VenusRisingCyrillic.woff) format("woff");
-    font-weight: 700;
-    font-style: normal
+	font-family: "Venus Rising";
+	src: url(../fonts/VenusRisingCyrillic.woff2) format("woff2"), url(../fonts/VenusRisingCyrillic.woff) format("woff");
+	font-weight: 700;
+	font-style: normal;
 }
 
 body {
-    margin: 0;
-    font-family: Roboto, sans-serif
+	margin: 0;
+	font-family: Roboto, sans-serif;
 }
 
 img {
-    max-width: 100%;
-    vertical-align: bottom
+	max-width: 100%;
+	vertical-align: bottom;
 }
 
 h1,
@@ -24,328 +24,406 @@ h4,
 h5,
 h6,
 p {
-    margin: 0
+	margin: 0;
 }
 
 a {
-    text-decoration: none
+	text-decoration: none;
 }
 
 menu,
 ul {
-    margin: 0;
-    padding: 0
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .content-container {
-    max-width: 1174px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative
+	max-width: 1174px;
+	margin: 0 auto;
+	padding: 0 20px;
+	position: relative;
 }
 
 .btn {
-    max-width: 230px;
-    display: block;
-    margin: 0 auto;
-    background: rgba(11, 34, 53, .9);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, .05);
-    border-radius: 20px;
-    text-transform: uppercase;
-    color: #fff;
-    cursor: pointer;
-    text-align: center;
-    padding: 10px 0;
-    font-weight: 700;
-    font-size: 10px
+	max-width: 230px;
+	display: block;
+	margin: 0 auto;
+	background: rgba(11, 34, 53, .9);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, .05);
+	border-radius: 20px;
+	text-transform: uppercase;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px 0;
+	font-weight: 700;
+	font-size: 10px;
 }
 
 .title {
-    font-family: "Venus Rising", sans-serif;
-    color: #fff;
-    position: absolute;
-    width: 145px;
-    text-align: center;
-    text-transform: uppercase;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px
+	font-family: "Venus Rising", sans-serif;
+	color: #fff;
+	position: absolute;
+	width: 145px;
+	text-align: center;
+	text-transform: uppercase;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 16px;
 }
 
 .title_small {
-    display: block;
-    font-size: 8px;
-    line-height: 11px;
-    margin-top: 3px
+	display: block;
+	font-size: 8px;
+	line-height: 11px;
+	margin-top: 3px;
 }
 
 .section-title {
-    font-family: "Venus Rising";
-    font-style: normal;
-    font-size: 16px;
-    line-height: 19px;
-    color: #232523;
-    text-transform: uppercase;
-    margin-bottom: 20px
+	font-family: "Venus Rising";
+	font-style: normal;
+	font-size: 16px;
+	line-height: 19px;
+	color: #232523;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 }
 
 @media screen and (min-width:768px) {
-    .section-title {
-        font-size: 32px;
-        line-height: 38px;
-        margin-bottom: 40px
-    }
+	.section-title {
+		font-size: 32px;
+		line-height: 38px;
+		margin-bottom: 40px;
+	}
 
-    .btn {
-        max-width: 577px;
-        font-size: 18px;
-        line-height: 21px;
-        padding: 19.5px 0
-    }
+	.btn {
+		max-width: 577px;
+		font-size: 18px;
+		line-height: 21px;
+		padding: 19.5px 0;
+	}
 }
 
 .header {
-    padding-top: 20px;
-    position: fixed;
-    z-index: 99999;
-    background-color: #fff;
-    left: 0;
-    top: 0;
-    width: 100%
+	padding-top: 20px;
+	padding-bottom: 5px;
+	position: fixed;
+	z-index: 99999;
+	background-color: #fff;
+	left: 0;
+	top: 0;
+	width: 100%;
 }
 
 .header .container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-areas: "menu logo";
-    padding: 0 20px;
-    max-width: 1174px;
-    margin: 0 auto
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-areas: "menu logo";
+	padding: 0 20px;
+	max-width: 1174px;
+	margin: 0 auto;
+}
+
+.header .mob-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	height: 100vh;
+	transform: translateY(-100%);
+	transition: .3s;
+	padding: 30px 15px 0;
+}
+
+.header .mob-menu.active {
+	transform: translateY(0);
+	transition: .3s;
+}
+
+.header .mob-menu .menu__nav {
+	display: grid;
+	font-family: "Venus Rising";
+	font-size: 10px;
+	line-height: 12px;
+}
+
+.header .mob-menu .menu__nav a {
+	color: #232523;
+}
+
+.header .mob-menu .menu__nav li {
+	padding: 20px 0 20px 40px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.header .mob-menu .menu__nav li:not(:last-child) {
+	border-bottom: 1px solid rgba(11, 34, 53, .1);
+}
+
+.header .mob-menu .header__items {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.header .language {
+	padding: 14px 18px 14px 10px;
+	border: 1px solid #0b2235;
+	border-radius: 5px;
 }
 
 .menu__nav {
-    display: none
+	display: none;
 }
 
 .menu {
-    display: flex;
-    align-items: center;
-    grid-area: menu
+	display: flex;
+	align-items: center;
+	grid-area: menu;
 }
 
 .logo {
-    grid-area: logo;
-    width: 24px;
-    height: 30px;
-    justify-self: end
+	grid-area: logo;
+	width: 24px;
+	height: 30px;
+	justify-self: end;
 }
 
 .hamburger-menu {
-    display: flex;
-    justify-content: flex-end;
-    order: 1;
-    padding: 6px 3px
+	display: flex;
+	justify-content: flex-end;
+	order: 1;
+	position: relative;
+	z-index: 999999;
+	top: 0;
+	transition: top .3s;
+}
+
+.hamburger-menu.active {
+	top: 25px;
+	transition: top .3s;
+}
+
+.hamburger-menu.active .hamburger::after {
+	top: 9px;
+	transform: rotate(45deg);
+	transition: .3s;
+}
+
+.hamburger-menu.active .hamburger::before {
+	bottom: 9px;
+	transform: rotate(-45deg);
+	transition: .3s;
+}
+
+.hamburger-menu.active .hamburger span {
+	display: none;
 }
 
 .hamburger {
-    width: 20px;
-    height: 13px;
-    display: flex;
-    align-items: center;
-    cursor: pointer
+	width: 30px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.hamburger::after {
+	position: absolute;
+	content: "";
+	height: 2px;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-color: #000;
+	transition: .3s;
+	transform: translate(0);
+}
+
+.hamburger::before {
+	position: absolute;
+	content: "";
+	height: 2px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	transition: .3s;
+	transform: translate(0);
 }
 
 .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    border-radius: 100px;
-    position: relative
-}
-
-.hamburger span::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    left: 0;
-    right: 0;
-    top: 5px;
-    background-color: #000
-}
-
-.hamburger span::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    left: 0;
-    right: 0;
-    bottom: 5px;
-    background-color: #000
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	border-radius: 100px;
+	position: relative;
 }
 
 .header__items {
-    display: none
+	display: none;
 }
 
 @media screen and (min-width:1160px) {
-    .hamburger-menu {
-        display: none
-    }
+	.hamburger-menu {
+		display: none;
+	}
 
-    .menu {
-        align-items: flex-end;
-        flex-direction: column;
-        justify-content: space-between
-    }
+	.menu {
+		align-items: flex-end;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
-    .menu__nav {
-        display: flex;
-        gap: 29px;
-        list-style: none;
-        font-family: "Venus Rising", sans-serif;
-        font-weight: 700
-    }
+	.menu__nav {
+		display: flex;
+		gap: 29px;
+		list-style: none;
+		font-family: "Venus Rising", sans-serif;
+		font-weight: 700;
+	}
 
-    .menu__item a {
-        text-decoration: none;
-        font-size: 16px;
-        line-height: 19px;
-        text-transform: uppercase;
-        color: #232523
-    }
+	.menu__item a {
+		text-decoration: none;
+		font-size: 16px;
+		line-height: 19px;
+		text-transform: uppercase;
+		color: #232523;
+	}
 
-    .header .container {
-        grid-template-areas: "logo menu"
-    }
+	.header .container {
+		grid-template-areas: "logo menu";
+	}
 
-    .logo {
-        width: 80px;
-        height: auto
-    }
+	.logo {
+		width: 80px;
+		height: auto;
+	}
 
-    .header__items {
-        display: flex;
-        gap: 60px;
-        align-items: center
-    }
+	.header__items {
+		display: flex;
+		gap: 60px;
+		align-items: center;
+	}
 
-    .header__items .phone {
-        font-family: "Venus Rising", sans-serif;
-        color: #000
-    }
+	.header__items .phone {
+		font-family: "Venus Rising", sans-serif;
+		color: #000;
+	}
 
-    .header__items .language {
-        padding: 14px 18px 14px 10px;
-        border: 1px solid #0b2235;
-        border-radius: 5px
-    }
-
-    .header__items .language__ico {
-        width: 26px;
-        height: 26px
-    }
+	.header__items .language__ico {
+		width: 26px;
+		height: 26px;
+	}
 }
 
 .slider {
-    margin-top: 65px;
-    margin-bottom: 40px
+	margin-top: 65px;
+	margin-bottom: 40px;
 }
 
 .slide {
-    position: relative;
-    margin-bottom: 20px
+	position: relative;
+	margin-bottom: 20px;
 }
 
 @media screen and (min-width:768px) {
-    .slider {
-        margin-bottom: 121px
-    }
+	.slider {
+		margin-bottom: 121px;
+	}
 
-    .slide {
-        margin-bottom: 128px
-    }
+	.slide {
+		margin-bottom: 128px;
+	}
 
-    .title {
-        width: 305px;
-        font-size: 42px
-    }
+	.title {
+		width: 305px;
+		font-size: 42px;
+	}
 
-    .title_small {
-        font-size: 20px;
-        line-height: 24px;
-        margin-top: 15px
-    }
+	.title_small {
+		font-size: 20px;
+		line-height: 24px;
+		margin-top: 15px;
+	}
 }
 
 @media screen and (min-width:1160px) {
-    .slider {
-        margin-top: 197px
-    }
+	.slider {
+		margin-top: 197px;
+	}
+}
+
+.advantages {
+	margin-bottom: 40px;
 }
 
 .advantages .container {
-    display: grid;
-    gap: 10px
+	display: grid;
+	gap: 10px;
 }
 
 .advantages__item {
-    border: .8px solid #0b2235;
-    border-radius: 10px;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    padding: 10px 0;
-    position: relative;
-    width: 96%;
-    transform: translate(4%, 0);
-    color: #232523;
-    display: flex;
-    align-items: center
+	border: .8px solid #0b2235;
+	border-radius: 10px;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	padding: 10px 0;
+	position: relative;
+	width: 96%;
+	transform: translate(4%, 0);
+	color: #232523;
+	display: flex;
+	align-items: center;
 }
 
 .advantages__item p {
-    max-width: 205px;
-    margin: 0 auto
+	max-width: 205px;
+	margin: 0 auto;
 }
 
 .advantages .item__num {
-    display: block;
-    content: "";
-    position: absolute;
-    background-color: #fff;
-    font-size: 16px;
-    color: #fd460e;
-    font-weight: 700;
-    top: 50%;
-    transform: translate(-11px, -50%);
-    line-height: 18px
+	display: block;
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	font-size: 16px;
+	color: #fd460e;
+	font-weight: 700;
+	top: 50%;
+	transform: translate(-11px, -50%);
+	line-height: 18px;
 }
 
 @media screen and (min-width:768px) {
-    .advantages .container {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 75px;
-        row-gap: 40px
-    }
+	.advantages .container {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 75px;
+		row-gap: 40px;
+	}
 
-    .advantages__item {
-        max-width: 540px;
-        box-sizing: border-box;
-        font-size: 24px;
-        line-height: 28px;
-        height: 100px;
-        padding: 0 25px
-    }
+	.advantages__item {
+		max-width: 540px;
+		box-sizing: border-box;
+		font-size: 24px;
+		line-height: 28px;
+		height: 100px;
+		padding: 0 25px;
+	}
 
-    .advantages__item p {
-        max-width: 431px
-    }
+	.advantages__item p {
+		max-width: 431px;
+	}
 
-    .advantages .item__num {
-        font-size: 32px;
-        padding: 10px 0;
-        transform: translate(-45px, -50%)
-    }
+	.advantages .item__num {
+		font-size: 32px;
+		padding: 10px 0;
+		transform: translate(-45px, -50%);
+	}
 }
