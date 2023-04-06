@@ -587,6 +587,10 @@ section.tutors .tutors-card__course-link::after {
     column-gap: 18px;
     margin-bottom: 60px;
   }
+
+  .tutors-card.became-tutor{
+    height: auto;
+  }
 }
 
 @media screen and (min-width:992px) {
