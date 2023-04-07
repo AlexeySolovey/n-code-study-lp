@@ -1,20 +1,21 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap);
 
 @font-face {
-	font-family: "Venus Rising";
-	src: url(../fonts/VenusRisingCyrillic.woff2) format("woff2"), url(../fonts/VenusRisingCyrillic.woff) format("woff");
-	font-weight: 700;
-	font-style: normal;
+  font-family: "Venus Rising";
+  src: url(../fonts/VenusRisingCyrillic.woff2) format("woff2"), url(../fonts/VenusRisingCyrillic.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
-	margin: 0;
-	font-family: Roboto, sans-serif;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  color: #232523;
 }
 
 img {
-	max-width: 100%;
-	vertical-align: bottom;
+  max-width: 100%;
+  vertical-align: bottom;
 }
 
 h1,
@@ -24,406 +25,657 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
+  margin: 0;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 menu,
 ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .content-container {
-	max-width: 1174px;
-	margin: 0 auto;
-	padding: 0 20px;
-	position: relative;
+  max-width: 1174px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
 }
 
 .btn {
-	max-width: 230px;
-	display: block;
-	margin: 0 auto;
-	background: rgba(11, 34, 53, .9);
-	box-shadow: 0 6px 12px rgba(0, 0, 0, .05);
-	border-radius: 20px;
-	text-transform: uppercase;
-	color: #fff;
-	cursor: pointer;
-	text-align: center;
-	padding: 10px 0;
-	font-weight: 700;
-	font-size: 10px;
+  max-width: 230px;
+  display: block;
+  margin: 0 auto;
+  background: rgba(11, 34, 53, .9);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, .05);
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 700;
+  font-size: 10px;
 }
 
 .title {
-	font-family: "Venus Rising", sans-serif;
-	color: #fff;
-	position: absolute;
-	width: 145px;
-	text-align: center;
-	text-transform: uppercase;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	font-size: 16px;
+  font-family: "Venus Rising", sans-serif;
+  color: #fff;
+  position: absolute;
+  width: 145px;
+  text-align: center;
+  text-transform: uppercase;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
 }
 
 .title_small {
-	display: block;
-	font-size: 8px;
-	line-height: 11px;
-	margin-top: 3px;
+  display: block;
+  font-size: 8px;
+  line-height: 11px;
+  margin-top: 3px;
 }
 
 .section-title {
-	font-family: "Venus Rising";
-	font-style: normal;
-	font-size: 16px;
-	line-height: 19px;
-	color: #232523;
-	text-transform: uppercase;
-	margin-bottom: 20px;
+  font-family: "Venus Rising";
+  font-style: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #232523;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.more-info-link {
+  text-decoration: underline;
+  color: #297abf;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.more-info-link:after {
+  content: "";
+  width: 26px;
+  height: 16px;
+  display: inline-block;
+  background-image: url(../img/more-info-arrow.svg);
+  background-repeat: no-repeat;
+  margin-left: 25px;
+}
+
+.section-title-wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.section-title-wrap .more-info-link {
+  display: none;
 }
 
 @media screen and (min-width:768px) {
-	.section-title {
-		font-size: 32px;
-		line-height: 38px;
-		margin-bottom: 40px;
-	}
+  .section-title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 40px;
+  }
 
-	.btn {
-		max-width: 577px;
-		font-size: 18px;
-		line-height: 21px;
-		padding: 19.5px 0;
-	}
+  .btn {
+    max-width: 577px;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 19.5px 0;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .section-title-wrap .more-info-link {
+    display: block;
+  }
 }
 
 .header {
-	padding-top: 20px;
-	padding-bottom: 5px;
-	position: fixed;
-	z-index: 99999;
-	background-color: #fff;
-	left: 0;
-	top: 0;
-	width: 100%;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  position: fixed;
+  z-index: 99999;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 .header .container {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	grid-template-areas: "menu logo";
-	padding: 0 20px;
-	max-width: 1174px;
-	margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "menu logo";
+  padding: 0 20px;
+  max-width: 1174px;
+  margin: 0 auto;
 }
 
 .header .mob-menu {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	background-color: #fff;
-	height: 100vh;
-	transform: translateY(-100%);
-	transition: .3s;
-	padding: 30px 15px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  height: 100vh;
+  transform: translateY(-100%);
+  transition: .3s;
+  padding: 30px 15px 0;
 }
 
 .header .mob-menu.active {
-	transform: translateY(0);
-	transition: .3s;
+  transform: translateY(0);
+  transition: .3s;
 }
 
 .header .mob-menu .menu__nav {
-	display: grid;
-	font-family: "Venus Rising";
-	font-size: 10px;
-	line-height: 12px;
+  display: grid;
+  font-family: "Venus Rising";
+  font-size: 10px;
+  line-height: 12px;
 }
 
 .header .mob-menu .menu__nav a {
-	color: #232523;
+  color: #232523;
 }
 
 .header .mob-menu .menu__nav li {
-	padding: 20px 0 20px 40px;
-	font-size: 16px;
-	text-transform: uppercase;
+  padding: 20px 0 20px 40px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .header .mob-menu .menu__nav li:not(:last-child) {
-	border-bottom: 1px solid rgba(11, 34, 53, .1);
+  border-bottom: 1px solid rgba(11, 34, 53, .1);
 }
 
 .header .mob-menu .header__items {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .header .language {
-	padding: 14px 18px 14px 10px;
-	border: 1px solid #0b2235;
-	border-radius: 5px;
+  padding: 14px 18px 14px 10px;
+  border: 1px solid #0b2235;
+  border-radius: 5px;
 }
 
 .menu__nav {
-	display: none;
+  display: none;
 }
 
 .menu {
-	display: flex;
-	align-items: center;
-	grid-area: menu;
+  display: flex;
+  align-items: center;
+  grid-area: menu;
 }
 
 .logo {
-	grid-area: logo;
-	width: 24px;
-	height: 30px;
-	justify-self: end;
+  grid-area: logo;
+  width: 24px;
+  height: 30px;
+  justify-self: end;
 }
 
 .hamburger-menu {
-	display: flex;
-	justify-content: flex-end;
-	order: 1;
-	position: relative;
-	z-index: 999999;
-	top: 0;
-	transition: top .3s;
+  display: flex;
+  justify-content: flex-end;
+  order: 1;
+  position: relative;
+  z-index: 999999;
+  top: 0;
+  transition: top .3s;
 }
 
 .hamburger-menu.active {
-	top: 25px;
-	transition: top .3s;
+  top: 25px;
+  transition: top .3s;
 }
 
 .hamburger-menu.active .hamburger::after {
-	top: 9px;
-	transform: rotate(45deg);
-	transition: .3s;
+  top: 9px;
+  transform: rotate(45deg);
+  transition: .3s;
 }
 
 .hamburger-menu.active .hamburger::before {
-	bottom: 9px;
-	transform: rotate(-45deg);
-	transition: .3s;
+  bottom: 9px;
+  transform: rotate(-45deg);
+  transition: .3s;
 }
 
 .hamburger-menu.active .hamburger span {
-	display: none;
+  display: none;
 }
 
 .hamburger {
-	width: 30px;
-	height: 20px;
-	display: flex;
-	align-items: center;
-	cursor: pointer;
+  width: 30px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 .hamburger::after {
-	position: absolute;
-	content: "";
-	height: 2px;
-	left: 0;
-	right: 0;
-	top: 0;
-	background-color: #000;
-	transition: .3s;
-	transform: translate(0);
+  position: absolute;
+  content: "";
+  height: 2px;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #000;
+  transition: .3s;
+  transform: translate(0);
 }
 
 .hamburger::before {
-	position: absolute;
-	content: "";
-	height: 2px;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #000;
-	transition: .3s;
-	transform: translate(0);
+  position: absolute;
+  content: "";
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  transition: .3s;
+  transform: translate(0);
 }
 
 .hamburger span {
-	display: block;
-	width: 100%;
-	height: 2px;
-	background-color: #000;
-	border-radius: 100px;
-	position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  border-radius: 100px;
+  position: relative;
 }
 
 .header__items {
-	display: none;
+  display: none;
 }
 
 @media screen and (min-width:1160px) {
-	.hamburger-menu {
-		display: none;
-	}
+  .hamburger-menu {
+    display: none;
+  }
 
-	.menu {
-		align-items: flex-end;
-		flex-direction: column;
-		justify-content: space-between;
-	}
+  .menu {
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-	.menu__nav {
-		display: flex;
-		gap: 29px;
-		list-style: none;
-		font-family: "Venus Rising", sans-serif;
-		font-weight: 700;
-	}
+  .menu__nav {
+    display: flex;
+    gap: 29px;
+    list-style: none;
+    font-family: "Venus Rising", sans-serif;
+    font-weight: 700;
+  }
 
-	.menu__item a {
-		text-decoration: none;
-		font-size: 16px;
-		line-height: 19px;
-		text-transform: uppercase;
-		color: #232523;
-	}
+  .menu__item a {
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #232523;
+  }
 
-	.header .container {
-		grid-template-areas: "logo menu";
-	}
+  .header .container {
+    grid-template-areas: "logo menu";
+  }
 
-	.logo {
-		width: 80px;
-		height: auto;
-	}
+  .logo {
+    width: 80px;
+    height: auto;
+  }
 
-	.header__items {
-		display: flex;
-		gap: 60px;
-		align-items: center;
-	}
+  .header__items {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
 
-	.header__items .phone {
-		font-family: "Venus Rising", sans-serif;
-		color: #000;
-	}
+  .header__items .phone {
+    font-family: "Venus Rising", sans-serif;
+    color: #000;
+  }
 
-	.header__items .language__ico {
-		width: 26px;
-		height: 26px;
-	}
+  .header__items .language__ico {
+    width: 26px;
+    height: 26px;
+  }
 }
 
 .slider {
-	margin-top: 65px;
-	margin-bottom: 40px;
+  margin-top: 65px;
+  margin-bottom: 40px;
 }
 
 .slide {
-	position: relative;
-	margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 @media screen and (min-width:768px) {
-	.slider {
-		margin-bottom: 121px;
-	}
+  .slider {
+    margin-bottom: 121px;
+  }
 
-	.slide {
-		margin-bottom: 128px;
-	}
+  .slide {
+    margin-bottom: 128px;
+  }
 
-	.title {
-		width: 305px;
-		font-size: 42px;
-	}
+  .title {
+    width: 305px;
+    font-size: 42px;
+  }
 
-	.title_small {
-		font-size: 20px;
-		line-height: 24px;
-		margin-top: 15px;
-	}
+  .title_small {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 15px;
+  }
 }
 
 @media screen and (min-width:1160px) {
-	.slider {
-		margin-top: 197px;
-	}
+  .slider {
+    margin-top: 197px;
+  }
 }
 
 .advantages {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .advantages .container {
-	display: grid;
-	gap: 10px;
+  display: grid;
+  gap: 10px;
 }
 
 .advantages__item {
-	border: .8px solid #0b2235;
-	border-radius: 10px;
-	font-size: 14px;
-	line-height: 16px;
-	text-align: center;
-	padding: 10px 0;
-	position: relative;
-	width: 96%;
-	transform: translate(4%, 0);
-	color: #232523;
-	display: flex;
-	align-items: center;
+  border: .8px solid #0b2235;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  width: 96%;
+  transform: translate(4%, 0);
+  color: #232523;
+  display: flex;
+  align-items: center;
 }
 
 .advantages__item p {
-	max-width: 205px;
-	margin: 0 auto;
+  max-width: 205px;
+  margin: 0 auto;
 }
 
 .advantages .item__num {
-	display: block;
-	content: "";
-	position: absolute;
-	background-color: #fff;
-	font-size: 16px;
-	color: #fd460e;
-	font-weight: 700;
-	top: 50%;
-	transform: translate(-11px, -50%);
-	line-height: 18px;
+  display: block;
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  font-size: 16px;
+  color: #fd460e;
+  font-weight: 700;
+  top: 50%;
+  transform: translate(-11px, -50%);
+  line-height: 18px;
 }
 
 @media screen and (min-width:768px) {
-	.advantages .container {
-		grid-template-columns: repeat(2, 1fr);
-		column-gap: 75px;
-		row-gap: 40px;
-	}
+  .advantages .container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 75px;
+    row-gap: 40px;
+  }
 
-	.advantages__item {
-		max-width: 540px;
-		box-sizing: border-box;
-		font-size: 24px;
-		line-height: 28px;
-		height: 100px;
-		padding: 0 25px;
-	}
+  .advantages__item {
+    max-width: 540px;
+    box-sizing: border-box;
+    font-size: 24px;
+    line-height: 28px;
+    height: 100px;
+    padding: 0 25px;
+  }
 
-	.advantages__item p {
-		max-width: 431px;
-	}
+  .advantages__item p {
+    max-width: 431px;
+  }
 
-	.advantages .item__num {
-		font-size: 32px;
-		padding: 10px 0;
-		transform: translate(-45px, -50%);
-	}
+  .advantages .item__num {
+    font-size: 32px;
+    padding: 10px 0;
+    transform: translate(-45px, -50%);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .advantages {
+    margin-bottom: 120px;
+  }
+}
+
+section.tutors .section-title {
+  max-width: 420px;
+  text-transform: uppercase;
+}
+
+section.tutors .tutors-card {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dce7fc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: grid;
+  row-gap: 10px;
+  font-size: 14px;
+}
+
+section.tutors .tutors-card:nth-child(n+4) {
+  display: none;
+}
+
+section.tutors .tutors-card__wrap {
+  display: grid;
+  row-gap: 20px;
+  margin-bottom: 20px;
+}
+
+section.tutors .tutors-card__top {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "img name""rate rate";
+  column-gap: 5px;
+}
+
+section.tutors .tutors-card__img {
+  width: 40px;
+  height: 40px;
+  grid-area: img;
+  grid-row-end: 3;
+}
+
+section.tutors .tutors-card__name {
+  grid-area: name;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  margin-top: 5px;
+}
+
+section.tutors .tutors-card__rate {
+  grid-area: rate;
+  height: 15px;
+  grid-column-start: 2;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+section.tutors .tutors-card__rate i {
+  font-size: 11px;
+  color: #fd460e;
+}
+
+section.tutors .tutors-card__info .tutors-card__description {
+  margin-bottom: 10px;
+}
+
+section.tutors .tutors-card__course {
+  display: grid;
+  grid-template-areas: "title title""curs_name link";
+  grid-template-columns: 1fr auto;
+}
+
+section.tutors .tutors-card__course p:nth-child(1) {
+  margin-bottom: 5px;
+  grid-area: title;
+}
+
+section.tutors .tutors-card__course p:nth-child(2) {
+  grid-area: curs_name;
+}
+
+section.tutors .tutors-card.became-tutor {
+  height: 110px;
+  border: 1px solid #0b2235;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 17px;
+}
+
+section.tutors .tutors-card.became-tutor p {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+section.tutors .tutors-card.became-tutor .tutors-card__img {
+  width: 25px;
+  height: 25px;
+}
+
+section.tutors .tutors-card__course-link {
+  font-size: 14px;
+  grid-area: link;
+}
+
+section.tutors .tutors-card__course-link::after {
+  width: 14px;
+  height: 9px;
+  background-image: url(../img/tutor-card-arrow.svg);
+}
+
+@media(min-width:576px) {
+  section.tutors .tutors-card__wrap {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 18px;
+    margin-bottom: 60px;
+  }
+
+  .tutors-card.became-tutor{
+    height: auto;
+  }
+}
+
+@media screen and (min-width:992px) {
+  section.tutors {
+    margin-bottom: 120px;
+  }
+
+  section.tutors .section-title {
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+
+  section.tutors .tutors-card__wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  section.tutors .tutors-card {
+    row-gap: 25px;
+  }
+
+  section.tutors .tutors-card:nth-child(n+4) {
+    display: grid;
+  }
+
+  section.tutors .tutors-card__top {
+    column-gap: 9px;
+    row-gap: 20px;
+    grid-template-rows: 1fr 20px auto;
+    grid-template-columns: auto;
+    grid-template-areas: "img img""name name""rate rate";
+  }
+
+  section.tutors .tutors-card__img {
+    width: 60px;
+    height: 60px;
+    grid-area: img;
+    grid-row-end: 2;
+  }
+
+  section.tutors .tutors-card__name {
+    grid-area: name;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    line-height: 28px;
+    grid-row-start: 4;
+    grid-column-start: 1;
+    margin-top: 0;
+  }
+
+  section.tutors .tutors-card__rate {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    gap: 12px;
+    height: 20px;
+  }
+
+  section.tutors .tutors-card__rate i {
+    font-size: 18px;
+  }
+
+  section.tutors .tutors-card__info .tutors-card__description {
+    margin-bottom: 20px;
+  }
+
+  section.tutors .tutors-card__course {
+    grid-template-areas: "title title""curs_name curs_name""link link";
+  }
+
+  section.tutors .tutors-card__course p:nth-child(1) {
+    font-size: 12px;
+  }
+
+  section.tutors .tutors-card__course-link {
+    margin-top: 20px;
+  }
+
+  section.tutors .tutors-card__course-link:after {
+    margin-left: 15px;
+  }
+
+  section.tutors .tutors-card.became-tutor {
+    height: auto;
+    border: 2px solid #0b2235;
+    display: flex;
+    gap: 32px;
+  }
 }
