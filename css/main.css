@@ -825,3 +825,151 @@ section.tutors .tutors-card__course-link::after {
     display: none;
   }
 }
+
+.salary {
+  margin-bottom: 40px;
+}
+
+.salary .salary-card {
+  border: 1px solid rgba(11, 34, 53, .3);
+  border-radius: 10px;
+  padding: 14px 20px;
+  display: grid;
+  grid-template-columns: 52px auto 1fr;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.salary .salary-card__sum {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #fd460e;
+}
+
+.salary .salary-card__rank {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #232523;
+}
+
+.salary .salary-card__rank-time {
+  font-size: 14px;
+  line-height: 16px;
+  color: #bdbdbd;
+}
+
+.salary .salary-card__text {
+  display: none;
+}
+
+.salary .salary-card__img {
+  width: 100%;
+}
+
+.salary .salary-card-wrap {
+  display: grid;
+  row-gap: 10px;
+  position: relative;
+}
+
+.salary .btn,
+.salary .salary__line {
+  display: none;
+}
+
+@media screen and (min-width:992px) {
+  .salary .salary-card-wrap {
+    grid-template-columns: repeat(5, 1fr);
+    border: 1px solid #0b2235;
+    border-radius: 15px;
+    padding: 35px 30px;
+    margin-bottom: 60px;
+  }
+
+  .salary .salary-card {
+    border: none;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr auto 1fr;
+    justify-items: center;
+    text-align: center;
+    padding: 0 35px;
+  }
+
+  .salary .salary-card__text {
+    display: block;
+    width: 237px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .salary .salary-card__sum {
+    align-self: end;
+    font-size: 16px;
+  }
+
+  .salary .salary-card__img {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  .salary .salary-card .item-group {
+    align-self: start;
+  }
+
+  .salary .salary-card .salary-card__rank {
+    font-size: 16px;
+    margin-bottom: 3px;
+  }
+
+  .salary .salary-card .salary-card__rank-time {
+    font-size: 12px;
+  }
+
+  .salary .salary-card:nth-child(2) {
+    justify-content: start;
+  }
+
+  .salary .salary-card:nth-child(2) .salary-card__img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .salary .salary-card:nth-child(3) {
+    justify-content: end;
+  }
+
+  .salary .salary-card:nth-child(3) .salary-card__img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .salary .salary-card:nth-child(4) {
+    justify-content: start;
+  }
+
+  .salary .salary-card:nth-child(4) .salary-card__img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .salary .salary-card:nth-child(5) .salary-card__img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .salary .salary__line {
+    display: block;
+    position: absolute;
+    width: 68%;
+    height: 1px;
+    background-color: #0b2235;
+    top: 50%;
+    left: 28%;
+  }
+
+  .salary .btn {
+    display: block;
+  }
+}
