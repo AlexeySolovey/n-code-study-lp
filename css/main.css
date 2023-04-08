@@ -758,6 +758,10 @@ section.tutors .tutors-card__course-link::after {
   margin-bottom: 15px;
 }
 
+.roadmap .roadmap__wrap {
+  margin-bottom: 20px;
+}
+
 @media(min-width:576px) {
   .roadmap .roadmap-step {
     grid-template-rows: auto auto;
@@ -810,5 +814,9 @@ section.tutors .tutors-card__course-link::after {
 
   .roadmap .roadmap-step-info__item p {
     font-size: 24px;
+  }
+
+  .roadmap .btn {
+    display: none;
   }
 }
