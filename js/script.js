@@ -8,7 +8,7 @@
         this.classList.toggle("active");
     });
 
-}())
+}());
 
 
 (function roadmap() {
@@ -27,7 +27,7 @@
         })
     });
 
-}())
+}());
 
 
 

@@ -707,6 +707,7 @@ section.tutors .tutors-card__course-link::after {
 
 .roadmap .roadmap-step__item.active {
   border: 2px solid #297abf;
+  background-color: #dce7fc;
 }
 
 .roadmap .roadmap-step__item p:nth-of-type(1) {
@@ -746,7 +747,7 @@ section.tutors .tutors-card__course-link::after {
 
 .roadmap .roadmap-step-info__item.active {
   display: block;
-  height: 100%;
+  min-height: 160px;
 }
 
 .roadmap .roadmap-step-info__item p {
@@ -766,6 +767,10 @@ section.tutors .tutors-card__course-link::after {
   .roadmap .roadmap-step {
     grid-template-rows: auto auto;
     margin-bottom: 0;
+  }
+
+  .roadmap .roadmap-step-info__item.active {
+    min-height: 100%;
   }
 
   .roadmap__wrap {
