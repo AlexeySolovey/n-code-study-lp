@@ -595,16 +595,6 @@ section.tutors .tutors-card__course-link::after {
   section.tutors .tutors-card.became-tutor {
     height: auto;
   }
-
-  .roadmap-step {
-    grid-template-rows: auto auto;
-  }
-
-  .roadmap__wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 21px;
-  }
 }
 
 @media screen and (min-width:992px) {
@@ -694,6 +684,10 @@ section.tutors .tutors-card__course-link::after {
   }
 }
 
+.roadmap {
+  margin-bottom: 140px;
+}
+
 .roadmap .roadmap-step {
   margin-bottom: 10px;
   display: grid;
@@ -709,6 +703,10 @@ section.tutors .tutors-card__course-link::after {
   grid-template-rows: 1fr auto;
   grid-template-areas: "img steps";
   grid-column-gap: 10px;
+}
+
+.roadmap .roadmap-step__item.active {
+  border: 2px solid #297abf;
 }
 
 .roadmap .roadmap-step__item p:nth-of-type(1) {
@@ -746,6 +744,11 @@ section.tutors .tutors-card__course-link::after {
   display: none;
 }
 
+.roadmap .roadmap-step-info__item.active {
+  display: block;
+  height: 100%;
+}
+
 .roadmap .roadmap-step-info__item p {
   font-size: 14px;
 }
@@ -755,8 +758,17 @@ section.tutors .tutors-card__course-link::after {
   margin-bottom: 15px;
 }
 
-.roadmap .roadmap-step-info__item.active {
-  display: block;
+@media(min-width:576px) {
+  .roadmap .roadmap-step {
+    grid-template-rows: auto auto;
+    margin-bottom: 0;
+  }
+
+  .roadmap__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 21px;
+  }
 }
 
 @media(min-width:992px) {
