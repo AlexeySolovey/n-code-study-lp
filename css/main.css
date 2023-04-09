@@ -875,7 +875,8 @@ section.tutors .tutors-card__course-link::after {
 }
 
 .salary .btn,
-.salary .salary__line {
+.salary .salary__line,
+.salary .salary__title {
   display: none;
 }
 
@@ -884,7 +885,7 @@ section.tutors .tutors-card__course-link::after {
     grid-template-columns: repeat(5, 1fr);
     border: 1px solid #0b2235;
     border-radius: 15px;
-    padding: 35px 30px;
+    padding: 44px 30px;
     margin-bottom: 60px;
   }
 
@@ -895,6 +896,7 @@ section.tutors .tutors-card__course-link::after {
     justify-items: center;
     text-align: center;
     padding: 0 35px;
+    margin-top: 26px;
   }
 
   .salary .salary-card__text {
@@ -927,34 +929,34 @@ section.tutors .tutors-card__course-link::after {
     font-size: 12px;
   }
 
-  .salary .salary-card:nth-child(2) {
+  .salary .salary-card:nth-child(3) {
     justify-content: start;
   }
 
-  .salary .salary-card:nth-child(2) .salary-card__img {
+  .salary .salary-card:nth-child(3) .salary-card__img {
     width: 15px;
     height: 15px;
   }
 
-  .salary .salary-card:nth-child(3) {
+  .salary .salary-card:nth-child(4) {
     justify-content: end;
   }
 
-  .salary .salary-card:nth-child(3) .salary-card__img {
+  .salary .salary-card:nth-child(4) .salary-card__img {
     width: 20px;
     height: 20px;
   }
 
-  .salary .salary-card:nth-child(4) {
+  .salary .salary-card:nth-child(5) {
     justify-content: start;
   }
 
-  .salary .salary-card:nth-child(4) .salary-card__img {
+  .salary .salary-card:nth-child(5) .salary-card__img {
     width: 25px;
     height: 25px;
   }
 
-  .salary .salary-card:nth-child(5) .salary-card__img {
+  .salary .salary-card:nth-child(6) .salary-card__img {
     width: 30px;
     height: 30px;
   }
@@ -965,11 +967,20 @@ section.tutors .tutors-card__course-link::after {
     width: 68%;
     height: 1px;
     background-color: #0b2235;
-    top: 50%;
+    top: 55%;
     left: 28%;
   }
 
   .salary .btn {
     display: block;
+  }
+
+  .salary .salary__title {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 47%;
+    font-size: 24px;
+    font-weight: 400;
   }
 }
