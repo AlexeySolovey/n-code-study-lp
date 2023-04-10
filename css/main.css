@@ -902,16 +902,12 @@ section.tutors .section-title {
 }
 
 @media screen and (min-width:576px) {
-  .salary {
-    margin-bottom: 120px;
-  }
-
   .salary .salary-card-wrap {
     grid-template-columns: repeat(4, 1fr);
     border: 1px solid #0b2235;
     border-radius: 15px;
     padding: 35px 30px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 
   .salary .salary-card {
@@ -1008,6 +1004,10 @@ section.tutors .section-title {
 }
 
 @media screen and (min-width:992px) {
+  .salary {
+    margin-bottom: 120px;
+  }
+
   .salary .salary-card__text {
     display: block;
     width: 232px;
@@ -1017,6 +1017,7 @@ section.tutors .section-title {
 
   .salary .salary-card-wrap {
     grid-template-columns: repeat(5, 1fr);
+    margin-bottom: 60px;
   }
 
   .salary .salary-card {
@@ -1033,5 +1034,68 @@ section.tutors .section-title {
     left: 47%;
     transform: translate(0);
     font-size: 24px;
+  }
+}
+
+section.feedback {
+  margin-bottom: 40px;
+}
+
+section.feedback .btn-wrap,
+section.feedback .tutors-card__tutor {
+  display: none;
+}
+
+@media(min-width:992px) {
+  section.feedback {
+    margin-bottom: 55px;
+  }
+
+  section.feedback .tutors-card__top {
+    grid-template-rows: 1fr 20px;
+    grid-template-columns: auto;
+    grid-template-areas: "img name""rate rate";
+  }
+
+  section.feedback .tutors-card__name {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  section.feedback .btn-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  section.feedback .btn-wrap .btn {
+    width: 100%;
+  }
+
+  section.feedback .btn.mob_btn {
+    display: none;
+  }
+
+  section.feedback .tutors-card__wrap {
+    margin-bottom: 120px;
+  }
+
+  section.feedback .tutors-card__course {
+    grid-template-areas: "link link""title title""curs_name curs_name";
+    margin-bottom: 20px;
+  }
+
+  section.feedback .tutors-card__course-link {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  section.feedback .tutors-card__tutor {
+    display: block;
+  }
+
+  section.feedback .tutors-card__tutor p:first-child {
+    font-size: 12px;
+    margin-bottom: 5px;
   }
 }
