@@ -32,12 +32,16 @@ hamburger_menu.addEventListener("click", function(e){
 (function accordion(){
     let accordionItem = document.querySelectorAll(".accordion__item")
     accordionItem.forEach(item => {
-        console.log(item.classList)
         item.addEventListener("click", function(){
-            accordionItem.forEach(item => item.classList.remove("active"));
-            accordionItem.forEach(item => item.children[1].style.maxHeight = 0);
-            this.classList.add("active");
-            this.children[1].style.maxHeight = this.children[1].scrollHeight + 'px'
+            if(this.classList.contains("active")){
+                this.classList.remove("active");
+                item.children[1].style.maxHeight = 0;
+            }else{
+                accordionItem.forEach(item => item.classList.remove("active"));
+                accordionItem.forEach(item => item.children[1].style.maxHeight = 0);
+                this.classList.add("active");
+                this.children[1].style.maxHeight = this.children[1].scrollHeight + 'px'
+            }
         })
     })
 }());
