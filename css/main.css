@@ -12,7 +12,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   vertical-align: bottom;
 }
 
@@ -121,6 +121,21 @@ ul {
   background: #fff;
   border: 2px solid rgba(11, 34, 53, .7);
   color: #0b2235;
+}
+
+.btn.btn_blue {
+  border: 2px solid #297abf;
+  color: #297abf;
+  background-color: #fff;
+}
+
+@media(min-width:552px) {
+  .btn {
+    width: 100%;
+    max-width: initial;
+    padding: 20px 0;
+    font-size: 18px;
+  }
 }
 
 @media screen and (min-width:992px) {
@@ -1180,8 +1195,192 @@ section.feedback .tutors-card__tutor {
     margin-bottom: 120px;
   }
 
+  .faq .btn {
+    display: none;
+  }
+
   .accordion__item {
     padding: 28px 20px;
     line-height: 120%;
+  }
+}
+
+.callback-form .section-title {
+  text-align: center;
+}
+
+.form {
+  display: grid;
+  row-gap: 10px;
+  max-width: 880px;
+  margin: 0 auto 80px;
+}
+
+.form input,
+.form select {
+  width: 100%;
+  box-sizing: border-box;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #0b2235;
+  font-size: 11px;
+  font-family: Roboto, sans-serif;
+  line-height: 13px;
+  padding-left: 20px;
+  font-weight: 300;
+}
+
+.form textarea[name=comment] {
+  border: 1px solid #0b2235;
+  font-family: Roboto, sans-serif;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.form .from__btn {
+  margin-top: 10px;
+}
+
+.form .btn {
+  border: none;
+  width: 100%;
+}
+
+.form .select2-container--default .select2-selection--single .select2-selection__arrow {
+  position: relative;
+  width: 10px;
+  height: 11px;
+  top: -3px;
+}
+
+.form .select2-container--default .select2-selection--single {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border: 1px solid #0b2235;
+  font-size: 11px;
+  height: 32px;
+}
+
+.form .select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+}
+
+.form .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  right: 0;
+  left: auto;
+  border-color: #000 transparent transparent;
+  border-width: 8px 5px 0;
+  transform: rotate(0);
+  transition: .3s;
+}
+
+.form .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  border-color: #000 transparent transparent;
+  border-width: 8px 5px 0;
+  transform: rotate(180deg);
+  transition: .3s;
+}
+
+.form .select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: #232523;
+}
+
+.form .select2-results__options .select2-results__option {
+  padding: 20px;
+}
+
+.form .required {
+  position: relative;
+}
+
+.form .required::after {
+  content: "*";
+  position: absolute;
+  top: -11px;
+  right: 5px;
+  color: rgba(253, 70, 14, .7);
+  font-size: 15px;
+}
+
+@media(min-width:576px) {
+  .form input {
+    height: 60px;
+  }
+
+  .form .select2-container--default .select2-selection--single {
+    height: 60px;
+    font-size: 16px;
+  }
+
+  .form .select2-container--default .select2-selection--single .select2-selection__arrow b,
+  .form .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-width: 16px 10px 0;
+  }
+}
+
+@media(min-width:992px) {
+  .form {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "phone email course""name name wherefrom""text text text";
+  }
+
+  .form input,
+  .form select {
+    height: 52px;
+    font-size: 14px;
+    line-height: 15px;
+  }
+
+  .form label[for=name] {
+    grid-area: name;
+  }
+
+  .form label[for=phone] {
+    grid-area: phone;
+  }
+
+  .form label[for=email] {
+    grid-area: email;
+  }
+
+  .form select[name=course] {
+    grid-area: course;
+  }
+
+  .form select[name=wherefrom] {
+    grid-area: wherefrom;
+  }
+
+  .form textarea[name=comment] {
+    grid-area: text;
+    height: 120px;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .form .from__btn {
+    grid-column: 2/3;
+  }
+
+  .form .select2-container--default .select2-selection--single {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .form .select2-container--default .select2-selection--single .select2-selection__arrow b,
+  .form .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border-width: 8px 5px 0;
   }
 }

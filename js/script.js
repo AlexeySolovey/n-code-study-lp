@@ -45,3 +45,17 @@ hamburger_menu.addEventListener("click", function(e){
         })
     })
 }());
+
+(function(){
+    $('#course').select2({
+        placeholder: 'Оберіть напрямок',
+        minimumResultsForSearch: Infinity,
+        width: '100%' 
+    });
+
+    $('#wherefrom').select2({
+        placeholder: 'Звідки Ви дізнались про N-CODE?',
+        minimumResultsForSearch: Infinity,
+        width: '100%'     
+    });
+}())

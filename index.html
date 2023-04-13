@@ -9,9 +9,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <title>N-Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
 </head>
+<title>N-Code</title>
 
 <body>
   <div class="content-container">
@@ -613,7 +614,40 @@
         </div>
       </div><a class="btn" href="#">Отримати консультацію менеджера</a>
     </section>
+    <section class="callback-form">
+      <div class="section-title">Зворотнiй зв’язок</div>
+      <form class="form" action="POST">
+        <label class="required" for="name">
+          <input type="text" name="name" placeholder="Ім’я" required>
+        </label>
+        <label class="required" for="phone">
+          <input type="phone" name="phone" placeholder="Номер телефона" required>
+        </label>
+        <label class="required" for="email">
+          <input type="email" name="email" placeholder="E-mail" required>
+        </label>
+        <select name="course" id="course">
+          <option></option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JS</option>
+        </select>
+        <select name="wherefrom" id="wherefrom">
+          <option></option>
+          <option value="html">оттуда</option>
+          <option value="css">отсюда</option>
+          <option value="js">из ниоткуда</option>
+        </select>
+        <textarea name="comment" resize="none" placeholder="Повідомлення"></textarea>
+        <div class="from__btn">
+          <button class="btn" type="submit">Надіслати</button>
+        </div>
+      </form>
+    </section>
   </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 </body>
