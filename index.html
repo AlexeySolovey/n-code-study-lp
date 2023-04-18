@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/nice-select2.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <title>N-Code</title>
 
@@ -104,7 +104,7 @@
           <p>Найкращих студентів працевлаштовуємо</p>
         </div>
         <div class="advantages__item"><span class="item__num">08</span>
-          <p>Сертифікатрекомендації в залежності від отриманих компетенцій</p>
+          <p>Сертифікат\рекомендації в залежності від отриманих компетенцій</p>
         </div>
       </div>
     </section>
@@ -310,8 +310,8 @@
         </div>
         <div class="roadmap-step-info">
           <div class="roadmap-step-info__item active">
-            <p></p>
             <p>Залишити заявку у формі зворотнього зв’язку чи подзвонити 067 000 00 00</p>
+            <p></p>
           </div>
           <div class="roadmap-step-info__item">
             <p>Отримати консультацію у менеджера та записатись на безкоштовне пробне заняття.</p>
@@ -616,7 +616,7 @@
     </section>
     <section class="callback-form">
       <div class="section-title">Зворотнiй зв’язок</div>
-      <form class="form" action="POST">
+      <form class="form" action="POST" id="callbackForm">
         <label class="required" for="name">
           <input type="text" name="name" placeholder="Ім’я" required>
         </label>
@@ -626,28 +626,26 @@
         <label class="required" for="email">
           <input type="email" name="email" placeholder="E-mail" required>
         </label>
-        <select name="course" id="course">
-          <option></option>
-          <option value="html">HTML</option>
-          <option value="css">CSS</option>
-          <option value="js">JS</option>
+        <select class="select-course custom-select" name="course" id="course">
+          <option data-display="Оберіть напрямок"></option>
+          <option value="1">HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JS</option>
         </select>
-        <select name="wherefrom" id="wherefrom">
+        <select class="select-wherefrom custom-select" name="wherefrom" id="wherefrom">
           <option></option>
           <option value="html">оттуда</option>
           <option value="css">отсюда</option>
           <option value="js">из ниоткуда</option>
         </select>
-        <textarea name="comment" resize="none" placeholder="Повідомлення"></textarea>
+        <textarea name="comment" placeholder="Повідомлення"></textarea>
         <div class="from__btn">
           <button class="btn" type="submit">Надіслати</button>
         </div>
       </form>
     </section>
   </div>
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="js/nice-select2.js"></script>
   <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 </body>

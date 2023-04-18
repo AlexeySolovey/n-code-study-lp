@@ -59,6 +59,7 @@ ul {
   padding: 10px 0;
   font-weight: 700;
   font-size: 10px;
+  box-sizing: border-box;
 }
 
 .title {
@@ -129,12 +130,18 @@ ul {
   background-color: #fff;
 }
 
-@media(min-width:552px) {
+@media(min-width:576px) {
   .btn {
     width: 100%;
     max-width: initial;
     padding: 20px 0;
     font-size: 18px;
+  }
+
+  .section-title {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 40px;
   }
 }
 
@@ -385,13 +392,11 @@ ul {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width:768px) {
-  .slider {
-    margin-bottom: 121px;
-  }
+@media screen and (min-width:576px) {
 
-  .slide {
-    margin-bottom: 128px;
+  .slide,
+  .slider {
+    margin-bottom: 60px;
   }
 
   .title {
@@ -403,6 +408,14 @@ ul {
     font-size: 20px;
     line-height: 24px;
     margin-top: 15px;
+  }
+}
+
+@media screen and (min-width:992px) {
+
+  .slide,
+  .slider {
+    margin-bottom: 120px;
   }
 }
 
@@ -454,7 +467,50 @@ ul {
   line-height: 18px;
 }
 
-@media screen and (min-width:768px) {
+@media(min-width:576px) {
+  .advantages {
+    margin-bottom: 60px;
+  }
+
+  .advantages__item {
+    padding: 17px 0;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .advantages__item p {
+    max-width: 279px;
+  }
+
+  .advantages .item__num {
+    line-height: 38px;
+    font-size: 33px;
+    transform: translate(-21px, -50%);
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .advantages {
+    margin-bottom: 120px;
+  }
+}
+
+section.tutors {
+  margin-bottom: 40px;
+}
+
+section.tutors .section-title {
+  max-width: 420px;
+  text-transform: uppercase;
+}
+
+@media(min-width:576px) {
+  section.tutors {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width:992px) {
   .advantages .container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 75px;
@@ -479,24 +535,7 @@ ul {
     padding: 10px 0;
     transform: translate(-45px, -50%);
   }
-}
 
-@media screen and (min-width:1024px) {
-  .advantages {
-    margin-bottom: 120px;
-  }
-}
-
-section.tutors {
-  margin-bottom: 40px;
-}
-
-section.tutors .section-title {
-  max-width: 420px;
-  text-transform: uppercase;
-}
-
-@media screen and (min-width:992px) {
   section.tutors {
     margin-bottom: 120px;
   }
@@ -625,6 +664,47 @@ section.tutors .section-title {
 
   .tutors-card.became-tutor {
     height: auto;
+  }
+
+  .tutors-card__rate {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  .tutors-card__rate i {
+    font-size: 16px;
+  }
+
+  .tutors-card__top {
+    row-gap: 15px;
+    column-gap: 10px;
+  }
+
+  .tutors-card__name {
+    font-size: 20px;
+    margin-top: 13px;
+  }
+
+  .tutors-card {
+    padding: 20px;
+    row-gap: 15px;
+    font-size: 16px;
+  }
+
+  .tutors-card__course p:nth-child(1) {
+    font-size: 14px;
+  }
+
+  .tutors-card__course p:last-of-type {
+    margin-bottom: 10px;
+  }
+
+  .tutors-card__course p .tutors-card__course-link::after {
+    margin-left: 15px;
+  }
+
+  .tutors-card__course {
+    grid-template-areas: "title title""curs_name curs_name""link link";
   }
 }
 
@@ -764,7 +844,7 @@ section.tutors .section-title {
   grid-area: img;
 }
 
-.roadmap .roadmap-step-info__item {
+.roadmap-step-info__item {
   border: 2px solid #dce7fc;
   border-radius: 10px;
   padding: 10px 15px;
@@ -772,16 +852,16 @@ section.tutors .section-title {
   display: none;
 }
 
-.roadmap .roadmap-step-info__item.active {
+.roadmap-step-info__item.active {
   display: block;
   min-height: 160px;
 }
 
-.roadmap .roadmap-step-info__item p {
+.roadmap-step-info__item p {
   font-size: 14px;
 }
 
-.roadmap .roadmap-step-info__item p:first-child {
+.roadmap-step-info__item p:first-child {
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -791,19 +871,59 @@ section.tutors .section-title {
 }
 
 @media(min-width:576px) {
+  .roadmap {
+    margin-bottom: 60px;
+  }
+
   .roadmap .roadmap-step {
     grid-template-rows: auto auto;
     margin-bottom: 0;
   }
 
-  .roadmap .roadmap-step-info__item.active {
-    min-height: 100%;
+  .roadmap .roadmap-step__item {
+    padding: 20px 31px;
+    grid-column-gap: 21px;
+    cursor: pointer;
+  }
+
+  .roadmap .roadmap-step__item p:nth-of-type(1) {
+    font-size: 18px;
+    line-height: 21px;
+    color: #bdbdbd;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .roadmap .roadmap-step__item p:nth-of-type(2) {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .roadmap .roadmap-step__item-img {
+    width: 71px;
+    height: 71px;
+  }
+
+  .roadmap-step-info__item {
+    padding: 23px 20px;
+  }
+
+  .roadmap-step-info__item.active {
+    height: 320px;
+  }
+
+  .roadmap-step-info__item p {
+    font-size: 20px;
+  }
+
+  .roadmap .btn {
+    display: none;
   }
 
   .roadmap__wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 21px;
+    row-gap: 10px;
   }
 }
 
@@ -854,6 +974,16 @@ section.tutors .section-title {
 
   .roadmap .btn {
     display: none;
+  }
+
+  .roadmap__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 21px;
+  }
+
+  .roadmap-step-info__item.active {
+    min-height: 100%;
   }
 }
 
@@ -1124,7 +1254,8 @@ section.feedback .tutors-card__tutor {
 
 @media(min-width:576px) {
   .accordion__item {
-    font-size: 24px;
+    font-size: 20px;
+    padding: 28px 20px;
   }
 
   .accordion .accordion__content {
@@ -1200,8 +1331,8 @@ section.feedback .tutors-card__tutor {
   }
 
   .accordion__item {
-    padding: 28px 20px;
     line-height: 120%;
+    font-size: 24px;
   }
 }
 
@@ -1226,8 +1357,23 @@ section.feedback .tutors-card__tutor {
   font-size: 11px;
   font-family: Roboto, sans-serif;
   line-height: 13px;
+  color: #232523;
+  font-weight: 400;
   padding-left: 20px;
-  font-weight: 300;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .0509803922);
+}
+
+.form input:focus {
+  border: 1px solid #0b2235;
+  outline: 0;
+}
+
+.form input.invalid {
+  border: 1px solid rgba(238, 66, 66, .7);
+}
+
+.form input.invalid::placeholder {
+  color: #fd460e;
 }
 
 .form textarea[name=comment] {
@@ -1237,7 +1383,53 @@ section.feedback .tutors-card__tutor {
   padding: 20px;
   box-sizing: border-box;
   font-size: 11px;
-  font-weight: 300;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .0509803922);
+  color: #232523;
+  font-weight: 400;
+  outline: 0;
+}
+
+.form label[for=phone] {
+  position: relative;
+}
+
+.form label[for=phone]::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: 15px;
+  width: 25px;
+  height: 28px;
+  background-image: url(../img/ukraine.svg);
+  background-repeat: no-repeat;
+}
+
+.form select {
+  display: none;
+}
+
+.form .custom-select {
+  width: 100%;
+  box-sizing: border-box;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid #0b2235;
+  font-size: 11px;
+  font-family: Roboto, sans-serif;
+  line-height: 32px;
+  color: #232523;
+  font-weight: 400;
+  padding-left: 20px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .0509803922);
+}
+
+.form .custom-select:hover {
+  border: 1px solid #0b2235;
+}
+
+.form input[type=phone] {
+  padding-left: 55px;
 }
 
 .form .from__btn {
@@ -1249,49 +1441,23 @@ section.feedback .tutors-card__tutor {
   width: 100%;
 }
 
-.form .select2-container--default .select2-selection--single .select2-selection__arrow {
-  position: relative;
+.form .nice-select-dropdown {
+  width: 100%;
+}
+
+.form .nice-select:after {
+  border: none;
+  background-image: url(../img/faq-arrow.svg);
   width: 10px;
-  height: 11px;
-  top: -3px;
-}
-
-.form .select2-container--default .select2-selection--single {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  border: 1px solid #0b2235;
-  font-size: 11px;
-  height: 32px;
-}
-
-.form .select2-container .select2-selection--single .select2-selection__rendered {
-  padding: 0;
-}
-
-.form .select2-container--default .select2-selection--single .select2-selection__arrow b {
-  right: 0;
-  left: auto;
-  border-color: #000 transparent transparent;
-  border-width: 8px 5px 0;
+  height: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
   transform: rotate(0);
-  transition: .3s;
+  transform-origin: 50% 50%;
 }
 
-.form .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border-color: #000 transparent transparent;
-  border-width: 8px 5px 0;
+.form .nice-select.open:after {
   transform: rotate(180deg);
-  transition: .3s;
-}
-
-.form .select2-container--default .select2-selection--single .select2-selection__placeholder {
-  color: #232523;
-}
-
-.form .select2-results__options .select2-results__option {
-  padding: 20px;
 }
 
 .form .required {
@@ -1310,16 +1476,33 @@ section.feedback .tutors-card__tutor {
 @media(min-width:576px) {
   .form input {
     height: 60px;
-  }
-
-  .form .select2-container--default .select2-selection--single {
-    height: 60px;
     font-size: 16px;
   }
 
-  .form .select2-container--default .select2-selection--single .select2-selection__arrow b,
-  .form .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-    border-width: 16px 10px 0;
+  .form textarea[name=comment] {
+    font-size: 16px;
+  }
+
+  .form label[for=phone]::before {
+    top: 17px;
+    left: 20px;
+    padding-left: 60px;
+  }
+
+  .form .nice-select {
+    height: 52px;
+    font-size: 16px;
+    line-height: 50px;
+  }
+
+  .form .nice-select:after {
+    width: 20px;
+    height: 17px;
+    margin-top: -7px;
+  }
+
+  .form .nice-select .option {
+    line-height: 60px;
   }
 }
 
@@ -1346,15 +1529,20 @@ section.feedback .tutors-card__tutor {
     grid-area: phone;
   }
 
+  .form label[for=phone]::before {
+    top: 13px;
+    left: 20px;
+  }
+
   .form label[for=email] {
     grid-area: email;
   }
 
-  .form select[name=course] {
+  .form .select-course {
     grid-area: course;
   }
 
-  .form select[name=wherefrom] {
+  .form .select-wherefrom {
     grid-area: wherefrom;
   }
 
@@ -1364,23 +1552,15 @@ section.feedback .tutors-card__tutor {
     width: 100%;
     font-size: 14px;
     margin-bottom: 40px;
+    resize: none;
   }
 
   .form .from__btn {
     grid-column: 2/3;
   }
 
-  .form .select2-container--default .select2-selection--single {
-    height: 52px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    justify-content: space-between;
-    padding: 0 20px;
-  }
-
-  .form .select2-container--default .select2-selection--single .select2-selection__arrow b,
-  .form .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-    border-width: 8px 5px 0;
+  .form .nice-select:after {
+    width: 10px;
+    height: 8px;
   }
 }
