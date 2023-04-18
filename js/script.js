@@ -44,10 +44,10 @@
     })
 }());
 
-(function customSelect() {
+(function customSelect () {
     NiceSelect.bind(document.getElementById("course"));
     NiceSelect.bind(document.getElementById("wherefrom"));
-
+    
     let selectsPlaceholder = document.querySelectorAll('.nice-select .current');
     selectsPlaceholder[0].innerHTML = 'Оберіть напрямок';
     selectsPlaceholder[1].innerHTML = 'Звідки ви дізнались про N-Code?';
@@ -57,7 +57,7 @@
     const form = document.querySelector('#callbackForm');
     const btn = document.querySelector('.callback-form .btn')
 
-    btn.addEventListener('click', function (event) {
+    btn.addEventListener('click', function(event){
         event.preventDefault();
         const inputs = form.querySelectorAll('input');
         inputs.forEach(function (input) {

@@ -1510,7 +1510,7 @@ section.feedback .tutors-card__tutor {
   .form {
     gap: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 33%;
     grid-template-areas: "phone email course""name name wherefrom""text text text";
   }
 
@@ -1557,6 +1557,10 @@ section.feedback .tutors-card__tutor {
 
   .form .from__btn {
     grid-column: 2/3;
+  }
+
+  .form .nice-select {
+    font-size: 14px;
   }
 
   .form .nice-select:after {
