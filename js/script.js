@@ -44,19 +44,26 @@
     })
 }());
 
+// (function customSelect () {
+//     NiceSelect.bind(document.getElementById("course"));
+//     NiceSelect.bind(document.getElementById("wherefrom"));
+    
+//     let selectsPlaceholder = document.querySelectorAll('.nice-select .current');
+//     selectsPlaceholder[0].innerHTML = 'Оберіть напрямок';
+//     selectsPlaceholder[1].innerHTML = 'Звідки ви дізнались про N-Code?';
+// }());
 
+// (function validation() {
+//     const form = document.querySelector('#callbackForm');
+//     const btn = document.querySelector('.callback-form .btn')
 
-(function validation() {
-    const form = document.querySelector('#callbackForm');
-    const btn = document.querySelector('.callback-form .btn')
-
-    btn.addEventListener('click', function (event) {
-        event.preventDefault();
-        const inputs = form.querySelectorAll('input');
-        inputs.forEach(function (input) {
-            if (!input.checkValidity()) {
-                input.classList.add('invalid');
-            }
-        });
-    })
-}())
+//     btn.addEventListener('click', function(event){
+//         event.preventDefault();
+//         const inputs = form.querySelectorAll('input');
+//         inputs.forEach(function (input) {
+//             if (!input.checkValidity()) {
+//                 input.classList.add('invalid');
+//             }
+//         });
+//     })
+// }())
