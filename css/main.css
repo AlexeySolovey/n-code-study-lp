@@ -141,6 +141,7 @@ ul {
   .section-title {
     font-size: 28px;
     line-height: 34px;
+    margin-bottom: 40px;
   }
 }
 
@@ -391,13 +392,11 @@ ul {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width:768px) {
-  .slider {
-    margin-bottom: 121px;
-  }
+@media screen and (min-width:576px) {
 
-  .slide {
-    margin-bottom: 128px;
+  .slide,
+  .slider {
+    margin-bottom: 60px;
   }
 
   .title {
@@ -409,6 +408,14 @@ ul {
     font-size: 20px;
     line-height: 24px;
     margin-top: 15px;
+  }
+}
+
+@media screen and (min-width:992px) {
+
+  .slide,
+  .slider {
+    margin-bottom: 120px;
   }
 }
 
@@ -461,6 +468,10 @@ ul {
 }
 
 @media(min-width:576px) {
+  .advantages {
+    margin-bottom: 60px;
+  }
+
   .advantages__item {
     padding: 17px 0;
     font-size: 20px;
@@ -491,6 +502,12 @@ section.tutors {
 section.tutors .section-title {
   max-width: 420px;
   text-transform: uppercase;
+}
+
+@media(min-width:576px) {
+  section.tutors {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width:992px) {
@@ -827,7 +844,7 @@ section.tutors .section-title {
   grid-area: img;
 }
 
-.roadmap .roadmap-step-info__item {
+.roadmap-step-info__item {
   border: 2px solid #dce7fc;
   border-radius: 10px;
   padding: 10px 15px;
@@ -835,16 +852,16 @@ section.tutors .section-title {
   display: none;
 }
 
-.roadmap .roadmap-step-info__item.active {
+.roadmap-step-info__item.active {
   display: block;
   min-height: 160px;
 }
 
-.roadmap .roadmap-step-info__item p {
+.roadmap-step-info__item p {
   font-size: 14px;
 }
 
-.roadmap .roadmap-step-info__item p:first-child {
+.roadmap-step-info__item p:first-child {
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -854,19 +871,59 @@ section.tutors .section-title {
 }
 
 @media(min-width:576px) {
+  .roadmap {
+    margin-bottom: 60px;
+  }
+
   .roadmap .roadmap-step {
     grid-template-rows: auto auto;
     margin-bottom: 0;
   }
 
-  .roadmap .roadmap-step-info__item.active {
-    min-height: 100%;
+  .roadmap .roadmap-step__item {
+    padding: 20px 31px;
+    grid-column-gap: 21px;
+    cursor: pointer;
+  }
+
+  .roadmap .roadmap-step__item p:nth-of-type(1) {
+    font-size: 18px;
+    line-height: 21px;
+    color: #bdbdbd;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+
+  .roadmap .roadmap-step__item p:nth-of-type(2) {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .roadmap .roadmap-step__item-img {
+    width: 71px;
+    height: 71px;
+  }
+
+  .roadmap-step-info__item {
+    padding: 23px 20px;
+  }
+
+  .roadmap-step-info__item.active {
+    height: 320px;
+  }
+
+  .roadmap-step-info__item p {
+    font-size: 20px;
+  }
+
+  .roadmap .btn {
+    display: none;
   }
 
   .roadmap__wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 21px;
+    row-gap: 10px;
   }
 }
 
@@ -917,6 +974,16 @@ section.tutors .section-title {
 
   .roadmap .btn {
     display: none;
+  }
+
+  .roadmap__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 21px;
+  }
+
+  .roadmap-step-info__item.active {
+    min-height: 100%;
   }
 }
 
@@ -1272,7 +1339,7 @@ section.feedback .tutors-card__tutor {
 .footer__mob {
   display: block;
   background-color: rgba(220, 231, 252, .5);
-  padding-top: 8px;
+  padding-block: 20px;
   overflow-x: hidden;
 }
 
@@ -1422,8 +1489,23 @@ section.feedback .tutors-card__tutor {
     height: 40px;
   }
 
-  .footer .col:nth-child(1) .footer__copyright,
   .footer .col:nth-child(1) .footer__sup-pay {
+    justify-content: start;
+    margin-top: 45px;
+  }
+
+  .footer .col:nth-child(1) .footer__sup-pay p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .footer .col:nth-child(1) .pay-ico {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer .col:nth-child(1) .footer__copyright {
     display: none;
   }
 
@@ -1439,11 +1521,16 @@ section.feedback .tutors-card__tutor {
   .footer .col:nth-child(3) .footer__title {
     text-align: center;
   }
+
+  .footer__copyright {
+    margin-top: 40px;
+    font-size: 16px;
+  }
 }
 
 @media(min-width:992px) {
   .footer {
-    padding-top: 40px;
+    padding-block: 40px;
   }
 
   .footer .row {
@@ -1489,7 +1576,6 @@ section.feedback .tutors-card__tutor {
 
   .footer__copyright {
     font-size: 20px;
-    text-align: left;
     line-height: 24px;
     color: #000;
     margin-top: 63px;
