@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nice-select2.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/feedback-page.css">
 </head>
 <title>N-Code</title>
 
 <body>
-    <div class="content-container feedback">
+    <div class="content-container feedback-page feedback">
         <header class="header">
             <div class="container">
                 <div class="logo">
@@ -73,11 +74,17 @@
                 </ul>
             </div>
         </header>
-        <div class="section-title-wrap" style="margin-top:240px">
+        <div class="section-title-wrap">
             <div class="back-link">Назад</div>
             <h2 class="section-title">ВСi вiдгуки</h2><a class="give-feedback btn btn_blue">Залишити відгук</a>
         </div>
         <div class="tutors-card__wrap">
+            <div class="tutors-card give-feedback">
+                <div class="tutors-card__img">
+                    <img src="./img/add-ico-orange.svg" alt="">
+                </div>
+                <p>Залишити відгук</p>
+            </div>
             <div class="tutors-card">
                 <div class="tutors-card__top">
                     <div class="tutors-card__img">
@@ -690,8 +697,52 @@
             </div>
         </div>
     </div>
+    <div class="popup give-feedback-popup">
+        <div class="popup-body">
+            <div class="popup__close"></div>
+            <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2>
+            <div class="back-link">Назад</div>
+            <form class="form" action="POST" id="feedbackForm">
+                <label class="required" for="name">
+                    <input type="text" name="name" placeholder="Ім’я" required>
+                </label>
+                <label class="required" for="phone">
+                    <input type="phone" name="phone" placeholder="Номер телефона" required>
+                </label>
+                <label class="required" for="email">
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </label>
+                <select class="select-course custom-select" name="course" id="courseFeed">
+                    <option value="1">HTML</option>
+                    <option value="2">CSS</option>
+                    <option value="3">JS</option>
+                </select>
+                <select class="custom-select" name="tutor" id="tutor">
+                    <option value="1">Иван Иваненко</option>
+                    <option value="2">Петр Петренко</option>
+                    <option value="3">Светлана Светленко</option>
+                </select>
+                <div class="form-rate required">
+                    <div class="tutors-card__rate"><i class="mentors__star fa-solid fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <label class="required" for="social">
+                    <input type="" name="social" placeholder="Соціальна мережа" required>
+                </label>
+                <textarea name="comment" placeholder="Повідомлення"></textarea>
+                <div class="from__btn">
+                    <button class="btn" type="submit">Надіслати ЗАЯВКУ</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/nice-select2.js"></script>
+    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
+    <script src="js/popup.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
-<script src="js/popup.js"></script>
 
 </html>
