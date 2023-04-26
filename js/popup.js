@@ -22,6 +22,33 @@
     selectsPlaceholder[1].innerHTML = 'Виберіть Викладача';
 }());
 
+(function popupValidation() {
+    const form = document.querySelector('.give-feedback-popup');
+    const btn = document.querySelector('.give-feedback-popup .btn')
+
+    btn.addEventListener('click', function (event) {
+        event.preventDefault();
+        const inputs = form.querySelectorAll('input');
+        inputs.forEach(function (input) {
+            if (!input.checkValidity()) {
+                input.classList.add('invalid');
+            } else {
+                input.classList.remove('invalid');
+            }
+        });
+
+        const selects = form.querySelectorAll('select');
+        selects.forEach(function (select) {
+
+            if (select.value === '') {
+                console.log(select.value)
+                select.nextElementSibling.classList.add('invalid');
+            } else {
+                select.nextElementSibling.classList.remove('invalid');
+            }
+        });
+    })
+}());
 
 
 // Скорее всего это будет использоватсья иначе. Существует сугубо как пример работы попапа

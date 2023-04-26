@@ -20,7 +20,9 @@
         <header class="header">
             <div class="container">
                 <div class="logo">
-                    <img src="img/logo.svg" alt="logo">
+                    <a href="index.html">
+                        <img src="img/logo.svg" alt="logo">
+                    </a>
                 </div>
                 <menu class="menu">
                     <div class="hamburger-menu">
@@ -35,7 +37,7 @@
                         </div>
                     </div>
                     <ul class="menu__nav">
-                        <li class="menu__item"><a href="#">Про нас</a>
+                        <li class="menu__item"><a href="index.html">Про нас</a>
                         </li>
                         <li class="menu__item"><a href="tutors.html">Ментори</a>
                         </li>
@@ -59,11 +61,11 @@
                     </div>
                 </div>
                 <ul class="menu__nav">
-                    <li class="menu__item"><a href="#">Про нас</a>
+                    <li class="menu__item"><a href="index.html">Про нас</a>
                     </li>
-                    <li class="menu__item"><a href="#">Ментори</a>
+                    <li class="menu__item"><a href="tutors.html">Ментори</a>
                     </li>
-                    <li class="menu__item"><a href="#">Вiдгуки</a>
+                    <li class="menu__item"><a href="feedback.html">Вiдгуки</a>
                     </li>
                     <li class="menu__item"><a href="#">Подарувати сертифiкат</a>
                     </li>
@@ -74,9 +76,9 @@
                 </ul>
             </div>
         </header>
-        <div class="section-title-wrap">
-            <div class="back-link">Назад</div>
-            <h2 class="section-title">ВСi вiдгуки</h2><a class="give-feedback btn btn_blue">Залишити відгук</a>
+        <div class="section-title-wrap"><a class="back-link" href="index.html">Назад </a>
+            <h2 class="section-title">ВСi вiдгуки</h2>
+            <button class="give-feedback btn btn_blue">Залишити відгук</button>
         </div>
         <div class="tutors-card__wrap">
             <div class="tutors-card give-feedback">
@@ -700,8 +702,7 @@
     <div class="popup give-feedback-popup">
         <div class="popup-body">
             <div class="popup__close"></div>
-            <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2>
-            <div class="back-link">Назад</div>
+            <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2><a class="back-link">Назад </a>
             <form class="form" action="POST" id="feedbackForm">
                 <label class="required" for="name">
                     <input type="text" name="name" placeholder="Ім’я" required>
@@ -712,15 +713,17 @@
                 <label class="required" for="email">
                     <input type="email" name="email" placeholder="E-mail" required>
                 </label>
-                <select class="select-course custom-select" name="course" id="courseFeed">
-                    <option value="1">HTML</option>
-                    <option value="2">CSS</option>
-                    <option value="3">JS</option>
+                <select class="select-course custom-select custom-select-required" name="course" id="courseFeed">
+                    <option value=""></option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JS">JS</option>
                 </select>
-                <select class="custom-select" name="tutor" id="tutor">
-                    <option value="1">Иван Иваненко</option>
-                    <option value="2">Петр Петренко</option>
-                    <option value="3">Светлана Светленко</option>
+                <select class="custom-select custom-select-required" name="tutor" id="tutor">
+                    <option value=""></option>
+                    <option value="Иван Иваненко">Иван Иваненко</option>
+                    <option value="Петр Петренко">Петр Петренко</option>
+                    <option value="Светлана Светленко">Светлана Светленко</option>
                 </select>
                 <div class="form-rate required">
                     <div class="tutors-card__rate"><i class="mentors__star fa-solid fa-star"></i><i
@@ -743,6 +746,7 @@
     <script src="js/nice-select2.js"></script>
     <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
     <script src="js/popup.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

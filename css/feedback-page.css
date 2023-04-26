@@ -22,9 +22,10 @@
 .popup.give-feedback-popup {
     padding-left: 0;
     padding-right: 0;
-    background: 0 0;
+    background-color: #fff;
     padding-top: 55px;
     display: none;
+    z-index: 10;
 }
 
 .popup.give-feedback-popup select[name=tutor] {
@@ -43,7 +44,6 @@
     max-width: 100%;
     border: none;
     border-radius: 0;
-    height: 100%;
 }
 
 .popup.give-feedback-popup .popup__title {
@@ -133,6 +133,7 @@
     .popup.give-feedback-popup {
         background-color: rgba(0, 0, 0, .5);
         padding-top: 15%;
+        z-index: 99999;
     }
 
     .popup.give-feedback-popup .popup__close {
