@@ -112,6 +112,7 @@ ul {
 .section-title-wrap {
   display: grid;
   grid-template-columns: 1fr auto;
+  align-items: start;
 }
 
 .section-title-wrap .more-info-link {
@@ -130,12 +131,63 @@ ul {
   background-color: #fff;
 }
 
+.back-link {
+  color: #297abf;
+  font-size: 11px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+
+.back-link::before {
+  content: "";
+  width: 11px;
+  height: 8px;
+  display: inline-block;
+  background-image: url(../img/more-info-arrow.svg);
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  margin-right: 12px;
+  background-size: contain;
+}
+
+.back-link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 23px;
+  height: 1px;
+  background-color: #297abf;
+  width: 33px;
+}
+
 @media(min-width:576px) {
   .btn {
     width: 100%;
     max-width: initial;
     padding: 20px 0;
     font-size: 18px;
+  }
+
+  .back-link {
+    font-size: 24px;
+  }
+
+  .back-link::before {
+    width: 26px;
+    height: 16px;
+    background-repeat: no-repeat;
+    margin-right: 24px;
+  }
+
+  .back-link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    height: 1px;
+    background-color: #297abf;
+    width: 70px;
   }
 
   .section-title {
@@ -495,17 +547,21 @@ ul {
   }
 }
 
-section.tutors {
+.tutors {
   margin-bottom: 40px;
 }
 
-section.tutors .section-title {
+.tutors .section-title {
   max-width: 420px;
   text-transform: uppercase;
 }
 
+.tutors .tutors-card:nth-child(n+4):not(.became-tutor) {
+  display: none;
+}
+
 @media(min-width:576px) {
-  section.tutors {
+  .tutors {
     margin-bottom: 60px;
   }
 }
@@ -536,11 +592,15 @@ section.tutors .section-title {
     transform: translate(-45px, -50%);
   }
 
-  section.tutors {
+  .tutors {
     margin-bottom: 120px;
   }
 
-  section.tutors .section-title {
+  .tutors .tutors-card:nth-child(n+4):not(.became-tutor) {
+    display: grid;
+  }
+
+  .tutors .section-title {
     max-width: 100%;
     margin-bottom: 60px;
   }
@@ -555,10 +615,6 @@ section.tutors .section-title {
   display: grid;
   row-gap: 10px;
   font-size: 14px;
-}
-
-.tutors-card:nth-child(n+4) {
-  display: none;
 }
 
 .tutors-card__wrap {
@@ -623,7 +679,8 @@ section.tutors .section-title {
   grid-area: curs_name;
 }
 
-.tutors-card.became-tutor {
+.tutors-card.became-tutor,
+.tutors-card.give-feedback {
   height: 110px;
   border: 1px solid #0b2235;
   border-radius: 10px;
@@ -634,12 +691,14 @@ section.tutors .section-title {
   gap: 17px;
 }
 
-.tutors-card.became-tutor p {
+.tutors-card.became-tutor p,
+.tutors-card.give-feedback p {
   font-weight: 700;
   font-size: 14px;
 }
 
-.tutors-card.became-tutor .tutors-card__img {
+.tutors-card.became-tutor .tutors-card__img,
+.tutors-card.give-feedback .tutors-card__img {
   width: 25px;
   height: 25px;
 }
@@ -662,7 +721,8 @@ section.tutors .section-title {
     margin-bottom: 40px;
   }
 
-  .tutors-card.became-tutor {
+  .tutors-card.became-tutor,
+  .tutors-card.give-feedback {
     height: auto;
   }
 
@@ -717,12 +777,8 @@ section.tutors .section-title {
     row-gap: 25px;
   }
 
-  .tutors-card:nth-child(n+4) {
-    display: grid;
-  }
-
   .tutors-card__top {
-    column-gap: 9px;
+    column-gap: 7px;
     row-gap: 20px;
     grid-template-rows: 1fr 20px auto;
     grid-template-columns: auto;
@@ -778,14 +834,16 @@ section.tutors .section-title {
     margin-left: 15px;
   }
 
-  .tutors-card.became-tutor {
+  .tutors-card.became-tutor,
+  .tutors-card.give-feedback {
     height: auto;
     border: 2px solid #0b2235;
     display: flex;
     gap: 32px;
   }
 
-  .tutors-card.became-tutor p {
+  .tutors-card.became-tutor p,
+  .tutors-card.give-feedback p {
     font-size: 24px;
     font-weight: 400;
   }
@@ -1181,13 +1239,67 @@ section.tutors .section-title {
   }
 }
 
-section.feedback {
+.feedback {
   margin-bottom: 40px;
 }
 
-section.feedback .btn-wrap,
-section.feedback .tutors-card__tutor {
+.feedback .btn-wrap,
+.feedback .tutors-card__tutor {
   display: none;
+}
+
+@media(min-width:992px) {
+  .feedback {
+    margin-bottom: 55px;
+  }
+
+  .feedback .tutors-card__top {
+    grid-template-rows: 1fr 20px;
+    grid-template-columns: auto;
+    grid-template-areas: "img name""rate rate";
+  }
+
+  .feedback .tutors-card__name {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  .feedback .btn-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .feedback .btn-wrap .btn {
+    width: 100%;
+  }
+
+  .feedback .btn.mob_btn {
+    display: none;
+  }
+
+  .feedback .tutors-card__wrap {
+    margin-bottom: 120px;
+  }
+
+  .feedback .tutors-card__course {
+    grid-template-areas: "link link""title title""curs_name curs_name";
+    margin-bottom: 20px;
+  }
+
+  .feedback .tutors-card__course-link {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .feedback .tutors-card__tutor {
+    display: block;
+  }
+
+  .feedback .tutors-card__tutor p:first-child {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
 }
 
 .faq {
@@ -1270,58 +1382,6 @@ section.feedback .tutors-card__tutor {
 }
 
 @media(min-width:992px) {
-  section.feedback {
-    margin-bottom: 55px;
-  }
-
-  section.feedback .tutors-card__top {
-    grid-template-rows: 1fr 20px;
-    grid-template-columns: auto;
-    grid-template-areas: "img name""rate rate";
-  }
-
-  section.feedback .tutors-card__name {
-    grid-row-start: 1;
-    grid-column-start: 2;
-  }
-
-  section.feedback .btn-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  section.feedback .btn-wrap .btn {
-    width: 100%;
-  }
-
-  section.feedback .btn.mob_btn {
-    display: none;
-  }
-
-  section.feedback .tutors-card__wrap {
-    margin-bottom: 120px;
-  }
-
-  section.feedback .tutors-card__course {
-    grid-template-areas: "link link""title title""curs_name curs_name";
-    margin-bottom: 20px;
-  }
-
-  section.feedback .tutors-card__course-link {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-  section.feedback .tutors-card__tutor {
-    display: block;
-  }
-
-  section.feedback .tutors-card__tutor p:first-child {
-    font-size: 12px;
-    margin-bottom: 5px;
-  }
-
   .faq {
     margin-bottom: 120px;
   }
@@ -1428,6 +1488,23 @@ section.feedback .tutors-card__tutor {
   border: 1px solid #0b2235;
 }
 
+.form .custom-select.invalid {
+  border: 1px solid rgba(238, 66, 66, .7);
+}
+
+.form .custom-select-required {
+  position: relative;
+}
+
+.form .custom-select-required::before {
+  content: "*";
+  position: absolute;
+  top: -28px;
+  right: 5px;
+  color: rgba(253, 70, 14, .7);
+  font-size: 15px;
+}
+
 .form input[type=phone] {
   padding-left: 55px;
 }
@@ -1509,7 +1586,6 @@ section.feedback .tutors-card__tutor {
 @media(min-width:992px) {
   .form {
     gap: 20px;
-    display: grid;
     grid-template-columns: 1fr 1fr 33%;
     grid-template-areas: "phone email course""name name wherefrom""text text text";
   }
@@ -1846,5 +1922,180 @@ section.feedback .tutors-card__tutor {
 
   .footer .col:nth-child(4) .btn-wrap {
     display: grid;
+  }
+}
+
+.popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 999999;
+  padding-top: 15%;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: none;
+  overflow-y: scroll;
+}
+
+.popup-body {
+  max-width: 700px;
+  margin: 0 auto 100px;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #0b2235;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.popup__close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.popup__close::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #232523;
+  height: 2px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transform: rotate(45deg);
+}
+
+.popup__close::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #232523;
+  height: 2px;
+  top: 50%;
+  transform: translate(0, -50%);
+  transform: rotate(-45deg);
+}
+
+.feedback-popup .popup-body {
+  display: grid;
+  grid-template-areas: "img name""text text";
+  row-gap: 20px;
+  grid-template-columns: 40px repeat(3, 1fr);
+}
+
+.feedback-popup__img {
+  grid-area: img;
+  width: 60px;
+}
+
+.feedback-popup__name {
+  grid-area: name;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 12px;
+  margin-left: 30px;
+  grid-column: 2/5;
+}
+
+.feedback-popup__text {
+  grid-area: text;
+  font-size: 14px;
+  line-height: 18px;
+  grid-column: 1/6;
+}
+
+.feedback-popup__item {
+  grid-row: 3;
+  grid-column: auto;
+  grid-column: 1/3;
+}
+
+.feedback-popup__item:last-child {
+  grid-column: 3/5;
+}
+
+.feedback-popup__item p:first-child {
+  font-size: 18px;
+  color: #fd460e;
+  margin-bottom: 10px;
+}
+
+.feedback-popup__item p:last-child {
+  font-size: 16px;
+}
+
+.feedback-popup .tutors-card__rate {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+@media(min-width:576px) {
+  .feedback-popup__name {
+    margin-top: 6px;
+  }
+}
+
+@media(min-width:992px) {
+  .feedback-popup .popup-body {
+    display: grid;
+    grid-template-areas: "img name""text text";
+    row-gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px;
+  }
+
+  .feedback-popup__img {
+    width: 100px;
+  }
+
+  .feedback-popup__name {
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 15px;
+    margin-left: -26px;
+    grid-column: 2/4;
+  }
+
+  .feedback-popup__text {
+    grid-area: text;
+    font-size: 20px;
+    line-height: 23px;
+    grid-column: 1/6;
+  }
+
+  .feedback-popup__item {
+    grid-row: 3;
+  }
+
+  .feedback-popup__item:last-child {
+    grid-column: 3;
+  }
+
+  .feedback-popup__item p:first-child {
+    font-size: 18px;
+    line-height: 21px;
+    color: #fd460e;
+    margin-bottom: 22px;
+  }
+
+  .feedback-popup__item p:last-child {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .feedback-popup .tutors-card__rate {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 65px;
+    margin-left: -26px;
   }
 }
