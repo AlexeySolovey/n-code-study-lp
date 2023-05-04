@@ -195,6 +195,10 @@ ul {
     line-height: 34px;
     margin-bottom: 40px;
   }
+
+  .action-btn {
+    width: 278px;
+  }
 }
 
 @media screen and (min-width:992px) {
@@ -220,7 +224,7 @@ ul {
 
 .header {
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
   position: fixed;
   z-index: 99999;
   background-color: #fff;
@@ -236,6 +240,7 @@ ul {
   padding: 0 20px;
   max-width: 1174px;
   margin: 0 auto;
+  column-gap: 47px;
 }
 
 .header .mob-menu {
@@ -286,6 +291,10 @@ ul {
   padding: 14px 18px 14px 10px;
   border: 1px solid #0b2235;
   border-radius: 5px;
+}
+
+.header.scrolled {
+  border-bottom: 1px solid #bdbdbd;
 }
 
 .menu__nav {
@@ -381,14 +390,13 @@ ul {
   display: none;
 }
 
-@media screen and (min-width:1160px) {
+@media screen and (min-width:992px) {
   .hamburger-menu {
     display: none;
   }
 
   .menu {
     align-items: flex-end;
-    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -398,6 +406,7 @@ ul {
     list-style: none;
     font-family: "Venus Rising", sans-serif;
     font-weight: 700;
+    width: 100%;
   }
 
   .menu__item a {
@@ -412,6 +421,12 @@ ul {
     grid-template-areas: "logo menu";
   }
 
+  .header .items-wrap {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
   .logo {
     width: 80px;
     height: auto;
@@ -419,8 +434,9 @@ ul {
 
   .header__items {
     display: flex;
-    gap: 60px;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .header__items .phone {
@@ -653,6 +669,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 3px;
+  cursor: pointer;
 }
 
 .tutors-card__rate i {

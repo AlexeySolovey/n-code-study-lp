@@ -13,33 +13,44 @@
     const form = document.querySelector('#callbackForm');
     const btn = document.querySelector('.callback-form .btn')
 
-    btn.addEventListener('click', function (event) {
-        event.preventDefault();
-        const inputs = form.querySelectorAll('input');
-        inputs.forEach(function (input) {
-            if (!input.checkValidity()) {
-                input.classList.add('invalid');
-            }
-        });
-    })
+    if (form) {
+        btn.addEventListener('click', function (event) {
+            event.preventDefault();
+            const inputs = form.querySelectorAll('input');
+            inputs.forEach(function (input) {
+                if (!input.checkValidity()) {
+                    input.classList.add('invalid');
+                }
+            });
+        })
+    }
+
 }());
 
 
 (function roadmap() {
+
     let roadmapItems = document.querySelector(".roadmap-step");
-    roadmapItems = Array.from(roadmapItems.children);
+
 
     let roadmapInfoItems = document.querySelector(".roadmap-step-info");
-    roadmapInfoItems = Array.from(roadmapInfoItems.children);
 
-    roadmapItems.forEach((item, index) => {
-        item.addEventListener('click', function () {
-            roadmapItems.forEach(item => item.classList.remove("active"));
-            roadmapInfoItems.forEach(item => item.classList.remove("active"));
-            roadmapInfoItems[index].classList.add("active");
-            item.classList.add("active");
-        })
-    });
+
+    if (roadmapItems && roadmapInfoItems) {
+
+        roadmapItems = Array.from(roadmapItems.children);
+        roadmapInfoItems = Array.from(roadmapInfoItems.children);
+
+        roadmapItems.forEach((item, index) => {
+            item.addEventListener('click', function () {
+                roadmapItems.forEach(item => item.classList.remove("active"));
+                roadmapInfoItems.forEach(item => item.classList.remove("active"));
+                roadmapInfoItems[index].classList.add("active");
+                item.classList.add("active");
+            })
+        });
+    }
+
 }());
 
 (function accordion() {
@@ -60,10 +71,26 @@
 }());
 
 (function customSelect() {
-    NiceSelect.bind(document.getElementById("course"));
-    NiceSelect.bind(document.getElementById("wherefrom"));
+    const course = document.getElementById("course")
+    const wherefrom = document.getElementById("wherefrom")
 
-    let selectsPlaceholder = document.querySelectorAll('.nice-select .current');
-    selectsPlaceholder[0].innerHTML = 'Оберіть напрямок';
-    selectsPlaceholder[1].innerHTML = 'Звідки ви дізнались про N-Code?';
+    if (course && wherefrom) {
+        NiceSelect.bind(wherefrom);
+        NiceSelect.bind(course);
+
+        let selectsPlaceholder = document.querySelectorAll('.nice-select .current');
+        selectsPlaceholder[0].innerHTML = 'Оберіть напрямок';
+        selectsPlaceholder[1].innerHTML = 'Звідки ви дізнались про N-Code?';
+    }
 }());
+
+(function headerScroll() {
+    const fixedElement = document.querySelector('#header');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 0) {
+            fixedElement.classList.add('scrolled');
+        } else {
+            fixedElement.classList.remove('scrolled');
+        }
+    });
+}())

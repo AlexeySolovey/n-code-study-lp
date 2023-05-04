@@ -1,0 +1,20 @@
+.tutors-page .tutors-card {
+  display: grid!important;
+}
+
+.tutors-page .give-feedback.btn.btn_blue {
+  display: none;
+}
+
+.tutors-page .section-title-wrap {
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2,1fr);
+}
+
+.tutors-page .back-link {
+  order: 2;
+}
+
+.tutors-page .section-title {
+  order: 1;
+}
