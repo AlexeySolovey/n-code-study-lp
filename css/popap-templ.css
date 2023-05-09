@@ -1,0 +1,118 @@
+.popup.popap-templ {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: #fff;
+    padding-top: 55px;
+    display: none;
+    z-index: 10;
+}
+
+.popup.popap-templ select[name=tutor] {
+    grid-area: tutor;
+}
+
+.popup.popap-templ label[for=rate] {
+    grid-area: rate;
+}
+
+.popup.popap-templ label[for=social] {
+    grid-area: social;
+}
+
+.popup.popap-templ .popup-body {
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+}
+
+.popup.popap-templ .popup__title {
+    font-family: "Venus Rising", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    color: #232523;
+    margin-bottom: 40px;
+}
+
+.popup.popap-templ .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup.popap-templ .form .from__btn {
+    margin-top: 20px;
+}
+
+.popup.popap-templ .back-link {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.popup.popap-templ .popup__close {
+    display: none;
+}
+
+.popup.popap-templ .form-rate {
+    width: 100%;
+    box-sizing: border-box;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #0b2235;
+    padding-left: 20px;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .0509803922);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+@media(min-width:576px) {
+    .popup.popup.popap-templ .form-rate {
+        height: 52px;
+    }
+}
+
+@media(min-width:992px) {
+    .popup.popup.popap-templ {
+        background-color: rgba(0, 0, 0, .5);
+        padding-top: 15%;
+        z-index: 99999;
+    }
+
+    .popup.popup.popap-templ .popup__close {
+        display: block;
+        width: 20px;
+        height: 20px;
+        right: 40px;
+        top: 40px;
+    }
+
+    .popup.popup.popap-templ select[name=tutor] {
+        grid-area: tutor;
+    }
+
+    .popup.popup.popap-templ .form textarea[name=comment] {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .popup.popup.popap-templ .popup-body {
+        max-width: 961px;
+        border: 1px solid #0b2235;
+        border-radius: 10px;
+        height: auto;
+    }
+
+    .popup.popup.popap-templ .form {
+        display: grid;
+        grid-template-areas: "name name course""phone email tutor""text text rate""text text social";
+        margin-bottom: 0;
+    }
+
+    .popup.popup.popap-templ .back-link {
+        display: none;
+    }
+
+    .popup.popup.popap-templ .popup__title {
+        text-align: center;
+    }
+}

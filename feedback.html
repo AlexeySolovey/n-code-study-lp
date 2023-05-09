@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/nice-select2.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/popap-templ.css">
     <link rel="stylesheet" href="css/feedback-page.css">
 </head>
 <title>N-Code</title>
@@ -30,13 +31,13 @@
                         </div>
                     </div>
                     <ul class="menu__nav">
-                        <li class="menu__item"><a href="/">Головна</a>
+                        <li class="menu__item"><a href="index.html">Головна</a>
                         </li>
                         <li class="menu__item"><a href="#">Про нас</a>
                         </li>
                         <li class="menu__item"><a href="#">Контакти</a>
                         </li>
-                        <li class="menu__item"><a href="#">Кабинет</a>
+                        <li class="menu__item"><a href="#">Кабiнет</a>
                         </li>
                     </ul>
                     <div class="header__items"><a class="phone" href="tel:+380670000000">+380670000000</a>
@@ -66,14 +67,14 @@
                     </li>
                     <li class="menu__item"><a href="#">Контакти </a>
                     </li>
-                    <li class="menu__item"><a href="#">Кабинет</a>
+                    <li class="menu__item"><a href="#">Кабiнет</a>
                     </li>
                 </ul>
             </div>
         </header>
         <div class="section-title-wrap"><a class="back-link" href="index.html">Назад</a>
             <h2 class="section-title">ВСi вiдгуки</h2>
-            <button class="action-btn btn btn_blue">Залишити відгук</button>
+            <button class="action-btn give-feedback btn btn_blue">Залишити відгук</button>
         </div>
         <div class="tutors-card__wrap">
             <div class="tutors-card give-feedback">
@@ -555,7 +556,7 @@
                     <p class="footer__title">Хочете, щоб з вами зв’язались?</p><a class="btn_blue footer__btn btn"
                         href="#">залишити заявку</a>
                     <div class="btn-wrap"><a class="btn_blue footer__btn btn" href="#">Стати МЕНТОРОМ</a><a
-                            class="btn_blue footer__btn btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
+                            class="btn_blue footer__btn action-btn give-feedback btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
                     </div>
                     <div class="footer__sup-pay">
                         <p>Підтримка платежів</p>
@@ -570,7 +571,7 @@
                 <div class="col">
                     <p class="footer__title">Школа
                         <ul class="footer__list">
-                            <li><a href="">Про нас</a>
+                            <li><a href="index.html">Про нас</a>
                             </li>
                             <li><a href="tutors.html">Викладачі</a>
                             </li>
@@ -604,8 +605,9 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="btn-wrap"><a class="btn_blue footer__btn btn" href="#">Стати МЕНТОРОМ</a><a
-                            class="btn_blue footer__btn action-btn btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
+                    <div class="btn-wrap"><a class="action-btn became-tutor btn_blue footer__btn btn" href="#">Стати
+                            МЕНТОРОМ</a><a class="btn_blue footer__btn action-btn give-feedback btn" href="#">ЗАЛИШИТИ
+                            ВІДГУК</a>
                     </div>
                 </div>
             </div>
@@ -619,7 +621,7 @@
             <div class="footer__mob-top">
                 <p class="footer__title">Школа
                     <ul class="footer__list">
-                        <li><a href="">Про нас</a>
+                        <li><a href="index.html">Про нас</a>
                         </li>
                         <li><a href="tutors.html">Викладачі</a>
                         </li>
@@ -665,7 +667,7 @@
             </div>
         </div>
     </footer>
-    <div class="popup give-feedback-popup">
+    <div class="popup give-feedback-popup popap-templ">
         <div class="popup-body">
             <div class="popup__close"></div>
             <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2><a class="back-link">Назад </a>
@@ -692,7 +694,7 @@
                     <option value="Светлана Светленко">Светлана Светленко</option>
                 </select>
                 <div class="form-rate required">
-                    <div class="tutors-card__rate"><i class="mentors__star fa-solid fa-star"></i><i
+                    <div class="tutors-card__rate" data-stars="1"><i class="mentors__star fa-solid fa-star"></i><i
                             class="mentors__star fa-regular fa-star"></i><i
                             class="mentors__star fa-regular fa-star"></i><i
                             class="mentors__star fa-regular fa-star"></i><i
@@ -709,6 +711,8 @@
             </form>
         </div>
     </div>
+    <script src="js/star.js"></script>
+    <script src="js/nice-select2.js"></script>
     <div class="popup feedback-popup">
         <div class="popup-body">
             <div class="popup__close"></div>
@@ -716,7 +720,7 @@
                 <img src="img//tutors-img.svg" alt="tutor">
             </div>
             <p class="feedback-popup__name">Им’я Прізвище</p>
-            <div class="tutors-card__rate" data-stars="1"><i class="mentors__star fa-solid fa-star"></i><i
+            <div class="tutors-card__rate"><i class="mentors__star fa-solid fa-star"></i><i
                     class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i><i
                     class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i>
             </div>
@@ -743,7 +747,6 @@
             </div>
         </div>
     </div>
-    <script src="js/star.js"></script>
 </body>
 
 </html>

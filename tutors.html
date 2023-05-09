@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/nice-select2.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/feedback-page.css">
+    <link rel="stylesheet" href="css/popap-templ.css">
     <link rel="stylesheet" href="css/became-mentor-popup.css">
 </head>
 <title>N-Code</title>
@@ -30,13 +32,13 @@
                         </div>
                     </div>
                     <ul class="menu__nav">
-                        <li class="menu__item"><a href="/">Головна</a>
+                        <li class="menu__item"><a href="index.html">Головна</a>
                         </li>
                         <li class="menu__item"><a href="#">Про нас</a>
                         </li>
                         <li class="menu__item"><a href="#">Контакти</a>
                         </li>
-                        <li class="menu__item"><a href="#">Кабинет</a>
+                        <li class="menu__item"><a href="#">Кабiнет</a>
                         </li>
                     </ul>
                     <div class="header__items"><a class="phone" href="tel:+380670000000">+380670000000</a>
@@ -66,14 +68,14 @@
                     </li>
                     <li class="menu__item"><a href="#">Контакти </a>
                     </li>
-                    <li class="menu__item"><a href="#">Кабинет</a>
+                    <li class="menu__item"><a href="#">Кабiнет</a>
                     </li>
                 </ul>
             </div>
         </header>
         <div class="section-title-wrap"><a class="back-link" href="index.html">Назад</a>
             <h2 class="section-title">ВСi МЕНТОРИ</h2>
-            <button class="action-btn btn btn_blue">Стати МЕНТОРОМ</button>
+            <button class="action-btn became-tutor btn btn_blue">Стати МЕНТОРОМ</button>
         </div>
         <div class="tutors-card__wrap">
             <div class="tutors-card give-feedback action-btn">
@@ -491,7 +493,7 @@
                     <p class="footer__title">Хочете, щоб з вами зв’язались?</p><a class="btn_blue footer__btn btn"
                         href="#">залишити заявку</a>
                     <div class="btn-wrap"><a class="btn_blue footer__btn btn" href="#">Стати МЕНТОРОМ</a><a
-                            class="btn_blue footer__btn btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
+                            class="btn_blue footer__btn action-btn give-feedback btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
                     </div>
                     <div class="footer__sup-pay">
                         <p>Підтримка платежів</p>
@@ -506,7 +508,7 @@
                 <div class="col">
                     <p class="footer__title">Школа
                         <ul class="footer__list">
-                            <li><a href="">Про нас</a>
+                            <li><a href="index.html">Про нас</a>
                             </li>
                             <li><a href="tutors.html">Викладачі</a>
                             </li>
@@ -540,8 +542,9 @@
                     </div>
                 </div>
                 <div class="col">
-                    <div class="btn-wrap"><a class="btn_blue footer__btn btn" href="#">Стати МЕНТОРОМ</a><a
-                            class="btn_blue footer__btn action-btn btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
+                    <div class="btn-wrap"><a class="action-btn became-tutor btn_blue footer__btn btn" href="#">Стати
+                            МЕНТОРОМ</a><a class="btn_blue footer__btn action-btn give-feedback btn" href="#">ЗАЛИШИТИ
+                            ВІДГУК</a>
                     </div>
                 </div>
             </div>
@@ -555,7 +558,7 @@
             <div class="footer__mob-top">
                 <p class="footer__title">Школа
                     <ul class="footer__list">
-                        <li><a href="">Про нас</a>
+                        <li><a href="index.html">Про нас</a>
                         </li>
                         <li><a href="tutors.html">Викладачі</a>
                         </li>
@@ -601,51 +604,107 @@
             </div>
         </div>
     </footer>
-</body>
-<div class="popup give-feedback-popup became-mentor-popup">
-    <div class="popup-body">
-        <div class="popup__close"></div>
-        <div class="popup__title-group">
-            <h2 class="popup__title">СТАТИ МЕНТОРОМ</h2>
-            <p class="popup__sub-title">Залиште ваші контактні дані, і ми вам обов'язково зателефонуємо!</p>
-        </div><a class="back-link">Назад </a>
-        <form class="form" action="POST" id="feedbackForm">
-            <label class="required" for="name">
-                <input type="text" name="name" placeholder="Ім’я та Прізвище" required>
-            </label>
-            <label class="required" for="work">
-                <input type="text" name="work" placeholder="Місце роботи" required>
-            </label>
-            <label class="required" for="phone">
-                <input type="phone" name="phone" placeholder="Номер телефону" required>
-            </label>
-            <label class="required" for="email">
-                <input type="email" name="email" placeholder="E-mail" required>
-            </label>
-            <label class="required" for="file">
-                <input type="file" name="file" accept=".doc, .docx, .pdf" placeholder="Прикріпити файл з резюме"
-                    required>
-            </label>
-            <label class="required" for="place">
-                <input type="text" name="place" placeholder="Посада" required>
-            </label>
-            <label class="required" for="linkedIn">
-                <input type="text" name="linkedIn" placeholder="LinkedIn" required>
-            </label>
-            <label class="required" for="social">
-                <input type="text" name="social" placeholder="Соціальна мережа" required>
-            </label>
-            <label class="required" for="social">
-                <input type="" name="social" placeholder="Соціальна мережа" required>
-            </label>
-            <textarea name="comment" placeholder="Коментар (не обов’язково)"></textarea>
-            <div class="from__btn">
-                <button class="btn" type="submit">Надіслати ЗАЯВКУ</button>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head></head>
+
+    <body>
+        <div class="popup popap-templ became-mentor-popup">
+            <div class="popup-body">
+                <div class="popup__close"></div>
+                <div class="popup__title-group">
+                    <h2 class="popup__title">СТАТИ МЕНТОРОМ</h2>
+                    <p class="popup__sub-title">Залиште ваші контактні дані, і ми вам обов'язково зателефонуємо!</p>
+                </div><a class="back-link">Назад </a>
+                <form class="form" action="POST" id="feedbackForm">
+                    <label class="required" for="name">
+                        <input type="text" name="name" placeholder="Ім’я та Прізвище" required>
+                    </label>
+                    <label class="required" for="work">
+                        <input type="text" name="work" placeholder="Місце роботи" required>
+                    </label>
+                    <label class="required" for="phone">
+                        <input type="phone" name="phone" placeholder="Номер телефону" required>
+                    </label>
+                    <label class="required" for="email">
+                        <input type="email" name="email" placeholder="E-mail" required>
+                    </label>
+                    <label class="required" for="file">
+                        <input type="file" name="file" accept=".doc, .docx, .pdf" placeholder="Прикріпити файл з резюме"
+                            required>
+                    </label>
+                    <label class="required" for="place">
+                        <input type="text" name="place" placeholder="Посада" required>
+                    </label>
+                    <label class="required" for="linkedIn">
+                        <input type="text" name="linkedIn" placeholder="LinkedIn" required>
+                    </label>
+                    <label class="required" for="social">
+                        <input type="text" name="social" placeholder="Соціальна мережа" required>
+                    </label>
+                    <label class="required" for="social">
+                        <input type="" name="social" placeholder="Соціальна мережа" required>
+                    </label>
+                    <textarea name="comment" placeholder="Коментар (не обов’язково)"></textarea>
+                    <div class="from__btn">
+                        <button class="btn" type="submit">Надіслати ЗАЯВКУ</button>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
+    </body>
+
+    </html>
+    <div class="popup give-feedback-popup popap-templ">
+        <div class="popup-body">
+            <div class="popup__close"></div>
+            <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2><a class="back-link">Назад </a>
+            <form class="form" action="POST" id="feedbackForm">
+                <label class="required" for="name">
+                    <input type="text" name="name" placeholder="Ім’я" required>
+                </label>
+                <label class="required" for="phone">
+                    <input type="phone" name="phone" placeholder="Номер телефона" required>
+                </label>
+                <label class="required" for="email">
+                    <input type="email" name="email" placeholder="E-mail" required>
+                </label>
+                <select class="select-course custom-select custom-select-required" name="course" id="courseFeed">
+                    <option value=""></option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JS">JS</option>
+                </select>
+                <select class="custom-select custom-select-required" name="tutor" id="tutor">
+                    <option value=""></option>
+                    <option value="Иван Иваненко">Иван Иваненко</option>
+                    <option value="Петр Петренко">Петр Петренко</option>
+                    <option value="Светлана Светленко">Светлана Светленко</option>
+                </select>
+                <div class="form-rate required">
+                    <div class="tutors-card__rate" data-stars="1"><i class="mentors__star fa-solid fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i><i
+                            class="mentors__star fa-regular fa-star"></i>
+                    </div>
+                </div>
+                <label class="required" for="social">
+                    <input type="" name="social" placeholder="Соціальна мережа" required>
+                </label>
+                <textarea name="comment" placeholder="Повідомлення"></textarea>
+                <div class="from__btn">
+                    <button class="btn" type="submit">Надіслати ЗАЯВКУ</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-<script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
-<script src="js/popup.js"></script>
+    <script src="js/star.js"></script>
+    <script src="js/nice-select2.js"></script>
+    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/script.js"></script>
+</body>
 
 </html>

@@ -16,7 +16,6 @@
 (function feedbackPopupSelect() {
     const courseFeed = document.getElementById("courseFeed");
     const tutor = document.getElementById("tutor");
-
     if (courseFeed && tutor) {
         NiceSelect.bind(courseFeed);
         NiceSelect.bind(tutor);
@@ -73,11 +72,14 @@
 
     const givePopup = document.querySelector('.give-feedback-popup')
     // let allGiveFeedvack = [...document.querySelectorAll('.give-feedback')]
-    let allGiveFeedvack = [...document.querySelectorAll('.action-btn')]
-    allGiveFeedvack.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            givePopup.style.display = 'block'
+    let allGiveFeedvack = [...document.querySelectorAll('.action-btn.give-feedback')]
+    if (allGiveFeedvack) {
+        allGiveFeedvack.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                givePopup.style.display = 'block'
+            })
         })
-    })
+    }
+
 }())

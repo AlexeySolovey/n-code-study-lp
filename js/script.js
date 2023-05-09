@@ -24,14 +24,11 @@
             });
         })
     }
-
 }());
-
 
 (function roadmap() {
 
     let roadmapItems = document.querySelector(".roadmap-step");
-
 
     let roadmapInfoItems = document.querySelector(".roadmap-step-info");
 
@@ -53,8 +50,8 @@
 
 }());
 
-(function accordion() {
-    let accordionItem = document.querySelectorAll(".accordion__item")
+function accordion(selector) {
+    let accordionItem = document.querySelectorAll(selector)
     accordionItem.forEach(item => {
         item.addEventListener("click", function () {
             if (this.classList.contains("active")) {
@@ -68,7 +65,10 @@
             }
         })
     })
-}());
+}
+
+accordion(".accordion__item");
+accordion(".header-card__mob .header-card");
 
 (function customSelect() {
     const course = document.getElementById("course")
@@ -93,4 +93,28 @@
             fixedElement.classList.remove('scrolled');
         }
     });
-}())
+}());
+
+
+(function becomeMentorPopup() {
+    const becomeMentorPopup = document.querySelector('.popup.became-mentor-popup')
+    const becomeMentorPopupLink = document.querySelector('.tutors-card.became-tutor')
+    let becomeMentorPopupBtn = document.querySelectorAll('.action-btn.became-tutor')
+    becomeMentorPopupBtn = [...becomeMentorPopupBtn]
+
+    if (becomeMentorPopupBtn) {
+        becomeMentorPopupBtn.forEach(item => {
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                becomeMentorPopup.style.display = "block"
+            })
+        })
+    }
+
+    if (becomeMentorPopupLink) {
+        becomeMentorPopupLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            becomeMentorPopup.style.display = "block"
+        })
+    }
+}());

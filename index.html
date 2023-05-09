@@ -10,71 +10,157 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/nice-select2.css">
+  <link rel="stylesheet" href="css/popap-templ.css">
+  <link rel="stylesheet" href="css/feedback-page.css">
+  <link rel="stylesheet" href="css/became-mentor-popup.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <title>N-Code</title>
 
 <body>
-  <div class="content-container">
-    <header class="header" id="header">
-      <div class="container">
-        <div class="logo">
-          <a href="index.html">
-            <img src="img/logo.svg" alt="logo">
-          </a>
-        </div>
-        <menu class="menu">
-          <div class="hamburger-menu">
-            <div class="hamburger"><span> </span>
-            </div>
-          </div>
-          <ul class="menu__nav">
-            <li class="menu__item"><a href="/">Головна</a>
-            </li>
-            <li class="menu__item"><a href="#">Про нас</a>
-            </li>
-            <li class="menu__item"><a href="#">Контакти</a>
-            </li>
-            <li class="menu__item"><a href="#">Кабинет</a>
-            </li>
-          </ul>
-          <div class="header__items"><a class="phone" href="tel:+380670000000">+380670000000</a>
-            <div class="items-wrap"><a class="action-btn btn btn_blue" href="#callback-form">Замовити дзвінок</a>
-              <div class="language">
-                <div class="language__ico">
-                  <img src="img/ukraine.svg" alt="ukraine">
-                </div>
-              </div>
-            </div>
-          </div>
-        </menu>
+  <header class="header" id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="img/logo.svg" alt="logo">
+        </a>
       </div>
-      <div class="mob-menu">
-        <div class="header__items">
-          <div class="language">
-            <div class="language__ico">
-              <img src="img/ukraine.svg" alt="ukraine">
-            </div>
+      <menu class="menu">
+        <div class="hamburger-menu">
+          <div class="hamburger"><span> </span>
           </div>
         </div>
         <ul class="menu__nav">
-          <li class="menu__item"><a href="/">Головна</a>
+          <li class="menu__item"><a href="index.html">Головна</a>
           </li>
           <li class="menu__item"><a href="#">Про нас</a>
           </li>
-          <li class="menu__item"><a href="#">Контакти </a>
+          <li class="menu__item"><a href="#">Контакти</a>
           </li>
-          <li class="menu__item"><a href="#">Кабинет</a>
+          <li class="menu__item"><a href="#">Кабiнет</a>
           </li>
         </ul>
-      </div>
-    </header>
-    <div class="slider">
-      <div class="slide">
-        <h1 class="title">N-CODE <span class="title_small">Місце зустрічі з твоїм ментором</span></h1>
-        <img src="./img/main-slide.png" alt="">
-      </div><a class="btn" href="#">Отримати консультацію менеджера</a>
+        <div class="header__items"><a class="phone" href="tel:+380670000000">+380670000000</a>
+          <div class="items-wrap"><a class="action-btn btn btn_blue" href="#callback-form">Замовити дзвінок</a>
+            <div class="language">
+              <div class="language__ico">
+                <img src="img/ukraine.svg" alt="ukraine">
+              </div>
+            </div>
+          </div>
+        </div>
+      </menu>
     </div>
+    <div class="mob-menu">
+      <div class="header__items">
+        <div class="language">
+          <div class="language__ico">
+            <img src="img/ukraine.svg" alt="ukraine">
+          </div>
+        </div>
+      </div>
+      <ul class="menu__nav">
+        <li class="menu__item"><a href="/">Головна</a>
+        </li>
+        <li class="menu__item"><a href="#">Про нас</a>
+        </li>
+        <li class="menu__item"><a href="#">Контакти </a>
+        </li>
+        <li class="menu__item"><a href="#">Кабiнет</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="slider">
+    <div class="slide">
+      <h1 class="title">N-CODE <span class="title_small">Місце зустрічі з твоїм ментором</span></h1>
+    </div>
+  </div>
+  <div class="content-container">
+    <div class="header-card__mob">
+      <div class="header-card-wrap">
+        <div class="header-card">
+          <div class="header-card__title-wrap">
+            <p class="header-card__title">Допомогаємо розібратись у Front-End</p><span
+              class="header-card__arrow"></span>
+          </div>
+          <p class="header-card__text">Навчання з менторами з 0 до профі, навчання для дітей</p>
+        </div>
+        <div class="header-card">
+          <div class="header-card__title-wrap">
+            <p class="header-card__title">Підтримуємо при пошуку роботи</p><span class="header-card__arrow"></span>
+          </div>
+          <p class="header-card__text">Підготовка до співбесіди, формування резюме, напрацювання портфоліо</p>
+        </div>
+        <div class="header-card">
+          <div class="header-card__title-wrap">
+            <p class="header-card__title">Ефективність та швидкий ріст</p><span class="header-card__arrow"></span>
+          </div>
+          <p class="header-card__text">Навчання один на один з ментором, 80% практики 20% теорії, розбір коду</p>
+        </div>
+        <div class="mob_block">
+          <div class="header-card">
+            <div class="header-card__title-wrap">
+              <p class="header-card__title">Впізнаєте в цих питаннях себе?</p><span class="header-card__arrow"></span>
+            </div>
+            <ul class="header-card__text">
+              <li>Хочеш розібратись у Javascript, React, та супутніх технологіях(Redux, MobX, React Query, Apollo
+                GraphQl)?</li>
+              <li>Світчер чи джун і не знаєш з чого почати професійний розвиток в галузі Front-End?</li>
+              <li>Складно знайти першу роботу або не можеш розібратись з тестовим?</li>
+              <li>Ваша дитина хоче вчитись програмувати і потрібен професійний ментор?</li>
+              <li>Потрібне кодрев'ю чи допомога з Pet проектом?</li>
+              <li>Хочеш отримати нову високооплачувану професію, але не знаєш з чого почати?</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-card__desktop">
+      <div class="header-card-wrap">
+        <div class="header-card">
+          <div class="header-card__title-wrap">
+            <p class="header-card__title">Допомогаємо розібратись у Front-End</p><span
+              class="header-card__arrow"></span>
+          </div>
+          <p class="header-card__text">Навчання з менторами з 0 до профі, навчання для дітей</p>
+        </div>
+        <div class="header-card">
+          <div class="header-card__title-wrap">
+            <p class="header-card__title">Підтримуємо при пошуку роботи</p><span class="header-card__arrow"></span>
+          </div>
+          <p class="header-card__text">Підготовка до співбесіди, формування резюме, напрацювання портфоліо</p>
+        </div>
+        <div class="header-card">
+          <div class="header-card__title-wrap">
+            <p class="header-card__title">Ефективність та швидкий ріст</p><span class="header-card__arrow"></span>
+          </div>
+          <p class="header-card__text">Навчання один на один з ментором, 80% практики 20% теорії, розбір коду</p>
+        </div>
+      </div>
+    </div>
+    <section class="consult">
+      <div class="container">
+        <div class="col">
+          <div class="consult__title">
+            <h2>Впізнаєте в цих питаннях себе?</h2>
+            <p class="consult__sub-title">Якщо так, допоможемо знайти перевіреного репетитора з програмування для Вас чи
+              вашої дитини</p>
+          </div><a class="consult__btn btn" href="#">Отримати консультацію менеджера</a>
+        </div>
+        <div class="col">
+          <ul class="consult__list">
+            <li>Хочеш розібратись у Javascript, React, та супутніх технологіях(Redux, MobX, React Query, Apollo
+              GraphQl)?</li>
+            <li>Світчер чи джун і не знаєш з чого почати професійний розвиток в галузі Front-End?</li>
+            <li>Складно знайти першу роботу або не можеш розібратись з тестовим?</li>
+            <li>Ваша дитина хоче вчитись програмувати і потрібен професійний ментор?</li>
+            <li>Потрібне кодрев'ю чи допомога з Pet проектом?</li>
+            <li>Хочеш отримати нову високооплачувану професію, але не знаєш з чого почати?</li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section class="advantages" id="advantages">
       <h2 class="section-title">НАШi ПЕРЕВАГИ</h2>
       <div class="container">
@@ -106,7 +192,8 @@
     </section>
     <section class="tutors">
       <div class="section-title-wrap">
-        <h2 class="section-title">ТОП МЕНТОРiВ/РЕПЕТИТОРIВ</h2><a class="more-info-link">Всі ментори</a>
+        <h2 class="section-title">ТОП МЕНТОРiВ/РЕПЕТИТОРIВ</h2><a class="more-info-link" href="tutors.html">Всі
+          ментори</a>
       </div>
       <div class="tutors-card__wrap">
         <div class="tutors-card">
@@ -379,7 +466,7 @@
     </section>
     <section class="feedback">
       <div class="section-title-wrap">
-        <h2 class="section-title">ВiДГУКИ</h2><a class="more-info-link">Всі відгуки</a>
+        <h2 class="section-title">ВiДГУКИ</h2><a class="more-info-link" href="feedback.html">Всі відгуки</a>
       </div>
       <div class="tutors-card__wrap">
         <div class="tutors-card">
@@ -564,7 +651,7 @@
             </div>
           </div>
         </div>
-        <div class="tutors-card became-tutor">
+        <div class="tutors-card action-btn give-feedback">
           <div class="tutors-card__img">
             <img src="./img/add-ico-orange.svg" alt="">
           </div>
@@ -648,7 +735,7 @@
           <p class="footer__title">Хочете, щоб з вами зв’язались?</p><a class="btn_blue footer__btn btn"
             href="#">залишити заявку</a>
           <div class="btn-wrap"><a class="btn_blue footer__btn btn" href="#">Стати МЕНТОРОМ</a><a
-              class="btn_blue footer__btn btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
+              class="btn_blue footer__btn action-btn give-feedback btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
           </div>
           <div class="footer__sup-pay">
             <p>Підтримка платежів</p>
@@ -663,7 +750,7 @@
         <div class="col">
           <p class="footer__title">Школа
             <ul class="footer__list">
-              <li><a href="">Про нас</a>
+              <li><a href="index.html">Про нас</a>
               </li>
               <li><a href="tutors.html">Викладачі</a>
               </li>
@@ -697,8 +784,8 @@
           </div>
         </div>
         <div class="col">
-          <div class="btn-wrap"><a class="btn_blue footer__btn btn" href="#">Стати МЕНТОРОМ</a><a
-              class="btn_blue footer__btn action-btn btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
+          <div class="btn-wrap"><a class="action-btn became-tutor btn_blue footer__btn btn" href="#">Стати
+              МЕНТОРОМ</a><a class="btn_blue footer__btn action-btn give-feedback btn" href="#">ЗАЛИШИТИ ВІДГУК</a>
           </div>
         </div>
       </div>
@@ -712,7 +799,7 @@
       <div class="footer__mob-top">
         <p class="footer__title">Школа
           <ul class="footer__list">
-            <li><a href="">Про нас</a>
+            <li><a href="index.html">Про нас</a>
             </li>
             <li><a href="tutors.html">Викладачі</a>
             </li>
@@ -765,7 +852,7 @@
         <img src="img//tutors-img.svg" alt="tutor">
       </div>
       <p class="feedback-popup__name">Им’я Прізвище</p>
-      <div class="tutors-card__rate" data-stars="1"><i class="mentors__star fa-solid fa-star"></i><i
+      <div class="tutors-card__rate"><i class="mentors__star fa-solid fa-star"></i><i
           class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i><i
           class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i>
       </div>
@@ -786,8 +873,7 @@
       </div>
     </div>
   </div>
-  <script src="js/star.js"></script>
-  <div class="popup give-feedback-popup">
+  <div class="popup give-feedback-popup popap-templ">
     <div class="popup-body">
       <div class="popup__close"></div>
       <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2><a class="back-link">Назад </a>
@@ -814,7 +900,7 @@
           <option value="Светлана Светленко">Светлана Светленко</option>
         </select>
         <div class="form-rate required">
-          <div class="tutors-card__rate"><i class="mentors__star fa-solid fa-star"></i><i
+          <div class="tutors-card__rate" data-stars="1"><i class="mentors__star fa-solid fa-star"></i><i
               class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i><i
               class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i>
           </div>
@@ -829,6 +915,59 @@
       </form>
     </div>
   </div>
+  <script src="js/star.js"></script>
+  <script src="js/nice-select2.js"></script>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head></head>
+
+  <body>
+    <div class="popup popap-templ became-mentor-popup">
+      <div class="popup-body">
+        <div class="popup__close"></div>
+        <div class="popup__title-group">
+          <h2 class="popup__title">СТАТИ МЕНТОРОМ</h2>
+          <p class="popup__sub-title">Залиште ваші контактні дані, і ми вам обов'язково зателефонуємо!</p>
+        </div><a class="back-link">Назад </a>
+        <form class="form" action="POST" id="feedbackForm">
+          <label class="required" for="name">
+            <input type="text" name="name" placeholder="Ім’я та Прізвище" required>
+          </label>
+          <label class="required" for="work">
+            <input type="text" name="work" placeholder="Місце роботи" required>
+          </label>
+          <label class="required" for="phone">
+            <input type="phone" name="phone" placeholder="Номер телефону" required>
+          </label>
+          <label class="required" for="email">
+            <input type="email" name="email" placeholder="E-mail" required>
+          </label>
+          <label class="required" for="file">
+            <input type="file" name="file" accept=".doc, .docx, .pdf" placeholder="Прикріпити файл з резюме" required>
+          </label>
+          <label class="required" for="place">
+            <input type="text" name="place" placeholder="Посада" required>
+          </label>
+          <label class="required" for="linkedIn">
+            <input type="text" name="linkedIn" placeholder="LinkedIn" required>
+          </label>
+          <label class="required" for="social">
+            <input type="text" name="social" placeholder="Соціальна мережа" required>
+          </label>
+          <label class="required" for="social">
+            <input type="" name="social" placeholder="Соціальна мережа" required>
+          </label>
+          <textarea name="comment" placeholder="Коментар (не обов’язково)"></textarea>
+          <div class="from__btn">
+            <button class="btn" type="submit">Надіслати ЗАЯВКУ</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+
+  </html>
   <script src="js/nice-select2.js"></script>
   <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
