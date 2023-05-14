@@ -1,176 +1,58 @@
-.feedback-page {
+.cards-page {
     margin-top: 85px;
 }
 
-.feedback-page .give-feedback.btn.btn_blue {
+.cards-page .action-btn.btn.btn_blue {
     display: none;
 }
 
-.feedback-page .section-title-wrap {
+.cards-page .section-title-wrap {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
 }
 
-.feedback-page .back-link {
+.cards-page .back-link {
     order: 2;
 }
 
-.feedback-page .section-title {
+.cards-page .section-title {
     order: 1;
 }
 
-.popup.give-feedback-popup {
-    padding-left: 0;
-    padding-right: 0;
-    background-color: #fff;
-    padding-top: 55px;
-    display: none;
-    z-index: 10;
-}
-
-.popup.give-feedback-popup select[name=tutor] {
-    grid-area: tutor;
-}
-
-.popup.give-feedback-popup label[for=rate] {
-    grid-area: rate;
-}
-
-.popup.give-feedback-popup label[for=social] {
-    grid-area: social;
-}
-
-.popup.give-feedback-popup .popup-body {
-    max-width: 100%;
-    border: none;
-    border-radius: 0;
-}
-
-.popup.give-feedback-popup .popup__title {
-    font-family: "Venus Rising", sans-serif;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 120%;
-    color: #232523;
-    margin-bottom: 40px;
-}
-
-.popup.give-feedback-popup .form {
-    display: flex;
-    flex-direction: column;
-}
-
-.popup.give-feedback-popup .form .from__btn {
-    margin-top: 20px;
-}
-
-.popup.give-feedback-popup .back-link {
-    margin-bottom: 40px;
-}
-
-.popup.give-feedback-popup .popup__close {
-    display: none;
-}
-
-.popup.give-feedback-popup .form-rate {
-    width: 100%;
-    box-sizing: border-box;
-    height: 32px;
-    border-radius: 5px;
-    border: 1px solid #0b2235;
-    padding-left: 20px;
-    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .0509803922);
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
 @media(min-width:576px) {
-    .give-feedback {
-        width: 278px;
-    }
-
-    .feedback-page .back-link {
+    .cards-page .back-link {
         grid-area: link;
         grid-row: 1;
         grid-column: 1;
         margin-bottom: 32px;
     }
 
-    .feedback-page .section-title {
+    .cards-page .section-title {
         grid-area: title;
         grid-row: 2;
         grid-column: 1;
         margin: 0;
     }
 
-    .feedback-page .give-feedback.btn.btn_blue {
+    .cards-page .action-btn.btn.btn_blue {
         grid-area: btn;
         display: block;
         grid-row: 2;
     }
 
-    .feedback-page .section-title-wrap {
+    .cards-page .section-title-wrap {
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "link link""title btn";
         margin-bottom: 71px;
     }
 
-    .feedback-page .tutors-card.give-feedback {
+    .cards-page .tutors-card.give-feedback {
         display: none;
-    }
-
-    .popup.give-feedback-popup .form-rate {
-        height: 52px;
     }
 }
 
 @media(min-width:992px) {
-    .feedback-page {
+    .cards-page {
         margin-top: 240px;
-    }
-
-    .popup.give-feedback-popup {
-        background-color: rgba(0, 0, 0, .5);
-        padding-top: 15%;
-        z-index: 99999;
-    }
-
-    .popup.give-feedback-popup .popup__close {
-        display: block;
-        width: 20px;
-        height: 20px;
-        right: 40px;
-        top: 40px;
-    }
-
-    .popup.give-feedback-popup select[name=tutor] {
-        grid-area: tutor;
-    }
-
-    .popup.give-feedback-popup .form textarea[name=comment] {
-        height: auto;
-        margin-bottom: 0;
-    }
-
-    .popup.give-feedback-popup .popup-body {
-        max-width: 961px;
-        border: 1px solid #0b2235;
-        border-radius: 10px;
-        height: auto;
-    }
-
-    .popup.give-feedback-popup .form {
-        display: grid;
-        grid-template-areas: "name name course""phone email tutor""text text rate""text text social";
-        margin-bottom: 0;
-    }
-
-    .popup.give-feedback-popup .back-link {
-        display: none;
-    }
-
-    .popup.give-feedback-popup .popup__title {
-        text-align: center;
     }
 }

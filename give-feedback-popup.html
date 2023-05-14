@@ -1,0 +1,44 @@
+<div class="popup give-feedback-popup popap-templ">
+    <div class="popup-body">
+        <div class="popup__close"></div>
+        <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2><a class="back-link">Назад </a>
+        <form class="form" action="POST" id="feedbackForm">
+            <label class="required" for="name">
+                <input type="text" name="name" placeholder="Ім’я" required="required" />
+            </label>
+            <label class="required" for="phone">
+                <input type="phone" name="phone" placeholder="Номер телефона" required="required" />
+            </label>
+            <label class="required" for="email">
+                <input type="email" name="email" placeholder="E-mail" required="required" />
+            </label>
+            <select class="select-course custom-select custom-select-required" name="course" id="courseFeed">
+                <option value=""></option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">JS</option>
+            </select>
+            <select class="custom-select custom-select-required" name="tutor" id="tutor">
+                <option value=""></option>
+                <option value="Иван Иваненко">Иван Иваненко</option>
+                <option value="Петр Петренко">Петр Петренко</option>
+                <option value="Светлана Светленко">Светлана Светленко</option>
+            </select>
+            <div class="form-rate required">
+                <div class="tutors-card__rate" data-stars="1"><i class="mentors__star fa-solid fa-star"></i><i
+                        class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i><i
+                        class="mentors__star fa-regular fa-star"></i><i class="mentors__star fa-regular fa-star"></i>
+                </div>
+            </div>
+            <label class="required" for="social">
+                <input type="" name="social" placeholder="Соціальна мережа" required="required" />
+            </label>
+            <textarea name="comment" placeholder="Повідомлення"></textarea>
+            <div class="from__btn">
+                <button class="btn" type="submit">Надіслати ЗАЯВКУ</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="js/star.js"></script>
+<script src="js/nice-select2.js"></script>

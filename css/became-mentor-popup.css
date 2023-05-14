@@ -1,0 +1,46 @@
+.popup.popap-templ.became-mentor-popup .form {
+    display: flex;
+}
+
+.popup.popap-templ.became-mentor-popup label[for=file] {
+    grid-area: file;
+}
+
+.popup.popap-templ.became-mentor-popup label[for=place] {
+    grid-area: place;
+}
+
+.popup.popap-templ.became-mentor-popup label[for=work] {
+    grid-area: work;
+}
+
+.popup.popap-templ.became-mentor-popup label[for=social] {
+    grid-area: social;
+}
+
+.popup.popap-templ.became-mentor-popup label[for=linkedIn] {
+    grid-area: linkedIn;
+}
+
+.popup.popap-templ.became-mentor-popup .form textarea[name=comment] {
+    height: 52px;
+    box-sizing: border-box;
+    padding: 16px 0 5px 20px;
+}
+
+.popup.popap-templ.became-mentor-popup .popup__title {
+    margin-bottom: 20px;
+}
+
+.popup.popap-templ.became-mentor-popup .popup__title-group {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media(min-width:992px) {
+    .popup.popap-templ.became-mentor-popup .form {
+        display: grid;
+        grid-template-areas: "name name work""phone email place""file file linkedIn""text text social";
+        margin-bottom: 0;
+    }
+}

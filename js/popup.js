@@ -13,13 +13,17 @@
     })
 }());
 
-(function feddbackPopupSelect() {
-    NiceSelect.bind(document.getElementById("courseFeed"));
-    NiceSelect.bind(document.getElementById("tutor"));
+(function feedbackPopupSelect() {
+    const courseFeed = document.getElementById("courseFeed");
+    const tutor = document.getElementById("tutor");
+    if (courseFeed && tutor) {
+        NiceSelect.bind(courseFeed);
+        NiceSelect.bind(tutor);
 
-    let selectsPlaceholder = document.querySelectorAll('.give-feedback-popup .nice-select .current');
-    selectsPlaceholder[0].innerHTML = 'Виберіть курс';
-    selectsPlaceholder[1].innerHTML = 'Виберіть Викладача';
+        let selectsPlaceholder = document.querySelectorAll('.give-feedback-popup .nice-select .current');
+        selectsPlaceholder[0].innerHTML = 'Виберіть курс';
+        selectsPlaceholder[1].innerHTML = 'Виберіть Викладача';
+    }
 }());
 
 (function popupValidation() {
@@ -53,21 +57,29 @@
 
 // Скорее всего это будет использоватсья иначе. Существует сугубо как пример работы попапа
 (function showPopup() {
-    const popup = document.querySelector('.feedback-popup');
+
+    const popups = document.querySelectorAll('.popup')
+    // console.log(popups)
+
+    const feedbackPopup = document.querySelector('.feedback-popup');
     let allLinks = [...document.querySelectorAll('.feedback .tutors-card__course-link')];
     allLinks.forEach(item => {
         item.addEventListener('click', (e) => {
             e.preventDefault();
-            popup.style.display = 'block'
+            feedbackPopup.style.display = 'block'
         })
     })
 
     const givePopup = document.querySelector('.give-feedback-popup')
-    let allGiveFeedvack = [...document.querySelectorAll('.give-feedback')]
-    allGiveFeedvack.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            givePopup.style.display = 'block'
+    // let allGiveFeedvack = [...document.querySelectorAll('.give-feedback')]
+    let allGiveFeedvack = [...document.querySelectorAll('.action-btn.give-feedback')]
+    if (allGiveFeedvack) {
+        allGiveFeedvack.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                givePopup.style.display = 'block'
+            })
         })
-    })
+    }
+
 }())

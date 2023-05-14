@@ -5,6 +5,10 @@
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -195,6 +199,10 @@ ul {
     line-height: 34px;
     margin-bottom: 40px;
   }
+
+  .action-btn {
+    width: 278px;
+  }
 }
 
 @media screen and (min-width:992px) {
@@ -220,7 +228,7 @@ ul {
 
 .header {
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 25px;
   position: fixed;
   z-index: 99999;
   background-color: #fff;
@@ -236,6 +244,7 @@ ul {
   padding: 0 20px;
   max-width: 1174px;
   margin: 0 auto;
+  column-gap: 47px;
 }
 
 .header .mob-menu {
@@ -286,6 +295,10 @@ ul {
   padding: 14px 18px 14px 10px;
   border: 1px solid #0b2235;
   border-radius: 5px;
+}
+
+.header.scrolled {
+  border-bottom: 1px solid #bdbdbd;
 }
 
 .menu__nav {
@@ -381,14 +394,13 @@ ul {
   display: none;
 }
 
-@media screen and (min-width:1160px) {
+@media screen and (min-width:992px) {
   .hamburger-menu {
     display: none;
   }
 
   .menu {
     align-items: flex-end;
-    flex-direction: column;
     justify-content: space-between;
   }
 
@@ -398,6 +410,7 @@ ul {
     list-style: none;
     font-family: "Venus Rising", sans-serif;
     font-weight: 700;
+    width: 100%;
   }
 
   .menu__item a {
@@ -412,6 +425,12 @@ ul {
     grid-template-areas: "logo menu";
   }
 
+  .header .items-wrap {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
   .logo {
     width: 80px;
     height: auto;
@@ -419,8 +438,9 @@ ul {
 
   .header__items {
     display: flex;
-    gap: 60px;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .header__items .phone {
@@ -435,22 +455,18 @@ ul {
 }
 
 .slider {
-  margin-top: 65px;
   margin-bottom: 40px;
+  background-image: url(../img/header-main-bg.svg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .slide {
   position: relative;
-  margin-bottom: 20px;
 }
 
 @media screen and (min-width:576px) {
-
-  .slide,
-  .slider {
-    margin-bottom: 60px;
-  }
-
   .title {
     width: 305px;
     font-size: 42px;
@@ -460,20 +476,6 @@ ul {
     font-size: 20px;
     line-height: 24px;
     margin-top: 15px;
-  }
-}
-
-@media screen and (min-width:992px) {
-
-  .slide,
-  .slider {
-    margin-bottom: 120px;
-  }
-}
-
-@media screen and (min-width:1160px) {
-  .slider {
-    margin-top: 197px;
   }
 }
 
@@ -567,6 +569,10 @@ ul {
 }
 
 @media screen and (min-width:992px) {
+  .slider {
+    height: 83vh;
+  }
+
   .advantages .container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 75px;
@@ -653,6 +659,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 3px;
+  cursor: pointer;
 }
 
 .tutors-card__rate i {
@@ -724,6 +731,7 @@ ul {
   .tutors-card.became-tutor,
   .tutors-card.give-feedback {
     height: auto;
+    cursor: pointer;
   }
 
   .tutors-card__rate {
@@ -1922,6 +1930,200 @@ ul {
 
   .footer .col:nth-child(4) .btn-wrap {
     display: grid;
+  }
+}
+
+.header-card-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.header-card {
+  width: 100%;
+  border: 1px solid rgba(11, 34, 53, .2);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 11px 25px;
+  background-color: #fff;
+}
+
+.header-card__arrow {
+  width: 14px;
+  height: 12px;
+  display: inline-block;
+  background-image: url(../img/header-card-arrow.svg);
+  background-repeat: no-repeat;
+  transition: .5s;
+}
+
+.header-card.active .header-card__arrow {
+  transform: rotate(180deg);
+  transition: .5s;
+}
+
+.header-card.active .header-card__text {
+  margin-top: 10px;
+}
+
+.header-card__title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-card__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #297abf;
+  width: 160px;
+}
+
+.header-card__text {
+  font-size: 14px;
+  line-height: 16px;
+  overflow: hidden;
+  max-height: 0;
+  transition: .5s;
+}
+
+.header-card__desktop {
+  display: none;
+}
+
+ul.header-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+@media(min-width:576px) {
+  .mob_block {
+    display: block;
+  }
+
+  .header-card {
+    width: 100%;
+    border: 1px solid #232523;
+    padding: 29px 25px;
+  }
+
+  .header-card__title {
+    font-size: 20px;
+    line-height: 23px;
+    width: 100%;
+  }
+
+  .header-card__text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .header-card.active .header-card__text {
+    margin-top: 20px;
+  }
+}
+
+@media(min-width:992px) {
+  .mob_block {
+    display: none;
+  }
+
+  .header-card__desktop {
+    display: block;
+  }
+
+  .header-card__mob {
+    display: none;
+  }
+
+  .header-card {
+    position: relative;
+    width: 360px;
+    height: 230px;
+    box-shadow: 0 8px 20px rgba(11, 34, 53, .15);
+  }
+
+  .header-card__text {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 23px;
+    overflow: hidden;
+    max-height: fit-content;
+    transition: .5s;
+  }
+
+  .header-card__title {
+    font-size: 24px;
+    width: 268px;
+  }
+
+  .header-card__arrow {
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    top: 20px;
+    right: 15px;
+    background-image: url(../img/header-card-desc-ico.svg);
+  }
+
+  .header-card-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -100px;
+    margin-bottom: 150px;
+  }
+}
+
+.consult {
+  display: none;
+  margin-bottom: 63px;
+}
+
+.consult .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.consult__title {
+  margin-bottom: 97px;
+  max-width: 515px;
+}
+
+.consult__title h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #297abf;
+  margin-bottom: 35px;
+}
+
+.consult__title p {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.consult__btn {
+  max-width: 469px;
+}
+
+.consult__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 498px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+@media(min-width:992px) {
+  .consult {
+    display: block;
   }
 }
 
