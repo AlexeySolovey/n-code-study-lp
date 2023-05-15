@@ -1,5 +1,5 @@
 .tutors-page .tutors-card {
-  display: grid!important;
+  display: grid !important;
 }
 
 .tutors-page .give-feedback.btn.btn_blue {
@@ -8,7 +8,7 @@
 
 .tutors-page .section-title-wrap {
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2,1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .tutors-page .back-link {

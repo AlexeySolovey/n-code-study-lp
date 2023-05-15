@@ -55,29 +55,40 @@
 }());
 
 
-// Скорее всего это будет использоватсья иначе. Существует сугубо как пример работы попапа
+
 (function showPopup() {
 
     const popups = document.querySelectorAll('.popup')
-    // console.log(popups)
 
     const feedbackPopup = document.querySelector('.feedback-popup');
-    let allLinks = [...document.querySelectorAll('.feedback .tutors-card__course-link')];
-    allLinks.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            feedbackPopup.style.display = 'block'
+    if (feedbackPopup) {
+        let allLinks = [...document.querySelectorAll('.feedback .tutors-card__course-link')];
+        allLinks.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                feedbackPopup.style.display = 'block'
+            })
         })
-    })
+    }
 
     const givePopup = document.querySelector('.give-feedback-popup')
-    // let allGiveFeedvack = [...document.querySelectorAll('.give-feedback')]
     let allGiveFeedvack = [...document.querySelectorAll('.action-btn.give-feedback')]
     if (allGiveFeedvack) {
         allGiveFeedvack.forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
                 givePopup.style.display = 'block'
+            })
+        })
+    }
+
+    const mentorInfoPopup = document.querySelector('.mentor-info-popup')
+    let allMentorInfo = [...document.querySelectorAll('.tutors .tutors-card__course-link.more-info-link')]
+    if (mentorInfoPopup) {
+        allMentorInfo.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                mentorInfoPopup.style.display = 'block'
             })
         })
     }
