@@ -48,7 +48,7 @@ jobs:
 
       - name: 📂 Deploy with rsync development DEV
         if: github.ref == 'refs/heads/dev'
-        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_DEV_FRONT }}@${{ secrets.SSH_HOST_DEV }}:/var/www/ncodedev/${{ secrets.SSH_HOST_DEV }}
+        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_DEV_FRONT }}@n-code-dev.in.net:/var/www/ncodedev/n-code-dev.in.net
 
       - name: Adding Known Hosts DEV => TEST
         if: github.ref == 'refs/heads/dev'
