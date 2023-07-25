@@ -660,7 +660,6 @@ ul {
   display: flex;
   align-items: center;
   gap: 3px;
-  cursor: pointer;
 }
 
 .tutors-card__rate i {
@@ -825,6 +824,7 @@ ul {
 
   .tutors-card__info .tutors-card__description {
     margin-bottom: 20px;
+    height: 100px;
   }
 
   .tutors-card__course {
@@ -1264,8 +1264,9 @@ ul {
 
   .feedback .tutors-card__top {
     grid-template-rows: 1fr 20px;
-    grid-template-columns: auto;
+    grid-template-columns: 60px;
     grid-template-areas: "img name""rate rate";
+    height: 100px;
   }
 
   .feedback .tutors-card__name {
@@ -1557,6 +1558,10 @@ ul {
   right: 5px;
   color: rgba(253, 70, 14, .7);
   font-size: 15px;
+}
+
+.form .tutors-card__rate{
+  cursor: pointer;
 }
 
 @media(min-width:576px) {
@@ -2136,7 +2141,7 @@ ul.header-card__text {
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
   z-index: 999999;
-  padding-top: 15%;
+  padding-top: 7%;
   padding-left: 20px;
   padding-right: 20px;
   display: none;
@@ -2232,6 +2237,7 @@ ul.header-card__text {
 
 .feedback-popup__item p:last-child {
   font-size: 16px;
+  width: 300px;
 }
 
 .feedback-popup .tutors-card__rate {
@@ -2264,7 +2270,6 @@ ul.header-card__text {
     font-size: 32px;
     line-height: 38px;
     margin-top: 15px;
-    margin-left: -26px;
     grid-column: 2/4;
   }
 
@@ -2299,6 +2304,5 @@ ul.header-card__text {
     grid-column: 2;
     grid-row: 1;
     margin-top: 65px;
-    margin-left: -26px;
   }
 }
