@@ -44,7 +44,7 @@ jobs:
 
       - name: Adding Known Hosts development DEV
         if: github.ref == 'refs/heads/dev'
-        run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST_DEV }}  >> ~/.ssh/known_hosts
+        run: ssh-keyscan -p 22 -H n-code-dev.in.net  >> ~/.ssh/known_hosts
 
       - name: 📂 Deploy with rsync development DEV
         if: github.ref == 'refs/heads/dev'
