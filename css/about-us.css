@@ -1,3 +1,58 @@
 .abous-us{
     margin-top: 240px;
+    font-size: 18px;
 }
+
+ol{
+    padding: 0 20px;
+}
+
+.list-title{
+    display: block;
+    margin: 40px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.list-advantages li{
+    margin-bottom: 24px;
+    line-height: 24px;
+}
+
+li:last-child{
+    margin-bottom: 0;
+}
+
+.li-title{
+    font-weight: 700;
+}
+
+li p {
+    margin-left: -20px;
+}
+
+.text{
+    margin: 40px 0 50px;
+}
+
+.conclusion{
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 90px;
+}
+
+@media screen and (max-width: 992px){
+    .abous-us{
+        margin-top: 80px;
+    }
+    .conclusion{
+        text-align: center;
+    }
+} 
+
+@media screen and (max-width: 576px){
+    .conclusion{
+        font-size: 18px;
+    }
+} 
