@@ -396,6 +396,9 @@ ul {
 }
 
 @media screen and (min-width:992px) {
+  .header .mob-menu .menu__nav{
+    display: none;
+  }
   .hamburger-menu {
     display: none;
   }
