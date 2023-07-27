@@ -2067,7 +2067,6 @@ ul.header-card__text {
 
   .header-card__text {
     margin-top: 20px;
-    font-size: 20px;
     line-height: 23px;
     overflow: hidden;
     max-height: fit-content;
