@@ -1,21 +1,27 @@
 function redirect() {
-  const link = document.querySelector(".cabinet-link");
+  const loginLink = document.querySelector(".login-btn");
+  const signupLink = document.querySelector(".signup-btn");
 
   switch (window.location.host) {
     case "n-code-dev.in.net":
-      link.href = "https://my.n-code-dev.in.net/";
+      loginLink.href = "https://my.n-code-dev.in.net/";
+      signupLink.href = `${loginLink.href}uk/#/signup`;
       break;
     case "n-code-release.in.net":
-      link.href = "https://my.n-code-release.in.net/";
+      loginLink.href = "https://my.n-code-release.in.net/";
+      signupLink.href = `${loginLink.href}uk/#/signup`
       break;
     case "n-code.study":
-      link.href = "https://my.n-code.study/";
+      loginLink.href = "https://my.n-code.study/";
+      signupLink.href = `${loginLink.href}uk/#/signup`
       break;
     case "n-code-test.in.net":
-      link.href = "https://my.n-code-test.in.net/";
+      loginLink.href = "https://my.n-code-test.in.net/";
+      signupLink.href = `${loginLink.href}uk/#/signup`
       break;
     default:
-      link.href = "#";
+      loginLink.href = "#";
+      signupLink.href = "#";
   }
 }
 
