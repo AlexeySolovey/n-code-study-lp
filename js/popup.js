@@ -57,19 +57,15 @@
 
 
 (function showPopup() {
-
-    const popups = document.querySelectorAll('.popup')
-
-    const feedbackPopup = document.querySelector('.feedback-popup');
-    if (feedbackPopup) {
-        let allLinks = [...document.querySelectorAll('.feedback .tutors-card__course-link')];
-        allLinks.forEach(item => {
-            item.addEventListener('click', (e) => {
-                e.preventDefault();
-                feedbackPopup.style.display = 'block'
-            })
-        })
-    }
+  let allLinks = [...document.querySelectorAll(".feedback .tutors-card__course-link")];
+  allLinks.forEach((item) => {
+    const contentId = item.dataset.trigger;
+    const feedbackPopUp = document.querySelector(`[data-content="${contentId}"]`);
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      feedbackPopUp.style.display = "block";
+    });
+  });
 
     const givePopup = document.querySelector('.give-feedback-popup')
     let allGiveFeedvack = [...document.querySelectorAll('.action-btn.give-feedback')]
