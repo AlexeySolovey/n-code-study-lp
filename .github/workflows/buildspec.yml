@@ -5,11 +5,11 @@ on:
     branches:
       - main
       - dev
-      - release-1.22.0
+      - release-2.24.0
       - test
 
 env:
-  RELEASE_BRANCH: "release-1.22.0"
+  RELEASE_BRANCH: "release-2.24.0"
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install SSH Key
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/release-1.23.0' || github.ref == 'refs/heads/test'
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/release-2.24.0' || github.ref == 'refs/heads/test'
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_KEY_STUDENT_APP }}
@@ -32,28 +32,23 @@ jobs:
 
       - name: 📂 Deploy with rsync production MAIN
         if: github.ref == 'refs/heads/main'
-        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_MAIN_PROD_FRONT }}@${{ secrets.SSH_HOST_MAIN_PROD }}:/var/www/ncodef/${{ secrets.SSH_HOST_MAIN_PROD }}
+        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./ ${{ secrets.SSH_USER_NAME_MAIN_PROD_FRONT }}@${{ secrets.SSH_HOST_MAIN_PROD }}:/var/www/ncodef/${{ secrets.SSH_HOST_MAIN_PROD }}
 
-      - name: Adding Known Hosts release-1.23.0
-        if: github.ref == 'refs/heads/release-1.23.0'
+      - name: Adding Known Hosts release-2.24.0
+        if: github.ref == 'refs/heads/release-2.24.0'
         run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST_RELEASE }}  >> ~/.ssh/known_hosts
 
-      - name: 📂 Deploy with rsync release-1.23.0
-        if: github.ref == 'refs/heads/release-1.23.0'
-        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_RELEASE_FRONT }}@${{ secrets.SSH_HOST_RELEASE }}:/var/www/ncoderelease/${{ secrets.SSH_HOST_RELEASE }}
-
-      - name: Build for development and Install dependencies DEV
-        if: github.ref == 'refs/heads/dev'
-        run: |
-          npm install
+      - name: 📂 Deploy with rsync release-2.24.0
+        if: github.ref == 'refs/heads/release-2.24.0'
+        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./ ${{ secrets.SSH_USER_NAME_RELEASE_FRONT }}@${{ secrets.SSH_HOST_RELEASE }}:/var/www/ncoderelease/${{ secrets.SSH_HOST_RELEASE }}
 
       - name: Adding Known Hosts development DEV
         if: github.ref == 'refs/heads/dev'
-        run: ssh-keyscan -p 22 -H n-code-dev.in.net  >> ~/.ssh/known_hosts
+        run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST_DEV }}  >> ~/.ssh/known_hosts
 
       - name: 📂 Deploy with rsync development DEV
         if: github.ref == 'refs/heads/dev'
-        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./ ncbdevssh@n-code-dev.in.net:/var/www/ncodedev/n-code-dev.in.net
+        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./ ${{ secrets.SSH_USER_NAME_DEV_FRONT }}@${{ secrets.SSH_HOST_DEV }}:/var/www/ncodedev/${{ secrets.SSH_HOST_DEV }}
 
       - name: Adding Known Hosts DEV => TEST
         if: github.ref == 'refs/heads/dev'
@@ -61,7 +56,7 @@ jobs:
 
       - name: 📂 Deploy with rsync DEV => TEST
         if: github.ref == 'refs/heads/dev'
-        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_TEST_FRONT }}@${{ secrets.SSH_HOST_TEST }}:/var/www/ncodetest/${{ secrets.SSH_HOST_TEST }}
+        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./ ${{ secrets.SSH_USER_NAME_TEST_FRONT }}@${{ secrets.SSH_HOST_TEST }}:/var/www/ncodetest/${{ secrets.SSH_HOST_TEST }}
 
       - name: Adding Known Hosts TEST
         if: github.ref == 'refs/heads/test'
@@ -69,13 +64,13 @@ jobs:
 
       - name: 📂 Deploy with rsync TEST
         if: github.ref == 'refs/heads/test'
-        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_TEST_FRONT }}@${{ secrets.SSH_HOST_TEST }}:/var/www/ncodetest/${{ secrets.SSH_HOST_TEST }}
+        run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./ ${{ secrets.SSH_USER_NAME_TEST_FRONT }}@${{ secrets.SSH_HOST_TEST }}:/var/www/ncodetest/${{ secrets.SSH_HOST_TEST }}
 # on:
 #   push:
 #     branches:
 #       - main
 #       - dev
-#       - release-1.23.0
+#       - release-2.24.0
 #       - test
 
 # jobs:
@@ -87,7 +82,7 @@ jobs:
 #         uses: actions/checkout@v3
 
 #       - name: Install SSH Key
-#         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/release-1.23.0' || github.ref == 'refs/heads/test'
+#         if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/release-2.24.0' || github.ref == 'refs/heads/test'
 #         uses: shimataro/ssh-key-action@v2
 #         with:
 #           key: ${{ secrets.SSH_KEY_STUDENT_APP }}
@@ -101,12 +96,12 @@ jobs:
 #         if: github.ref == 'refs/heads/main'
 #         run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_MAIN_PROD_FRONT }}@${{ secrets.SSH_HOST_MAIN_PROD }}:/var/www/ncodef/${{ secrets.SSH_HOST_MAIN_PROD }}
 
-#       - name: Adding Known Hosts release-1.23.0
-#         if: github.ref == 'refs/heads/release-1.23.0'
+#       - name: Adding Known Hosts release-2.24.0
+#         if: github.ref == 'refs/heads/release-2.24.0'
 #         run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST_RELEASE }}  >> ~/.ssh/known_hosts
 
-#       - name: 📂 Deploy with rsync release-1.23.0
-#         if: github.ref == 'refs/heads/release-1.23.0'
+#       - name: 📂 Deploy with rsync release-2.24.0
+#         if: github.ref == 'refs/heads/release-2.24.0'
 #         run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=README.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./dist/student-app/ ${{ secrets.SSH_USER_NAME_RELEASE_FRONT }}@${{ secrets.SSH_HOST_RELEASE }}:/var/www/ncoderelease/${{ secrets.SSH_HOST_RELEASE }}
 
 #       - name: Adding Known Hosts development DEV
