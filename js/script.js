@@ -54,26 +54,6 @@ redirect();
   }
 })();
 
-(function roadmap() {
-  let roadmapItems = document.querySelector(".roadmap-step");
-
-  let roadmapInfoItems = document.querySelector(".roadmap-step-info");
-
-  if (roadmapItems && roadmapInfoItems) {
-    roadmapItems = Array.from(roadmapItems.children);
-    roadmapInfoItems = Array.from(roadmapInfoItems.children);
-
-    roadmapItems.forEach((item, index) => {
-      item.addEventListener("click", function () {
-        roadmapItems.forEach((item) => item.classList.remove("active"));
-        roadmapInfoItems.forEach((item) => item.classList.remove("active"));
-        roadmapInfoItems[index].classList.add("active");
-        item.classList.add("active");
-      });
-    });
-  }
-})();
-
 function accordion(selector) {
   let accordionItem = document.querySelectorAll(selector);
   accordionItem.forEach((item) => {

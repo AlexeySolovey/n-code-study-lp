@@ -1,0 +1,141 @@
+/**
+ * ItcSlider
+ * @version 1.0.1
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2023
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+
+.itc-slider {
+  position: relative;
+  height: 270px;
+  width: calc(1174px - 90px);
+  margin: 0 auto;
+}
+
+.itc-slider-wrapper {
+  overflow: hidden;
+}
+
+.itc-slider-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  gap: 10px;
+}
+
+.itc-slider-transition-none {
+  transition: none;
+}
+
+.itc-slider-item {
+  flex: 0 0 492px;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
+  border-radius: 20px;
+  border: 1px solid #0B2235;
+  padding: 20px;
+  height: 170px;
+
+}
+
+.itc-slider-btn {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: transparent;
+}
+
+.itc-slider-btn-hide {
+  display: none;
+}
+
+.itc-slider-btn-prev {
+  left: -50px;
+}
+
+.itc-slider-btn-next {
+  right: -40px;
+}
+
+.itc-slider-btn:hover,
+.itc-slider-btn:focus {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+}
+
+.itc-slider-btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.itc-slider-btn-prev::before {
+  background-image: url("../img/slider/prev-arrow.svg");
+}
+
+.itc-slider-btn-next::before {
+  background-image: url("../img/slider/next-arrow.svg");
+}
+
+.slider-step{
+  font-size: 20px;
+  color: #BDBDBD;
+  font-weight: 400;
+}
+.slider-title{
+  font-size: 20px;
+  font-weight: 400;
+  margin: 10px 0 20px;
+}
+
+.slider-text{
+  font-size: 16px;
+}
+
+.itc-slider-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.itc-slider-indicator {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: #0B22351A;
+  background-clip: padding-box;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  cursor: pointer;
+}
+
+.itc-slider-indicator-active {
+  background-color: black
+}
