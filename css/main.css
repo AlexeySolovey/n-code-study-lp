@@ -1236,6 +1236,14 @@ ul {
   }
 }
 
+/* For scroll to center section */
+.anchor{
+  display: block;
+  height: 120px;
+  margin-top: -120px;
+  visibility: hidden;
+}
+
 .callback-form .section-title {
   text-align: center;
 }
@@ -1945,6 +1953,7 @@ ul.header-card__text {
 
 .consult__btn {
   max-width: 469px;
+  margin-left: 0;
 }
 
 .consult__list {
