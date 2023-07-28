@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Venus Rising";
-  src: url(../fonts/VenusRisingCyrillic.woff2) format("woff2"), url(../fonts/VenusRisingCyrillic.woff) format("woff");
+  src: url(../fonts/venus-rising-rg.otf) format("opentype");
   font-weight: 700;
   font-style: normal;
 }
@@ -68,22 +68,10 @@ ul {
 
 .title {
   font-family: "Venus Rising", sans-serif;
-  color: #fff;
-  position: absolute;
-  width: 145px;
+  color: #000000;
   text-align: center;
   text-transform: uppercase;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   font-size: 16px;
-}
-
-.title_small {
-  display: block;
-  font-size: 8px;
-  line-height: 11px;
-  margin-top: 3px;
 }
 
 .section-title {
@@ -227,14 +215,13 @@ ul {
 }
 
 .header {
-  padding-top: 20px;
-  padding-bottom: 25px;
+  padding: 15px 0;
   position: fixed;
   z-index: 99999;
-  background-color: #fff;
   left: 0;
   top: 0;
   width: 100%;
+  transition: 500ms;
 }
 
 .header .container {
@@ -299,7 +286,8 @@ ul {
 }
 
 .header.scrolled {
-  border-bottom: 1px solid #bdbdbd;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 rgba(37, 36, 37, 0.04);
 }
 
 .menu__nav {
@@ -419,7 +407,7 @@ ul {
 
   .menu__item a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 19px;
     text-transform: uppercase;
     color: #232523;
@@ -436,31 +424,41 @@ ul {
   }
 
   .logo {
-    width: 80px;
-    height: auto;
+    width: 47px;
+    height: 60px;
   }
 
   .header__items {
     display: flex;
     align-items: flex-start;
-    flex-direction: column;
     gap: 15px;
   }
 
-  .header__items .phone {
-    font-family: "Venus Rising", sans-serif;
-    color: #000;
+  .header__items .btn{
+    min-width: 100px;
+    width: 100%;
+    height: 30px;
+    padding: 4px 5px;
+    border-radius: 5px;
+    font-family: 'Venus Rising';
+    font-size: 15px;
+    border: none;
   }
 
-  .header__items .language__ico {
-    width: 26px;
-    height: 26px;
+  .header__items .login-btn{
+    width: 100px;
+  }
+
+  .header__items .signup-btn{
+   background-color: #FD460E;
+   border-color: #FD460E;
+   width: 170px;
   }
 }
 
 .slider {
-  margin-bottom: 24px;
-  background-image: url(../img/header-main-bg.svg);
+  margin-bottom: 0  ;
+  background-image: url(../img/intro-background.png);
   height: 52vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -471,15 +469,25 @@ ul {
 }
 
 @media screen and (min-width:576px) {
-  .title {
-    width: 305px;
-    font-size: 42px;
+  .slide {
+    position: relative;
+    max-width: 1176px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
   }
-
-  .title_small {
-    font-size: 20px;
-    line-height: 24px;
-    margin-top: 15px;
+  .title {
+    width: 926px;
+    font-size: 48px;
+    position: absolute;
+    top: 233px;
+    left: -0;
+    text-align: start;
+    line-height: 70px;
+  }
+  .logo-title{
+    color: #FD460E;
   }
 }
 
@@ -574,7 +582,7 @@ ul {
 
 @media screen and (min-width:992px) {
   .slider {
-    height: 83vh;
+    height: 100vh;
   }
 
   .advantages .container {
@@ -2059,7 +2067,6 @@ ul.header-card__text {
 
   .header-card__text {
     margin-top: 20px;
-    font-size: 20px;
     line-height: 23px;
     overflow: hidden;
     max-height: fit-content;
@@ -2083,7 +2090,7 @@ ul.header-card__text {
   .header-card-wrap {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: -100px;
+    margin-top: 30px;
     margin-bottom: 150px;
   }
 }
