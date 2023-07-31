@@ -64,6 +64,7 @@ ul {
   font-weight: 700;
   font-size: 10px;
   box-sizing: border-box;
+  border: none;
 }
 
 .title {
@@ -458,14 +459,40 @@ ul {
 .slider {
   margin-bottom: 0  ;
   background-image: url(../img/intro-background.png);
-  height: 52vh;
+  height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .slide {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  align-items: center;
 }
+
+.title {
+  font-size: 20px;
+  width: 400px;
+  text-align: center;
+  line-height: 30.8px;
+}
+
+.logo-title{
+  color: #FD460E;
+}
+
+.slide__btn{
+  margin-top: 30px;
+  max-width: 290px;
+  width: 100%;
+}
+
+.header-card__mob {
+  margin-top: 20px;
+}
+
 
 @media screen and (min-width:576px) {
   .slide {
@@ -473,20 +500,36 @@ ul {
     max-width: 1176px;
     width: 100%;
     height: 100%;
-    display: block;
     margin: 0 auto;
   }
+
   .title {
-    width: 926px;
-    font-size: 48px;
-    position: absolute;
-    top: 233px;
-    left: -0;
-    text-align: start;
-    line-height: 70px;
+    font-size: 32px;
+    line-height: 50px;
+    width: 550px;
   }
-  .logo-title{
-    color: #FD460E;
+}
+
+@media screen and (min-width:992px){
+  .slider {
+    height: 100vh;
+    padding: 0 20px;
+  }
+  
+  .title {
+    position: absolute;
+    font-size: 48px;
+    width: 926px;
+    line-height: 70px;
+    top: 233px;
+    left: 0;
+    text-align: start;
+  }
+
+  .slide__btn{
+    position: absolute;
+    top: 435px;
+    left: 0;
   }
 }
 
@@ -580,10 +623,6 @@ ul {
 }
 
 @media screen and (min-width:992px) {
-  .slider {
-    height: 100vh;
-  }
-
   .advantages .container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 75px;
