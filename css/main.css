@@ -197,7 +197,6 @@ ul {
   .section-title {
     font-size: 32px;
     line-height: 38px;
-    margin-bottom: 60px;
   }
 
   .btn {
@@ -873,195 +872,15 @@ ul {
   margin-bottom: 40px;
 }
 
-.roadmap .roadmap-step {
-  margin-bottom: 10px;
-  display: grid;
-  grid-gap: 10px;
-}
-
-.roadmap .roadmap-step__item {
-  border: 1px solid #0b2235;
-  border-radius: 10px;
-  padding: 11px 20px;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: 1fr auto;
-  grid-template-areas: "img steps";
-  grid-column-gap: 10px;
-}
-
-.roadmap .roadmap-step__item.active {
-  border: 2px solid #297abf;
-  background-color: #dce7fc;
-}
-
-.roadmap .roadmap-step__item p:nth-of-type(1) {
-  grid-area: steps;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 14px;
-  color: #0b2235;
-}
-
-.roadmap .roadmap-step__item p:nth-of-type(2) {
-  grid-area: steps;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  margin-top: 24px;
-}
-
-.roadmap .roadmap-step__item-img {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(11, 34, 53, .9);
-  box-shadow: inset 5px 4px 24px rgba(255, 255, 255, .52);
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-position: center;
-  grid-area: img;
-}
-
-.roadmap-step-info__item {
-  border: 2px solid #dce7fc;
-  border-radius: 10px;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  display: none;
-}
-
-.roadmap-step-info__item.active {
-  display: block;
-  min-height: 160px;
-}
-
-.roadmap-step-info__item p {
-  font-size: 14px;
-}
-
-.roadmap-step-info__item p:first-child {
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.roadmap .roadmap__wrap {
-  margin-bottom: 20px;
-}
-
 @media(min-width:576px) {
   .roadmap {
     margin-bottom: 60px;
-  }
-
-  .roadmap .roadmap-step {
-    grid-template-rows: auto auto;
-    margin-bottom: 0;
-  }
-
-  .roadmap .roadmap-step__item {
-    padding: 20px 31px;
-    grid-column-gap: 21px;
-    cursor: pointer;
-  }
-
-  .roadmap .roadmap-step__item p:nth-of-type(1) {
-    font-size: 18px;
-    line-height: 21px;
-    color: #bdbdbd;
-    font-weight: 400;
-    margin-top: 10px;
-  }
-
-  .roadmap .roadmap-step__item p:nth-of-type(2) {
-    margin-top: 40px;
-    font-size: 20px;
-    line-height: 23px;
-  }
-
-  .roadmap .roadmap-step__item-img {
-    width: 71px;
-    height: 71px;
-  }
-
-  .roadmap-step-info__item {
-    padding: 23px 20px;
-  }
-
-  .roadmap-step-info__item.active {
-    height: 320px;
-  }
-
-  .roadmap-step-info__item p {
-    font-size: 20px;
-  }
-
-  .roadmap .btn {
-    display: none;
-  }
-
-  .roadmap__wrap {
-    display: grid;
-    row-gap: 10px;
   }
 }
 
 @media(min-width:992px) {
   .roadmap {
-    margin-bottom: 140px;
-  }
-
-  .roadmap .roadmap-step .roadmap-step__item {
-    padding: 20px 31px;
-    grid-column-gap: 21px;
-    cursor: pointer;
-  }
-
-  .roadmap .roadmap-step .roadmap-step__item p {
-    line-height: 28px;
-    font-size: 24px;
-    font-weight: 500;
-  }
-
-  .roadmap .roadmap-step .roadmap-step__item p:nth-of-type(1) {
-    color: #bdbdbd;
-    margin-top: 4px;
-  }
-
-  .roadmap .roadmap-step .roadmap-step__item p:nth-of-type(2) {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-  }
-
-  .roadmap .roadmap-step .roadmap-step__item-img {
-    width: 71px;
-    height: 71px;
-  }
-
-  .roadmap .roadmap-step .roadmap-step__item-img img {
-    width: 100%;
-  }
-
-  .roadmap .roadmap-step-info__item {
-    padding: 40px 33px;
-  }
-
-  .roadmap .roadmap-step-info__item p {
-    font-size: 24px;
-  }
-
-  .roadmap .btn {
-    display: none;
-  }
-
-  .roadmap__wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 21px;
-  }
-
-  .roadmap-step-info__item.active {
-    min-height: 100%;
+    margin-bottom: 120px;
   }
 }
 
@@ -1415,6 +1234,14 @@ ul {
     line-height: 120%;
     font-size: 24px;
   }
+}
+
+/* For scroll to center section */
+.anchor{
+  display: block;
+  height: 120px;
+  margin-top: -120px;
+  visibility: hidden;
 }
 
 .callback-form .section-title {
@@ -2126,6 +1953,7 @@ ul.header-card__text {
 
 .consult__btn {
   max-width: 469px;
+  margin-left: 0;
 }
 
 .consult__list {
