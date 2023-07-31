@@ -27,6 +27,15 @@ function redirect() {
 
 redirect();
 
+(function getInputFile() {
+  const input = document.querySelector("#file");
+  const placeholder = document.querySelector(".popup .input-wrapper .placeholder")
+  input.addEventListener("change", function() {
+    placeholder.innerHTML = input.files[0].name;
+    placeholder.style.color = "black"
+  })
+})();
+
 (function mobMenu() {
   const hamburger_menu = document.querySelector(".hamburger-menu");
   const mob_menu = document.querySelector(".mob-menu");
@@ -100,24 +109,11 @@ accordion(".header-card__mob .header-card");
 })();
 
 (function becomeMentorPopup() {
-  const becomeMentorPopup = document.querySelector(".popup.became-mentor-popup");
-  const becomeMentorPopupLink = document.querySelector(".tutors-card.became-tutor");
-  let becomeMentorPopupBtn = document.querySelectorAll(".action-btn.became-tutor");
-  becomeMentorPopupBtn = [...becomeMentorPopupBtn];
-
-  if (becomeMentorPopupBtn) {
-    becomeMentorPopupBtn.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
-        becomeMentorPopup.style.display = "block";
-      });
-    });
-  }
-
+  const becomeMentorPopup = document.querySelector(".became-mentor-popup");
+  const becomeMentorPopupLink = document.querySelector(".became-mentor");
   if (becomeMentorPopupLink) {
-    becomeMentorPopupLink.addEventListener("click", (e) => {
-      e.preventDefault();
+    becomeMentorPopupLink.addEventListener("click", () => {
       becomeMentorPopup.style.display = "block";
-    });
+    })
   }
 })();

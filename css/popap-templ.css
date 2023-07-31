@@ -39,7 +39,7 @@
     flex-direction: column;
 }
 
-.popup.popap-templ .form .from__btn {
+.popup.popap-templ .form .form__btn {
     margin-top: 20px;
 }
 
@@ -74,7 +74,7 @@
 @media(min-width:992px) {
     .popup.popup.popap-templ {
         background-color: rgba(0, 0, 0, .5);
-        padding-top: 15%;
+        padding-top: 50px;
         z-index: 99999;
     }
 
@@ -96,7 +96,7 @@
     }
 
     .popup.popup.popap-templ .popup-body {
-        max-width: 961px;
+        max-width: 700px;
         border: 1px solid #0b2235;
         border-radius: 10px;
         height: auto;
