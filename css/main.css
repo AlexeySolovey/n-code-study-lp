@@ -51,7 +51,9 @@ ul {
 
 .btn {
   max-width: 230px;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
   background: rgba(11, 34, 53, .9);
   box-shadow: 0 6px 12px rgba(0, 0, 0, .05);
@@ -246,6 +248,10 @@ ul {
   padding: 30px 15px 0;
 }
 
+.header .mob-menu .logo{
+  margin: 10px auto 0;
+}
+
 .header .mob-menu.active {
   transform: translateY(0);
   transition: .3s;
@@ -256,6 +262,7 @@ ul {
   font-family: "Venus Rising";
   font-size: 10px;
   line-height: 12px;
+  padding-top: 40px;
 }
 
 .header .mob-menu .menu__nav a {
@@ -263,26 +270,50 @@ ul {
 }
 
 .header .mob-menu .menu__nav li {
-  padding: 12px 0 10px 40px;
+  padding: 12px 0 10px 20px;
   font-size: 14px;
   line-height: 2;
   text-transform: uppercase;
 }
 
-.header .mob-menu .menu__nav li:not(:last-child) {
-  border-bottom: 1px solid rgba(11, 34, 53, .1);
-}
 
 .header .mob-menu .header__items {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: start;
+  margin-left: 20px;
+  margin-top: 20px;
 }
 
-.header .language {
-  padding: 14px 18px 14px 10px;
-  border: 1px solid #0b2235;
+.header .mob-menu .header__items .btn{
+  margin: unset;
   border-radius: 5px;
+  height: 30px;
+}
+
+.header .mob-menu .header__items .login-btn{
+  width: 72px;
+  margin-right: 20px;
+}
+
+.header .mob-menu .header__items .signup-btn{
+  width: 130px;
+}
+
+.header .mob-menu .header__footer{
+  position: absolute;
+  bottom: 80px;
+  left: 40%;
+}
+
+@media screen and (min-width:576px){
+.header .mob-menu .header__items .login-btn{
+  width: 50%
+}
+
+.header .mob-menu .header__items .signup-btn{
+  width: 50%;
+  }
 }
 
 .header.scrolled {
@@ -320,6 +351,7 @@ ul {
 .hamburger-menu.active {
   top: 25px;
   transition: top .3s;
+  left: 10px;
 }
 
 .hamburger-menu.active .hamburger::after {
@@ -382,6 +414,12 @@ ul {
 .header__items {
   display: none;
 }
+
+.header__items .signup-btn{
+  background-color: #FD460E;
+  border-color: #FD460E;
+  width: 170px;
+ }
 
 @media screen and (min-width:992px) {
   .header .mob-menu .menu__nav{
@@ -448,12 +486,6 @@ ul {
   .header__items .login-btn{
     width: 100px;
   }
-
-  .header__items .signup-btn{
-   background-color: #FD460E;
-   border-color: #FD460E;
-   width: 170px;
-  }
 }
 
 .slider {
@@ -462,6 +494,7 @@ ul {
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .slide {
@@ -474,13 +507,14 @@ ul {
 
 .title {
   font-size: 20px;
-  width: 400px;
+  width: 280px;
   text-align: center;
   line-height: 30.8px;
 }
 
 .logo-title{
   color: #FD460E;
+  font-size: 29px;
 }
 
 .slide__btn{
@@ -507,6 +541,9 @@ ul {
     font-size: 32px;
     line-height: 50px;
     width: 550px;
+  }
+  .logo-title{
+    font-size: unset;
   }
 }
 
