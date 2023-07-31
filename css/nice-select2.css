@@ -42,7 +42,7 @@
   pointer-events: none;
   position: absolute;
   right: 12px;
-  top: 50%;
+  top: 55%;
   transform-origin: 66% 66%;
   transform: rotate(45deg);
   transition: .15s ease-in-out;
