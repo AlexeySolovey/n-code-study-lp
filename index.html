@@ -726,23 +726,18 @@
           <label class="required" for="name">
             <input type="text" name="name" placeholder="Ім’я" required="true" />
           </label>
-          <label class="required" for="phone">
-            <input type="phone" name="phone" placeholder="Номер телефона" required="true" />
-          </label>
-          <label class="required" for="email">
-            <input type="email" name="email" placeholder="E-mail" required="true" />
-          </label>
-          <select class="select-course custom-select" name="course" id="course">
-            <option data-display="Оберіть напрямок"></option>
-            <option value="1">HTML</option>
-            <option value="2">CSS</option>
-            <option value="3">JS</option>
-          </select>
+          <div class="input-wrapper">
+            <label class="required" for="phone">
+              <input type="phone" name="phone" placeholder="Номер телефона" required="true" />
+            </label>
+            <label class="required" for="email">
+              <input type="email" name="email" placeholder="E-mail" required="true" />
+            </label>
+            </div>
           <select class="select-wherefrom custom-select" name="wherefrom" id="wherefrom">
-            <option></option>
-            <option value="html">оттуда</option>
-            <option value="css">отсюда</option>
-            <option value="js">из ниоткуда</option>
+            <option value="google">З пошукової системи (Google)</option>
+            <option value="social">Із соціальної мережі (Facebook, Instagram)</option>
+            <option value="friends">Від друзів чи знайомих</option>
           </select>
           <textarea name="comment" placeholder="Повідомлення"></textarea>
           <div class="from__btn">

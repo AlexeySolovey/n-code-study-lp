@@ -84,16 +84,13 @@ accordion(".accordion__item");
 accordion(".header-card__mob .header-card");
 
 (function customSelect() {
-  const course = document.getElementById("course");
   const wherefrom = document.getElementById("wherefrom");
 
-  if (course && wherefrom) {
+  if (wherefrom) {
     NiceSelect.bind(wherefrom);
-    NiceSelect.bind(course);
 
     let selectsPlaceholder = document.querySelectorAll(".nice-select .current");
-    selectsPlaceholder[0].innerHTML = "Оберіть напрямок";
-    selectsPlaceholder[1].innerHTML = "Звідки ви дізнались про N-Code?";
+    selectsPlaceholder[0].innerHTML = "Звідки ви дізнались про N-Code?";
   }
 })();
 
