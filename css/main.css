@@ -705,7 +705,7 @@ ul {
     margin-bottom: 120px;
   }
 
-  .tutors .tutors-card:nth-child(n+4):not(.became-tutor) {
+  .tutors-card:nth-child(n+4):not(.became-tutor) {
     display: grid;
   }
 
