@@ -665,7 +665,7 @@ ul {
   text-transform: uppercase;
 }
 
-.tutors .tutors-card:nth-child(n+4):not(.became-tutor) {
+ .tutors-card:nth-child(n+4):not(.became-tutor) {
   display: none;
 }
 
