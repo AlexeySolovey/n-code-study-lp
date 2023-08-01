@@ -2,6 +2,10 @@
     margin-top: 85px;
 }
 
+.feedback-page  .tutors-card {
+    display: grid !important;
+  }
+
 .cards-page .action-btn.btn.btn_blue {
     display: none;
 }
