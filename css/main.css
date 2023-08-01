@@ -65,6 +65,11 @@ ul {
   font-size: 10px;
   box-sizing: border-box;
   border: none;
+  transition: background-color 300ms;
+}
+
+.btn:hover{
+  background: #FD460E;
 }
 
 .title {
@@ -453,6 +458,10 @@ ul {
    background-color: #FD460E;
    border-color: #FD460E;
    width: 170px;
+  }
+
+  .header__items .signup-btn:hover{
+    background-color: #24394A;
   }
 }
 
