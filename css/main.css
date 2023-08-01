@@ -876,6 +876,9 @@ ul {
   .tutors-card__course p:last-of-type {
     margin-bottom: 20px;
   }
+  .feedback .tutors-card__course p:last-of-type {
+    margin-bottom: 10px;
+  }
 
   .tutors-card__course p .tutors-card__course-link::after {
     margin-left: 15px;
@@ -927,10 +930,6 @@ ul {
     grid-row-start: 2;
     gap: 12px;
     height: 20px;
-  }
-
-  .tutors-card__rate i {
-    font-size: 18px;
   }
 
   .tutors-card__info .tutors-card__description {
@@ -2007,11 +2006,13 @@ ul.header-card__text {
   max-width: 700px;
   margin: 0 auto 100px;
   background-color: #fff;
-  padding: 40px;
+  padding: 60px;
   border: 1px solid #0b2235;
   border-radius: 10px;
   box-sizing: border-box;
   position: relative;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 .popup__close {
