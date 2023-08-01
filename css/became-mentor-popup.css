@@ -1,46 +1,60 @@
 .popup.popap-templ.became-mentor-popup .form {
-    display: flex;
+  display: flex;
 }
-
-.popup.popap-templ.became-mentor-popup label[for=file] {
-    grid-area: file;
-}
-
-.popup.popap-templ.became-mentor-popup label[for=place] {
-    grid-area: place;
-}
-
-.popup.popap-templ.became-mentor-popup label[for=work] {
-    grid-area: work;
-}
-
-.popup.popap-templ.became-mentor-popup label[for=social] {
-    grid-area: social;
-}
-
-.popup.popap-templ.became-mentor-popup label[for=linkedIn] {
-    grid-area: linkedIn;
-}
-
-.popup.popap-templ.became-mentor-popup .form textarea[name=comment] {
-    height: 52px;
-    box-sizing: border-box;
-    padding: 16px 0 5px 20px;
+.popup.popap-templ.became-mentor-popup .form textarea[name="comment"] {
+  height: 52px;
+  box-sizing: border-box;
+  padding: 16px 0 5px 20px;
 }
 
 .popup.popap-templ.became-mentor-popup .popup__title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .popup.popap-templ.became-mentor-popup .popup__title-group {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.popup.popap-templ.became-mentor-popup .input-wrapper {
+  display: flex;
 }
 
-@media(min-width:992px) {
-    .popup.popap-templ.became-mentor-popup .form {
-        display: grid;
-        grid-template-areas: "name name work""phone email place""file file linkedIn""text text social";
-        margin-bottom: 0;
-    }
+.popup.popap-templ.became-mentor-popup .input-wrapper label {
+  width: 50%;
+}
+
+.popup.popap-templ.became-mentor-popup .input-wrapper label:first-child {
+  margin-right: 20px;
+}
+
+.popup.popap-templ.became-mentor-popup .input-wrapper .file-upload {
+  position: relative;
+  border: 1px solid #0b2235;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.popup.popap-templ.became-mentor-popup .input-wrapper .placeholder {
+  color: #8e8e8e;
+  position: absolute;
+  top: 33%;
+  left: 20px;
+  font-size: 14px;
+}
+
+.popup.popap-templ.became-mentor-popup .input-wrapper .file {
+  display: none;
+}
+
+.popup.popap-templ.became-mentor-popup .form__btn .btn {
+  width: 280px;
+  font-size: 15px;
+}
+
+@media (min-width: 992px) {
+  .popup.popap-templ.became-mentor-popup .form {
+    margin-bottom: 0;
+  }
 }
