@@ -665,7 +665,7 @@ ul {
   text-transform: uppercase;
 }
 
-.tutors .tutors-card:nth-child(n+4):not(.became-tutor) {
+ .tutors-card:nth-child(n+4):not(.became-tutor) {
   display: none;
 }
 
@@ -705,7 +705,7 @@ ul {
     margin-bottom: 120px;
   }
 
-  .tutors .tutors-card:nth-child(n+4):not(.became-tutor) {
+  .tutors-card:nth-child(n+4):not(.became-tutor) {
     display: grid;
   }
 
@@ -747,6 +747,13 @@ ul {
   grid-row-end: 3;
 }
 
+.tutors-card__img img{
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .tutors-card__name {
   grid-area: name;
   font-weight: 600;
@@ -782,6 +789,7 @@ ul {
 .tutors-card__course p:nth-child(1) {
   margin-bottom: 5px;
   grid-area: title;
+  color: #bdbdbd;
 }
 
 .tutors-card__course p:nth-child(2) {
@@ -866,6 +874,9 @@ ul {
   }
 
   .tutors-card__course p:last-of-type {
+    margin-bottom: 20px;
+  }
+  .feedback .tutors-card__course p:last-of-type {
     margin-bottom: 10px;
   }
 
@@ -884,7 +895,12 @@ ul {
   }
 
   .tutors-card {
-    row-gap: 25px;
+    row-gap: 15px;
+    height: 361px;
+  }
+
+  .tutors .tutors-card{
+    row-gap: 0;
   }
 
   .tutors-card__top {
@@ -896,8 +912,8 @@ ul {
   }
 
   .tutors-card__img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     grid-area: img;
     grid-row-end: 2;
   }
@@ -920,13 +936,9 @@ ul {
     height: 20px;
   }
 
-  .tutors-card__rate i {
-    font-size: 18px;
-  }
-
   .tutors-card__info .tutors-card__description {
     margin-bottom: 20px;
-    height: 100px;
+    height: 60px;
   }
 
   .tutors-card__course {
@@ -1174,8 +1186,8 @@ ul {
   margin-bottom: 40px;
 }
 
-.feedback .btn-wrap,
-.feedback .tutors-card__tutor {
+.btn-wrap,
+.tutors-card__tutor {
   display: none;
 }
 
@@ -1184,53 +1196,58 @@ ul {
     margin-bottom: 55px;
   }
 
-  .feedback .tutors-card__top {
+  .tutors-card__top {
     grid-template-rows: 1fr 20px;
     grid-template-columns: 60px;
     grid-template-areas: "img name""rate rate";
     height: 100px;
   }
 
-  .feedback .tutors-card__name {
+  .tutors .tutors-card__top{
+    height: 50px;
+  }
+
+  .tutors-card__name {
     grid-row-start: 1;
     grid-column-start: 2;
   }
 
-  .feedback .btn-wrap {
+  .btn-wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
-  .feedback .btn-wrap .btn {
+  .btn-wrap .btn {
     width: 100%;
   }
 
-  .feedback .btn.mob_btn {
+  .btn.mob_btn {
     display: none;
   }
 
-  .feedback .tutors-card__wrap {
+  .tutors-card__wrap {
     margin-bottom: 120px;
   }
 
-  .feedback .tutors-card__course {
-    grid-template-areas: "link link""title title""curs_name curs_name";
-    margin-bottom: 20px;
+  .tutors-card__course {
+    grid-template-areas: "title title""curs_name curs_name""link link";
   }
 
-  .feedback .tutors-card__course-link {
+  .tutors-card__course-link {
     margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .tutors-card__tutor {
+    display: block;
     margin-bottom: 20px;
   }
 
-  .feedback .tutors-card__tutor {
-    display: block;
-  }
-
-  .feedback .tutors-card__tutor p:first-child {
+  .tutors-card__tutor p:first-child {
     font-size: 12px;
     margin-bottom: 5px;
+    color: #bdbdbd;
   }
 }
 
@@ -1987,7 +2004,7 @@ ul.header-card__text {
   height: 100%;
   background-color: rgba(0, 0, 0, .5);
   z-index: 999999;
-  padding-top: 7%;
+  padding-top: 5%;
   padding-left: 20px;
   padding-right: 20px;
   display: none;
@@ -1997,11 +2014,13 @@ ul.header-card__text {
   max-width: 700px;
   margin: 0 auto 100px;
   background-color: #fff;
-  padding: 40px;
+  padding: 60px;
   border: 1px solid #0b2235;
   border-radius: 10px;
   box-sizing: border-box;
   position: relative;
+  max-height: 600px;
+  overflow-y: auto;
 }
 
 .popup__close {
