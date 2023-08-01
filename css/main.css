@@ -308,7 +308,7 @@ ul {
 .header .mob-menu .header__footer{
   position: absolute;
   bottom: 80px;
-  width: 100%;
+  width: calc(100% - 30px);
   margin: 0 auto;
 }
 
