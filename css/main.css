@@ -67,6 +67,11 @@ ul {
   font-size: 10px;
   box-sizing: border-box;
   border: none;
+  transition: background-color 300ms;
+}
+
+.btn:hover{
+  background: #FD460E;
 }
 
 .title {
@@ -485,6 +490,16 @@ ul {
 
   .header__items .login-btn{
     width: 100px;
+  }
+
+  .header__items .signup-btn{
+   background-color: #FD460E;
+   border-color: #FD460E;
+   width: 170px;
+  }
+
+  .header__items .signup-btn:hover{
+    background-color: #24394A;
   }
 }
 
@@ -1325,10 +1340,23 @@ ul {
 }
 
 .form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   row-gap: 10px;
   max-width: 880px;
   margin: 0 auto 80px;
+}
+
+.form .input-wrapper{
+  display: flex;
+}
+
+.form .input-wrapper label{
+  width: 50%;
+}
+
+.form .input-wrapper label:first-child{
+  margin-right: 20px;
 }
 
 .form input,
@@ -1389,14 +1417,10 @@ ul {
   background-repeat: no-repeat;
 }
 
-.form select {
-  display: none;
-}
-
 .form .custom-select {
+  cursor: pointer;
   width: 100%;
   box-sizing: border-box;
-  height: 32px;
   border-radius: 5px;
   border: 1px solid #0b2235;
   font-size: 11px;
@@ -1406,10 +1430,6 @@ ul {
   font-weight: 400;
   padding-left: 20px;
   box-shadow: 0 6px 12px 0 rgba(0, 0, 0, .0509803922);
-}
-
-.form .custom-select:hover {
-  border: 1px solid #0b2235;
 }
 
 .form .custom-select.invalid {
@@ -1479,9 +1499,14 @@ ul {
 }
 
 @media(min-width:576px) {
-  .form input {
+  .form input,
+  .form select {
     height: 60px;
     font-size: 16px;
+  }
+
+  .form .custom-select{
+      font-size: 14px;
   }
 
   .form textarea[name=comment] {
@@ -1514,12 +1539,11 @@ ul {
 @media(min-width:992px) {
   .form {
     gap: 20px;
-    grid-template-columns: 1fr 1fr 33%;
-    grid-template-areas: "phone email course""name name wherefrom""text text text";
   }
 
   .form input,
   .form select {
+    display: block;
     height: 52px;
     font-size: 14px;
     line-height: 15px;
@@ -1536,18 +1560,6 @@ ul {
   .form label[for=phone]::before {
     top: 13px;
     left: 20px;
-  }
-
-  .form label[for=email] {
-    grid-area: email;
-  }
-
-  .form .select-course {
-    grid-area: course;
-  }
-
-  .form .select-wherefrom {
-    grid-area: wherefrom;
   }
 
   .form textarea[name=comment] {

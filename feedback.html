@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="css/nice-select2.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/popap-templ.css">
+    <link rel="stylesheet" href="css/became-mentor-popup.css" />
     <link rel="stylesheet" href="css/feedback-page.css">
+    <title>N-Code</title>
 </head>
-<title>N-Code</title>
 
 <body>
     <div class="content-container feedback-page feedback cards-page">
@@ -269,7 +270,7 @@
             </div>
             <div class="col">
               <p class="footer__title">Співробітництво</p>
-              <button class="btn footer__btn">Стати ментором</button>
+              <button class="btn footer__btn became-mentor">Стати ментором</button>
             </div>
           </div>
           <div class="footer__social">
@@ -310,52 +311,6 @@
           </div>
         </div>
       </footer>
-    <div class="popup give-feedback-popup popap-templ">
-        <div class="popup-body">
-            <div class="popup__close"></div>
-            <h2 class="popup__title">ЗАЛИШИТИ ВІДГУК</h2><a class="back-link">Назад </a>
-            <form class="form" action="POST" id="feedbackForm">
-                <label class="required" for="name">
-                    <input type="text" name="name" placeholder="Ім’я" required>
-                </label>
-                <label class="required" for="phone">
-                    <input type="phone" name="phone" placeholder="Номер телефона" required>
-                </label>
-                <label class="required" for="email">
-                    <input type="email" name="email" placeholder="E-mail" required>
-                </label>
-                <select class="select-course custom-select custom-select-required" name="course" id="courseFeed">
-                    <option value=""></option>
-                    <option value="HTML">HTML</option>
-                    <option value="CSS">CSS</option>
-                    <option value="JS">JS</option>
-                </select>
-                <select class="custom-select custom-select-required" name="tutor" id="tutor">
-                    <option value=""></option>
-                    <option value="Иван Иваненко">Иван Иваненко</option>
-                    <option value="Петр Петренко">Петр Петренко</option>
-                    <option value="Светлана Светленко">Светлана Светленко</option>
-                </select>
-                <div class="form-rate required">
-                    <div class="tutors-card__rate" data-stars="1"><i class="mentors__star fa-solid fa-star"></i><i
-                            class="mentors__star fa-solid fa-star"></i><i
-                            class="mentors__star fa-solid fa-star"></i><i
-                            class="mentors__star fa-solid fa-star"></i><i
-                            class="mentors__star fa-solid fa-star"></i>
-                    </div>
-                </div>
-                <label class="required" for="social">
-                    <input type="" name="social" placeholder="Соціальна мережа" required>
-                </label>
-                <textarea name="comment" placeholder="Повідомлення"></textarea>
-                <div class="from__btn">
-                    <button class="btn" type="submit">Надіслати ЗАЯВКУ</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src="js/star.js"></script>
-    <script src="js/nice-select2.js"></script>
     <div class="popup feedback-popup" data-content="1">
         <div class="popup-body">
             <div class="popup__close"></div>
@@ -377,11 +332,6 @@
             <div class="feedback-popup__item">
                 <p>Викладач:</p>
                 <p>Михайло Великосельський
-                    <script src="js/nice-select2.js"></script>
-                    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
-                    <script src="js/popup.js">
-                    </script>
-                    <script src="js/script.js"></script>
                 </p>
             </div>
         </div>
@@ -405,11 +355,6 @@
             <div class="feedback-popup__item">
                 <p>Викладач:</p>
                 <p>Владислав Хаус
-                    <script src="js/nice-select2.js"></script>
-                    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
-                    <script src="js/popup.js">
-                    </script>
-                    <script src="js/script.js"></script>
                 </p>
             </div>
         </div>
@@ -433,11 +378,6 @@
             <div class="feedback-popup__item">
                 <p>Викладач:</p>
                 <p>Олексій Козаковський
-                    <script src="js/nice-select2.js"></script>
-                    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
-                    <script src="js/popup.js">
-                    </script>
-                    <script src="js/script.js"></script>
                 </p>
             </div>
         </div>
@@ -462,11 +402,6 @@
             <div class="feedback-popup__item">
                 <p>Викладач:</p>
                 <p>Сергій Популях
-                    <script src="js/nice-select2.js"></script>
-                    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
-                    <script src="js/popup.js">
-                    </script>
-                    <script src="js/script.js"></script>
                 </p>
             </div>
         </div>
@@ -490,15 +425,49 @@
             <div class="feedback-popup__item">
                 <p>Викладач:</p>
                 <p>Яна Паламарчук
-                    <script src="js/nice-select2.js"></script>
-                    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
-                    <script src="js/popup.js">
-                    </script>
-                    <script src="js/script.js"></script>
                 </p>
             </div>
         </div>
     </div>
+
+    <div class="popup popap-templ became-mentor-popup">
+        <div class="popup-body">
+          <div class="popup__close"></div>
+          <div class="popup__title-group">
+            <h2 class="popup__title">Стати ментором</h2>
+            <p class="popup__sub-title">Залиште ваші контактні дані, і ми вам обов'язково зателефонуємо!</p>
+          </div>
+          <a class="back-link">Назад </a>
+          <form class="form" action="POST" id="feedbackForm">
+            <label class="required" for="name">
+              <input type="text" name="name" placeholder="Ім’я та Прізвище" required="required" />
+            </label>
+            <label class="required" for="phone">
+              <input type="phone" name="phone" placeholder="Номер телефону" required="required" />
+            </label>
+            <label class="required" for="email">
+              <input type="email" name="email" placeholder="E-mail" required="required" />
+            </label>
+            <div class="input-wrapper">
+              <label class="required file-upload" for="file">
+                <span class="placeholder">Прикріпити файл з резюме</span>
+                <input id="file" class="file" type="file" name="file" accept=".pdf" required="required" />
+              </label>
+              <label class="required" for="linkedIn">
+                <input type="text" name="linkedIn" placeholder="LinkedIn" required="required" />
+              </label>
+            </div>
+            <textarea name="comment" placeholder="Коментар (не обов’язково)"></textarea>
+            <div class="form__btn">
+              <button class="btn" type="submit">Надіслати заявку</button>
+            </div>
+          </form>
+        </div>
+    </div>
+    <script src="js/nice-select2.js"></script>
+    <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
