@@ -54,18 +54,13 @@ redirect();
     btn.addEventListener("click", function (event) {
       event.preventDefault();
       
-      // const name = document.querySelector(".callback-form .name").value
-      // const phone = document.querySelector(".callback-form .phone").value
-      // const email = document.querySelector(".callback-form .email").value
-      // const wherefrom = document.querySelector(".callback-form .select-wherefrom").value
-      // const comment = document.querySelector(".callback-form .comment").value
+      const name = document.querySelector(".callback-form .name").value
+      const phone = document.querySelector(".callback-form .phone").value
+      const email = document.querySelector(".callback-form .email").value
+      const wherefrom = document.querySelector(".callback-form .select-wherefrom").value
+      const comment = document.querySelector(".callback-form .comment").value
 
-      // const body = {name, phone, email, wherefrom, comment}
-
-      const formData = new FormData(form)
-      // // formData.append('name', name)
-      // console.log(formData)
-      // console.log([...formData.entries()])
+      const body = {name, phone, email, wherefrom, comment}
 
       const url = 'https://api.n-code-dev.in.net/api/emails/feedback'
 
@@ -74,15 +69,16 @@ redirect();
         headers: {
           'Content-Type': 'application/json'
         },
-        body: formData
+        body: body
       };
-
-      fetch(url, options)
 
       const inputs = form.querySelectorAll("input");
       inputs.forEach(function (input) {
         if (!input.checkValidity()) {
           input.classList.add("invalid");
+        }
+        else{
+          fetch(url, options)
         }
       });
     });
