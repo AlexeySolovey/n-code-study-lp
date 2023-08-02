@@ -853,14 +853,14 @@
         <div class="section-title">Зворотній зв’язок</div>
         <form class="form" id="callbackForm">
           <label class="required">
-            <input class="name" type="text" name="name" placeholder="Ім’я" required="true" />
+            <input maxlength="30" class="name" type="text" name="name" placeholder="Ім’я" required="required" />
           </label>
           <div class="input-wrapper">
-            <label class="required" for="phone">
-              <input class="phone" type="phone" name="phone" placeholder="Номер телефона" required="true" />
+            <label class="required">
+              <input class="phone" type="phone" name="phone" placeholder="Номер телефона" required="required" />
             </label>
             <label class="required">
-              <input class="email" type="email" name="email" placeholder="E-mail" required="true" />
+              <input class="email" type="email" name="email" placeholder="E-mail" required="required" />
             </label>
           </div>
           <select class="select-wherefrom custom-select" name="wherefrom" id="wherefrom">
@@ -868,8 +868,8 @@
             <option value="social">Із соціальної мережі (Facebook, Instagram)</option>
             <option value="friends">Від друзів чи знайомих</option>
           </select>
-          <textarea class="comment" name="comment" placeholder="Повідомлення"></textarea>
-          <div class="from__btn">
+          <textarea maxlength="300" class="comment" name="comment" placeholder="Повідомлення"></textarea>
+          <div class="form__btn">
             <button class="btn" type="submit">Надіслати</button>
           </div>
         </form>
