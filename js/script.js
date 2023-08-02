@@ -53,6 +53,32 @@ redirect();
   if (form) {
     btn.addEventListener("click", function (event) {
       event.preventDefault();
+      
+      // const name = document.querySelector(".callback-form .name").value
+      // const phone = document.querySelector(".callback-form .phone").value
+      // const email = document.querySelector(".callback-form .email").value
+      // const wherefrom = document.querySelector(".callback-form .select-wherefrom").value
+      // const comment = document.querySelector(".callback-form .comment").value
+
+      // const body = {name, phone, email, wherefrom, comment}
+
+      const formData = new FormData(form)
+      // // formData.append('name', name)
+      // console.log(formData)
+      // console.log([...formData.entries()])
+
+      const url = 'https://api.n-code-dev.in.net/api/emails/feedback'
+
+      const options = {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: formData
+      };
+
+      fetch(url, options)
+
       const inputs = form.querySelectorAll("input");
       inputs.forEach(function (input) {
         if (!input.checkValidity()) {
@@ -62,6 +88,8 @@ redirect();
     });
   }
 })();
+
+
 
 function accordion(selector) {
   let accordionItem = document.querySelectorAll(selector);
