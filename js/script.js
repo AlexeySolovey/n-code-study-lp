@@ -57,10 +57,10 @@ redirect();
       const name = document.querySelector(".callback-form .name").value
       const phone = document.querySelector(".callback-form .phone").value
       const email = document.querySelector(".callback-form .email").value
-      const wherefrom = document.querySelector(".callback-form .select-wherefrom").value
+      const source = document.querySelector(".callback-form .select-wherefrom").value
       const comment = document.querySelector(".callback-form .comment").value
 
-      const body = {name, phone, email, wherefrom, comment}
+      const body = {name, email, phone, source, comment}
 
       const url = 'https://api.n-code-dev.in.net/api/emails/feedback'
 
