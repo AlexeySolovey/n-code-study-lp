@@ -69,16 +69,15 @@ redirect();
         headers: {
           'Content-Type': 'application/json'
         },
-        body: body
+        body: JSON.stringify(body)
       };
+
+      fetch(url, options)
 
       const inputs = form.querySelectorAll("input");
       inputs.forEach(function (input) {
         if (!input.checkValidity()) {
           input.classList.add("invalid");
-        }
-        else{
-          fetch(url, options)
         }
       });
     });
