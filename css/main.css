@@ -635,7 +635,7 @@ ul {
 
   .advantages__item {
     padding: 17px 0;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 23px;
   }
 
@@ -685,18 +685,17 @@ ul {
   .advantages__item {
     max-width: 540px;
     box-sizing: border-box;
-    font-size: 24px;
     line-height: 28px;
     height: 100px;
     padding: 0 25px;
   }
 
   .advantages__item p {
-    max-width: 431px;
+    max-width: 400px;
   }
 
   .advantages .item__num {
-    font-size: 32px;
+    font-size: 26px;
     padding: 10px 0;
     transform: translate(-45px, -50%);
   }
