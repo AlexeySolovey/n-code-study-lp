@@ -853,14 +853,14 @@
         <div class="section-title">Зворотній зв’язок</div>
         <form class="form" id="callbackForm">
           <label class="required">
-            <input class="name" type="text" name="name" placeholder="Ім’я" required="true" />
+            <input maxlength="30" class="name" type="text" name="name" placeholder="Ім’я" required="required" />
           </label>
           <div class="input-wrapper">
             <label class="required" for="phone">
-              <input class="phone" type="phone" name="phone" placeholder="Номер телефона" required="true" />
+              <input class="phone" type="phone" name="phone" placeholder="Номер телефона" required="required" />
             </label>
             <label class="required">
-              <input class="email" type="email" name="email" placeholder="E-mail" required="true" />
+              <input class="email" type="email" name="email" placeholder="E-mail" required="required" />
             </label>
           </div>
           <select class="select-wherefrom custom-select" name="wherefrom" id="wherefrom">
@@ -868,8 +868,8 @@
             <option value="social">Із соціальної мережі (Facebook, Instagram)</option>
             <option value="friends">Від друзів чи знайомих</option>
           </select>
-          <textarea class="comment" name="comment" placeholder="Повідомлення"></textarea>
-          <div class="from__btn">
+          <textarea maxlength="300" class="comment" name="comment" placeholder="Повідомлення"></textarea>
+          <div class="form__btn">
             <button class="btn" type="submit">Надіслати</button>
           </div>
         </form>
@@ -1358,26 +1358,26 @@
           <p class="popup__sub-title">Залиште ваші контактні дані, і ми вам обов'язково зателефонуємо!</p>
         </div>
         <a class="back-link">Назад </a>
-        <form class="form" action="POST" id="feedbackForm">
+        <form class="form" action="POST" id="mentorForm">
           <label class="required" for="name">
-            <input type="text" name="name" placeholder="Ім’я та Прізвище" required="required" />
+            <input class="name" type="text" name="name" placeholder="Ім’я та Прізвище" required="required" />
           </label>
           <label class="required" for="phone">
-            <input type="phone" name="phone" placeholder="Номер телефону" required="required" />
+            <input class="phone" type="phone" name="phone" placeholder="Номер телефону" required="required" />
           </label>
           <label class="required" for="email">
-            <input type="email" name="email" placeholder="E-mail" required="required" />
+            <input class="email" type="email" name="email" placeholder="E-mail" required="required" />
           </label>
           <div class="input-wrapper">
             <label class="required file-upload" for="file">
               <span class="placeholder">Прикріпити файл з резюме</span>
-              <input id="file" class="file" type="file" name="file" accept=".pdf" required="required" />
+              <input id="file" class="file" type="file" name="attachment" accept=".pdf" required="required" />
             </label>
-            <label class="required" for="linkedIn">
-              <input type="text" name="linkedIn" placeholder="LinkedIn" required="required" />
+            <label for="linkedIn">
+              <input class="link" type="text" name="linkedIn" placeholder="LinkedIn" />
             </label>
           </div>
-          <textarea name="comment" placeholder="Коментар (не обов’язково)"></textarea>
+          <textarea class="comment" name="comment" placeholder="Коментар (не обов’язково)"></textarea>
           <div class="form__btn">
             <button class="btn" type="submit">Надіслати заявку</button>
           </div>

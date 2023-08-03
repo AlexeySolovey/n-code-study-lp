@@ -9,15 +9,15 @@ function redirect() {
       break;
     case "n-code-release.in.net":
       loginLink.href = "https://my.n-code-release.in.net/";
-      signupLink.href = `${loginLink.href}uk/#/signup`
+      signupLink.href = `${loginLink.href}uk/#/signup`;
       break;
     case "n-code.study":
       loginLink.href = "https://my.n-code.study/";
-      signupLink.href = `${loginLink.href}uk/#/signup`
+      signupLink.href = `${loginLink.href}uk/#/signup`;
       break;
     case "n-code-test.in.net":
       loginLink.href = "https://my.n-code-test.in.net/";
-      signupLink.href = `${loginLink.href}uk/#/signup`
+      signupLink.href = `${loginLink.href}uk/#/signup`;
       break;
     default:
       loginLink.href = "#";
@@ -29,11 +29,11 @@ redirect();
 
 (function getInputFile() {
   const input = document.querySelector("#file");
-  const placeholder = document.querySelector(".popup .input-wrapper .placeholder")
-  input.addEventListener("change", function() {
+  const placeholder = document.querySelector(".popup .input-wrapper .placeholder");
+  input.addEventListener("change", function () {
     placeholder.innerHTML = input.files[0].name;
-    placeholder.style.color = "black"
-  })
+    placeholder.style.color = "black";
+  });
 })();
 
 (function mobMenu() {
@@ -46,45 +46,143 @@ redirect();
   });
 })();
 
-(function validation() {
+function getApiUrl(type) {
+  switch (window.location.host) {
+    case "n-code-dev.in.net":
+      return `https://api.n-code-dev.in.net/api/emails/${type}`;
+    case "n-code-release.in.net":
+      return `https://api.n-code-release.in.net/api/emails/${type}`;
+    case "n-code.study":
+      return `https://api.n-code-study/api/emails/${type}`;
+    case "n-code-test.in.net":
+      return `https://api.n-code-test.in.net/api/emails/${type}`;
+    default:
+      return `http://localhost:3022/api/emails/${type}`;
+  }
+}
+
+(function onSubmitCallBack() {
   const form = document.querySelector("#callbackForm");
   const btn = document.querySelector(".callback-form .btn");
 
   if (form) {
     btn.addEventListener("click", function (event) {
       event.preventDefault();
-      
-      const name = document.querySelector(".callback-form .name").value
-      const phone = document.querySelector(".callback-form .phone").value
-      const email = document.querySelector(".callback-form .email").value
-      const source = document.querySelector(".callback-form .select-wherefrom").value
-      const comment = document.querySelector(".callback-form .comment").value
 
-      const body = {name, email, phone, source, comment}
+      const name = document.querySelector(".callback-form .name").value;
+      const phone = document.querySelector(".callback-form .phone").value;
+      const email = document.querySelector(".callback-form .email").value;
+      const source = document.querySelector(".callback-form .select-wherefrom").value;
+      const comment = document.querySelector(".callback-form .comment").value;
 
-      const url = 'https://api.n-code-dev.in.net/api/emails/feedback'
+      const body = { name, email, phone, source, comment };
 
       const options = {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       };
 
-      fetch(url, options)
+      const url = getApiUrl("feedback");
 
-      const inputs = form.querySelectorAll("input");
-      inputs.forEach(function (input) {
-        if (!input.checkValidity()) {
-          input.classList.add("invalid");
-        }
-      });
+      if (validEmailCallback && validPhoneCallback && name) {
+        fetch(url, options)
+          .then(() => {
+            alert("Запит успішно відправлено");
+            form.reset();
+          })
+          .catch((error) => {
+            alert("Сталася помилка при виконанні запиту", error);
+          });
+      } else {
+        alert(`Будь ласка, заповніть обов'язкові поля!`);
+      }
     });
   }
 })();
 
+(function onSubmitBecameMentor() {
+  const form = document.querySelector("#mentorForm");
+  const btn = document.querySelector("#mentorForm .btn");
 
+  if (form) {
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      const options = {
+        method: "POST",
+        body: formData,
+      };
+
+      const url = getApiUrl("statement");
+
+      if (validEmailMentor && validPhoneMentor && formData.get("name") && formData.get("attachment").name) {
+        fetch(url, options)
+          .then(() => {
+            alert("Запит успішно відправлено");
+            form.reset();
+
+            const placeholder = document.querySelector(".became-mentor-popup .input-wrapper .placeholder");
+            placeholder.innerHTML = "Прикріпити файл з резюме";
+            placeholder.style.color = "#8e8e8e";
+          })
+          .catch((error) => {
+            alert("Сталася помилка при виконанні запиту", error);
+          });
+      } else {
+        alert(`Будь ласка, заповніть обов'язкові поля!`);
+      }
+    });
+  }
+})();
+
+let emailInputCallback = document.querySelector(".callback-form .email");
+let phoneInputCallback = document.querySelector(".callback-form .phone");
+
+let emailInputMentor = document.querySelector(".became-mentor-popup .email");
+let phoneInputMentor = document.querySelector(".became-mentor-popup .phone");
+
+let validEmailCallback = false;
+let validPhoneCallback = false;
+
+let validEmailMentor = false;
+let validPhoneMentor = false;
+
+emailInputCallback.addEventListener("input", function () {
+  let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
+  validEmailCallback = validationEmail.test(emailInputCallback.value.trim());
+
+  emailInputCallback.style.borderColor = validEmailCallback ? "black" : "red";
+});
+
+phoneInputCallback.addEventListener("input", function () {
+  let validationPhone = /^(\+380|380|0)\d{9}$/;
+
+  validPhoneCallback = validationPhone.test(phoneInputCallback.value.trim());
+
+  phoneInputCallback.style.borderColor = validPhoneCallback ? "black" : "red";
+});
+
+emailInputMentor.addEventListener("input", function () {
+  let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
+  validEmailMentor = validationEmail.test(emailInputMentor.value.trim());
+
+  emailInputMentor.style.borderColor = validEmailMentor ? "black" : "red";
+});
+
+phoneInputMentor.addEventListener("input", function () {
+  let validationPhone = /^(\+380|380|0)\d{9}$/;
+
+  validPhoneMentor = validationPhone.test(phoneInputMentor.value.trim());
+
+  phoneInputMentor.style.borderColor = validPhoneMentor ? "black" : "red";
+});
 
 function accordion(selector) {
   let accordionItem = document.querySelectorAll(selector);
@@ -134,6 +232,6 @@ accordion(".header-card__mob .header-card");
   if (becomeMentorPopupLink) {
     becomeMentorPopupLink.addEventListener("click", () => {
       becomeMentorPopup.style.display = "block";
-    })
+    });
   }
 })();
