@@ -46,22 +46,22 @@ redirect();
   });
 })();
 
-function getApiUrl() {
+function getApiUrl(type) {
   switch (window.location.host) {
     case "n-code-dev.in.net":
-      return "https://api.n-code-dev.in.net/api/emails/feedback";
+      return `https://api.n-code-dev.in.net/api/emails/${type}`;
     case "n-code-release.in.net":
-      return "https://api.n-code-release.in.net/api/emails/feedback";
+      return `https://api.n-code-release.in.net/api/emails/${type}`;
     case "n-code.study":
-      return "https://api.n-code-study/api/emails/feedback";
+      return `https://api.n-code-study/api/emails/${type}`;
     case "n-code-test.in.net":
-      return "https://api.n-code-test.in.net/api/emails/feedback";
+      return `https://api.n-code-test.in.net/api/emails/${type}`;
     default:
-      return "https://api.n-code-dev.in.net/api/emails/feedback";
+      return `http://localhost:3022/api/emails/${type}`;
   }
 }
 
-(function onSubmit() {
+(function onSubmitCallBack() {
   const form = document.querySelector("#callbackForm");
   const btn = document.querySelector(".callback-form .btn");
 
@@ -85,7 +85,7 @@ function getApiUrl() {
         body: JSON.stringify(body),
       };
 
-      const url = getApiUrl();
+      const url = getApiUrl("feedback");
 
       if (validEmail && validPhone && name) {
         fetch(url, options)
@@ -103,6 +103,35 @@ function getApiUrl() {
   }
 })();
 
+(function onSubmitBecameMentor() {
+  const form = document.querySelector("#mentorForm");
+  const btn = document.querySelector("#mentorForm .btn");
+
+  if (form) {
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      const options = {
+        method: "POST",
+        body: formData,
+      };
+
+      const url = getApiUrl("statement");
+
+      fetch(url, options)
+        .then(() => {
+          alert("Запит успішно відправлено");
+          form.reset();
+        })
+        .catch((error) => {
+          alert("Сталася помилка при виконанні запиту", error);
+        });
+    });
+  }
+})();
+
 let emailInput = document.querySelector(".email");
 let phoneInput = document.querySelector(".phone");
 
@@ -114,7 +143,7 @@ emailInput.addEventListener("input", function () {
 
   validEmail = validationEmail.test(emailInput.value.trim());
 
-  emailInput.style.borderColor = validEmail ? "black" : "red"
+  emailInput.style.borderColor = validEmail ? "black" : "red";
 });
 
 phoneInput.addEventListener("input", function () {
@@ -122,8 +151,7 @@ phoneInput.addEventListener("input", function () {
 
   validPhone = validationPhone.test(phoneInput.value.trim());
 
-  phoneInput.style.borderColor = validPhone ? "black" : "red"
-
+  phoneInput.style.borderColor = validPhone ? "black" : "red";
 });
 
 function accordion(selector) {
