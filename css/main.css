@@ -1300,12 +1300,15 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: calc(100% - 70px);
 }
 
 .accordion__header::after {
   content: "";
-  width: 9px;
-  height: 8px;
+  position: absolute;
+  right: 30px;
+  width: 10px;
+  height: 10px;
   display: inline-block;
   background-image: url(../img/faq-arrow.svg);
   background-repeat: no-repeat;
@@ -1314,7 +1317,7 @@ ul {
 
 @media(min-width:576px) {
   .accordion__item {
-    font-size: 20px;
+    font-size: 16px;
     padding: 28px 20px;
   }
 
@@ -1323,8 +1326,9 @@ ul {
   }
 
   .accordion__header::after {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
+    right: 50px;
     background-size: contain;
   }
 }
