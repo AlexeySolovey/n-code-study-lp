@@ -87,7 +87,7 @@ function getApiUrl(type) {
 
       const url = getApiUrl("feedback");
 
-      if (validEmail && validPhone && name) {
+      if (validEmailCallback && validPhoneCallback && name) {
         fetch(url, options)
           .then(() => {
             alert("Запит успішно відправлено");
@@ -120,38 +120,68 @@ function getApiUrl(type) {
 
       const url = getApiUrl("statement");
 
-      fetch(url, options)
-        .then(() => {
-          alert("Запит успішно відправлено");
-          form.reset();
-        })
-        .catch((error) => {
-          alert("Сталася помилка при виконанні запиту", error);
-        });
+      if (validEmailMentor && validPhoneMentor && formData.get("name") && formData.get("attachment").name) {
+        fetch(url, options)
+          .then(() => {
+            alert("Запит успішно відправлено");
+            form.reset();
+
+            const placeholder = document.querySelector(".became-mentor-popup .input-wrapper .placeholder");
+            placeholder.innerHTML = "Прикріпити файл з резюме";
+            placeholder.style.color = "#8e8e8e";
+          })
+          .catch((error) => {
+            alert("Сталася помилка при виконанні запиту", error);
+          });
+      } else {
+        alert(`Будь ласка, заповніть обов'язкові поля!`);
+      }
     });
   }
 })();
 
-let emailInput = document.querySelector(".email");
-let phoneInput = document.querySelector(".phone");
+let emailInputCallback = document.querySelector(".callback-form .email");
+let phoneInputCallback = document.querySelector(".callback-form .phone");
 
-let validEmail = false;
-let validPhone = false;
+let emailInputMentor = document.querySelector(".became-mentor-popup .email");
+let phoneInputMentor = document.querySelector(".became-mentor-popup .phone");
 
-emailInput.addEventListener("input", function () {
+let validEmailCallback = false;
+let validPhoneCallback = false;
+
+let validEmailMentor = false;
+let validPhoneMentor = false;
+
+emailInputCallback.addEventListener("input", function () {
   let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
-  validEmail = validationEmail.test(emailInput.value.trim());
+  validEmailCallback = validationEmail.test(emailInputCallback.value.trim());
 
-  emailInput.style.borderColor = validEmail ? "black" : "red";
+  emailInputCallback.style.borderColor = validEmailCallback ? "black" : "red";
 });
 
-phoneInput.addEventListener("input", function () {
+phoneInputCallback.addEventListener("input", function () {
   let validationPhone = /^(\+380|380|0)\d{9}$/;
 
-  validPhone = validationPhone.test(phoneInput.value.trim());
+  validPhoneCallback = validationPhone.test(phoneInputCallback.value.trim());
 
-  phoneInput.style.borderColor = validPhone ? "black" : "red";
+  phoneInputCallback.style.borderColor = validPhoneCallback ? "black" : "red";
+});
+
+emailInputMentor.addEventListener("input", function () {
+  let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
+  validEmailMentor = validationEmail.test(emailInputMentor.value.trim());
+
+  emailInputMentor.style.borderColor = validEmailMentor ? "black" : "red";
+});
+
+phoneInputMentor.addEventListener("input", function () {
+  let validationPhone = /^(\+380|380|0)\d{9}$/;
+
+  validPhoneMentor = validationPhone.test(phoneInputMentor.value.trim());
+
+  phoneInputMentor.style.borderColor = validPhoneMentor ? "black" : "red";
 });
 
 function accordion(selector) {
