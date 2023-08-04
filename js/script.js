@@ -152,21 +152,24 @@ let validPhoneCallback = false;
 let validEmailMentor = false;
 let validPhoneMentor = false;
 
-emailInputCallback.addEventListener("input", function () {
-  let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-
-  validEmailCallback = validationEmail.test(emailInputCallback.value.trim());
-
-  emailInputCallback.style.borderColor = validEmailCallback ? "black" : "red";
-});
-
-phoneInputCallback.addEventListener("input", function () {
-  let validationPhone = /^(\+380|380|0)\d{9}$/;
-
-  validPhoneCallback = validationPhone.test(phoneInputCallback.value.trim());
-
-  phoneInputCallback.style.borderColor = validPhoneCallback ? "black" : "red";
-});
+if(emailInputCallback){
+  emailInputCallback.addEventListener("input", function () {
+    let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  
+    validEmailCallback = validationEmail.test(emailInputCallback.value.trim());
+  
+    emailInputCallback.style.borderColor = validEmailCallback ? "black" : "red";
+  });
+}
+if(phoneInputCallback){
+  phoneInputCallback.addEventListener("input", function () {
+    let validationPhone = /^(\+380|380|0)\d{9}$/;
+  
+    validPhoneCallback = validationPhone.test(phoneInputCallback.value.trim());
+  
+    phoneInputCallback.style.borderColor = validPhoneCallback ? "black" : "red";
+  });
+}
 
 emailInputMentor.addEventListener("input", function () {
   let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
