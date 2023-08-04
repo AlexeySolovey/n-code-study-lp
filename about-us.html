@@ -35,7 +35,7 @@
             <ul class="menu__nav">
               <li class="menu__item"><a href="index.html">Головна</a></li>
               <li class="menu__item"><a href="about-us.html">Про нас</a></li>
-              <li class="menu__item"><a href="tutors.html">Ментори</a></li>
+              <li class="menu__item"><a href="tutors.html">Репетитори</a></li>
               <li class="menu__item"><a href="feedback.html">Відгуки</a></li>
             </ul>
             <div class="header__items">
@@ -53,7 +53,7 @@
           <ul class="menu__nav">
             <li class="menu__item"><a href="index.html">Головна</a></li>
             <li class="menu__item"><a href="about-us.html">Про нас</a></li>
-            <li class="menu__item"><a href="tutors.html">Ментори</a></li>
+            <li class="menu__item"><a href="tutors.html">Репетитори</a></li>
             <li class="menu__item"><a href="feedback.html">Відгуки</a></li>
           </ul>
           <div class="header__items">
@@ -158,7 +158,7 @@
               <p class="footer__title">N-Code</p>
               <ul class="footer__list">
                 <li><a href="about-us.html">Про нас</a></li>
-                <li><a href="tutors.html">Викладачі</a></li>
+                <li><a href="tutors.html">Репетитори</a></li>
                 <li><a href="feedback.html">Відгуки</a></li>
               </ul>
             </div>
@@ -171,7 +171,7 @@
             </div>
             <div class="col">
               <p class="footer__title">Співробітництво</p>
-              <button class="btn footer__btn became-mentor">Стати ментором</button>
+              <button class="btn footer__btn became-mentor">Стати репетитором</button>
             </div>
           </div>
           <div class="footer__social">
@@ -212,40 +212,40 @@
           </div>
         </div>
       </footer>
-    <div class="popup popap-templ became-mentor-popup">
-      <div class="popup-body">
-        <div class="popup__close"></div>
-        <div class="popup__title-group">
-          <h2 class="popup__title">Стати ментором</h2>
-          <p class="popup__sub-title">Залиште ваші контактні дані, і ми вам обов'язково зателефонуємо!</p>
+      <div class="popup popap-templ became-mentor-popup">
+        <div class="popup-body">
+          <div class="popup__close"></div>
+          <div class="popup__title-group">
+            <h2 class="popup__title">Стати репетитором</h2>
+            <p class="popup__sub-title">Залиште ваші контактні дані, і ми вам обов'язково зателефонуємо!</p>
+          </div>
+          <a class="back-link">Назад </a>
+          <form class="form" action="POST" id="mentorForm">
+            <label class="required" for="name">
+              <input class="name" type="text" name="name" placeholder="Ім’я та Прізвище" required="required" />
+            </label>
+            <label class="required" for="phone">
+              <input class="phone" type="phone" name="phone" placeholder="Номер телефону" required="required" />
+            </label>
+            <label class="required" for="email">
+              <input class="email" type="email" name="email" placeholder="E-mail" required="required" />
+            </label>
+            <div class="input-wrapper">
+              <label class="required file-upload" for="file">
+                <span class="placeholder">Прикріпити файл з резюме</span>
+                <input id="file" class="file" type="file" name="attachment" accept=".pdf" required="required" />
+              </label>
+              <label for="linkedIn">
+                <input class="link" type="text" name="linkedIn" placeholder="LinkedIn" />
+              </label>
+            </div>
+            <textarea class="comment" name="comment" placeholder="Коментар (не обов’язково)"></textarea>
+            <div class="form__btn">
+              <button class="btn" type="submit">Надіслати заявку</button>
+            </div>
+          </form>
         </div>
-        <a class="back-link">Назад </a>
-        <form class="form" action="POST" id="feedbackForm">
-          <label class="required" for="name">
-            <input type="text" name="name" placeholder="Ім’я та Прізвище" required="required" />
-          </label>
-          <label class="required" for="phone">
-            <input type="phone" name="phone" placeholder="Номер телефону" required="required" />
-          </label>
-          <label class="required" for="email">
-            <input type="email" name="email" placeholder="E-mail" required="required" />
-          </label>
-          <div class="input-wrapper">
-            <label class="required file-upload" for="file">
-              <span class="placeholder">Прикріпити файл з резюме</span>
-              <input id="file" class="file" type="file" name="file" accept=".pdf" required="required" />
-            </label>
-            <label class="required" for="linkedIn">
-              <input type="text" name="linkedIn" placeholder="LinkedIn" required="required" />
-            </label>
-          </div>
-          <textarea name="comment" placeholder="Коментар (не обов’язково)"></textarea>
-          <div class="form__btn">
-            <button class="btn" type="submit">Надіслати заявку</button>
-          </div>
-        </form>
       </div>
-    </div>
     <script src="js/nice-select2.js"></script>
     <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
