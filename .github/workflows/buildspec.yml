@@ -60,11 +60,13 @@ jobs:
 
       - name: Adding Known Hosts TEST
         if: github.ref == 'refs/heads/test'
-        run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST_TEST }}  >> ~/.ssh/known_hosts
+        run: ssh-keyscan -p 22 -H n-code-test.in.net  >> ~/.ssh/known_hosts
 
       - name: 📂 Deploy with rsync TEST
         if: github.ref == 'refs/heads/test'
+
         run: rsync --archive --verbose --compress -c --delete-after --exclude=.git* --exclude=.git/ --exclude=README.es.md --exclude=README.en.md --exclude=README.pl.md --exclude=.gitignore --exclude=node_modules --exclude=ecosystem.config.js --exclude=.env --exclude=build --exclude=dist --exclude=.vscode ./ ${{ secrets.SSH_USER_NAME_TEST_FRONT }}@${{ secrets.SSH_HOST_TEST }}:/var/www/ncodetest/${{ secrets.SSH_HOST_TEST }}
+
 # on:
 #   push:
 #     branches:
