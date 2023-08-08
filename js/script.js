@@ -88,7 +88,11 @@ function getApiUrl(type) {
       const url = getApiUrl("feedback");
 
       if (validEmailCallback && validPhoneCallback && name) {
-        fetch(url, options)
+        fetch(url, options, {
+          headers: {
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+          },
+        })
           .then(() => {
             alert("Запит успішно відправлено");
             form.reset();
@@ -121,7 +125,11 @@ function getApiUrl(type) {
       const url = getApiUrl("statement");
 
       if (validEmailMentor && validPhoneMentor && formData.get("name") && formData.get("attachment").name) {
-        fetch(url, options)
+        fetch(url, options, {
+          headers: {
+            "Cache-Control": "no-cache, no-store, must-revalidate",
+          },
+        })
           .then(() => {
             alert("Запит успішно відправлено");
             form.reset();
