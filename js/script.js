@@ -1,27 +1,27 @@
 function redirect() {
-  const loginLink = document.querySelector(".login-btn");
-  const signupLink = document.querySelector(".signup-btn");
+  const loginLink = document.querySelectorAll(".login-btn");
+  const signupLink = document.querySelectorAll(".signup-btn");
 
   switch (window.location.host) {
     case "n-code-dev.in.net":
-      loginLink.href = "https://my.n-code-dev.in.net/";
-      signupLink.href = `${loginLink.href}uk/#/signup`;
+      loginLink.forEach((el) => el.href = "https://my.n-code-dev.in.net/")
+      signupLink.forEach((el) => el.href = "https://my.n-code-dev.in.net/uk/#/signup")
       break;
     case "n-code-release.in.net":
-      loginLink.href = "https://my.n-code-release.in.net/";
-      signupLink.href = `${loginLink.href}uk/#/signup`;
+      loginLink.forEach((el) => el.href = "https://my.n-code-release.in.net/")
+      signupLink.forEach((el) => el.href = "https://my.n-code-release.in.net/uk/#/signup")
       break;
     case "n-code.study":
-      loginLink.href = "https://my.n-code.study/";
-      signupLink.href = `${loginLink.href}uk/#/signup`;
+      loginLink.forEach((el) => el.href = "https://my.n-code.study/")
+      signupLink.forEach((el) => el.href = "https://my.n-code.study/uk/#/signup")
       break;
     case "n-code-test.in.net":
-      loginLink.href = "https://my.n-code-test.in.net/";
-      signupLink.href = `${loginLink.href}uk/#/signup`;
+      loginLink.forEach((el) => el.href = "https://my.n-code-test.in.net/")
+      signupLink.forEach((el) => el.href = "https://my.n-code-test.in.net/uk/#/signup")
       break;
     default:
-      loginLink.href = "#";
-      signupLink.href = "#";
+      loginLink.forEach((el) => el.href = "#")
+      signupLink.forEach((el) => el.href = "#")
   }
 }
 
