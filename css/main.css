@@ -1384,7 +1384,7 @@ ul {
 .form select {
   width: 100%;
   box-sizing: border-box;
-  height: 32px;
+  height: 40px;
   border-radius: 5px;
   border: 1px solid #0b2235;
   font-size: 11px;
