@@ -4,7 +4,7 @@
 .popup.popap-templ.became-mentor-popup .form textarea[name="comment"] {
   height: 40px;
   box-sizing: border-box;
-  padding: 16px 0 5px 20px;
+  padding: 12px 0 5px 20px;
 }
 
 .popup.popap-templ.became-mentor-popup .popup__title {
@@ -41,7 +41,7 @@
   color: #8e8e8e;
   display: block;
   margin-top: 12px;
-  margin-left: 15px;
+  margin-left: 19px;
   font-size: 12px;
 }
 
@@ -65,6 +65,7 @@
 @media (min-width: 576px){
   .popup.popap-templ.became-mentor-popup .form textarea[name="comment"] {
     height: 60px;
+    padding: 16px 0 5px 20px;
   }
 
   .popup.popap-templ.became-mentor-popup .input-wrapper .file-upload {
@@ -72,8 +73,8 @@
   }
 
   .popup.popap-templ.became-mentor-popup .input-wrapper .placeholder {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 15px;
+    font-size: 16px;
   }
   
 }
