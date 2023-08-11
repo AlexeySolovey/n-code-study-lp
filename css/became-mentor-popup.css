@@ -2,9 +2,9 @@
   display: flex;
 }
 .popup.popap-templ.became-mentor-popup .form textarea[name="comment"] {
-  height: 52px;
+  height: 40px;
   box-sizing: border-box;
-  padding: 16px 0 5px 20px;
+  padding: 12px 0 5px 20px;
 }
 
 .popup.popap-templ.became-mentor-popup .popup__title {
@@ -17,14 +17,15 @@
 }
 .popup.popap-templ.became-mentor-popup .input-wrapper {
   display: flex;
+  flex-direction: column;
 }
 
 .popup.popap-templ.became-mentor-popup .input-wrapper label {
-  width: 50%;
+  width: 100%;
 }
 
 .popup.popap-templ.became-mentor-popup .input-wrapper label:first-child {
-  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .popup.popap-templ.became-mentor-popup .input-wrapper .file-upload {
@@ -32,16 +33,16 @@
   border: 1px solid #0b2235;
   border-radius: 5px;
   display: inline-block;
-  padding: 6px 12px;
   cursor: pointer;
+  height: 39px;
 }
 
 .popup.popap-templ.became-mentor-popup .input-wrapper .placeholder {
   color: #8e8e8e;
-  position: absolute;
-  top: 33%;
-  left: 20px;
-  font-size: 14px;
+  display: block;
+  margin-top: 12px;
+  margin-left: 19px;
+  font-size: 12px;
 }
 
 .popup.popap-templ.became-mentor-popup .input-wrapper .file {
@@ -50,11 +51,66 @@
 
 .popup.popap-templ.became-mentor-popup .form__btn .btn {
   width: 280px;
-  font-size: 15px;
+  font-size: 10px;
+}
+
+.popup.popap-templ.became-mentor-popup .form .input-wrapper label:first-child{
+  margin-right: 0 ;
+}
+
+.popup-body{
+  max-height: 100vh !important;
+}
+
+@media (min-width: 576px){
+  .popup.popap-templ.became-mentor-popup .form textarea[name="comment"] {
+    height: 60px;
+    padding: 16px 0 5px 20px;
+  }
+
+  .popup.popap-templ.became-mentor-popup .input-wrapper .file-upload {
+    height: 52px;
+  }
+
+  .popup.popap-templ.became-mentor-popup .input-wrapper .placeholder {
+    margin-top: 15px;
+    font-size: 16px;
+  }
+  
 }
 
 @media (min-width: 992px) {
+  .popup.popap-templ.became-mentor-popup .form .input-wrapper label:first-child{
+    margin-right: 20px ;
+  }
+  .popup-body{
+    max-height: 600px !important;
+  }
+  
   .popup.popap-templ.became-mentor-popup .form {
     margin-bottom: 0;
   }
+
+  .popup.popap-templ.became-mentor-popup .input-wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .popup.popap-templ.became-mentor-popup .input-wrapper label:first-child {
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .popup.popap-templ.became-mentor-popup .input-wrapper label {
+    width: 50%;
+  }
+
+  .popup.popap-templ.became-mentor-popup .form textarea[name="comment"] {
+    height: 52px;
+  }
+
+  .popup.popap-templ.became-mentor-popup .form__btn .btn {
+    font-size: 15px;
+  }
+  
 }

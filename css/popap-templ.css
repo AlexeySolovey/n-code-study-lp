@@ -28,7 +28,7 @@
 .popup.popap-templ .popup__title {
     font-family: "Venus Rising", sans-serif;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 120%;
     color: #232523;
     margin-bottom: 40px;
@@ -68,6 +68,10 @@
 @media(min-width:576px) {
     .popup.popup.popap-templ .form-rate {
         height: 52px;
+    }
+
+    .popup.popap-templ .popup__title{
+        font-size: 24px;
     }
 }
 
