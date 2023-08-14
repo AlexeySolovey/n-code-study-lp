@@ -1,120 +1,240 @@
+function redirect() {
+  const loginLink = document.querySelectorAll(".login-btn");
+  const signupLink = document.querySelectorAll(".signup-btn");
+
+  switch (window.location.host) {
+    case "n-code-dev.in.net":
+      loginLink.forEach((el) => el.href = "https://my.n-code-dev.in.net/")
+      signupLink.forEach((el) => el.href = "https://my.n-code-dev.in.net/uk/#/signup")
+      break;
+    case "n-code-release.in.net":
+      loginLink.forEach((el) => el.href = "https://my.n-code-release.in.net/")
+      signupLink.forEach((el) => el.href = "https://my.n-code-release.in.net/uk/#/signup")
+      break;
+    case "n-code.study":
+      loginLink.forEach((el) => el.href = "https://my.n-code.study/")
+      signupLink.forEach((el) => el.href = "https://my.n-code.study/uk/#/signup")
+      break;
+    case "n-code-test.in.net":
+      loginLink.forEach((el) => el.href = "https://my.n-code-test.in.net/")
+      signupLink.forEach((el) => el.href = "https://my.n-code-test.in.net/uk/#/signup")
+      break;
+    default:
+      loginLink.forEach((el) => el.href = "#")
+      signupLink.forEach((el) => el.href = "#")
+  }
+}
+
+redirect();
+
+(function getInputFile() {
+  const input = document.querySelector("#file");
+  const placeholder = document.querySelector(".popup .input-wrapper .placeholder");
+  input.addEventListener("change", function () {
+    placeholder.innerHTML = input.files[0].name;
+    placeholder.style.color = "black";
+  });
+})();
+
 (function mobMenu() {
+  const hamburger_menu = document.querySelector(".hamburger-menu");
+  const mob_menu = document.querySelector(".mob-menu");
 
-    const hamburger_menu = document.querySelector(".hamburger-menu");
-    const mob_menu = document.querySelector(".mob-menu");
+  hamburger_menu.addEventListener("click", function (e) {
+    mob_menu.classList.toggle("active");
+    this.classList.toggle("active");
+  });
+})();
 
-    hamburger_menu.addEventListener("click", function (e) {
-        mob_menu.classList.toggle("active");
-        this.classList.toggle("active");
+function getApiUrl(type) {
+  switch (window.location.host) {
+    case "n-code-dev.in.net":
+      return `https://api.n-code-dev.in.net/api/emails/${type}`;
+    case "n-code-release.in.net":
+      return `https://api.n-code-release.in.net/api/emails/${type}`;
+    case "n-code.study":
+      return `https://api.n-code-study/api/emails/${type}`;
+    case "n-code-test.in.net":
+      return `https://api.n-code-test.in.net/api/emails/${type}`;
+    default:
+      return `http://localhost:3022/api/emails/${type}`;
+  }
+}
+
+(function onSubmitCallBack() {
+  const form = document.querySelector("#callbackForm");
+  const btn = document.querySelector(".callback-form .btn");
+
+  if (form) {
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const name = document.querySelector(".callback-form .name").value;
+      const phone = document.querySelector(".callback-form .phone").value;
+      const email = document.querySelector(".callback-form .email").value;
+      const source = document.querySelector(".callback-form .select-wherefrom").value;
+      const comment = document.querySelector(".callback-form .comment").value;
+
+      const body = { name, email, phone, source, comment };
+
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
+      };
+
+      const url = getApiUrl("feedback");
+
+      if (validEmailCallback && validPhoneCallback && name) {
+        fetch(url, options)
+          .then(() => {
+            alert("Запит успішно відправлено");
+            form.reset();
+          })
+          .catch((error) => {
+            alert("Сталася помилка при виконанні запиту", error);
+          });
+      } else {
+        alert(`Будь ласка, заповніть обов'язкові поля!`);
+      }
     });
-}());
+  }
+})();
 
-(function validation() {
-    const form = document.querySelector('#callbackForm');
-    const btn = document.querySelector('.callback-form .btn')
+(function onSubmitBecameMentor() {
+  const form = document.querySelector("#mentorForm");
+  const btn = document.querySelector("#mentorForm .btn");
 
-    if (form) {
-        btn.addEventListener('click', function (event) {
-            event.preventDefault();
-            const inputs = form.querySelectorAll('input');
-            inputs.forEach(function (input) {
-                if (!input.checkValidity()) {
-                    input.classList.add('invalid');
-                }
-            });
-        })
-    }
-}());
+  if (form) {
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
 
-(function roadmap() {
+      const formData = new FormData(form);
 
-    let roadmapItems = document.querySelector(".roadmap-step");
+      const options = {
+        method: "POST",
+        body: formData,
+      };
 
-    let roadmapInfoItems = document.querySelector(".roadmap-step-info");
+      const url = getApiUrl("statement");
 
+      if (validEmailMentor && validPhoneMentor && formData.get("name") && formData.get("attachment").name) {
+        fetch(url, options)
+          .then(() => {
+            alert("Запит успішно відправлено");
+            form.reset();
 
-    if (roadmapItems && roadmapInfoItems) {
+            const placeholder = document.querySelector(".became-mentor-popup .input-wrapper .placeholder");
+            placeholder.innerHTML = "Прикріпити файл з резюме";
+            placeholder.style.color = "#8e8e8e";
+          })
+          .catch((error) => {
+            alert("Сталася помилка при виконанні запиту", error);
+          });
+      } else {
+        alert(`Будь ласка, заповніть обов'язкові поля!`);
+      }
+    });
+  }
+})();
 
-        roadmapItems = Array.from(roadmapItems.children);
-        roadmapInfoItems = Array.from(roadmapInfoItems.children);
+let emailInputCallback = document.querySelector(".callback-form .email");
+let phoneInputCallback = document.querySelector(".callback-form .phone");
 
-        roadmapItems.forEach((item, index) => {
-            item.addEventListener('click', function () {
-                roadmapItems.forEach(item => item.classList.remove("active"));
-                roadmapInfoItems.forEach(item => item.classList.remove("active"));
-                roadmapInfoItems[index].classList.add("active");
-                item.classList.add("active");
-            })
-        });
-    }
+let emailInputMentor = document.querySelector(".became-mentor-popup .email");
+let phoneInputMentor = document.querySelector(".became-mentor-popup .phone");
 
-}());
+let validEmailCallback = false;
+let validPhoneCallback = false;
+
+let validEmailMentor = false;
+let validPhoneMentor = false;
+
+if(emailInputCallback){
+  emailInputCallback.addEventListener("input", function () {
+    let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  
+    validEmailCallback = validationEmail.test(emailInputCallback.value.trim());
+  
+    emailInputCallback.style.borderColor = validEmailCallback ? "black" : "red";
+  });
+}
+if(phoneInputCallback){
+  phoneInputCallback.addEventListener("input", function () {
+    let validationPhone = /^(\+380|380|0)\d{9}$/;
+  
+    validPhoneCallback = validationPhone.test(phoneInputCallback.value.trim());
+  
+    phoneInputCallback.style.borderColor = validPhoneCallback ? "black" : "red";
+  });
+}
+
+emailInputMentor.addEventListener("input", function () {
+  let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
+  validEmailMentor = validationEmail.test(emailInputMentor.value.trim());
+
+  emailInputMentor.style.borderColor = validEmailMentor ? "black" : "red";
+});
+
+phoneInputMentor.addEventListener("input", function () {
+  let validationPhone = /^(\+380|380|0)\d{9}$/;
+
+  validPhoneMentor = validationPhone.test(phoneInputMentor.value.trim());
+
+  phoneInputMentor.style.borderColor = validPhoneMentor ? "black" : "red";
+});
 
 function accordion(selector) {
-    let accordionItem = document.querySelectorAll(selector)
-    accordionItem.forEach(item => {
-        item.addEventListener("click", function () {
-            if (this.classList.contains("active")) {
-                this.classList.remove("active");
-                item.children[1].style.maxHeight = 0;
-            } else {
-                accordionItem.forEach(item => item.classList.remove("active"));
-                accordionItem.forEach(item => item.children[1].style.maxHeight = 0);
-                this.classList.add("active");
-                this.children[1].style.maxHeight = this.children[1].scrollHeight + 'px'
-            }
-        })
-    })
+  let accordionItem = document.querySelectorAll(selector);
+  accordionItem.forEach((item) => {
+    item.addEventListener("click", function () {
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+        item.children[1].style.maxHeight = 0;
+      } else {
+        accordionItem.forEach((item) => item.classList.remove("active"));
+        accordionItem.forEach((item) => (item.children[1].style.maxHeight = 0));
+        this.classList.add("active");
+        this.children[1].style.maxHeight = this.children[1].scrollHeight + "px";
+      }
+    });
+  });
 }
 
 accordion(".accordion__item");
 accordion(".header-card__mob .header-card");
 
 (function customSelect() {
-    const course = document.getElementById("course")
-    const wherefrom = document.getElementById("wherefrom")
+  const wherefrom = document.getElementById("wherefrom");
 
-    if (course && wherefrom) {
-        NiceSelect.bind(wherefrom);
-        NiceSelect.bind(course);
+  if (wherefrom) {
+    NiceSelect.bind(wherefrom);
 
-        let selectsPlaceholder = document.querySelectorAll('.nice-select .current');
-        selectsPlaceholder[0].innerHTML = 'Оберіть напрямок';
-        selectsPlaceholder[1].innerHTML = 'Звідки ви дізнались про N-Code?';
-    }
-}());
+    let selectsPlaceholder = document.querySelectorAll(".nice-select .current");
+    selectsPlaceholder[0].innerHTML = "Звідки ви дізнались про N-Code?";
+  }
+})();
 
 (function headerScroll() {
-    const fixedElement = document.querySelector('#header');
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 0) {
-            fixedElement.classList.add('scrolled');
-        } else {
-            fixedElement.classList.remove('scrolled');
-        }
-    });
-}());
-
+  const fixedElement = document.querySelector("#header");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      fixedElement.classList.add("scrolled");
+    } else {
+      fixedElement.classList.remove("scrolled");
+    }
+  });
+})();
 
 (function becomeMentorPopup() {
-    const becomeMentorPopup = document.querySelector('.popup.became-mentor-popup')
-    const becomeMentorPopupLink = document.querySelector('.tutors-card.became-tutor')
-    let becomeMentorPopupBtn = document.querySelectorAll('.action-btn.became-tutor')
-    becomeMentorPopupBtn = [...becomeMentorPopupBtn]
-
-    if (becomeMentorPopupBtn) {
-        becomeMentorPopupBtn.forEach(item => {
-            item.addEventListener("click", (e) => {
-                e.preventDefault();
-                becomeMentorPopup.style.display = "block"
-            })
-        })
-    }
-
-    if (becomeMentorPopupLink) {
-        becomeMentorPopupLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            becomeMentorPopup.style.display = "block"
-        })
-    }
-}());
+  const becomeMentorPopup = document.querySelector(".became-mentor-popup");
+  const becomeMentorPopupLink = document.querySelector(".became-mentor");
+  if (becomeMentorPopupLink) {
+    becomeMentorPopupLink.addEventListener("click", () => {
+      becomeMentorPopup.style.display = "block";
+    });
+  }
+})();
