@@ -53,7 +53,7 @@ function getApiUrl(type) {
     case "n-code-release.in.net":
       return `https://api.n-code-release.in.net/api/emails/${type}`;
     case "n-code.study":
-      return `https://api.n-code-study/api/emails/${type}`;
+      return `https://api.n-code.study/api/emails/${type}`;
     case "n-code-test.in.net":
       return `https://api.n-code-test.in.net/api/emails/${type}`;
     default:
