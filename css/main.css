@@ -1291,7 +1291,7 @@ ul {
 .accordion__content {
   position: relative;
   overflow: hidden;
-  font-size: 9px;
+  font-size: 14px;
   max-height: 0;
   transition: .5s;
 }
