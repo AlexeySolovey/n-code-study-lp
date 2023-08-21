@@ -24,6 +24,12 @@
   width: 100%;
 }
 
+.popup.popap-templ.became-mentor-popup .input-wrapper .link {
+  overflow: hidden;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+}
+
 .popup.popap-templ.became-mentor-popup .input-wrapper label:first-child {
   margin-bottom: 10px;
 }
@@ -75,6 +81,9 @@
   .popup.popap-templ.became-mentor-popup .input-wrapper .placeholder {
     margin-top: 15px;
     font-size: 16px;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
   }
   
 }
