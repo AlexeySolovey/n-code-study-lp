@@ -95,6 +95,10 @@
   .popup-body{
     max-height: 600px !important;
   }
+
+  .popup-body_unlimited{
+    max-height: unset !important;
+  }
   
   .popup.popap-templ.became-mentor-popup .form {
     margin-bottom: 0;
