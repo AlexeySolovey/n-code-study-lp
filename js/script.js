@@ -222,7 +222,7 @@ accordion(".header-card__mob .header-card");
     NiceSelect.bind(wherefrom);
 
     let selectsPlaceholder = document.querySelectorAll(".nice-select .current");
-    selectsPlaceholder[0].innerHTML = "Звідки ви дізнались про N-Code?";
+    selectsPlaceholder[0].innerHTML = "Звідки Ви дізнались про N-Code?";
   }
 })();
 
