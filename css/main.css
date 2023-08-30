@@ -2131,7 +2131,7 @@ ul.header-card__text {
     grid-template-areas: "img name""text text";
     row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
-    padding: 60px;
+    padding: 50px;
   }
 
   .feedback-popup__img {
