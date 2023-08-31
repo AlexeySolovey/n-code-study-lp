@@ -2022,12 +2022,21 @@ ul.header-card__text {
   max-width: 700px;
   margin: 0 auto 100px;
   background-color: #fff;
-  padding: 60px;
+  padding: 60px 40px 60px 60px;
   border: 1px solid #0b2235;
   border-radius: 10px;
   box-sizing: border-box;
   position: relative;
   max-height: 600px;
+  overflow-y: hidden;
+}
+
+.popup-header {
+  position: relative;
+}
+
+.popup-content {
+  max-height: 500px;
   overflow-y: auto;
 }
 
@@ -2035,8 +2044,8 @@ ul.header-card__text {
   width: 15px;
   height: 15px;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 0px;
+  top: -30px;
   cursor: pointer;
 }
 
