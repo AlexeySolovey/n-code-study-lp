@@ -1291,7 +1291,7 @@ ul {
 .accordion__content {
   position: relative;
   overflow: hidden;
-  font-size: 9px;
+  font-size: 14px;
   max-height: 0;
   transition: .5s;
 }
@@ -1384,7 +1384,7 @@ ul {
 .form select {
   width: 100%;
   box-sizing: border-box;
-  height: 32px;
+  height: 40px;
   border-radius: 5px;
   border: 1px solid #0b2235;
   font-size: 11px;
@@ -1430,7 +1430,7 @@ ul {
   content: "";
   position: absolute;
   display: block;
-  top: 3px;
+  top: 5px;
   left: 15px;
   width: 25px;
   height: 28px;
@@ -1681,7 +1681,7 @@ ul {
   width: 155px;
   height: 32px;
   margin: unset;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .footer .social-ico svg{
@@ -1693,6 +1693,12 @@ ul {
   .footer {
     padding-top: 31px;
   }
+
+  .footer__btn{
+    width: 200px;
+    font-size: 12px;
+  }
+
 
   .footer__logo{
     width: 60px;
