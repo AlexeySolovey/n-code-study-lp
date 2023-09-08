@@ -2028,7 +2028,6 @@ ul.header-card__text {
   box-sizing: border-box;
   position: relative;
   max-height: 600px;
-  overflow-y: hidden;
 }
 
 .popup-content {
