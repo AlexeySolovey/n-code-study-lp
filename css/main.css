@@ -101,6 +101,12 @@ ul {
   padding-bottom: 40px;
 }
 
+@media screen and (max-width: 992px) {
+  .section-text {
+    display: none;
+  }
+}
+
 .section-content {
   display: flex;
   align-items: center;
@@ -1048,6 +1054,12 @@ ul {
   width: 75%;
   row-gap: 10px;
   position: relative;
+}
+
+@media screen and (max-width: 992px) {
+  .itc-slider.salary-slider {
+    width: 100%;
+  }
 }
 
 .salary .salary-cards {

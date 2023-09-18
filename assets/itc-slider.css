@@ -195,3 +195,9 @@
 .itc-slider-btn-next.salary-slider {
   right: 0;
 }
+
+@media screen and (max-width: 992px) {
+  .itc-slider-item.salary-slider {
+    height: 180px;
+  }
+}
