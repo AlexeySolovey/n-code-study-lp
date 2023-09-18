@@ -70,6 +70,10 @@ ul {
   transition: background-color 300ms;
 }
 
+.btn-trial {
+  margin-top: 60px;
+}
+
 .btn:hover{
   background: #FD460E;
 }
@@ -90,6 +94,16 @@ ul {
   color: #232523;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.section-text {
+  width: 25%;
+  padding-bottom: 40px;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
 }
 
 .more-info-link {
@@ -1006,6 +1020,7 @@ ul {
   font-size: 14px;
   line-height: 16px;
   color: #fd460e;
+  white-space: nowrap;
 }
 
 .salary .salary-card__rank {
@@ -1029,10 +1044,15 @@ ul {
   width: 100%;
 }
 
-.salary .salary-card-wrap {
-  display: grid;
+.itc-slider.salary-slider {
+  width: 75%;
   row-gap: 10px;
   position: relative;
+}
+
+.salary .salary-cards {
+  display: flex;
+  justify-content: space-between;
 }
 
 .salary .btn,
@@ -1051,7 +1071,6 @@ ul {
     border: 1px solid #0b2235;
     border-radius: 15px;
     padding: 35px 30px;
-    margin-bottom: 40px;
   }
 
   .salary .salary-card {
@@ -1061,7 +1080,7 @@ ul {
     justify-items: center;
     text-align: center;
     padding: 0;
-    margin-top: 23px;
+    margin-top: -6px;
   }
 
   .salary .salary-card__sum {
@@ -1087,13 +1106,31 @@ ul {
     font-size: 12px;
   }
 
+  .salary .salary-card:nth-child(1) {
+    justify-content: start;
+  }
+
+  .salary .salary-card:nth-child(1) .salary-card__img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .salary .salary-card:nth-child(2) {
+    justify-content: start;
+  }
+
+  .salary .salary-card:nth-child(2) .salary-card__img {
+    width: 20px;
+    height: 20px;
+  }
+
   .salary .salary-card:nth-child(3) {
     justify-content: start;
   }
 
   .salary .salary-card:nth-child(3) .salary-card__img {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
   }
 
   .salary .salary-card:nth-child(4) {
@@ -1102,8 +1139,8 @@ ul {
   }
 
   .salary .salary-card:nth-child(4) .salary-card__img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 
   .salary .salary-card:nth-child(5) {
@@ -1127,7 +1164,7 @@ ul {
     width: 87%;
     height: 1px;
     background-color: #0b2235;
-    top: 55%;
+    top: 50%;
     left: 6.5%;
   }
 
@@ -1137,10 +1174,7 @@ ul {
 
   .salary .salary__title {
     display: block;
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    text-align: center;
     font-size: 3vw;
     font-weight: 400;
     color: #232523;
@@ -1161,16 +1195,6 @@ ul {
 
   .salary .salary-card-wrap {
     grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 60px;
-  }
-
-  .salary .salary-card {
-    padding: 0 35px;
-  }
-
-  .salary .salary__line {
-    width: 68%;
-    left: 27.8%;
   }
 
   .salary .salary__title {

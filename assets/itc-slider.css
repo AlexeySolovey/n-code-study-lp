@@ -177,3 +177,21 @@
 .itc-slider-indicator-active {
   background-color: black
 }
+
+.itc-slider-wrapper.salary-slider {
+  max-width: 80%;
+}
+
+.itc-slider-item.salary-slider {
+  max-width: auto;
+  flex: 0 0 100%;
+  height: 175px;
+}
+
+.itc-slider-btn-prev.salary-slider {
+  left: 0;
+}
+
+.itc-slider-btn-next.salary-slider {
+  right: 0;
+}
