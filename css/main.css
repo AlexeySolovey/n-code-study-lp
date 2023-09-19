@@ -565,7 +565,7 @@ ul {
 
 @media screen and (min-width:992px){
   .slider {
-    height: 100vh;
+    height: 80vh;
     padding: 0 20px;
   }
   
@@ -577,6 +577,13 @@ ul {
     top: 233px;
     left: 0;
     text-align: start;
+  }
+  
+  .subtitle {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    font-size: 18px;
   }
 
   .slide__btn{
