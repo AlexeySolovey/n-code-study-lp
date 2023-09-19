@@ -1067,6 +1067,12 @@ ul {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 576px) {
+  .salary .salary-cards {
+    flex-direction: column;
+  }
+}
+
 .salary .btn,
 .salary .salary__line {
   display: none;
@@ -1147,7 +1153,6 @@ ul {
 
   .salary .salary-card:nth-child(4) {
     justify-content: end;
-    margin-right: 35px;
   }
 
   .salary .salary-card:nth-child(4) .salary-card__img {

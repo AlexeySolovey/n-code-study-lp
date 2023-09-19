@@ -201,3 +201,18 @@
     height: 180px;
   }
 }
+
+@media screen and (max-width: 576px) {
+  .itc-slider.salary-slider {
+    height: 300px;
+  }
+
+  .itc-slider-wrapper.salary-slider {
+    height: 400px;
+  }
+
+  .itc-slider-item.salary-slider {
+    height: 300px;
+    border: none;
+  }
+}
