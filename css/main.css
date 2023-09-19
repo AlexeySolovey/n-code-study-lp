@@ -2051,6 +2051,65 @@ ul.header-card__text {
     grid-row-gap: 40px;
     flex-wrap: wrap;
   }
+
+  .teaching-accordion {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .teaching {
+    padding: 20px 0;
+  }
+
+  .teaching-content {
+    margin-bottom: 20px;
+  }
+
+  .teaching-content__title {
+    font-size: 16px;
+  }
+
+  .teaching-content__subtitle  {
+    font-size: 16px;
+  }
+
+  .teaching-card {
+    display: none;
+  }
+
+  .teaching-accordion {
+    display: block;
+  }
+
+  .teaching-accordion-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .teaching-accordion-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FD460E;
+    position: relative;
+  }
+
+  .teaching-accordion-title svg {
+    position: absolute;
+    right: 0;
+    transition: .5s;
+  }
+
+  .teaching-accordion-item.active .teaching-accordion-title svg {
+    rotate: 180deg; 
+  }
+
+  .teaching-accordion-content {
+    border-top: none !important;
+    font-size: 13px;
+    color: #131313;
+  }
 }
 
 .consult {
