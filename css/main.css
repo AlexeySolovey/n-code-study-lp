@@ -1185,6 +1185,12 @@ ul {
     left: 6.5%;
   }
 
+  @media screen and (max-height: 992px) {
+    .salary .salary__line {
+      top: 46%;
+    }
+  }
+
   .salary .btn {
     display: block;
   }
@@ -1194,6 +1200,7 @@ ul {
     text-align: center;
     font-size: 3vw;
     font-weight: 400;
+    font-size: 20px;
     color: #232523;
   }
 }
