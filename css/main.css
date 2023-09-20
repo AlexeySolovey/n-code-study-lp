@@ -1509,7 +1509,7 @@ ul {
 .form .required::after {
   content: "*";
   position: absolute;
-  top: -11px;
+  top: -0;
   right: 5px;
   color: rgba(253, 70, 14, .7);
   font-size: 15px;
@@ -1973,14 +1973,14 @@ ul.header-card__text {
 
 .consult__title h2 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 35px;
   color: #297abf;
   margin-bottom: 35px;
 }
 
 .consult__title p {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 28px;
 }
 
@@ -1994,7 +1994,7 @@ ul.header-card__text {
   flex-direction: column;
   gap: 30px;
   max-width: 498px;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 28px;
 }
 
