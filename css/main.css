@@ -49,6 +49,12 @@ ul {
   position: relative;
 }
 
+.content-container.bg-dark {
+  background-color: #0B2235;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
 .btn {
   max-width: 230px;
   display: flex;
@@ -594,6 +600,7 @@ ul {
 }
 
 .advantages {
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -1962,9 +1969,160 @@ ul.header-card__text {
   }
 }
 
+.teaching {
+  max-width: 1176px;
+  color: white;
+  margin: 0 auto;
+  padding: 70px 0px;
+}
+
+.teaching-content {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.teaching-content__title {
+  font-family: "Venus Rising";
+  font-style: normal;
+  font-size: 32px;
+  line-height: 19px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.teaching-content__subtitle {
+  color: #FD460E;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.teaching-content__list li {
+  margin-top: 20px;
+}
+
+.teaching-content__list li::before {
+  content: "\2022";
+  font-weight: bold;
+  margin-right: 12px;
+  color: #FD460E;
+}
+
+.teaching-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.teaching-card__title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #FD460E;
+}
+
+.teaching-card__text {
+  color: #131313;
+  font-size: 14px;
+}
+
+.teaching-card:nth-child(2) {
+  grid-column-start: 7;
+  grid-column-end: 10;
+}
+
+.teaching-card:nth-child(3) {
+  grid-column-start: 10;
+  grid-column-end: 13;
+}
+
+.teaching-card:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.teaching-card:nth-child(5) {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+
+.teaching-card:nth-child(6) {
+  grid-column-start: 9;
+  grid-column-end: 13;
+}
+
+@media screen and (min-width: 576px) {
+  .teaching {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .teaching-accordion {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .teaching {
+    padding: 20px 0;
+  }
+
+  .teaching-content {
+    margin-bottom: 20px;
+  }
+
+  .teaching-content__title {
+    font-size: 16px;
+  }
+
+  .teaching-content__subtitle  {
+    font-size: 16px;
+  }
+
+  .teaching-card {
+    display: none;
+  }
+
+  .teaching-accordion {
+    display: block;
+  }
+
+  .teaching-accordion-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .teaching-accordion-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FD460E;
+    position: relative;
+  }
+
+  .teaching-accordion-title svg {
+    position: absolute;
+    right: 0;
+    transition: .5s;
+  }
+
+  .teaching-accordion-item.active .teaching-accordion-title svg {
+    rotate: 180deg; 
+  }
+
+  .teaching-accordion-content {
+    border-top: none !important;
+    font-size: 13px;
+    color: #131313;
+  }
+}
+
 .consult {
   display: none;
   margin-bottom: 63px;
+  margin-top: 140px;
 }
 
 .consult .container {
