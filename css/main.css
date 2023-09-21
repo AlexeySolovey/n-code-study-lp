@@ -1021,6 +1021,69 @@ ul {
   }
 }
 
+.about-teaching {
+  margin-bottom: 140px;
+}
+
+.teaching-slider__content {
+  background-color: #0B2235;
+  border-radius: 20px;
+  position: absolute;
+  padding: 40px 40px 0 40px;
+  left: -1px;
+  right: -1px;
+  top: 0;
+  transition: .5s;
+}
+
+.teaching-slider__title {
+  font-size: 18px;
+  color: #FD460E;
+  text-align: center;
+}
+
+.teaching-slider__list {
+  margin-top: 20px;
+}
+
+.teaching-slider__list li {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.teaching-slider__list li::before {
+  content: "\2022";
+  color: #FD460E;
+  font-size: 36px;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+}
+
+.teaching-slider__footer{
+  position: absolute;
+  bottom: 40px;
+  width: 90%;
+  overflow: hidden;
+  height: 0;
+  transition: .5s;
+}
+
+.teaching-slider__footer  button{
+  background-color: #FD460E;
+  
+}
+
+.itc-slider-item.teaching-slider:hover .teaching-slider__content {
+  top: -50px;
+}
+
+.itc-slider-item.teaching-slider:hover .teaching-slider__footer {
+  height: 60px;
+}
+
 .salary {
   margin-bottom: 40px;
 }
