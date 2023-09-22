@@ -216,3 +216,35 @@
     border: none;
   }
 }
+
+.itc-slider.teaching-slider {
+  width: 100%;
+  min-height: 550px;
+  height: 100%;
+}
+
+.itc-slider-wrapper.teaching-slider {
+  max-width: 100%;
+  min-height: 550px;
+  margin: 0;
+}
+
+.itc-slider-item.teaching-slider {
+  max-width: auto;
+  flex: 0 0 29%;
+  min-height: 550px;
+  background-color: #0B2235;
+  position: relative;
+}
+
+.itc-slider-items.teaching-slider {
+  padding-top: 50px;
+}
+
+.itc-slider-btn-prev.teaching-slider {
+  left: 0;
+}
+
+.itc-slider-btn-next.teaching-slider {
+  right: 0;
+}
