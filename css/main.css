@@ -1073,7 +1073,20 @@ ul {
 
 .teaching-slider__footer  button{
   background-color: #FD460E;
-  
+  height: 60px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.teaching-slider__footer a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .itc-slider-item.teaching-slider:hover .teaching-slider__content {
