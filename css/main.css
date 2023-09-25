@@ -109,7 +109,7 @@ ul {
 
 @media screen and (max-width: 992px) {
   .section-text {
-    display: none;
+    width: 100%;
   }
 }
 
@@ -619,6 +619,12 @@ ul {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .subtitle {
+    display: none;
+  }
+}
+
 .advantages {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -1025,7 +1031,13 @@ ul {
   margin-bottom: 140px;
 }
 
-.teaching-slider__content {
+@media screen and (max-width: 576px) {
+  .about-teaching {
+    margin-bottom: 50px;
+  }
+}
+
+.about-teaching-slider__content {
   background-color: #0B2235;
   border-radius: 20px;
   position: absolute;
@@ -1036,24 +1048,24 @@ ul {
   transition: .5s;
 }
 
-.teaching-slider__title {
+.about-teaching-slider__title {
   font-size: 18px;
   color: #FD460E;
   text-align: center;
 }
 
-.teaching-slider__list {
+.about-teaching-slider__list {
   margin-top: 20px;
 }
 
-.teaching-slider__list li {
+.about-teaching-slider__list li {
   color: white;
   font-size: 13px;
   margin-bottom: 12px;
   position: relative;
 }
 
-.teaching-slider__list li::before {
+.about-teaching-slider__list li::before {
   content: "\2022";
   color: #FD460E;
   font-size: 36px;
@@ -1062,7 +1074,7 @@ ul {
   top: -15px;
 }
 
-.teaching-slider__footer{
+.about-teaching-slider__footer{
   position: absolute;
   bottom: 40px;
   width: 90%;
@@ -1071,7 +1083,7 @@ ul {
   transition: .5s;
 }
 
-.teaching-slider__footer  button{
+.about-teaching-slider__footer  button{
   background-color: #FD460E;
   height: 60px;
   padding: 0;
@@ -1079,7 +1091,7 @@ ul {
   align-items: center;
 }
 
-.teaching-slider__footer a {
+.about-teaching-slider__footer a {
   color: white;
   height: 100%;
   width: 100%;
@@ -1089,16 +1101,91 @@ ul {
   text-align: center;
 }
 
-.itc-slider-item.teaching-slider:hover .teaching-slider__content {
+.itc-slider-item.about-teaching-slider:hover .about-teaching-slider__content {
   top: -50px;
 }
 
-.itc-slider-item.teaching-slider:hover .teaching-slider__footer {
+.itc-slider-item.about-teaching-slider:hover .about-teaching-slider__footer {
   height: 60px;
+}
+
+.accordion.about-teaching-accordion {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .about-teaching-slider {
+    display: none;
+  }
+
+  .accordion.about-teaching-accordion {
+    display: block;
+  }
+
+  .about-teaching-accordion-item {
+    background-color: #0B2235;
+    margin-bottom: 10px;
+  }
+
+  .accordion__item.about-teaching-accordion-item {
+    padding: 20px;
+  }
+
+  .about-teaching-accordion-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FD460E;
+    position: relative;
+  }
+
+  .about-teaching-accordion-title svg {
+    position: absolute;
+    right: 0;
+    transition: .5s;
+  }
+
+  .about-teaching-accordion-item.active .about-teaching-accordion-title svg {
+    rotate: 180deg; 
+  }
+
+  .about-teaching-accordion-content {
+    border-top: none !important;
+    font-size: 13px;
+    color: #131313;
+  }
+
+  .about-teaching-accordion-content__list {
+    color: #FFFFFF;
+  }
+
+  .about-teaching-accordion-content__list li::before {
+    content: "\2022";
+    font-weight: bold;
+    font-size: 24px;
+    color: #FD460E;
+  }
+
+  .about-teaching-accordion-content .btn {
+    margin: 20px 0 0 0;
+    max-width: 100%;
+    width: 100%;
+    height: 32px;
+    background-color: #FD460E;
+  }
+
+  .about-teaching-accordion-content a {
+    color: #FFFFFF;
+  }
 }
 
 .salary {
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 576px) {
+  .salary .section-content {
+    flex-direction: column;
+  }
 }
 
 .salary .salary-card {
@@ -1161,9 +1248,12 @@ ul {
   .salary .salary-cards {
     flex-direction: column;
   }
+
+  .salary-card {
+    margin-top: 10px;
+  }
 }
 
-.salary .btn,
 .salary .salary__line {
   display: none;
 }
@@ -1171,6 +1261,18 @@ ul {
 .salary .salary__title {
   font-size: 14px;
   color: #fd460e;
+}
+
+@media screen and (max-width: 576px) {
+  .salary .salary__title {
+    color: #242524;
+  }
+
+  .salary .btn {
+    margin-top: 30px;
+    max-width: 80%;
+    width: 100%;
+  }
 }
 
 @media screen and (min-width:576px) {
@@ -2211,6 +2313,21 @@ ul.header-card__text {
 
   .teaching-accordion {
     display: block;
+  }
+
+  .teaching-accordion .btn {
+    min-width: 300px;
+    width: 100%;
+    background-color: #FD460E;
+    height: 32px;
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .teaching-accordion a {
+    color: #FFFFFF;
   }
 
   .teaching-accordion-item {
