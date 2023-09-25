@@ -2022,13 +2022,19 @@ ul.header-card__text {
   max-width: 700px;
   margin: 0 auto 100px;
   background-color: #fff;
-  padding: 60px;
+  padding: 60px 20px 60px 60px;
   border: 1px solid #0b2235;
   border-radius: 10px;
   box-sizing: border-box;
   position: relative;
   max-height: 600px;
+}
+
+.popup-content {
+  position: relative;
+  max-height: 500px;
   overflow-y: auto;
+  padding-right: 20px;
 }
 
 .popup__close {
@@ -2131,7 +2137,7 @@ ul.header-card__text {
     grid-template-areas: "img name""text text";
     row-gap: 40px;
     grid-template-columns: repeat(4, 1fr);
-    padding: 60px;
+    padding: 50px;
   }
 
   .feedback-popup__img {

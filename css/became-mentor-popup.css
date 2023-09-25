@@ -11,6 +11,10 @@
   margin-bottom: 20px;
 }
 
+.popup.popap-templ.became-mentor-popup .popup__sub-title {
+  font-size: 18px;
+}
+
 .popup.popap-templ.became-mentor-popup .popup__title-group {
   text-align: center;
   margin-bottom: 40px;
@@ -94,6 +98,11 @@
   }
   .popup-body{
     max-height: 600px !important;
+  }
+
+  .popup-body_unlimited{
+    max-height: unset !important;
+    padding: 60px;
   }
   
   .popup.popap-templ.became-mentor-popup .form {
