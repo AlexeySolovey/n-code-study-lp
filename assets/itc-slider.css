@@ -204,11 +204,13 @@
 
 @media screen and (max-width: 576px) {
   .itc-slider.salary-slider {
-    height: 300px;
+    height: 350px;
   }
 
   .itc-slider-wrapper.salary-slider {
     height: 400px;
+    margin: 0;
+    max-width: 100%;
   }
 
   .itc-slider-item.salary-slider {
@@ -217,19 +219,19 @@
   }
 }
 
-.itc-slider.teaching-slider {
+.itc-slider.about-teaching-slider {
   width: 100%;
   min-height: 550px;
   height: 100%;
 }
 
-.itc-slider-wrapper.teaching-slider {
+.itc-slider-wrapper.about-teaching-slider {
   max-width: 100%;
   min-height: 550px;
   margin: 0;
 }
 
-.itc-slider-item.teaching-slider {
+.itc-slider-item.about-teaching-slider {
   max-width: auto;
   flex: 0 0 29%;
   min-height: 550px;
@@ -237,14 +239,14 @@
   position: relative;
 }
 
-.itc-slider-items.teaching-slider {
+.itc-slider-items.about-teaching-slider {
   padding-top: 50px;
 }
 
-.itc-slider-btn-prev.teaching-slider {
+.itc-slider-btn-prev.about-teaching-slider {
   left: 0;
 }
 
-.itc-slider-btn-next.teaching-slider {
+.itc-slider-btn-next.about-teaching-slider {
   right: 0;
 }
