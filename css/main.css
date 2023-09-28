@@ -1269,7 +1269,7 @@ ul {
   }
 
   .salary .btn {
-    margin-top: 30px;
+    margin-top: 50px;
     max-width: 80%;
     width: 100%;
   }
@@ -2434,6 +2434,10 @@ ul.header-card__text {
   box-sizing: border-box;
   position: relative;
   max-height: 600px;
+}
+
+.became-mentor-popup .popup-body {
+  padding: 60px;
 }
 
 .popup-content {
