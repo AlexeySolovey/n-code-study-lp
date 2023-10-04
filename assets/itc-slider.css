@@ -203,6 +203,14 @@
 }
 
 @media screen and (max-width: 576px) {
+  .itc-slider-items {
+    gap: 25px;
+  }
+
+  .itc-slider-item {
+    max-width: calc(100% - 65px);
+  }
+
   .itc-slider.salary-slider {
     height: 350px;
   }
