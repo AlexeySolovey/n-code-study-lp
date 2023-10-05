@@ -62,8 +62,7 @@ ul {
   align-items: center;
   margin: 0 auto;
   background: rgba(11, 34, 53, .9);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, .05);
-  border-radius: 20px;
+  border-radius: 10px;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
@@ -1136,11 +1135,12 @@ ul {
     font-weight: 500;
     color: #FD460E;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .about-teaching-accordion-title svg {
-    position: absolute;
-    right: 0;
     transition: .5s;
   }
 
@@ -2341,11 +2341,12 @@ ul.header-card__text {
     font-weight: 500;
     color: #FD460E;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .teaching-accordion-title svg {
-    position: absolute;
-    right: 0;
     transition: .5s;
   }
 
