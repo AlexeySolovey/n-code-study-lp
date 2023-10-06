@@ -209,15 +209,15 @@ phoneInputMentor.addEventListener("input", function () {
 function accordion(selector) {
   let accordionItem = document.querySelectorAll(selector);
   accordionItem.forEach((item) => {
-    item.addEventListener("click", function () {
-      if (this.classList.contains("active")) {
-        this.classList.remove("active");
+    item.children[0].addEventListener("click", function () {
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
         item.children[1].style.maxHeight = 0;
       } else {
         accordionItem.forEach((item) => item.classList.remove("active"));
         accordionItem.forEach((item) => (item.children[1].style.maxHeight = 0));
-        this.classList.add("active");
-        this.children[1].style.maxHeight = this.children[1].scrollHeight + "px";
+        item.classList.add("active");
+        item.children[1].style.maxHeight = item.children[1].scrollHeight + "px";
       }
     });
   });
@@ -253,6 +253,8 @@ accordion(".header-card__mob .header-card");
   const becomeMentorPopupLink = document.querySelector(".became-mentor");
   if (becomeMentorPopupLink) {
     becomeMentorPopupLink.addEventListener("click", () => {
+      const html = document.querySelector('html');
+      html.style.overflow = "hidden";
       becomeMentorPopup.style.display = "block";
     });
   }
