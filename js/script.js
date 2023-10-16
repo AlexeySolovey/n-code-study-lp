@@ -31,7 +31,12 @@ redirect();
   const input = document.querySelector("#file");
   const placeholder = document.querySelector(".popup .input-wrapper .placeholder");
   input.addEventListener("change", function () {
-    placeholder.innerHTML = input.files[0].name;
+    const isPdf = input.files[0].name.endsWith(".pdf");
+    const isDocx = input.files[0].name.endsWith(".docx");
+    
+    validFileMentor = isPdf || isDocx;
+
+    placeholder.innerHTML  = input.files[0].name;
     placeholder.style.color = "black";
   });
 })();
@@ -124,7 +129,12 @@ function getApiUrl(type) {
 
       const url = getApiUrl("statement");
 
-      if (validEmailMentor && validPhoneMentor && formData.get("name") && formData.get("attachment").name) {
+      if (!validFileMentor) {
+        alert(`Файл резюме має бути PDF або DOCX!`);
+        return;
+      }
+
+      if (validEmailMentor && validFileMentor && validPhoneMentor && formData.get("name") && formData.get("attachment").name) {
         fetch(url, options, {
           headers: {
             "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -159,6 +169,7 @@ let validPhoneCallback = false;
 
 let validEmailMentor = false;
 let validPhoneMentor = false;
+let validFileMentor = false;
 
 if(emailInputCallback){
   emailInputCallback.addEventListener("input", function () {
@@ -198,15 +209,15 @@ phoneInputMentor.addEventListener("input", function () {
 function accordion(selector) {
   let accordionItem = document.querySelectorAll(selector);
   accordionItem.forEach((item) => {
-    item.addEventListener("click", function () {
-      if (this.classList.contains("active")) {
-        this.classList.remove("active");
+    item.children[0].addEventListener("click", function () {
+      if (item.classList.contains("active")) {
+        item.classList.remove("active");
         item.children[1].style.maxHeight = 0;
       } else {
         accordionItem.forEach((item) => item.classList.remove("active"));
         accordionItem.forEach((item) => (item.children[1].style.maxHeight = 0));
-        this.classList.add("active");
-        this.children[1].style.maxHeight = this.children[1].scrollHeight + "px";
+        item.classList.add("active");
+        item.children[1].style.maxHeight = item.children[1].scrollHeight + "px";
       }
     });
   });
@@ -242,6 +253,8 @@ accordion(".header-card__mob .header-card");
   const becomeMentorPopupLink = document.querySelector(".became-mentor");
   if (becomeMentorPopupLink) {
     becomeMentorPopupLink.addEventListener("click", () => {
+      const html = document.querySelector('html');
+      html.style.overflow = "hidden";
       becomeMentorPopup.style.display = "block";
     });
   }

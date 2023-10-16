@@ -177,3 +177,84 @@
 .itc-slider-indicator-active {
   background-color: black
 }
+
+.itc-slider-wrapper.salary-slider {
+  max-width: 80%;
+}
+
+.itc-slider-item.salary-slider {
+  max-width: auto;
+  flex: 0 0 100%;
+  height: 175px;
+}
+
+.itc-slider-btn-prev.salary-slider {
+  left: 0;
+}
+
+.itc-slider-btn-next.salary-slider {
+  right: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .itc-slider-item.salary-slider {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .itc-slider-items {
+    gap: 25px;
+  }
+
+  .itc-slider-item {
+    max-width: calc(100% - 65px);
+  }
+
+  .itc-slider.salary-slider {
+    height: 350px;
+  }
+
+  .itc-slider-wrapper.salary-slider {
+    height: 400px;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .itc-slider-item.salary-slider {
+    height: 300px;
+    border: none;
+  }
+}
+
+.itc-slider.about-teaching-slider {
+  width: 100%;
+  min-height: 550px;
+  height: 100%;
+}
+
+.itc-slider-wrapper.about-teaching-slider {
+  max-width: 100%;
+  min-height: 550px;
+  margin: 0;
+}
+
+.itc-slider-item.about-teaching-slider {
+  max-width: auto;
+  flex: 0 0 29%;
+  min-height: 550px;
+  background-color: #0B2235;
+  position: relative;
+}
+
+.itc-slider-items.about-teaching-slider {
+  padding-top: 50px;
+}
+
+.itc-slider-btn-prev.about-teaching-slider {
+  left: 0;
+}
+
+.itc-slider-btn-next.about-teaching-slider {
+  right: 0;
+}

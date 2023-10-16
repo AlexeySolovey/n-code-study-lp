@@ -49,6 +49,12 @@ ul {
   position: relative;
 }
 
+.content-container.bg-dark {
+  background-color: #0B2235;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
 .btn {
   max-width: 230px;
   display: flex;
@@ -56,8 +62,7 @@ ul {
   align-items: center;
   margin: 0 auto;
   background: rgba(11, 34, 53, .9);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, .05);
-  border-radius: 20px;
+  border-radius: 10px;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
@@ -68,6 +73,10 @@ ul {
   box-sizing: border-box;
   border: none;
   transition: background-color 300ms;
+}
+
+.btn-trial {
+  margin-top: 60px;
 }
 
 .btn:hover{
@@ -90,6 +99,22 @@ ul {
   color: #232523;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.section-text {
+  width: 25%;
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  .section-text {
+    width: 100%;
+  }
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
 }
 
 .more-info-link {
@@ -565,7 +590,7 @@ ul {
 
 @media screen and (min-width:992px){
   .slider {
-    height: 100vh;
+    height: 80vh;
     padding: 0 20px;
   }
   
@@ -578,6 +603,13 @@ ul {
     left: 0;
     text-align: start;
   }
+  
+  .subtitle {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    font-size: 18px;
+  }
 
   .slide__btn{
     position: absolute;
@@ -586,7 +618,14 @@ ul {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .subtitle {
+    display: none;
+  }
+}
+
 .advantages {
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -987,8 +1026,166 @@ ul {
   }
 }
 
+.about-teaching {
+  margin-bottom: 140px;
+}
+
+@media screen and (max-width: 576px) {
+  .about-teaching {
+    margin-bottom: 50px;
+  }
+}
+
+.about-teaching-slider__content {
+  background-color: #0B2235;
+  border-radius: 20px;
+  position: absolute;
+  padding: 40px 40px 0 40px;
+  left: -1px;
+  right: -1px;
+  top: 0;
+  transition: .5s;
+}
+
+.about-teaching-slider__title {
+  font-size: 18px;
+  color: #FD460E;
+  text-align: center;
+}
+
+.about-teaching-slider__list {
+  margin-top: 20px;
+}
+
+.about-teaching-slider__list li {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.about-teaching-slider__list li::before {
+  content: "\2022";
+  color: #FD460E;
+  font-size: 36px;
+  position: absolute;
+  left: -15px;
+  top: -15px;
+}
+
+.about-teaching-slider__footer{
+  position: absolute;
+  bottom: 40px;
+  width: 90%;
+  overflow: hidden;
+  height: 0;
+  transition: .5s;
+}
+
+.about-teaching-slider__footer  button{
+  background-color: #FD460E;
+  height: 60px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.about-teaching-slider__footer a {
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.itc-slider-item.about-teaching-slider:hover .about-teaching-slider__content {
+  top: -50px;
+}
+
+.itc-slider-item.about-teaching-slider:hover .about-teaching-slider__footer {
+  height: 60px;
+}
+
+.accordion.about-teaching-accordion {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .about-teaching-slider {
+    display: none;
+  }
+
+  .accordion.about-teaching-accordion {
+    display: block;
+  }
+
+  .about-teaching-accordion-item {
+    background-color: #0B2235;
+    margin-bottom: 10px;
+  }
+
+  .accordion__item.about-teaching-accordion-item {
+    padding: 20px;
+  }
+
+  .about-teaching-accordion-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FD460E;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about-teaching-accordion-title svg {
+    transition: .5s;
+  }
+
+  .about-teaching-accordion-item.active .about-teaching-accordion-title svg {
+    rotate: 180deg; 
+  }
+
+  .about-teaching-accordion-content {
+    border-top: none !important;
+    font-size: 13px;
+    color: #131313;
+  }
+
+  .about-teaching-accordion-content__list {
+    color: #FFFFFF;
+  }
+
+  .about-teaching-accordion-content__list li::before {
+    content: "\2022";
+    font-weight: bold;
+    font-size: 24px;
+    color: #FD460E;
+  }
+
+  .about-teaching-accordion-content .btn {
+    margin: 20px 0 0 0;
+    max-width: 100%;
+    width: 100%;
+    height: 32px;
+    background-color: #FD460E;
+  }
+
+  .about-teaching-accordion-content a {
+    color: #FFFFFF;
+  }
+}
+
 .salary {
   margin-bottom: 40px;
+}
+
+@media screen and (max-width: 576px) {
+  .salary .section-content {
+    flex-direction: column;
+  }
 }
 
 .salary .salary-card {
@@ -1006,6 +1203,7 @@ ul {
   font-size: 14px;
   line-height: 16px;
   color: #fd460e;
+  white-space: nowrap;
 }
 
 .salary .salary-card__rank {
@@ -1029,13 +1227,33 @@ ul {
   width: 100%;
 }
 
-.salary .salary-card-wrap {
-  display: grid;
+.itc-slider.salary-slider {
+  width: 75%;
   row-gap: 10px;
   position: relative;
 }
 
-.salary .btn,
+@media screen and (max-width: 992px) {
+  .itc-slider.salary-slider {
+    width: 100%;
+  }
+}
+
+.salary .salary-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 576px) {
+  .salary .salary-cards {
+    flex-direction: column;
+  }
+
+  .salary-card {
+    margin-top: 10px;
+  }
+}
+
 .salary .salary__line {
   display: none;
 }
@@ -1045,13 +1263,24 @@ ul {
   color: #fd460e;
 }
 
+@media screen and (max-width: 576px) {
+  .salary .salary__title {
+    color: #242524;
+  }
+
+  .salary .btn {
+    margin-top: 50px;
+    max-width: 80%;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width:576px) {
   .salary .salary-card-wrap {
     grid-template-columns: repeat(4, 1fr);
     border: 1px solid #0b2235;
     border-radius: 15px;
     padding: 35px 30px;
-    margin-bottom: 40px;
   }
 
   .salary .salary-card {
@@ -1061,7 +1290,7 @@ ul {
     justify-items: center;
     text-align: center;
     padding: 0;
-    margin-top: 23px;
+    margin-top: -6px;
   }
 
   .salary .salary-card__sum {
@@ -1087,23 +1316,40 @@ ul {
     font-size: 12px;
   }
 
+  .salary .salary-card:nth-child(1) {
+    justify-content: start;
+  }
+
+  .salary .salary-card:nth-child(1) .salary-card__img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .salary .salary-card:nth-child(2) {
+    justify-content: start;
+  }
+
+  .salary .salary-card:nth-child(2) .salary-card__img {
+    width: 20px;
+    height: 20px;
+  }
+
   .salary .salary-card:nth-child(3) {
     justify-content: start;
   }
 
   .salary .salary-card:nth-child(3) .salary-card__img {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
   }
 
   .salary .salary-card:nth-child(4) {
     justify-content: end;
-    margin-right: 35px;
   }
 
   .salary .salary-card:nth-child(4) .salary-card__img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 
   .salary .salary-card:nth-child(5) {
@@ -1127,8 +1373,14 @@ ul {
     width: 87%;
     height: 1px;
     background-color: #0b2235;
-    top: 55%;
+    top: 50%;
     left: 6.5%;
+  }
+
+  @media screen and (max-width: 992px) {
+    .salary .salary__line {
+      top: 46%;
+    }
   }
 
   .salary .btn {
@@ -1137,12 +1389,10 @@ ul {
 
   .salary .salary__title {
     display: block;
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translate(-50%, 0);
+    text-align: center;
     font-size: 3vw;
     font-weight: 400;
+    font-size: 20px;
     color: #232523;
   }
 }
@@ -1161,16 +1411,6 @@ ul {
 
   .salary .salary-card-wrap {
     grid-template-columns: repeat(5, 1fr);
-    margin-bottom: 60px;
-  }
-
-  .salary .salary-card {
-    padding: 0 35px;
-  }
-
-  .salary .salary__line {
-    width: 68%;
-    left: 27.8%;
   }
 
   .salary .salary__title {
@@ -1509,7 +1749,7 @@ ul {
 .form .required::after {
   content: "*";
   position: absolute;
-  top: -11px;
+  top: -0;
   right: 5px;
   color: rgba(253, 70, 14, .7);
   font-size: 15px;
@@ -1955,9 +2195,176 @@ ul.header-card__text {
   }
 }
 
+.teaching {
+  max-width: 1176px;
+  color: white;
+  margin: 0 auto;
+  padding: 70px 0px;
+}
+
+.teaching-content {
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.teaching-content__title {
+  font-family: "Venus Rising";
+  font-style: normal;
+  font-size: 32px;
+  line-height: 19px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.teaching-content__subtitle {
+  color: #FD460E;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.teaching-content__list li {
+  margin-top: 20px;
+}
+
+.teaching-content__list li::before {
+  content: "\2022";
+  font-weight: bold;
+  margin-right: 12px;
+  color: #FD460E;
+}
+
+.teaching-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.teaching-card__title {
+  font-weight: 500;
+  font-size: 20px;
+  color: #FD460E;
+}
+
+.teaching-card__text {
+  color: #131313;
+  font-size: 14px;
+}
+
+.teaching-card:nth-child(2) {
+  grid-column-start: 7;
+  grid-column-end: 10;
+}
+
+.teaching-card:nth-child(3) {
+  grid-column-start: 10;
+  grid-column-end: 13;
+}
+
+.teaching-card:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+
+.teaching-card:nth-child(5) {
+  grid-column-start: 5;
+  grid-column-end: 9;
+}
+
+.teaching-card:nth-child(6) {
+  grid-column-start: 9;
+  grid-column-end: 13;
+}
+
+@media screen and (min-width: 576px) {
+  .teaching {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .teaching-accordion {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .teaching {
+    padding: 20px 0;
+  }
+
+  .teaching-content {
+    margin-bottom: 20px;
+  }
+
+  .teaching-content__title {
+    font-size: 16px;
+  }
+
+  .teaching-content__subtitle  {
+    font-size: 16px;
+  }
+
+  .teaching-card {
+    display: none;
+  }
+
+  .teaching-accordion {
+    display: block;
+  }
+
+  .teaching-accordion .btn {
+    min-width: 300px;
+    width: 100%;
+    background-color: #FD460E;
+    height: 32px;
+    margin-top: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .teaching-accordion a {
+    color: #FFFFFF;
+  }
+
+  .teaching-accordion-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .teaching-accordion-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FD460E;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .teaching-accordion-title svg {
+    transition: .5s;
+  }
+
+  .teaching-accordion-item.active .teaching-accordion-title svg {
+    rotate: 180deg; 
+  }
+
+  .teaching-accordion-content {
+    border-top: none !important;
+    font-size: 13px;
+    color: #131313;
+  }
+}
+
 .consult {
   display: none;
   margin-bottom: 63px;
+  margin-top: 140px;
 }
 
 .consult .container {
@@ -1973,14 +2380,14 @@ ul.header-card__text {
 
 .consult__title h2 {
   font-weight: 700;
-  font-size: 30px;
+  font-size: 24px;
   line-height: 35px;
   color: #297abf;
   margin-bottom: 35px;
 }
 
 .consult__title p {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 28px;
 }
 
@@ -1994,7 +2401,7 @@ ul.header-card__text {
   flex-direction: column;
   gap: 30px;
   max-width: 498px;
-  font-size: 24px;
+  font-size: 16px;
   line-height: 28px;
 }
 
@@ -2028,6 +2435,10 @@ ul.header-card__text {
   box-sizing: border-box;
   position: relative;
   max-height: 600px;
+}
+
+.became-mentor-popup .popup-body {
+  padding: 60px;
 }
 
 .popup-content {
