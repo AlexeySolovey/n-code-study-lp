@@ -5,8 +5,6 @@
   popup.forEach((item) => {
     item.addEventListener("click", function (e) {
       if (e.target.classList.value === "back-link" || e.target.classList.value === "popup__close") {
-        const html = document.querySelector('html');
-        html.style.overflow = "scroll";
         this.style.display = "none";
       }
     });
@@ -33,8 +31,6 @@
     const feedbackPopUp = document.querySelector(`[data-content="${contentId}"]`);
     item.addEventListener("click", (e) => {
       e.preventDefault();
-      const html = document.querySelector('html');
-      html.style.overflow = "hidden";
       feedbackPopUp.style.display = "block";
     });
   });
@@ -45,8 +41,6 @@
     allGiveFeedvack.forEach((item) => {
       item.addEventListener("click", (e) => {
         e.preventDefault();
-        const html = document.querySelector('html');
-        html.style.overflow = "hidden";
         givePopup.style.display = "block";
       });
     });
@@ -58,8 +52,6 @@
     const mentorInfoPopup = document.querySelector(`[data-content-mentor="${contentId}"]`);
     item.addEventListener("click", (e) => {
       e.preventDefault();
-      const html = document.querySelector('html');
-      html.style.overflow = "hidden";
       mentorInfoPopup.style.display = "block";
     });
   });

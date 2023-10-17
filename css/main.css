@@ -7,12 +7,15 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
   color: #232523;
+  height: 100vh;
+  overflow: scroll;
 }
 
 img {
