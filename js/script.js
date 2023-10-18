@@ -239,8 +239,9 @@ accordion(".header-card__mob .header-card");
 
 (function headerScroll() {
   const fixedElement = document.querySelector("#header");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 0) {
+  const body = document.querySelector('body');
+  body.addEventListener("scroll", function () {
+    if (body.scrollTop > 0) {
       fixedElement.classList.add("scrolled");
     } else {
       fixedElement.classList.remove("scrolled");
@@ -253,8 +254,6 @@ accordion(".header-card__mob .header-card");
   const becomeMentorPopupLink = document.querySelector(".became-mentor");
   if (becomeMentorPopupLink) {
     becomeMentorPopupLink.addEventListener("click", () => {
-      const html = document.querySelector('html');
-      html.style.overflow = "hidden";
       becomeMentorPopup.style.display = "block";
     });
   }
