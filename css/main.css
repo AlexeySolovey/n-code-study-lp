@@ -16,6 +16,7 @@ body {
   color: #232523;
   height: 100vh;
   overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 img {
