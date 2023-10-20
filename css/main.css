@@ -2296,6 +2296,16 @@ ul.header-card__text {
   .teaching-accordion {
     display: none;
   }
+
+  .popup.feedback-popup .popup-body .feedback-popup__img > .feedback-popup__name,
+  .close__popup-element > .popup__close,
+  .popup-content > .popup__close,
+  .popup .popup-content .tutor-info,
+  .popup.feedback-popup .popup-body .footer,
+  .popup-body .popup-content .footer {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -2367,6 +2377,104 @@ ul.header-card__text {
     font-size: 13px;
     color: #131313;
   }
+
+  .section-title-wrap{
+    margin-bottom: 20px;
+  }
+
+  .popup.feedback-popup,
+  .popup.mentor-info-popup {
+    padding: 0;
+    background: 0;
+    z-index: 99998;
+    top: 55px;
+  }
+
+  .popup.feedback-popup .popup-body,
+  .mentor-info-popup .popup-body {
+    display: block;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    border: none;
+    padding: 15px 20px 0;
+  }
+
+  .popup__close:before,
+  .popup__close:after,
+  .popup__close {
+    display: none;
+  }
+
+  .close__popup-element > .popup__close,
+  .popup-content > .popup__close{
+    display: block;
+    position: relative;
+    width: max-content;
+    height: max-content;
+    top: auto;
+    right: auto;
+    margin-bottom: 30px;
+    color: #297abf;
+    border-bottom: 1px solid #297abf;
+  }
+
+  .popup-body .popup-content{
+    max-height: none;
+  }
+
+  .popup.feedback-popup .popup-body > .footer,
+  .popup-body .popup-content .footer {
+    margin-top: 40px;
+  }
+
+  .content-container.feedback-page .section-title-wrap .back-link,
+  .content-container.tutors-page .section-title-wrap .back-link,
+  .popup.feedback-popup .popup-body > .feedback-popup__name,
+  .popup.feedback-popup .tutors-card__rate,
+  .mentor-info-popup__wrapper .mentor-name,
+  .popup-content .rate {
+    display: none;
+  }
+
+  .tutor-info {
+    margin-left: 5px;
+  }
+
+  .tutor-info .mentor-info-popu__name {
+    margin: 0 0 5px 0;
+  }
+
+  .popup.mentor-info-popup .tutor-info .tutors-card__rate {
+    margin-top: 0;
+  }
+
+  .popup.feedback-popup .popup-body .feedback-popup__img {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .popup.feedback-popup .popup-body .feedback__footer-description .feedback-popup__item:nth-child(1) {
+    margin: 10px 0;
+  }
+
+  .feedback-popup .popup-body .feedback__footer-description .feedback-popup__item p:first-child {
+    font-size: 14px;
+    color: #BDBDBD;
+    margin-bottom: 5px;
+  }
+
+  .feedback-popup .popup-body .feedback__footer-description .feedback-popup__item p:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    color: #232523;
+  }
+
+  .content-container.feedback-page .header,
+  .content-container.tutors-page .header {
+    background-color: white;
+  }
+
 }
 
 .consult {
@@ -2514,6 +2622,10 @@ ul.header-card__text {
   font-size: 14px;
   line-height: 18px;
   grid-column: 1/6;
+}
+
+.feedback__footer-description {
+  display: contents;
 }
 
 .feedback-popup__item {

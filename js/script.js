@@ -51,6 +51,18 @@ redirect();
   });
 })();
 
+(function reloadPage(){
+  let menuItem = document.querySelector(".main-item")
+  let modal = document.querySelectorAll(".popup")
+  modal.forEach(el => {
+    menuItem.addEventListener("click", function(){
+      if(el.style.display === "block"){
+        location.reload()
+      }
+    })
+  })
+})()
+
 function getApiUrl(type) {
   switch (window.location.host) {
     case "n-code-dev.in.net":
