@@ -627,7 +627,7 @@ ul {
 }
 
 .advantages {
-  margin-top: 70px;
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -2713,5 +2713,14 @@ ul.header-card__text {
     grid-column: 2;
     grid-row: 1;
     margin-top: 65px;
+  }
+
+  .advantages .section-title,
+  .roadmap .section-title,
+  .salary .section-title,
+  .feedback .section-title,
+  .faq .section-title,
+  .callback-form .section-title {
+    margin-bottom: 20px;
   }
 }
