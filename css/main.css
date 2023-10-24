@@ -127,16 +127,6 @@ ul {
   cursor: pointer;
 }
 
-.more-info-link:after {
-  content: "";
-  width: 26px;
-  height: 16px;
-  display: inline-block;
-  background-image: url(../img/more-info-arrow.svg);
-  background-repeat: no-repeat;
-  margin-left: 25px;
-}
-
 .section-title-wrap {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -167,23 +157,11 @@ ul {
   text-decoration: none;
 }
 
-.back-link::before {
-  content: "";
-  width: 11px;
-  height: 8px;
-  display: inline-block;
-  background-image: url(../img/more-info-arrow.svg);
-  background-repeat: no-repeat;
-  transform: rotate(180deg);
-  margin-right: 12px;
-  background-size: contain;
-}
-
 .back-link:after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 23px;
+  left: 0;
   height: 1px;
   background-color: #297abf;
   width: 33px;
@@ -212,7 +190,7 @@ ul {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50px;
+    left: 0;
     height: 1px;
     background-color: #297abf;
     width: 70px;
@@ -532,6 +510,7 @@ ul {
 }
 
 .slider {
+  padding-bottom: 140px;
   margin-bottom: 0  ;
   background-image: url(../img/intro-background.png);
   height: 50vh;
@@ -593,7 +572,7 @@ ul {
 @media screen and (min-width:992px){
   .slider {
     height: 80vh;
-    padding: 0 20px;
+    padding: 0 20px 140px 20px;
   }
   
   .title {
@@ -623,6 +602,10 @@ ul {
 @media screen and (max-width: 576px) {
   .subtitle {
     display: none;
+  }
+
+  .slider {
+    padding: 0 20px;
   }
 }
 
@@ -2480,7 +2463,7 @@ ul.header-card__text {
 .consult {
   display: none;
   margin-bottom: 70px;
-  margin-top: 140px;
+  margin-top: 70px;
 }
 
 .consult .container {
