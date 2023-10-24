@@ -102,7 +102,6 @@ ul {
   line-height: 19px;
   color: #232523;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .section-text {
@@ -222,7 +221,6 @@ ul {
   .section-title {
     font-size: 28px;
     line-height: 34px;
-    margin-bottom: 40px;
   }
 
   .action-btn {
@@ -722,7 +720,7 @@ ul {
   .advantages .container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 75px;
-    row-gap: 40px;
+    row-gap: 20px;
   }
 
   .advantages__item {
@@ -1079,7 +1077,7 @@ ul {
 
 .about-teaching-slider__footer{
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   width: 90%;
   overflow: hidden;
   height: 0;
@@ -1105,7 +1103,7 @@ ul {
 }
 
 .itc-slider-item.about-teaching-slider:hover .about-teaching-slider__content {
-  top: -50px;
+  top: -20px;
 }
 
 .itc-slider-item.about-teaching-slider:hover .about-teaching-slider__footer {
@@ -2280,6 +2278,12 @@ ul.header-card__text {
   grid-column-end: 13;
 }
 
+.teaching-card hr {
+  border: none;
+  border-top: 1px solid #FD460E;
+  opacity: 20%;
+}
+
 @media screen and (min-width: 576px) {
   .teaching {
     display: grid;
@@ -2292,6 +2296,16 @@ ul.header-card__text {
   .teaching-accordion {
     display: none;
   }
+
+  .popup.feedback-popup .popup-body .feedback-popup__img > .feedback-popup__name,
+  .close__popup-element > .popup__close,
+  .popup-content > .popup__close,
+  .popup .popup-content .tutor-info,
+  .popup.feedback-popup .popup-body .footer,
+  .popup-body .popup-content .footer {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
@@ -2363,11 +2377,109 @@ ul.header-card__text {
     font-size: 13px;
     color: #131313;
   }
+
+  .section-title-wrap{
+    margin-bottom: 20px;
+  }
+
+  .popup.feedback-popup,
+  .popup.mentor-info-popup {
+    padding: 0;
+    background: 0;
+    z-index: 99998;
+    top: 55px;
+  }
+
+  .popup.feedback-popup .popup-body,
+  .mentor-info-popup .popup-body {
+    display: block;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+    border: none;
+    padding: 15px 20px 0;
+  }
+
+  .popup__close:before,
+  .popup__close:after,
+  .popup__close {
+    display: none;
+  }
+
+  .close__popup-element > .popup__close,
+  .popup-content > .popup__close{
+    display: block;
+    position: relative;
+    width: max-content;
+    height: max-content;
+    top: auto;
+    right: auto;
+    margin-bottom: 30px;
+    color: #297abf;
+    border-bottom: 1px solid #297abf;
+  }
+
+  .popup-body .popup-content{
+    max-height: none;
+  }
+
+  .popup.feedback-popup .popup-body > .footer,
+  .popup-body .popup-content .footer {
+    margin-top: 40px;
+  }
+
+  .content-container.feedback-page .section-title-wrap .back-link,
+  .content-container.tutors-page .section-title-wrap .back-link,
+  .popup.feedback-popup .popup-body > .feedback-popup__name,
+  .popup.feedback-popup .tutors-card__rate,
+  .mentor-info-popup__wrapper .mentor-name,
+  .popup-content .rate {
+    display: none;
+  }
+
+  .tutor-info {
+    margin-left: 5px;
+  }
+
+  .tutor-info .mentor-info-popu__name {
+    margin: 0 0 5px 0;
+  }
+
+  .popup.mentor-info-popup .tutor-info .tutors-card__rate {
+    margin-top: 0;
+  }
+
+  .popup.feedback-popup .popup-body .feedback-popup__img {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .popup.feedback-popup .popup-body .feedback__footer-description .feedback-popup__item:nth-child(1) {
+    margin: 10px 0;
+  }
+
+  .feedback-popup .popup-body .feedback__footer-description .feedback-popup__item p:first-child {
+    font-size: 14px;
+    color: #BDBDBD;
+    margin-bottom: 5px;
+  }
+
+  .feedback-popup .popup-body .feedback__footer-description .feedback-popup__item p:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    color: #232523;
+  }
+
+  .content-container.feedback-page .header,
+  .content-container.tutors-page .header {
+    background-color: white;
+  }
+
 }
 
 .consult {
   display: none;
-  margin-bottom: 63px;
+  margin-bottom: 70px;
   margin-top: 140px;
 }
 
@@ -2512,6 +2624,10 @@ ul.header-card__text {
   grid-column: 1/6;
 }
 
+.feedback__footer-description {
+  display: contents;
+}
+
 .feedback-popup__item {
   grid-row: 3;
   grid-column: auto;
@@ -2597,5 +2713,15 @@ ul.header-card__text {
     grid-column: 2;
     grid-row: 1;
     margin-top: 65px;
+  }
+
+  .tutors .section-title,
+  .advantages .section-title,
+  .roadmap .section-title,
+  .salary .section-title,
+  .feedback .section-title,
+  .faq .section-title,
+  .callback-form .section-title {
+    margin-bottom: 40px;
   }
 }
