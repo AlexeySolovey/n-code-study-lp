@@ -1895,6 +1895,7 @@ ul {
 .footer__copyright {
   text-align: center;
   font-size: 11px;
+  position: relative;
 }
 
 .social-ico {
@@ -2654,6 +2655,22 @@ ul.header-card__text {
   grid-row: 1;
   margin-top: 40px;
   margin-left: 30px;
+}
+
+.privacy-policy-link {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .privacy-policy-link {
+    position: relative;
+    left: 0;
+    color: #0B2235;
+    font-size: 14px;
+  } 
 }
 
 @media(min-width:576px) {
