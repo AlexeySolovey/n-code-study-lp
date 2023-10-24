@@ -158,23 +158,11 @@ ul {
   text-decoration: none;
 }
 
-.back-link::before {
-  content: "";
-  width: 11px;
-  height: 8px;
-  display: inline-block;
-  background-image: url(../img/more-info-arrow.svg);
-  background-repeat: no-repeat;
-  transform: rotate(180deg);
-  margin-right: 12px;
-  background-size: contain;
-}
-
 .back-link:after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 23px;
+  left: 0;
   height: 1px;
   background-color: #297abf;
   width: 33px;
@@ -203,7 +191,7 @@ ul {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 50px;
+    left: 0;
     height: 1px;
     background-color: #297abf;
     width: 70px;
