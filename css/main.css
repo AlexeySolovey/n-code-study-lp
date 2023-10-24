@@ -1077,7 +1077,7 @@ ul {
 
 .about-teaching-slider__footer{
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   width: 90%;
   overflow: hidden;
   height: 0;
@@ -1103,7 +1103,7 @@ ul {
 }
 
 .itc-slider-item.about-teaching-slider:hover .about-teaching-slider__content {
-  top: -50px;
+  top: -20px;
 }
 
 .itc-slider-item.about-teaching-slider:hover .about-teaching-slider__footer {
@@ -2715,12 +2715,13 @@ ul.header-card__text {
     margin-top: 65px;
   }
 
+  .tutors .section-title,
   .advantages .section-title,
   .roadmap .section-title,
   .salary .section-title,
   .feedback .section-title,
   .faq .section-title,
   .callback-form .section-title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
