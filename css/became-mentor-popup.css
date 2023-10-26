@@ -137,4 +137,8 @@
   .popup.popap-templ.became-mentor-popup {
     overflow: auto;
   }
+
+  .popup.popap-templ .popup-body .form .required {
+    width: auto;
+  }
 }
