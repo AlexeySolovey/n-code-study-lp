@@ -2290,9 +2290,14 @@ ul.header-card__text {
     display: none;
   }
 
+  .tutors-card__info .tutors-card__course > .tutors-card__course-link.more-info-link {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
+
   .teaching {
     padding: 20px 0;
   }
@@ -2457,6 +2462,14 @@ ul.header-card__text {
   .content-container.feedback-page .header,
   .content-container.tutors-page .header {
     background-color: white;
+  }
+
+  .popup-body .footer .logo-mobile{
+    margin-bottom: 50px;
+  }
+
+  .tutors-card__info > .tutors-card__course-link.more-info-link {
+    display: none;
   }
 
 }
