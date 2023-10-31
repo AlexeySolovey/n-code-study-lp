@@ -23,6 +23,11 @@
     order: 1;
 }
 
+.feedback-page .header {
+    background: white;
+    box-shadow: 0 4px 4px 0 rgba(37, 36, 37, 0.04);
+}
+
 @media(min-width:576px) {
     .cards-page .back-link {
         grid-area: link;
