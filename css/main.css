@@ -2290,7 +2290,7 @@ ul.header-card__text {
     display: none;
   }
 
-  .tutors-card__info .tutors-card__course > .tutors-card__course-link.more-info-link {
+  .feedback .tutors-card__info .tutors-card__course > .tutors-card__course-link.more-info-link {
     display: none;
   }
 
@@ -2367,7 +2367,7 @@ ul.header-card__text {
     color: #131313;
   }
 
-  .section-title-wrap{
+  .section-title {
     margin-bottom: 20px;
   }
 
