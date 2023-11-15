@@ -1838,6 +1838,10 @@ ul {
   border-top: 1px solid #0B2235;
 }
 
+.iphone-mb-footer {
+  padding-bottom: 100px;
+}
+
 .footer .row {
   display: flex;
   flex-direction: column;
