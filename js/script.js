@@ -270,3 +270,9 @@ accordion(".header-card__mob .header-card");
     });
   }
 })();
+
+(function iPhoneScroll() {
+  if (/iPhone/.test(navigator.userAgent)) {
+    document.querySelector('.footer').classList.add('iphone-mb-footer');
+  }
+})();
