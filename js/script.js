@@ -3,25 +3,35 @@ function redirect() {
   const signupLink = document.querySelectorAll(".signup-btn");
 
   switch (window.location.host) {
-    case "n-code-dev.in.net":
-      loginLink.forEach((el) => el.href = "https://my.n-code-dev.in.net/")
-      signupLink.forEach((el) => el.href = "https://my.n-code-dev.in.net/uk/#/signup")
+    case "n-code-dev.xyz":
+      loginLink.forEach((el) => (el.href = "https://my.n-code-dev.xyz/"));
+      signupLink.forEach(
+        (el) => (el.href = "https://my.n-code-dev.xyz/uk/#/signup")
+      );
       break;
     case "n-code-release.in.net":
-      loginLink.forEach((el) => el.href = "https://my.n-code-release.in.net/")
-      signupLink.forEach((el) => el.href = "https://my.n-code-release.in.net/uk/#/signup")
+      loginLink.forEach(
+        (el) => (el.href = "https://my.n-code-release.in.net/")
+      );
+      signupLink.forEach(
+        (el) => (el.href = "https://my.n-code-release.in.net/uk/#/signup")
+      );
       break;
     case "n-code.study":
-      loginLink.forEach((el) => el.href = "https://my.n-code.study/")
-      signupLink.forEach((el) => el.href = "https://my.n-code.study/uk/#/signup")
+      loginLink.forEach((el) => (el.href = "https://my.n-code.study/"));
+      signupLink.forEach(
+        (el) => (el.href = "https://my.n-code.study/uk/#/signup")
+      );
       break;
     case "n-code-test.in.net":
-      loginLink.forEach((el) => el.href = "https://my.n-code-test.in.net/")
-      signupLink.forEach((el) => el.href = "https://my.n-code-test.in.net/uk/#/signup")
+      loginLink.forEach((el) => (el.href = "https://my.n-code-test.in.net/"));
+      signupLink.forEach(
+        (el) => (el.href = "https://my.n-code-test.in.net/uk/#/signup")
+      );
       break;
     default:
-      loginLink.forEach((el) => el.href = "#")
-      signupLink.forEach((el) => el.href = "#")
+      loginLink.forEach((el) => (el.href = "#"));
+      signupLink.forEach((el) => (el.href = "#"));
   }
 }
 
@@ -29,14 +39,16 @@ redirect();
 
 (function getInputFile() {
   const input = document.querySelector("#file");
-  const placeholder = document.querySelector(".popup .input-wrapper .placeholder");
+  const placeholder = document.querySelector(
+    ".popup .input-wrapper .placeholder"
+  );
   input.addEventListener("change", function () {
     const isPdf = input.files[0].name.endsWith(".pdf");
     const isDocx = input.files[0].name.endsWith(".docx");
-    
+
     validFileMentor = isPdf || isDocx;
 
-    placeholder.innerHTML  = input.files[0].name;
+    placeholder.innerHTML = input.files[0].name;
     placeholder.style.color = "black";
   });
 })();
@@ -51,22 +63,22 @@ redirect();
   });
 })();
 
-(function reloadPage(){
-  let menuItem = document.querySelector(".main-item")
-  let modal = document.querySelectorAll(".popup")
-  modal.forEach(el => {
-    menuItem.addEventListener("click", function(){
-      if(el.style.display === "block"){
-        location.reload()
+(function reloadPage() {
+  let menuItem = document.querySelector(".main-item");
+  let modal = document.querySelectorAll(".popup");
+  modal.forEach((el) => {
+    menuItem.addEventListener("click", function () {
+      if (el.style.display === "block") {
+        location.reload();
       }
-    })
-  })
-})()
+    });
+  });
+})();
 
 function getApiUrl(type) {
   switch (window.location.host) {
-    case "n-code-dev.in.net":
-      return `https://api.n-code-dev.in.net/api/emails/${type}`;
+    case "n-code-dev.xyz":
+      return `https://api.n-code-dev.xyz/api/emails/${type}`;
     case "n-code-release.in.net":
       return `https://api.n-code-release.in.net/api/emails/${type}`;
     case "n-code.study":
@@ -89,7 +101,9 @@ function getApiUrl(type) {
       const name = document.querySelector(".callback-form .name").value;
       const phone = document.querySelector(".callback-form .phone").value;
       const email = document.querySelector(".callback-form .email").value;
-      const source = document.querySelector(".callback-form .select-wherefrom").value;
+      const source = document.querySelector(
+        ".callback-form .select-wherefrom"
+      ).value;
       const comment = document.querySelector(".callback-form .comment").value;
 
       const body = { name, email, phone, source, comment };
@@ -146,7 +160,13 @@ function getApiUrl(type) {
         return;
       }
 
-      if (validEmailMentor && validFileMentor && validPhoneMentor && formData.get("name") && formData.get("attachment").name) {
+      if (
+        validEmailMentor &&
+        validFileMentor &&
+        validPhoneMentor &&
+        formData.get("name") &&
+        formData.get("attachment").name
+      ) {
         fetch(url, options, {
           headers: {
             "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -156,7 +176,9 @@ function getApiUrl(type) {
             alert("Запит успішно відправлено");
             form.reset();
 
-            const placeholder = document.querySelector(".became-mentor-popup .input-wrapper .placeholder");
+            const placeholder = document.querySelector(
+              ".became-mentor-popup .input-wrapper .placeholder"
+            );
             placeholder.innerHTML = "Прикріпити файл з резюме";
             placeholder.style.color = "#8e8e8e";
           })
@@ -183,27 +205,29 @@ let validEmailMentor = false;
 let validPhoneMentor = false;
 let validFileMentor = false;
 
-if(emailInputCallback){
+if (emailInputCallback) {
   emailInputCallback.addEventListener("input", function () {
-    let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-  
+    let validationEmail =
+      /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+
     validEmailCallback = validationEmail.test(emailInputCallback.value.trim());
-  
+
     emailInputCallback.style.borderColor = validEmailCallback ? "black" : "red";
   });
 }
-if(phoneInputCallback){
+if (phoneInputCallback) {
   phoneInputCallback.addEventListener("input", function () {
     let validationPhone = /^(\+380|380|0)\d{9}$/;
-  
+
     validPhoneCallback = validationPhone.test(phoneInputCallback.value.trim());
-  
+
     phoneInputCallback.style.borderColor = validPhoneCallback ? "black" : "red";
   });
 }
 
 emailInputMentor.addEventListener("input", function () {
-  let validationEmail = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+  let validationEmail =
+    /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
 
   validEmailMentor = validationEmail.test(emailInputMentor.value.trim());
 
@@ -251,7 +275,7 @@ accordion(".header-card__mob .header-card");
 
 (function headerScroll() {
   const fixedElement = document.querySelector("#header");
-  const body = document.querySelector('body');
+  const body = document.querySelector("body");
   body.addEventListener("scroll", function () {
     if (body.scrollTop > 0) {
       fixedElement.classList.add("scrolled");
@@ -273,6 +297,6 @@ accordion(".header-card__mob .header-card");
 
 (function iPhoneScroll() {
   if (/iPhone/.test(navigator.userAgent)) {
-    document.querySelector('.footer').classList.add('iphone-mb-footer');
+    document.querySelector(".footer").classList.add("iphone-mb-footer");
   }
 })();
