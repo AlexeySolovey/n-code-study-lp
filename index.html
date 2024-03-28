@@ -24,10 +24,25 @@
     <link rel="stylesheet" href="css/feedback-page.css" />
     <link rel="stylesheet" href="css/became-mentor-popup.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+
     <link rel="stylesheet" href="css/mentor-info-popup.css" />
 
     <!-- Slider -->
     <link rel="stylesheet" href="assets/itc-slider.css" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16510469093">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16510469093');
+    </script>
+  <!-- / Google tag (gtag.js) -->
     <title>N-Code</title>
   </head>
 
@@ -47,7 +62,7 @@
             <li class="menu__item"><a href="#">Головна</a></li>
             <li class="menu__item"><a href="about-us.html">Про нас</a></li>
             <li class="menu__item"><a href="tutors.html">Репетитори</a></li>
-            <li class="menu__item"><a href="feedback.html">Відгуки</a></li>
+            <li class="menu__item"><a href="#footer-copyright">Контакти</a></li>
           </ul>
           <div class="header__items">
             <a class="btn login-btn">Вхiд</a>
@@ -65,7 +80,7 @@
           <li class="menu__item main-item"><a href="#">Головна</a></li>
           <li class="menu__item"><a href="about-us.html">Про нас</a></li>
           <li class="menu__item"><a href="tutors.html">Репетитори</a></li>
-          <li class="menu__item"><a href="feedback.html">Відгуки</a></li>
+          <li class="menu__item"><a href="#footer-copyright">Контакти</a></li>
         </ul>
         <div class="header__items">
           <a class="btn login-btn">Вхiд</a>
@@ -120,134 +135,136 @@
         <a class="btn slide__btn" href="#callback-section">Замовити консультацію</a>
       </div>
     </div>
-    <div class="content-container bg-dark">
-      <section class="teaching">
-        <div class="teaching-content">
-          <h1 class="teaching-content__title">Напрямки навчання</h1>
-          <p class="teaching-content__subtitle">При індивідуальному навчанні ми пропонуємо:</p>
-          <ul class="teaching-content__list">
-            <li>Зручний графік занять</li>
-            <li>Оплата за кожний урок окремо</li>
-            <li>Самостійно обирай репетитора</li>
-          </ul>
-        </div>
-        <div class="teaching-card">
-          <h1 class="teaching-card__title">Front-end</h1>
-          <hr>
-          <p class="teaching-card__text">
-            Створення веб-сайтів та додатків - цікавий та творчий процес, який поєднує вміння написати ефективний код та створити зручний, 
-            інтуїтивно зрозумілий та привабливий інтерфейс. Front-end розробник - 
-            одна з найактуальніших та високооплачуваних спеціальностей, попит на яку постійно зростає.
-          </p>
-        </div>
-        <div class="teaching-card">
-          <h1 class="teaching-card__title">Основи роботи з комп'ютером</h1>
-          <hr>
-          <p class="teaching-card__text">
-            Сучасний світ неможливо уявити без комп’ютерних технологій, які міцно укоренилися майже у всіх сферах нашого життя: 
-            побуті, освіті, бізнесі, науці, соціальних та державних інституціях. 
-            Тож для комфортного життя у XXI столітті людина має володіти бодай базовими навичками роботи з ПК.
-          </p>
-        </div>
-        <div class="teaching-card">
-          <h1 class="teaching-card__title">QA (контроль якості програмного забезпечення)</h1>
-          <hr>
-          <p class="teaching-card__text">
-            Робота QA-спеціалістів полягає у забезпеченні якості програмного продукту та зосереджена головним чином на його тестуванні. 
-            Почати працювати тестувальником дуже легко - достатньо мати базові знання і навички у пошуку та документуванні 
-            помилок (багів) у програмних продуктах.
-          </p>
-        </div>
-        <div class="teaching-card">
-          <h1 class="teaching-card__title">Python (універсальна мова програмування)</h1>
-          <hr>
-          <p class="teaching-card__text">
-            Одна з найпопулярніших мов програмування. Використовується багатьма великими компаніями, такими як Google та Facebook. 
-            Завдяки простому, логічному та зрозумілому синтаксису, а також широкому спектру застосування має велику спільноту 
-            розробників по всьому світу.
-          </p>
-        </div>
-        <div class="teaching-card">
-          <h1 class="teaching-card__title">English</h1>
-          <hr>
-          <p class="teaching-card__text">
-            Англійська мова є міжнародною мовою спілкування, тому її знання відкриває вам більше можливостей для 
-            навчання та працевлаштування як в Україні, так і за кордоном. Якщо ж ви просто полюбляєте подорожувати, 
-            англійська мова також буде вам у пригоді і допоможе спілкуватись з людьми у різних країнах світу.
-          </p>
-        </div>
-
-        <div class="accordion teaching-accordion">
-          <div class="accordion__item teaching-accordion-item">
-            <div class="accordion__title teaching-accordion-title">
-              Front-end
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-                <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content teaching-accordion-content">
+    <div class="bg-dark">
+      <div class="content-container">
+        <section class="teaching">
+          <div class="teaching-content">
+            <h1 class="teaching-content__title">Напрямки навчання</h1>
+            <p class="teaching-content__subtitle">При індивідуальному навчанні ми пропонуємо:</p>
+            <ul class="teaching-content__list">
+              <li>Зручний графік занять</li>
+              <li>Оплата за кожний урок окремо</li>
+              <li>Самостійно обирай репетитора</li>
+            </ul>
+          </div>
+          <div class="teaching-card">
+            <h1 class="teaching-card__title">Front-end</h1>
+            <hr>
+            <p class="teaching-card__text">
               Створення веб-сайтів та додатків - цікавий та творчий процес, який поєднує вміння написати ефективний код та створити зручний, 
               інтуїтивно зрозумілий та привабливий інтерфейс. Front-end розробник - 
               одна з найактуальніших та високооплачуваних спеціальностей, попит на яку постійно зростає.
-            </div>
+            </p>
           </div>
-          <div class="accordion__item teaching-accordion-item">
-            <div class="accordion__title teaching-accordion-title">
-              Основи роботи з комп'ютером
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-                <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content teaching-accordion-content">
+          <div class="teaching-card">
+            <h1 class="teaching-card__title">Основи роботи з комп'ютером</h1>
+            <hr>
+            <p class="teaching-card__text">
               Сучасний світ неможливо уявити без комп’ютерних технологій, які міцно укоренилися майже у всіх сферах нашого життя: 
               побуті, освіті, бізнесі, науці, соціальних та державних інституціях. 
               Тож для комфортного життя у XXI столітті людина має володіти бодай базовими навичками роботи з ПК.
-            </div>
+            </p>
           </div>
-          <div class="accordion__item teaching-accordion-item">
-            <div class="accordion__title teaching-accordion-title">
-              QA (контроль якості <br> програмного забезпечення)
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-                <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content teaching-accordion-content">
+          <div class="teaching-card">
+            <h1 class="teaching-card__title">QA (контроль якості програмного забезпечення)</h1>
+            <hr>
+            <p class="teaching-card__text">
               Робота QA-спеціалістів полягає у забезпеченні якості програмного продукту та зосереджена головним чином на його тестуванні. 
               Почати працювати тестувальником дуже легко - достатньо мати базові знання і навички у пошуку та документуванні 
               помилок (багів) у програмних продуктах.
-            </div>
+            </p>
           </div>
-          <div class="accordion__item teaching-accordion-item">
-            <div class="accordion__title teaching-accordion-title">
-              Python (універсальна мова <br> програмування)
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-                <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content teaching-accordion-content">
+          <div class="teaching-card">
+            <h1 class="teaching-card__title">Python (універсальна мова програмування)</h1>
+            <hr>
+            <p class="teaching-card__text">
               Одна з найпопулярніших мов програмування. Використовується багатьма великими компаніями, такими як Google та Facebook. 
               Завдяки простому, логічному та зрозумілому синтаксису, а також широкому спектру застосування має велику спільноту 
               розробників по всьому світу.
-            </div>
+            </p>
           </div>
-          <div class="accordion__item teaching-accordion-item">
-            <div class="accordion__title teaching-accordion-title">
-              English
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
-                <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content teaching-accordion-content">
+          <div class="teaching-card">
+            <h1 class="teaching-card__title">English</h1>
+            <hr>
+            <p class="teaching-card__text">
               Англійська мова є міжнародною мовою спілкування, тому її знання відкриває вам більше можливостей для 
               навчання та працевлаштування як в Україні, так і за кордоном. Якщо ж ви просто полюбляєте подорожувати, 
               англійська мова також буде вам у пригоді і допоможе спілкуватись з людьми у різних країнах світу.
-            </div>
+            </p>
           </div>
-          <a class="btn" href="#callback-section">
-            Записатись
-          </a>
-        </div>
-      </section>
+
+          <div class="accordion teaching-accordion">
+            <div class="accordion__item teaching-accordion-item">
+              <div class="accordion__title teaching-accordion-title">
+                Front-end
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                  <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="accordion__content teaching-accordion-content">
+                Створення веб-сайтів та додатків - цікавий та творчий процес, який поєднує вміння написати ефективний код та створити зручний, 
+                інтуїтивно зрозумілий та привабливий інтерфейс. Front-end розробник - 
+                одна з найактуальніших та високооплачуваних спеціальностей, попит на яку постійно зростає.
+              </div>
+            </div>
+            <div class="accordion__item teaching-accordion-item">
+              <div class="accordion__title teaching-accordion-title">
+                Основи роботи з комп'ютером
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                  <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="accordion__content teaching-accordion-content">
+                Сучасний світ неможливо уявити без комп’ютерних технологій, які міцно укоренилися майже у всіх сферах нашого життя: 
+                побуті, освіті, бізнесі, науці, соціальних та державних інституціях. 
+                Тож для комфортного життя у XXI столітті людина має володіти бодай базовими навичками роботи з ПК.
+              </div>
+            </div>
+            <div class="accordion__item teaching-accordion-item">
+              <div class="accordion__title teaching-accordion-title">
+                QA (контроль якості <br> програмного забезпечення)
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                  <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="accordion__content teaching-accordion-content">
+                Робота QA-спеціалістів полягає у забезпеченні якості програмного продукту та зосереджена головним чином на його тестуванні. 
+                Почати працювати тестувальником дуже легко - достатньо мати базові знання і навички у пошуку та документуванні 
+                помилок (багів) у програмних продуктах.
+              </div>
+            </div>
+            <div class="accordion__item teaching-accordion-item">
+              <div class="accordion__title teaching-accordion-title">
+                Python (універсальна мова <br> програмування)
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                  <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="accordion__content teaching-accordion-content">
+                Одна з найпопулярніших мов програмування. Використовується багатьма великими компаніями, такими як Google та Facebook. 
+                Завдяки простому, логічному та зрозумілому синтаксису, а також широкому спектру застосування має велику спільноту 
+                розробників по всьому світу.
+              </div>
+            </div>
+            <div class="accordion__item teaching-accordion-item">
+              <div class="accordion__title teaching-accordion-title">
+                English
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                  <path d="M1 1L7 7L13 1" stroke="#242524" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="accordion__content teaching-accordion-content">
+                Англійська мова є міжнародною мовою спілкування, тому її знання відкриває вам більше можливостей для 
+                навчання та працевлаштування як в Україні, так і за кордоном. Якщо ж ви просто полюбляєте подорожувати, 
+                англійська мова також буде вам у пригоді і допоможе спілкуватись з людьми у різних країнах світу.
+              </div>
+            </div>
+            <a class="btn" href="#callback-section">
+              Записатись
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
     <div class="content-container">
       <section class="consult">
@@ -503,535 +520,259 @@
         </div>
         <a class="mob_btn btn" href="tutors.html">Всі репетитори</a>
       </section>
-      <section class="about-teaching">
-        <h2 class="section-title">Про напрямки</h2>
+    </div>
+    <div class="bg-dark">
+      <div class="content-container">
+        <section class="roadmap">
+          <h2 class="section-title">ЯК СТАТИ КРУТИМ РОЗРОБНИКОМ?</h2>
+          <div class="itc-slider" data-slider="itc-slider">
+            <div class="itc-slider-wrapper">
+              <div class="itc-slider-items">
+                <div class="itc-slider-item">
+                  <p class="slider-step">Крок 1</p>
+                  <p class="slider-title">Заповнити заявку</p>
+                  <p class="slider-text">Залишити заявку у формі зворотнього зв’язку чи подзвонити +38(068) 627-27-27. </p>
+                </div>
+                <div class="itc-slider-item">
+                  <p class="slider-step">Крок 2</p>
+                  <p class="slider-title">Зв’язок з менеджером</p>
+                  <p class="slider-text">
+                    На даному етапі менеджер допомагає підібрати репетитора в залежності від рівня знань студента та кваліфікації репетитора.
+                    Менеджер платформи N-Code узгоджує зі студентом та репетитором вільну дату та час для проведення пробного 30 хвилинного
+                    онлайн-заняття. ‌
+                  </p>
+                </div>
+                <div class="itc-slider-item">
+                  <p class="slider-step">Крок 3</p>
+                  <p class="slider-title">Тестування</p>
+                  <p class="slider-text">
+                    Пройти 30 хвилинне онлайн-тестування напряму з репетитором На даному етапі репетитор проводить тестування рівня
+                    знань студента, надає рекомендації та консультує щодо подальших уроків.
+                  </p>
+                </div>
+                <div class="itc-slider-item">
+                  <p class="slider-step">Крок 4</p>
+                  <p class="slider-title">Реєстрація</p>
+                  <p class="slider-text">Студент може самостійно обирати дату та час заняття з репетитором у власному онлайн-кабінеті.</p>
+                </div>
+                <div class="itc-slider-item">
+                  <p class="slider-step">Крок 5</p>
+                  <p class="slider-title">Оплата</p>
+                  <p class="slider-text">
+                    Оплата здійснюється через особистий онлайн-кабінет студента, в якому фіксуються всі надходження та списання коштів за
+                    проведені заняття.
+                  </p>
+                </div>
+                <div class="itc-slider-item">
+                  <p class="slider-step">Крок 6</p>
+                  <p class="slider-title">Підготовка до роботи</p>
+                  <p class="slider-text">
+                    Отримати рекомендаційний лист + шаблон резюме для програміста. Репетитор з онлайн-платформи N-Code за потреби може надати
+                    рекомендаційний лист про отримані знання та навички студента.
+                  </p>
+                </div>
+                <div class="itc-slider-item">
+                  <p class="slider-step">Крок 7</p>
+                  <p class="slider-title">Знайти роботу мрії</p>
+                  <p class="slider-text">
+                    Ми надаємо додаткову підтримку студентам у пошуку роботи та розвитку кар'єри, забезпечуючи їм необхідні інструменти та ресурси.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-        <div class="itc-slider about-teaching-slider" data-slider="itc-slider">
-          <div class="itc-slider-wrapper about-teaching-slider">
-            <div class="itc-slider-items about-teaching-slider">
-              <div class="itc-slider-item about-teaching-slider">
-                <div class="about-teaching-slider__content">
-                  <h4 class="about-teaching-slider__title">QA (контроль якості програмного забезпечення)</h4>
-                  <ul class="about-teaching-slider__list">
-                    <li>
-                      Низький поріг входу. Для того, аби знайти свою першу роботу, QA-спеціалістам не потрібне багатомісячне навчання, достатньо мати базові знання і навички у пошуку та документуванні помилок (багів) у програмних продуктах.
-                    </li>
-                    <li>
-                      Постійний саморозвиток. Специфіка роботи QA-спеціалістів, яка полягає у необхідності глибоко вникати у деталі програмного продукту, вимагає від них постійного освоєння нових технологій та розвитку аналітичних здібностей.
-                    </li>
-                    <li>
-                      Можливість поступового професійного зростання: від звичайного тестувальника до повноцінного QA-інженера, відповідального за комплексний підхід у забезпеченні якості програмного продукту. 
-                    </li>
-                    <li>
-                      Різноманітні вектори подальшого розвитку. Можна за бажанням зануритись у будь-яку специфічну сферу тестування (ігри, платформи, веб-додатки тощо) або навіть із часом перейти до команди розробників.
-                    </li>
-                  </ul>
-                </div>
-                <div class="about-teaching-slider__footer">
-                  <button class="btn">
-                    <a href="#callback-section">
-                      Записатись
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div class="itc-slider-item about-teaching-slider">
-                <div class="about-teaching-slider__content">
-                  <h4 class="about-teaching-slider__title">Front-end (створення веб-сайтів)</h4>
-                  <ul class="about-teaching-slider__list">
-                    <li>
-                      Front-end розробник має можливість у максимальній мірі реалізувати свої технічні навички, поєднуючи в одне ціле інтерфейс веб-сайтів та додатків з їх функціональністю.
-                    </li>
-                    <li>
-                      Навчання на front-end розробника можна побудувати за принципом "від простого - до складного". Спочатку ви вивчаєте HTML та CSS та оволодіваєте вмінням верстки, потім додаєте знання JavaScript, які дозволять вам створювати динамічні веб-сайти та додатки. 
-                    </li>
-                    <li>
-                      Попит на front-end розробників зростає з кожним роком. Це пов'язано з тим, що все більше компаній впроваджують процеси автоматизації, інтегровані у мережу Інтернет. 
-                    </li>
-                    <li>
-                      У front-end розробників висока оплата праці. За даними українського сервісу пошуку роботи http://Work.ua, середня заробітна плата front-end розробника складає $1000, висококваліфіковані та досвідчені спеціалісти заробляють ще більше.
-                    </li>
-                  </ul>
-                </div>
-                <div class="about-teaching-slider__footer">
-                  <button class="btn">
-                    <a href="#callback-section">
-                      Записатись
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div class="itc-slider-item about-teaching-slider">
-                <div class="about-teaching-slider__content">
-                  <h4 class="about-teaching-slider__title">Python (універсальна мова програмування)</h4>
-                  <ul class="about-teaching-slider__list">
-                    <li>
-                      Одна з найпопулярніших мов програмування. Посідає третє місце у рейтингу мов програмування 2023 року. Використовується багатьма великими компаніями, такими як Google та Facebook. Має велику спільноту розробників по всьому світу.
-                    </li>
-                    <li>
-                      Легке засвоєння. Python має простий, логічний та зрозумілий синтаксис, тому ідеально підходить в якості першої мови програмування навіть для новачків. Для написання програми на Python необхідно значно менше коду порівняно з іншими мовами програмування, такими, наприклад, як Java. 
-                    </li>
-                    <li>
-                      Широкий спектр застосування (веб-розробка, аналіз даних, автоматизація, ігри). Базова функціональність розширюється за рахунок великої кількості додаткових бібліотек. 
-                    </li>
-                    <li>
-                      Гнучкість та універсальність. Програми на Python працюють без додаткових коригувань на різних платформах та операційних системах: Windows, macOS, Linux та Unix. Розробники можуть легко поєднувати Python з іншими популярними мовами програмування, такими як Java, C та C++.
-                    </li>
-                  </ul>
-                </div>
-                <div class="about-teaching-slider__footer">
-                  <button class="btn">
-                    <a href="#callback-section">
-                      Записатись
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div class="itc-slider-item about-teaching-slider">
-                <div class="about-teaching-slider__content">
-                  <h4 class="about-teaching-slider__title">Основи роботи з комп'ютером</h4>
-                  <ul class="about-teaching-slider__list">
-                    <li>
-                      Знайомство з апаратним забезпеченням допоможе Вам зробити вірний та свідомий вибір при покупці персонального комп'ютеру та ноутбуку, самостійно підключити до них переферійне обладнання: монітор, принтер, сканер тощо.
-                    </li>
-                    <li>
-                      Розгляд основних типів програмного забезпечення дозволить Вам правильно обрати додаткову програму в залежності від її призначення: робота з файлами, текстом, графікою, відео тощо.
-                    </li>
-                    <li>
-                      Огляд популярних операційних систем (Windows, Linux та MacOS) дозволить Вам зрозуміти їх можливості та відмінності, навчить основним принцимам роботи з ними. 
-                    </li>
-                    <li>
-                      Засвоєння інформації про мережу Інтернет дозволить Вам не тільки працювати з браузером, інтернет-месенджерами та іншими мережевими програмами, а й навчить елементаним правилам безпеки та допоможе уникнути зайвих неприємностей.
-                    </li>
-                  </ul>
-                </div>
-                <div class="about-teaching-slider__footer">
-                  <button class="btn">
-                    <a href="#callback-section">
-                      Записатись
-                    </a>
-                  </button>
-                </div>
-              </div>
-              <div class="itc-slider-item about-teaching-slider">
-                <div class="about-teaching-slider__content">
-                  <h4 class="about-teaching-slider__title">Англійська мова</h4>
-                  <ul class="about-teaching-slider__list">
-                    <li>
-                      Більше можливостей працевлаштування.Англійська мова є міжнародною мовою бізнесу, тому знання її відкриває вам більше можливостей працевлаштування як в Україні, так і за кордоном.
-                    </li>
-                    <li>
-                      Більше можливостей для навчання.Якщо ви хочете продовжити навчання в університеті або післядипломній освіті, знання англійської мови вам знадобиться. 
-                    </li>
-                    <li>
-                      Більше можливостей для навчання.Якщо ви хочете продовжити навчання в університеті або післядипломній освіті, знання англійської мови вам знадобиться. 
-                    </li>
-                    <li>
-                      Більше можливостей для подорожей.Якщо ви любите подорожувати, знання англійської мови вам знадобиться.Англійська є однією з найпоширеніших мов у світі, тому вона необхідна для спілкування з людьми в різних країнах.
-                    </li>
-                  </ul>
-                </div>
-                <div class="about-teaching-slider__footer">
-                  <button class="btn">
-                    <a href="#callback-section">
-                      Записатись
-                    </a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button class="itc-slider-btn itc-slider-btn-prev"></button>
-          <button class="itc-slider-btn itc-slider-btn-next"></button>
-        </div>
-
-        <div class="accordion about-teaching-accordion">
-          <div class="accordion__item about-teaching-accordion-item">
-            <div class="accordion__title about-teaching-accordion-title">
-              Front-end <br> (створення веб-сайтів)
-              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L13 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content about-teaching-accordion-content">
-              <ul class="about-teaching-accordion-content__list">
-                <li>
-                  Front-end розробник має можливість у максимальній мірі реалізувати свої технічні навички, поєднуючи в одне ціле інтерфейс веб-сайтів та додатків з їх функціональністю.
-                </li>
-                <li>
-                  Навчання на front-end розробника можна побудувати за принципом "від простого - до складного". Спочатку ви вивчаєте HTML та CSS та оволодіваєте вмінням верстки, потім додаєте знання JavaScript, які дозволять вам створювати динамічні веб-сайти та додатки.
-                </li>
-                <li>
-                  Попит на front-end розробників зростає з кожним роком. Це пов'язано з тим, що все більше компаній впроваджують процеси автоматизації, інтегровані у мережу Інтернет. 
-                </li>
-                <li>
-                  У front-end розробників висока оплата праці. За даними українського сервісу пошуку роботи http://Work.ua, середня заробітна плата front-end розробника складає $1000, висококваліфіковані та досвідчені спеціалісти заробляють ще більше.
-                </li>
-              </ul>
-              <a class="btn" href="#callback-section">
-                Записатись
-              </a>
-            </div>
-          </div>
-          <div class="accordion__item about-teaching-accordion-item">
-            <div class="accordion__title about-teaching-accordion-title">
-              QA (контроль якості <br> програмного забезпечення)
-              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L13 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content about-teaching-accordion-content">
-              <ul class="about-teaching-accordion-content__list">
-                <li>
-                  Низький поріг входу. Для того, аби знайти свою першу роботу, QA-спеціалістам не потрібне багатомісячне навчання, достатньо мати базові знання і навички у пошуку та документуванні помилок (багів) у програмних продуктах.
-                </li>
-                <li>
-                  Постійний саморозвиток. Специфіка роботи QA-спеціалістів, яка полягає у необхідності глибоко вникати у деталі програмного продукту, вимагає від них постійного освоєння нових технологій та розвитку аналітичних здібностей.
-                </li>
-                <li>
-                  Можливість поступового професійного зростання: від звичайного тестувальника до повноцінного QA-інженера, відповідального за комплексний підхід у забезпеченні якості програмного продукту. 
-                </li>
-                <li>
-                  Різноманітні вектори подальшого розвитку. Можна за бажанням зануритись у будь-яку специфічну сферу тестування (ігри, платформи, веб-додатки тощо) або навіть із часом перейти до команди розробників.
-                </li>
-              </ul>
-              <a class="btn" href="#callback-section">
-                Записатись
-              </a>
-            </div>
-          </div>
-          <div class="accordion__item about-teaching-accordion-item">
-            <div class="accordion__title about-teaching-accordion-title">
-              Python (універсальна мова <br> програмування)
-              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L13 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content about-teaching-accordion-content">
-              <ul class="about-teaching-accordion-content__list">
-                <li>
-                  Одна з найпопулярніших мов програмування. Посідає третє місце у рейтингу мов програмування 2023 року. Використовується багатьма великими компаніями, такими як Google та Facebook. Має велику спільноту розробників по всьому світу.
-                </li>
-                <li>
-                  Легке засвоєння. Python має простий, логічний та зрозумілий синтаксис, тому ідеально підходить в якості першої мови програмування навіть для новачків. Для написання програми на Python необхідно значно менше коду порівняно з іншими мовами програмування, такими, наприклад, як Java.
-                </li>
-                <li>
-                  Широкий спектр застосування (веб-розробка, аналіз даних, автоматизація, ігри). Базова функціональність розширюється за рахунок великої кількості додаткових бібліотек. 
-                </li>
-                <li>
-                  Гнучкість та універсальність. Програми на Python працюють без додаткових коригувань на різних платформах та операційних системах: Windows, macOS, Linux та Unix. Розробники можуть легко поєднувати Python з іншими популярними мовами програмування, такими як Java, C та C++.
-                </li>
-              </ul>
-              <a class="btn" href="#callback-section">
-                Записатись
-              </a>
-            </div>
-          </div>
-          <div class="accordion__item about-teaching-accordion-item">
-            <div class="accordion__title about-teaching-accordion-title">
-              Основи роботи з комп'ютером
-              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L13 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content about-teaching-accordion-content">
-              <ul class="about-teaching-accordion-content__list">
-                <li>
-                  Знайомство з апаратним забезпеченням допоможе Вам зробити вірний та свідомий вибір при покупці персонального комп'ютеру та ноутбуку, самостійно підключити до них переферійне обладнання: монітор, принтер, сканер тощо.
-                </li>
-                <li>
-                  Розгляд основних типів програмного забезпечення дозволить Вам правильно обрати додаткову програму в залежності від її призначення: робота з файлами, текстом, графікою, відео тощо.
-                </li>
-                <li>
-                  Огляд популярних операційних систем (Windows, Linux та MacOS) дозволить Вам зрозуміти їх можливості та відмінності, навчить основним принцимам роботи з ними. 
-                </li>
-                <li>
-                  Засвоєння інформації про мережу Інтернет дозволить Вам не тільки працювати з браузером, інтернет-месенджерами та іншими мережевими програмами, а й навчить елементаним правилам безпеки та допоможе уникнути зайвих неприємностей.
-                </li>
-              </ul>
-              <a class="btn" href="#callback-section">
-                Записатись
-              </a>
-            </div>
-          </div>
-          <div class="accordion__item about-teaching-accordion-item">
-            <div class="accordion__title about-teaching-accordion-title">
-              Англійська мова
-              <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L7 7L13 1" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <div class="accordion__content about-teaching-accordion-content">
-              <ul class="about-teaching-accordion-content__list">
-                <li>
-                  Більше можливостей працевлаштування.Англійська мова є міжнародною мовою бізнесу, тому знання її відкриває вам більше можливостей працевлаштування як в Україні, так і за кордоном.
-                </li>
-                <li>
-                  Більше можливостей для навчання.Якщо ви хочете продовжити навчання в університеті або післядипломній освіті, знання англійської мови вам знадобиться.
-                </li>
-                <li>
-                  Більше можливостей для навчання.Якщо ви хочете продовжити навчання в університеті або післядипломній освіті, знання англійської мови вам знадобиться. 
-                </li>
-                <li>
-                  Більше можливостей для подорожей.Якщо ви любите подорожувати, знання англійської мови вам знадобиться.Англійська є однією з найпоширеніших мов у світі, тому вона необхідна для спілкування з людьми в різних країнах.
-                </li>
-              </ul>
-              <a class="btn" href="#callback-section">
-                Записатись
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <section class="roadmap">
-        <h2 class="section-title">ЯК СТАТИ КРУТИМ РОЗРОБНИКОМ?</h2>
-        <div class="itc-slider" data-slider="itc-slider">
-          <div class="itc-slider-wrapper">
-            <div class="itc-slider-items">
-              <div class="itc-slider-item">
-                <p class="slider-step">Крок 1</p>
-                <p class="slider-title">Заповнити заявку</p>
-                <p class="slider-text">Залишити заявку у формі зворотнього зв’язку чи подзвонити +38(068) 627-27-27. </p>
-              </div>
-              <div class="itc-slider-item">
-                <p class="slider-step">Крок 2</p>
-                <p class="slider-title">Зв’язок з менеджером</p>
-                <p class="slider-text">
-                  На даному етапі менеджер допомагає підібрати репетитора в залежності від рівня знань студента та кваліфікації репетитора.
-                  Менеджер платформи N-Code узгоджує зі студентом та репетитором вільну дату та час для проведення пробного 30 хвилинного
-                  онлайн-заняття. ‌
-                </p>
-              </div>
-              <div class="itc-slider-item">
-                <p class="slider-step">Крок 3</p>
-                <p class="slider-title">Тестування</p>
-                <p class="slider-text">
-                  Пройти 30 хвилинне онлайн-тестування напряму з репетитором На даному етапі репетитор проводить тестування рівня
-                  знань студента, надає рекомендації та консультує щодо подальших уроків.
-                </p>
-              </div>
-              <div class="itc-slider-item">
-                <p class="slider-step">Крок 4</p>
-                <p class="slider-title">Реєстрація</p>
-                <p class="slider-text">Студент може самостійно обирати дату та час заняття з репетитором у власному онлайн-кабінеті.</p>
-              </div>
-              <div class="itc-slider-item">
-                <p class="slider-step">Крок 5</p>
-                <p class="slider-title">Оплата</p>
-                <p class="slider-text">
-                  Оплата здійснюється через особистий онлайн-кабінет студента, в якому фіксуються всі надходження та списання коштів за
-                  проведені заняття.
-                </p>
-              </div>
-              <div class="itc-slider-item">
-                <p class="slider-step">Крок 6</p>
-                <p class="slider-title">Підготовка до роботи</p>
-                <p class="slider-text">
-                  Отримати рекомендаційний лист + шаблон резюме для програміста. Репетитор з онлайн-платформи N-Code за потреби може надати
-                  рекомендаційний лист про отримані знання та навички студента.
-                </p>
-              </div>
-              <div class="itc-slider-item">
-                <p class="slider-step">Крок 7</p>
-                <p class="slider-title">Знайти роботу мрії</p>
-                <p class="slider-text">
-                  Ми надаємо додаткову підтримку студентам у пошуку роботи та розвитку кар'єри, забезпечуючи їм необхідні інструменти та ресурси.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <ol class="itc-slider-indicators">
-            <!-- data-slide-to="0" – для перехода к 1 слайду -->
-            <li class="itc-slider-indicator" data-slide-to="0"></li>
-            <!-- data-slide-to="1" – для перехода к 2 слайду -->
-            <li class="itc-slider-indicator" data-slide-to="2"></li>
-            <!-- data-slide-to="2" – для перехода к 3 слайду -->
-            <li class="itc-slider-indicator" data-slide-to="2"></li>
-            <li class="itc-slider-indicator" data-slide-to="3"></li>
-            <li class="itc-slider-indicator" data-slide-to="4"></li>
-            <li class="itc-slider-indicator" data-slide-to="5"></li>
-            <li class="itc-slider-indicator" data-slide-to="6"></li>
-          </ol>
-
-          <button class="itc-slider-btn itc-slider-btn-prev"></button>
-          <button class="itc-slider-btn itc-slider-btn-next"></button>
-        </div>
-      </section>
-      <section class="salary">
-        <h2 class="section-title">Кар’єрне зростання</h2>
-        <div class="section-content">
-          <p class="section-text">
-            Кар'єрний ріст та збільшення заробітної плати - це два головних фактори, що приваблюють нових фахівців до сфери ІТ. І не
-            даремно, адже ця галузь надає безліч можливостей для саморозвитку та професійного зростання.
-          </p>
-
-          <div class="itc-slider salary-slider" data-slider="itc-slider" data-autoplay="false">
-            <div class="itc-slider-wrapper salary-slider">
-              <div class="itc-slider-items salary-slider">
-                <div class="itc-slider-item salary-slider">
-
-                  <h3 class="salary__title">Скільки заробляє Front-end розробник?</h3>
-                  <div class="salary-cards">
-                    <div class="salary-card">
-                      <p class="salary-card__sum">300 $</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_1.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Trainee</p>
-                        <p class="salary-card__rank-time">Від 3 місяців</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">550$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_2.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Junior</p>
-                        <p class="salary-card__rank-time">Досвід 1-2 роки</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">1500$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_3.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Middle</p>
-                        <p class="salary-card__rank-time">Досвід від 3-5 років</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">4000$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_4.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Senior</p>
-                        <p class="salary-card__rank-time">Досвід від 6 років</p>
-                      </div>
-                    </div>
-                    <div class="salary__line"></div>
-                  </div>
-
-                </div>
-
-                <div class="itc-slider-item salary-slider">
-                  
-                  <h3 class="salary__title">Скільки заробляє Python - розробник?</h3>
-                  <div class="salary-cards">
-                    <div class="salary-card">
-                      <p class="salary-card__sum">350 $</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_1.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Trainee</p>
-                        <p class="salary-card__rank-time">Від 3 місяців</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">800$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_2.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Junior</p>
-                        <p class="salary-card__rank-time">Досвід 1-2 роки</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">2000$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_3.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Middle</p>
-                        <p class="salary-card__rank-time">Досвід від 3-5 років</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">4500$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_4.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Senior</p>
-                        <p class="salary-card__rank-time">Досвід від 6 років</p>
-                      </div>
-                    </div>
-                    <div class="salary__line"></div>
-                  </div>
-
-                </div>
-                <div class="itc-slider-item salary-slider">
-                  
-                  <h3 class="salary__title">Скільки заробляє QA?</h3>
-                  <div class="salary-cards">
-                    <div class="salary-card">
-                      <p class="salary-card__sum">200 $</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_1.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Trainee</p>
-                        <p class="salary-card__rank-time">Від 3 місяців</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">500$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_2.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Junior</p>
-                        <p class="salary-card__rank-time">Досвід 1-2 роки</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">1000$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_3.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Middle</p>
-                        <p class="salary-card__rank-time">Досвід від 3-5 років</p>
-                      </div>
-                    </div>
-                    <div class="salary-card">
-                      <p class="salary-card__sum">2500$ +</p>
-                      <div class="salary-card__img">
-                        <img src="./img/salary-card-img_4.svg" alt="" />
-                      </div>
-                      <div class="item-group">
-                        <p class="salary-card__rank">Senior</p>
-                        <p class="salary-card__rank-time">Досвід від 6 років</p>
-                      </div>
-                    </div>
-                    <div class="salary__line"></div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-  
             <ol class="itc-slider-indicators">
+              <!-- data-slide-to="0" – для перехода к 1 слайду -->
               <li class="itc-slider-indicator" data-slide-to="0"></li>
-              <li class="itc-slider-indicator" data-slide-to="1"></li>
+              <!-- data-slide-to="1" – для перехода к 2 слайду -->
               <li class="itc-slider-indicator" data-slide-to="2"></li>
+              <!-- data-slide-to="2" – для перехода к 3 слайду -->
+              <li class="itc-slider-indicator" data-slide-to="2"></li>
+              <li class="itc-slider-indicator" data-slide-to="3"></li>
+              <li class="itc-slider-indicator" data-slide-to="4"></li>
+              <li class="itc-slider-indicator" data-slide-to="5"></li>
+              <li class="itc-slider-indicator" data-slide-to="6"></li>
             </ol>
-  
-            <button class="itc-slider-btn itc-slider-btn-prev salary-slider"></button>
-            <button class="itc-slider-btn itc-slider-btn-next salary-slider"></button>
-          </div>
 
-        </div>
-        <a class="btn btn-trial" href="#callback-section">Записатись на пробне заняття</a>
-      </section>
+            <button class="itc-slider-btn itc-slider-btn-prev"></button>
+            <button class="itc-slider-btn itc-slider-btn-next"></button>
+          </div>
+        </section>
+        <section class="salary">
+          <h2 class="section-title">Кар’єрне зростання</h2>
+          <div class="section-content">
+            <p class="section-text">
+              Кар'єрний ріст та збільшення заробітної плати - це два головних фактори, що приваблюють нових фахівців до сфери ІТ. І не
+              даремно, адже ця галузь надає безліч можливостей для саморозвитку та професійного зростання.
+            </p>
+
+            <div class="itc-slider salary-slider" data-slider="itc-slider" data-autoplay="false">
+              <div class="itc-slider-wrapper salary-slider">
+                <div class="itc-slider-items salary-slider">
+                  <div class="itc-slider-item salary-slider">
+
+                    <h3 class="salary__title">Скільки заробляє Front-end розробник?</h3>
+                    <div class="salary-cards">
+                      <div class="salary-card">
+                        <p class="salary-card__sum">300 $</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_1.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Trainee</p>
+                          <p class="salary-card__rank-time">Від 3 місяців</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">550$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_2.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Junior</p>
+                          <p class="salary-card__rank-time">Досвід 1-2 роки</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">1500$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_3.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Middle</p>
+                          <p class="salary-card__rank-time">Досвід від 3-5 років</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">4000$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_4.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Senior</p>
+                          <p class="salary-card__rank-time">Досвід від 6 років</p>
+                        </div>
+                      </div>
+                      <div class="salary__line"></div>
+                    </div>
+
+                  </div>
+
+                  <div class="itc-slider-item salary-slider">
+                    
+                    <h3 class="salary__title">Скільки заробляє Python - розробник?</h3>
+                    <div class="salary-cards">
+                      <div class="salary-card">
+                        <p class="salary-card__sum">350 $</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_1.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Trainee</p>
+                          <p class="salary-card__rank-time">Від 3 місяців</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">800$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_2.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Junior</p>
+                          <p class="salary-card__rank-time">Досвід 1-2 роки</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">2000$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_3.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Middle</p>
+                          <p class="salary-card__rank-time">Досвід від 3-5 років</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">4500$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_4.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Senior</p>
+                          <p class="salary-card__rank-time">Досвід від 6 років</p>
+                        </div>
+                      </div>
+                      <div class="salary__line"></div>
+                    </div>
+
+                  </div>
+                  <div class="itc-slider-item salary-slider">
+                    
+                    <h3 class="salary__title">Скільки заробляє QA?</h3>
+                    <div class="salary-cards">
+                      <div class="salary-card">
+                        <p class="salary-card__sum">200 $</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_1.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Trainee</p>
+                          <p class="salary-card__rank-time">Від 3 місяців</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">500$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_2.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Junior</p>
+                          <p class="salary-card__rank-time">Досвід 1-2 роки</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">1000$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_3.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Middle</p>
+                          <p class="salary-card__rank-time">Досвід від 3-5 років</p>
+                        </div>
+                      </div>
+                      <div class="salary-card">
+                        <p class="salary-card__sum">2500$ +</p>
+                        <div class="salary-card__img">
+                          <img src="./img/salary-card-img_4.svg" alt="" />
+                        </div>
+                        <div class="item-group">
+                          <p class="salary-card__rank">Senior</p>
+                          <p class="salary-card__rank-time">Досвід від 6 років</p>
+                        </div>
+                      </div>
+                      <div class="salary__line"></div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+    
+              <ol class="itc-slider-indicators">
+                <li class="itc-slider-indicator" data-slide-to="0"></li>
+                <li class="itc-slider-indicator" data-slide-to="1"></li>
+                <li class="itc-slider-indicator" data-slide-to="2"></li>
+              </ol>
+    
+              <button class="itc-slider-btn itc-slider-btn-prev salary-slider"></button>
+              <button class="itc-slider-btn itc-slider-btn-next salary-slider"></button>
+            </div>
+
+          </div>
+          <a class="btn btn_warn" href="#callback-section">Записатись на пробне заняття</a>
+        </section>
+      </div>
+    </div>
+      <div class="content-container">
       <section class="feedback">
         <div class="section-title-wrap">
           <h2 class="section-title">ВiДГУКИ</h2>
@@ -1334,7 +1075,7 @@
       </section>
       <span class="anchor" id="callback-section"></span>
       <section class="callback-form">
-        <div class="section-title">Зворотній зв’язок</div>
+        <h2 class="section-title">Зворотній зв’язок</h2>
         <form class="form" id="callbackForm">
           <label class="required">
             <input maxlength="30" class="name" type="text" name="name" placeholder="Ім’я" required="required" title="будь ласка, заповніть це поле" />
@@ -1378,7 +1119,7 @@
           <div class="col">
             <p class="footer__title">Контакти</p>
             <ul class="footer__list">
-              <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+              <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
               <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
             </ul>
           </div>
@@ -1421,8 +1162,8 @@
             </svg>              
           </a>
         </div>
-        <div class="footer__copyright">
-          <p>&#169; Компанія N-CODE 2023</p>
+        <div class="footer__copyright" id="footer-copyright">
+          <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
           <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
         </div>
         <div class="col logo-mobile">
@@ -1490,7 +1231,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -1534,7 +1275,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -1596,7 +1337,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -1640,7 +1381,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -1703,7 +1444,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -1747,7 +1488,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -1808,7 +1549,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -1852,7 +1593,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -1912,7 +1653,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -1956,7 +1697,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -2017,7 +1758,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -2061,7 +1802,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -2121,7 +1862,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -2165,7 +1906,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -2227,7 +1968,7 @@
                         <div class="col">
                             <p class="footer__title">Контакти</p>
                             <ul class="footer__list">
-                                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                             </ul>
                         </div>
@@ -2271,7 +2012,7 @@
                         </a>
                     </div>
                     <div class="footer__copyright">
-                        <p>&#169; Компанія N-CODE 2023</p>
+                        <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span> </p>
                         <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                     </div>
                     <div class="col logo-mobile">
@@ -2335,7 +2076,7 @@
                       <div class="col">
                           <p class="footer__title">Контакти</p>
                           <ul class="footer__list">
-                              <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                              <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                               <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                           </ul>
                       </div>
@@ -2379,7 +2120,7 @@
                       </a>
                   </div>
                   <div class="footer__copyright">
-                      <p>&#169; Компанія N-CODE 2023</p>
+                      <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                       <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                   </div>
                   <div class="col logo-mobile">
@@ -2437,7 +2178,7 @@
                           <div class="col">
                               <p class="footer__title">Контакти</p>
                               <ul class="footer__list">
-                                  <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                  <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                   <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                               </ul>
                           </div>
@@ -2481,7 +2222,7 @@
                           </a>
                       </div>
                       <div class="footer__copyright">
-                          <p>&#169; Компанія N-CODE 2023</p>
+                          <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                           <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                       </div>
                       <div class="col logo-mobile">
@@ -2539,7 +2280,7 @@
                           <div class="col">
                               <p class="footer__title">Контакти</p>
                               <ul class="footer__list">
-                                  <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                  <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                   <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                               </ul>
                           </div>
@@ -2583,7 +2324,7 @@
                           </a>
                       </div>
                       <div class="footer__copyright">
-                          <p>&#169; Компанія N-CODE 2023</p>
+                          <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                           <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                       </div>
                       <div class="col logo-mobile">
@@ -2643,7 +2384,7 @@
                           <div class="col">
                               <p class="footer__title">Контакти</p>
                               <ul class="footer__list">
-                                  <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                  <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                   <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                               </ul>
                           </div>
@@ -2687,7 +2428,7 @@
                           </a>
                       </div>
                       <div class="footer__copyright">
-                          <p>&#169; Компанія N-CODE 2023</p>
+                          <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                           <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                       </div>
                       <div class="col logo-mobile">
@@ -2746,7 +2487,7 @@
                           <div class="col">
                               <p class="footer__title">Контакти</p>
                               <ul class="footer__list">
-                                  <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                  <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                   <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                               </ul>
                           </div>
@@ -2790,7 +2531,7 @@
                           </a>
                       </div>
                       <div class="footer__copyright">
-                          <p>&#169; Компанія N-CODE 2023</p>
+                          <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                           <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                       </div>
                       <div class="col logo-mobile">
@@ -2850,7 +2591,7 @@
                           <div class="col">
                               <p class="footer__title">Контакти</p>
                               <ul class="footer__list">
-                                  <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                  <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                   <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                               </ul>
                           </div>
@@ -2894,7 +2635,7 @@
                           </a>
                       </div>
                       <div class="footer__copyright">
-                          <p>&#169; Компанія N-CODE 2023</p>
+                          <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                           <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                       </div>
                       <div class="col logo-mobile">
@@ -2954,7 +2695,7 @@
                           <div class="col">
                               <p class="footer__title">Контакти</p>
                               <ul class="footer__list">
-                                  <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                                  <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                                   <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
                               </ul>
                           </div>
@@ -2998,7 +2739,7 @@
                           </a>
                       </div>
                       <div class="footer__copyright">
-                          <p>&#169; Компанія N-CODE 2023</p>
+                          <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
                           <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
                       </div>
                       <div class="col logo-mobile">
@@ -3022,10 +2763,10 @@
         </div>
         <p class="feedback-popup__name">Віталій</p>
         <div class="tutors-card__rate">
-                  <i class="mentors__star fa-solid fa-star"></i><i class="mentors__star fa-solid fa-star"></i
-              ><i class="mentors__star fa-solid fa-star"></i><i class="mentors__star fa-solid fa-star"></i
-              ><i class="mentors__star fa-solid fa-star"></i>
-              </div>
+          <i class="mentors__star fa-solid fa-star"></i><i class="mentors__star fa-solid fa-star"></i>
+          <i class="mentors__star fa-solid fa-star"></i><i class="mentors__star fa-solid fa-star"></i>
+          <i class="mentors__star fa-solid fa-star"></i>
+        </div>
         <p class="feedback-popup__text">
                   Навчання проходить добре. Андрій дуже хороший викладач, який вміє грамотно подати матеріал. Планую й надалі навчатися та розвиватися разом з N-Code.
               </p>
@@ -3040,78 +2781,78 @@
               </div>
           </div>
         <footer class="footer">
-                  <div class="content-container">
-                      <div class="row">
-                          <div class="col logo-desktop">
-                              <a href="index.html">
-                                  <img class="footer__logo" src="img/logo.svg" alt="logo" />
-                              </a>
-                          </div>
-                          <div class="col">
-                              <p class="footer__title">N-Code</p>
-                              <ul class="footer__list">
-                                  <li><a href="about-us.html">Про нас</a></li>
-                                  <li><a href="tutors.html">Репетитори</a></li>
-                                  <li><a href="feedback.html">Відгуки</a></li>
-                              </ul>
-                          </div>
-                          <div class="col">
-                              <p class="footer__title">Контакти</p>
-                              <ul class="footer__list">
-                                  <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
-                                  <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
-                              </ul>
-                          </div>
-                          <div class="col">
-                              <p class="footer__title">Співробітництво</p>
-                              <button class="btn footer__btn became-mentor">Стати репетитором</button>
-                          </div>
-                      </div>
-                      <div class="footer__social">
-                          <a class="social-ico" href="https://instagram.com/ncode.study?igshid=MzRlODBiNWFlZA==" target="_blank">
-                              <svg width="32" height="32" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                          d="M14.5 0.25H5.5C4.10807 0.251489 2.77358 0.805091 1.78933 1.78933C0.805091 2.77358 0.251489 4.10807 0.25 5.5V14.5C0.251489 15.8919 0.805091 17.2264 1.78933 18.2107C2.77358 19.1949 4.10807 19.7485 5.5 19.75H14.5C15.8919 19.7485 17.2264 19.1949 18.2107 18.2107C19.1949 17.2264 19.7485 15.8919 19.75 14.5V5.5C19.7485 4.10807 19.1949 2.77358 18.2107 1.78933C17.2264 0.805091 15.8919 0.251489 14.5 0.25ZM10 14.5C9.10998 14.5 8.23995 14.2361 7.49993 13.7416C6.75991 13.2471 6.18314 12.5443 5.84254 11.7221C5.50195 10.8998 5.41283 9.99501 5.58647 9.12209C5.7601 8.24918 6.18868 7.44736 6.81802 6.81802C7.44736 6.18868 8.24918 5.7601 9.12209 5.58647C9.99501 5.41283 10.8998 5.50195 11.7221 5.84254C12.5443 6.18314 13.2471 6.75991 13.7416 7.49993C14.2361 8.23995 14.5 9.10998 14.5 10C14.4988 11.1931 14.0243 12.337 13.1806 13.1806C12.337 14.0243 11.1931 14.4988 10 14.5ZM15.625 5.5C15.4025 5.5 15.185 5.43402 15 5.3104C14.815 5.18679 14.6708 5.01109 14.5856 4.80552C14.5005 4.59995 14.4782 4.37375 14.5216 4.15552C14.565 3.93729 14.6722 3.73684 14.8295 3.5795C14.9868 3.42217 15.1873 3.31502 15.4055 3.27162C15.6238 3.22821 15.85 3.25049 16.0555 3.33564C16.2611 3.42078 16.4368 3.56498 16.5604 3.74998C16.684 3.93499 16.75 4.1525 16.75 4.375C16.75 4.67337 16.6315 4.95952 16.4205 5.1705C16.2095 5.38147 15.9234 5.5 15.625 5.5ZM13 10C13 10.5933 12.8241 11.1734 12.4944 11.6667C12.1648 12.1601 11.6962 12.5446 11.1481 12.7716C10.5999 12.9987 9.99667 13.0581 9.41473 12.9424C8.83279 12.8266 8.29824 12.5409 7.87868 12.1213C7.45912 11.7018 7.1734 11.1672 7.05764 10.5853C6.94189 10.0033 7.0013 9.40013 7.22836 8.85195C7.45542 8.30377 7.83994 7.83524 8.33329 7.50559C8.82664 7.17595 9.40666 7 10 7C10.7956 7 11.5587 7.31607 12.1213 7.87868C12.6839 8.44129 13 9.20435 13 10Z"
-                                          fill="black"
-                                  />
-                              </svg>
-                          </a>
-                          <a class="social-ico" href="https://www.facebook.com/ncode.study" target="_blank">
-                              <svg width="32" height="32" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                          fill-rule="evenodd"
-                                          clip-rule="evenodd"
-                                          d="M21.8751 10.9377C21.8751 9.74298 21.9008 7.8956 21.9289 6.00022C21.978 2.68667 19.3134 0.000163861 15.9995 0.000199078C14.2228 0.000217959 12.4156 0.000219345 10.9376 0.000219345C9.6018 0.000219345 7.8235 0.000219345 6.00005 0.000219345C2.68638 0.000219345 -8.3135e-06 2.68651 3.38375e-05 6.00017C5.64166e-05 7.77521 8.19844e-05 9.52812 8.19844e-05 10.9377C8.19844e-05 12.0625 7.15326e-05 13.5196 5.8018e-05 14.9999C2.7765e-05 18.3136 2.68642 21 6.00015 21C7.15209 21 8.20278 21 9.2286 21V14.1003H6.45077V10.9377H9.2286V8.52805C9.2286 5.78733 10.8619 4.27219 13.3599 4.27219C14.5567 4.27219 15.8087 4.48606 15.8087 4.48606V7.17795H14.4288C13.0709 7.17795 12.6461 8.02073 12.6461 8.88694V10.9377H15.6793L15.1949 14.1003H12.6466V21C13.6864 21 14.8287 21 15.9999 21C19.3136 21 21.9801 18.3135 21.9234 15.0002C21.8975 13.4883 21.8751 12.0551 21.8751 10.9377Z"
-                                          fill="black"
-                                  />
-                              </svg>
-                          </a>
-                          <a class="social-ico" href="https://t.me/N_Code_study" target="_blank">
-                              <svg width="32" height="32" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                          d="M10.5001 -0.000311494C8.42335 -0.000311494 8.4806 -0.000173129 6 -0.000225283C2.68654 0.000583579 0.000109323 2.68613 0.000109475 5.99959C0.0001096 8.72236 0.000105837 11.5159 0.000218958 12.6018C0.000210833 13.2559 0.00021648 14.0948 0.000225864 14.9991C0.000260252 18.313 2.68731 21 6.00115 21C6.97223 21 7.85179 21 8.50005 21C10.5001 21 12.8348 21 14.9174 21C14.945 21 14.9726 21 15.0001 21C18.3138 21 21.0001 18.3134 21.0001 14.9997C21.0001 13.16 21.0001 11.4266 21.0001 10.4997C21.0001 9.12081 21.0001 7.99983 21.0001 6.48151C21.0001 6.33739 21.0001 6.17574 21.0001 5.99991C21.0001 2.68637 18.3136 0.000457692 15.0001 -0.000281453C13.8391 -0.000540435 11.8789 -0.000311494 10.5001 -0.000311494ZM13.8391 15.9093C13.7999 16.0074 13.7401 16.096 13.6639 16.1691C13.5876 16.2421 13.4966 16.2981 13.397 16.3331C13.2973 16.3681 13.1913 16.3814 13.0861 16.372C12.9809 16.3627 12.8789 16.3309 12.787 16.2789L9.9362 14.0634L8.10711 15.7518C8.06465 15.7831 8.015 15.8033 7.96271 15.8105C7.91042 15.8176 7.85717 15.8115 7.80785 15.7927L8.15856 12.6543L8.16905 12.6637L8.1764 12.6018C8.1764 12.6018 13.3057 7.93139 13.5146 7.73294C13.7267 7.53449 13.6564 7.49144 13.6564 7.49144C13.669 7.24994 13.2773 7.49144 13.2773 7.49144L6.48066 11.8636L3.65091 10.8997C3.65091 10.8997 3.21621 10.7443 3.17526 10.401C3.13221 10.0608 3.66456 9.87599 3.66456 9.87599L14.9174 5.40509C14.9174 5.40509 15.8425 4.99349 15.8425 5.67599L13.8391 15.9093Z"
-                                          fill="black"
-                                  />
-                              </svg>
-                          </a>
-                          <a class="social-ico" href="https://www.tiktok.com/@n_code.study" target="_blank">
-                              <svg width="30" height="30" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M22 6.83333V16.1667C22 17.7138 21.3854 19.1975 20.2915 20.2915C19.1975 21.3854 17.7138 22 16.1667 22H6.83333C5.28624 22 3.80251 21.3854 2.70854 20.2915C1.61458 19.1975 1 17.7138 1 16.1667V6.83333C1 5.28624 1.61458 3.80251 2.70854 2.70854C3.80251 1.61458 5.28624 1 6.83333 1H16.1667C17.7138 1 19.1975 1.61458 20.2915 2.70854C21.3854 3.80251 22 5.28624 22 6.83333Z" fill="#0B2235" stroke-linecap="round" stroke-linejoin="round"/>
-                                  <path d="M9.25 11.5C8.60721 11.5 7.97886 11.6906 7.4444 12.0477C6.90994 12.4048 6.49338 12.9124 6.24739 13.5063C6.00141 14.1001 5.93705 14.7536 6.06245 15.384C6.18785 16.0145 6.49738 16.5936 6.9519 17.0481C7.40642 17.5026 7.98552 17.8122 8.61596 17.9376C9.2464 18.063 9.89986 17.9986 10.4937 17.7526C11.0876 17.5066 11.5952 17.0901 11.9523 16.5556C12.3094 16.0211 12.5 15.3928 12.5 14.75V5C12.8608 6.08333 14.2333 8.25 16.8333 8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                          </a>
-                      </div>
-                      <div class="footer__copyright">
-                          <p>&#169; Компанія N-CODE 2023</p>
-                          <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
-                      </div>
-                      <div class="col logo-mobile">
-                          <a href="index.html">
-                              <img class="footer__logo" src="img/logo.svg" alt="logo" />
-                          </a>
-                      </div>
-                  </div>
-              </footer>
+            <div class="content-container">
+                <div class="row">
+                    <div class="col logo-desktop">
+                        <a href="index.html">
+                            <img class="footer__logo" src="img/logo.svg" alt="logo" />
+                        </a>
+                    </div>
+                    <div class="col">
+                        <p class="footer__title">N-Code</p>
+                        <ul class="footer__list">
+                            <li><a href="about-us.html">Про нас</a></li>
+                            <li><a href="tutors.html">Репетитори</a></li>
+                            <li><a href="feedback.html">Відгуки</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p class="footer__title">Контакти</p>
+                        <ul class="footer__list">
+                            <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
+                            <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <p class="footer__title">Співробітництво</p>
+                        <button class="btn footer__btn became-mentor">Стати репетитором</button>
+                    </div>
+                </div>
+                <div class="footer__social">
+                    <a class="social-ico" href="https://instagram.com/ncode.study?igshid=MzRlODBiNWFlZA==" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M14.5 0.25H5.5C4.10807 0.251489 2.77358 0.805091 1.78933 1.78933C0.805091 2.77358 0.251489 4.10807 0.25 5.5V14.5C0.251489 15.8919 0.805091 17.2264 1.78933 18.2107C2.77358 19.1949 4.10807 19.7485 5.5 19.75H14.5C15.8919 19.7485 17.2264 19.1949 18.2107 18.2107C19.1949 17.2264 19.7485 15.8919 19.75 14.5V5.5C19.7485 4.10807 19.1949 2.77358 18.2107 1.78933C17.2264 0.805091 15.8919 0.251489 14.5 0.25ZM10 14.5C9.10998 14.5 8.23995 14.2361 7.49993 13.7416C6.75991 13.2471 6.18314 12.5443 5.84254 11.7221C5.50195 10.8998 5.41283 9.99501 5.58647 9.12209C5.7601 8.24918 6.18868 7.44736 6.81802 6.81802C7.44736 6.18868 8.24918 5.7601 9.12209 5.58647C9.99501 5.41283 10.8998 5.50195 11.7221 5.84254C12.5443 6.18314 13.2471 6.75991 13.7416 7.49993C14.2361 8.23995 14.5 9.10998 14.5 10C14.4988 11.1931 14.0243 12.337 13.1806 13.1806C12.337 14.0243 11.1931 14.4988 10 14.5ZM15.625 5.5C15.4025 5.5 15.185 5.43402 15 5.3104C14.815 5.18679 14.6708 5.01109 14.5856 4.80552C14.5005 4.59995 14.4782 4.37375 14.5216 4.15552C14.565 3.93729 14.6722 3.73684 14.8295 3.5795C14.9868 3.42217 15.1873 3.31502 15.4055 3.27162C15.6238 3.22821 15.85 3.25049 16.0555 3.33564C16.2611 3.42078 16.4368 3.56498 16.5604 3.74998C16.684 3.93499 16.75 4.1525 16.75 4.375C16.75 4.67337 16.6315 4.95952 16.4205 5.1705C16.2095 5.38147 15.9234 5.5 15.625 5.5ZM13 10C13 10.5933 12.8241 11.1734 12.4944 11.6667C12.1648 12.1601 11.6962 12.5446 11.1481 12.7716C10.5999 12.9987 9.99667 13.0581 9.41473 12.9424C8.83279 12.8266 8.29824 12.5409 7.87868 12.1213C7.45912 11.7018 7.1734 11.1672 7.05764 10.5853C6.94189 10.0033 7.0013 9.40013 7.22836 8.85195C7.45542 8.30377 7.83994 7.83524 8.33329 7.50559C8.82664 7.17595 9.40666 7 10 7C10.7956 7 11.5587 7.31607 12.1213 7.87868C12.6839 8.44129 13 9.20435 13 10Z"
+                                    fill="black"
+                            />
+                        </svg>
+                    </a>
+                    <a class="social-ico" href="https://www.facebook.com/ncode.study" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M21.8751 10.9377C21.8751 9.74298 21.9008 7.8956 21.9289 6.00022C21.978 2.68667 19.3134 0.000163861 15.9995 0.000199078C14.2228 0.000217959 12.4156 0.000219345 10.9376 0.000219345C9.6018 0.000219345 7.8235 0.000219345 6.00005 0.000219345C2.68638 0.000219345 -8.3135e-06 2.68651 3.38375e-05 6.00017C5.64166e-05 7.77521 8.19844e-05 9.52812 8.19844e-05 10.9377C8.19844e-05 12.0625 7.15326e-05 13.5196 5.8018e-05 14.9999C2.7765e-05 18.3136 2.68642 21 6.00015 21C7.15209 21 8.20278 21 9.2286 21V14.1003H6.45077V10.9377H9.2286V8.52805C9.2286 5.78733 10.8619 4.27219 13.3599 4.27219C14.5567 4.27219 15.8087 4.48606 15.8087 4.48606V7.17795H14.4288C13.0709 7.17795 12.6461 8.02073 12.6461 8.88694V10.9377H15.6793L15.1949 14.1003H12.6466V21C13.6864 21 14.8287 21 15.9999 21C19.3136 21 21.9801 18.3135 21.9234 15.0002C21.8975 13.4883 21.8751 12.0551 21.8751 10.9377Z"
+                                    fill="black"
+                            />
+                        </svg>
+                    </a>
+                    <a class="social-ico" href="https://t.me/N_Code_study" target="_blank">
+                        <svg width="32" height="32" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                    d="M10.5001 -0.000311494C8.42335 -0.000311494 8.4806 -0.000173129 6 -0.000225283C2.68654 0.000583579 0.000109323 2.68613 0.000109475 5.99959C0.0001096 8.72236 0.000105837 11.5159 0.000218958 12.6018C0.000210833 13.2559 0.00021648 14.0948 0.000225864 14.9991C0.000260252 18.313 2.68731 21 6.00115 21C6.97223 21 7.85179 21 8.50005 21C10.5001 21 12.8348 21 14.9174 21C14.945 21 14.9726 21 15.0001 21C18.3138 21 21.0001 18.3134 21.0001 14.9997C21.0001 13.16 21.0001 11.4266 21.0001 10.4997C21.0001 9.12081 21.0001 7.99983 21.0001 6.48151C21.0001 6.33739 21.0001 6.17574 21.0001 5.99991C21.0001 2.68637 18.3136 0.000457692 15.0001 -0.000281453C13.8391 -0.000540435 11.8789 -0.000311494 10.5001 -0.000311494ZM13.8391 15.9093C13.7999 16.0074 13.7401 16.096 13.6639 16.1691C13.5876 16.2421 13.4966 16.2981 13.397 16.3331C13.2973 16.3681 13.1913 16.3814 13.0861 16.372C12.9809 16.3627 12.8789 16.3309 12.787 16.2789L9.9362 14.0634L8.10711 15.7518C8.06465 15.7831 8.015 15.8033 7.96271 15.8105C7.91042 15.8176 7.85717 15.8115 7.80785 15.7927L8.15856 12.6543L8.16905 12.6637L8.1764 12.6018C8.1764 12.6018 13.3057 7.93139 13.5146 7.73294C13.7267 7.53449 13.6564 7.49144 13.6564 7.49144C13.669 7.24994 13.2773 7.49144 13.2773 7.49144L6.48066 11.8636L3.65091 10.8997C3.65091 10.8997 3.21621 10.7443 3.17526 10.401C3.13221 10.0608 3.66456 9.87599 3.66456 9.87599L14.9174 5.40509C14.9174 5.40509 15.8425 4.99349 15.8425 5.67599L13.8391 15.9093Z"
+                                    fill="black"
+                            />
+                        </svg>
+                    </a>
+                    <a class="social-ico" href="https://www.tiktok.com/@n_code.study" target="_blank">
+                        <svg width="30" height="30" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 6.83333V16.1667C22 17.7138 21.3854 19.1975 20.2915 20.2915C19.1975 21.3854 17.7138 22 16.1667 22H6.83333C5.28624 22 3.80251 21.3854 2.70854 20.2915C1.61458 19.1975 1 17.7138 1 16.1667V6.83333C1 5.28624 1.61458 3.80251 2.70854 2.70854C3.80251 1.61458 5.28624 1 6.83333 1H16.1667C17.7138 1 19.1975 1.61458 20.2915 2.70854C21.3854 3.80251 22 5.28624 22 6.83333Z" fill="#0B2235" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.25 11.5C8.60721 11.5 7.97886 11.6906 7.4444 12.0477C6.90994 12.4048 6.49338 12.9124 6.24739 13.5063C6.00141 14.1001 5.93705 14.7536 6.06245 15.384C6.18785 16.0145 6.49738 16.5936 6.9519 17.0481C7.40642 17.5026 7.98552 17.8122 8.61596 17.9376C9.2464 18.063 9.89986 17.9986 10.4937 17.7526C11.0876 17.5066 11.5952 17.0901 11.9523 16.5556C12.3094 16.0211 12.5 15.3928 12.5 14.75V5C12.8608 6.08333 14.2333 8.25 16.8333 8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__copyright">
+                    <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span></p>
+                    <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
+                </div>
+                <div class="col logo-mobile">
+                    <a href="index.html">
+                        <img class="footer__logo" src="img/logo.svg" alt="logo" />
+                    </a>
+                </div>
+            </div>
+        </footer>
       </div>
     </div>
 
@@ -3149,23 +2890,6 @@
         </form>
       </div>
     </div>
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '626317969486542');
-      fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=626317969486542&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
     <script src="js/nice-select2.js"></script>
     <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>

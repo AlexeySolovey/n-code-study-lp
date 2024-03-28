@@ -16,7 +16,7 @@
 
 .itc-slider-wrapper {
   overflow: hidden;
-  max-width: 600px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -67,9 +67,7 @@
   .slider-text{
     font-size: 16px;
   }
-}
 
-@media (min-width: 992px) {
   .itc-slider-btn {
     top: 40%;
     display: flex;
@@ -257,4 +255,17 @@
 
 .itc-slider-btn-next.about-teaching-slider {
   right: 0;
+}
+
+/* bg-dark */
+.bg-dark .itc-slider-item{
+  background-color: #fff;
+}
+
+.bg-dark .itc-slider-indicator {
+  background-color: #fff;
+}
+
+.bg-dark .itc-slider-indicator-active {
+  background-color:#FD460E;
 }

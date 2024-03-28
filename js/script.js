@@ -63,15 +63,30 @@ redirect();
   });
 })();
 
+(function closeMobMenu() {
+  const hamburger_menu = document.querySelector(".hamburger-menu");
+  const mob_menu = document.querySelector(".mob-menu");
+  const menu__items = document.querySelectorAll(".menu__item");
+
+  menu__items.forEach((el) => {
+    el.addEventListener("click", function (e) {
+      mob_menu.classList.remove("active");
+      hamburger_menu.classList.remove("active");
+    });
+  })
+})();
+
 (function reloadPage() {
   let menuItem = document.querySelector(".main-item");
   let modal = document.querySelectorAll(".popup");
   modal.forEach((el) => {
-    menuItem.addEventListener("click", function () {
-      if (el.style.display === "block") {
-        location.reload();
-      }
-    });
+    if(menuItem) {
+      menuItem.addEventListener("click", function () {
+        if (el.style.display === "block") {
+          location.reload();
+        }
+      });
+    }
   });
 })();
 
@@ -299,4 +314,12 @@ accordion(".header-card__mob .header-card");
   if (/iPhone/.test(navigator.userAgent)) {
     document.querySelector(".footer").classList.add("iphone-mb-footer");
   }
+})();
+
+(function setCopiwrite() {
+  var yearSpans = document.querySelectorAll('.currentYear');
+  var currentYear = new Date().getFullYear();
+  yearSpans.forEach(function(yearSpan) {
+      yearSpan.innerText = currentYear;
+  });
 })();

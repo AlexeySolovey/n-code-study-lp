@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/nice-select2.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/feedback-page.css" />
     <link rel="stylesheet" href="css/popap-templ.css" />
     <link rel="stylesheet" href="css/became-mentor-popup.css" />
@@ -28,7 +29,7 @@
 </head>
 
 <body>
-    <div class="content-container abous-us">
+    <div class="content-container abous-us page-wrapper">
       <header class="header" id="header">
         <div class="container">
           <div class="logo">
@@ -44,7 +45,7 @@
               <li class="menu__item"><a href="index.html">Головна</a></li>
               <li class="menu__item"><a href="about-us.html">Про нас</a></li>
               <li class="menu__item"><a href="tutors.html">Репетитори</a></li>
-              <li class="menu__item"><a href="feedback.html">Відгуки</a></li>
+              <li class="menu__item"><a href="#footer-copyright">Контакти</a></li>
             </ul>
             <div class="header__items">
               <a class="btn login-btn">Вхiд</a>
@@ -62,7 +63,7 @@
             <li class="menu__item"><a href="index.html">Головна</a></li>
             <li class="menu__item"><a href="about-us.html">Про нас</a></li>
             <li class="menu__item"><a href="tutors.html">Репетитори</a></li>
-            <li class="menu__item"><a href="feedback.html">Відгуки</a></li>
+            <li class="menu__item"><a href="#footer-copyright">Контакти</a></li>
           </ul>
           <div class="header__items">
             <a class="btn login-btn">Вхiд</a>
@@ -104,15 +105,17 @@
               </a>
             </div>
             <div class="footer__copyright">
-              <p>&#169; Компанія N-CODE 2023</p>
+              <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span> </p>
               <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
             </div>
         </div>
         </div>
       </header>
-        <div class="section-title-wrap">
-            <h2 class="section-title">Про нас</h2>
-        </div>
+      
+      <div class="section-title-wrap">
+        <a class="back-link" href="index.html">Назад</a>
+        <h2 class="section-title">Про нас</h2>
+      </div>
         <div class="about-us__wrap">
             <p>N-Code - це команда професіоналів, яка була заснована в Україні 1 червня 2023 року, та ставить перед собою 
                 завдання надавати якісну онлайн освіту та сприяти успіху своїх студентів.
@@ -180,7 +183,7 @@
             <div class="col">
               <p class="footer__title">Контакти</p>
               <ul class="footer__list">
-                <li><a href="mailto:admin@n-code.study">admin@n-code.study</a></li>
+                <li><a href="mailto:info@n-code.study">info@n-code.study</a></li>
                 <li><a href="tel:380686272727">+38 (068) 627-27-27</a></li>
               </ul>
             </div>
@@ -223,8 +226,8 @@
               </svg>              
             </a>
           </div>
-          <div class="footer__copyright">
-            <p>&#169; Компанія N-CODE 2023</p>
+          <div class="footer__copyright" id="footer-copyright">
+            <p>&#169; Компанія N-CODE 2023 - <span class="currentYear"></span> </p>
             <a class="privacy-policy-link" href="privacy-policy.html">Політика конфідейнційності</a>
           </div>
           <div class="col logo-mobile">
@@ -268,23 +271,6 @@
           </form>
         </div>
       </div>
-          <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '626317969486542');
-      fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=626317969486542&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
     <script src="js/nice-select2.js"></script>
     <script src="https://kit.fontawesome.com/53722d01cf.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>

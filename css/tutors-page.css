@@ -11,14 +11,6 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
-.tutors-page .back-link {
-  order: 2;
-}
-
-.tutors-page .section-title {
-  order: 1;
-}
-
 .tutors-page .header {
   background: white;
   box-shadow: 0 4px 4px 0 rgba(37, 36, 37, 0.04);
