@@ -1,3 +1,23 @@
+/* main baner  */
+@keyframes fadeIn {
+  0% { opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  100% { opacity: 0; }
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+
 /* advantages */
 .advantages .container {
     display: grid;
@@ -81,6 +101,8 @@
     }
   }
   
+
+  /* salary */
   
   .salary .section-content {
     flex-direction: column;
@@ -317,3 +339,162 @@
       font-size: 24px;
     }
   }
+
+  /* teaching */
+.bg-ncode {
+  position: relative;
+}
+
+.bg-ncode::before,
+.bg-ncode::after {
+  display: none;
+  position: absolute;
+  background: url('../img/ncode.png') no-repeat;
+  background-size: contain;
+  content: '';
+  height: 3000px;
+  width: 200px;
+  top: 400px;
+}
+
+.bg-ncode::before {
+  left: -100px;
+}
+
+.bg-ncode::after {
+  right: -100px;
+}
+
+.teaching {
+  color: white;
+  position: relative;
+}
+
+.teaching-content {
+  margin-bottom: 20px;
+}
+
+.teaching-content__title {
+  font-family: "Venus Rising";
+  font-style: normal;
+  font-size: 16px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.teaching-content__subtitle {
+  color: #FD460E;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.teaching-content__list li {
+  margin-top: 20px;
+}
+
+.teaching-content__list li::before {
+  content: "\2022";
+  font-weight: bold;
+  margin-right: 12px;
+  color: #FD460E;
+}
+
+.teaching .btn {
+  margin-top: 30px;
+}
+
+.teaching-accordion-content {
+  border-top: none !important;
+  font-size: 13px;
+  color: #131313;
+}
+
+.teaching-accordion a {
+  color: #FFFFFF;
+}
+
+.teaching-accordion-item {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.teaching-accordion-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #FD460E;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.teaching-accordion-title svg {
+  transition: .5s;
+}
+
+.teaching-accordion-item.active .teaching-accordion-title svg {
+  rotate: 180deg; 
+}
+
+.teaching__list {
+  display: none;
+  max-width: 800px;
+}
+
+.teaching__list-item {
+  margin-bottom: 30px;
+}
+
+.teaching__theme {
+  color: #fd460e;
+  font-size: 32px;
+}
+
+@media screen and (min-width: 992px) {
+  .teaching {
+    text-align: center;
+  }
+  .bg-ncode::before,
+  .bg-ncode::after {
+    display: block;
+  }
+
+  .teaching-accordion {
+    display: none;
+  }
+  .teaching-content__title {
+    font-size: 32px;
+  }
+  .teaching-content__subtitle,
+  .teaching-content__list {
+    display: none;
+  }
+  .teaching__list {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .teaching__list {
+    max-width: 800px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bg-ncode::before,
+  .bg-ncode::after {
+    width: 300px;
+    top: 270px;
+  }
+}
+/* tutors */
+
+
+@media screen and (min-width:992px) {
+  .tutors .section-title {
+    max-width: 100%;
+    margin-bottom: 60px;
+  }
+}
