@@ -4,8 +4,18 @@
 
   popup.forEach((item) => {
     item.addEventListener("click", function (e) {
-      if (e.target.classList.value === "back-link" || e.target.classList.value === "popup__close") {
+      if (
+        e.target.classList.value === "back-link" ||
+        e.target.classList.value === "popup__close" ||
+        e.target.classList.value === 'btn'
+      ) {
         this.style.display = "none";
+      }
+
+      if(e.target.classList.value === 'btn became-mentor') {
+        this.style.display = "none";
+        const becomeMentorPopup = document.querySelector(".became-mentor-popup");
+        becomeMentorPopup.style.display = "block";
       }
     });
   });

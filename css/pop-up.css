@@ -1,12 +1,7 @@
-
 .close__popup-element > .popup__close,
-.popup-content > .popup__close,
-.popup.feedback-popup .popup-body .footer,
-.popup-body .popup-content .footer {
+.popup-content > .popup__close {
   display: none;
 }
-
-
 
 .popup__img {
     display: flex;
@@ -20,19 +15,17 @@
     border-radius: 50%;
 }
 
-.mentor-info-popup .btn {
-    margin: 0;
+.popup .btn {
+    margin-top: 15px;
+    max-width: 350px;
+}
+
+.popup.mentor-info-popup .btn {
+    margin-top: 0;
     max-width: 350px;
 }
 
 @media screen and (max-width: 576px) {
-
-    .mentor-info-popup .btn {
-        width: 300px;
-        margin: 0;
-        font-size: 14px;
-        padding: 5px;
-    }
 
   .popup.feedback-popup,
   .popup.mentor-info-popup {
@@ -87,10 +80,6 @@
     margin: 0 0 5px 0;
   }
 
-  .popup.feedback-popup .popup-body .feedback__footer-description .feedback-popup__item:nth-child(1) {
-    margin: 10px 0;
-  }
-
   .feedback-popup .popup-body .feedback__footer-description .feedback-popup__item p:first-child {
     font-size: 14px;
     color: #BDBDBD;
@@ -136,7 +125,6 @@
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
-    max-height: 600px;
 }
   
   .became-mentor-popup .popup-body {
@@ -188,8 +176,16 @@
 }
 
 @media(min-width:576px) {
+    .popup .footer{
+        display: none;
+    }
+    
     .popup__name {
       margin-top: 6px;
+    }
+    .popup .btn {
+        margin-top: 35px;
+        max-width: inherit;
     }
 }
 

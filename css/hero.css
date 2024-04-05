@@ -343,6 +343,7 @@
   /* teaching */
 .bg-ncode {
   position: relative;
+  overflow: hidden;
 }
 
 .bg-ncode::before,

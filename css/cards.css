@@ -1,4 +1,4 @@
-.tutors-card:nth-child(n+4):not(.became-tutor) {
+.tutors-card:nth-child(n+4) {
   display: none;
 }
 
@@ -62,7 +62,6 @@
 
 .tutors-card__description {
   margin-bottom: 10px;
-  min-height: 150px;
 }
 
 .tutors-card__course {
@@ -131,13 +130,12 @@
     cursor: pointer;
   }
 
-  .tutors-card__rate {
-    grid-column-start: 1;
-    grid-row-start: 3;
+  .tutors-card__description {
+    min-height: 100px;
   }
 
   .tutors-card__rate i {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .tutors-card {
@@ -166,11 +164,18 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .tutors-card:nth-child(n+4):not(.became-tutor) {
+  .tutors-card:nth-child(n+4){
       display: initial;
   }
 
+  .tutors-card:nth-child(n+9){
+    display: none;
+  }
   
+  .tutors-card__description {
+    min-height: 170px;
+  }
+
   .tutors-card__name {
     grid-area: name;
     font-size: 24px;
@@ -180,13 +185,6 @@
     grid-row-start: 4;
     grid-column-start: 1;
     margin-top: 0;
-  }
-
-  .tutors-card__rate {
-    grid-column-start: 1;
-    grid-row-start: 2;
-    gap: 12px;
-    height: 20px;
   }
 
   .tutors-card__course p:nth-child(1) {
