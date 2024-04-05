@@ -1,4 +1,4 @@
-function redirect() {
+(function redirect() {
   const loginLink = document.querySelectorAll(".login-btn");
   const signupLink = document.querySelectorAll(".signup-btn");
 
@@ -33,9 +33,43 @@ function redirect() {
       loginLink.forEach((el) => (el.href = "#"));
       signupLink.forEach((el) => (el.href = "#"));
   }
-}
+})();
 
-redirect();
+(function motivationText() {
+  const textEl = document.getElementById("motivation");
+  const phrases = [
+    "Вивчайте програмування та IT професії онлайн",
+    "Репетитори мають досвід в IT від 1 до 10 років",
+    "Кожен студент має персонального менеджера",
+    "Підключення до чат-боту системи навчання",
+    "Зручна форма оплати",
+    "Допомагаємо підготуватись до співбесіди",
+    "Допомагаємо з працевлаштуванням",
+    "Видаємо сертифікат та рекомендації ",
+  ];
+
+
+  function getRandomPhrase() {
+    return phrases[Math.floor(Math.random() * phrases.length)];
+  }
+
+  function displayRandomPhrase() {
+    textEl.classList.remove("fade-out");
+    textEl.textContent = getRandomPhrase();
+    textEl.classList.add("fade-in");
+
+    setTimeout(() => {
+      textEl.classList.remove("fade-in");
+      textEl.classList.add("fade-out");
+    }, 2000);
+  }
+
+  if(textEl) {
+    displayRandomPhrase();
+    setInterval(displayRandomPhrase, 3000);  
+  }
+
+})();
 
 (function getInputFile() {
   const input = document.querySelector("#file");
@@ -63,15 +97,30 @@ redirect();
   });
 })();
 
+(function closeMobMenu() {
+  const hamburger_menu = document.querySelector(".hamburger-menu");
+  const mob_menu = document.querySelector(".mob-menu");
+  const menu__items = document.querySelectorAll(".menu__item");
+
+  menu__items.forEach((el) => {
+    el.addEventListener("click", function (e) {
+      mob_menu.classList.remove("active");
+      hamburger_menu.classList.remove("active");
+    });
+  })
+})();
+
 (function reloadPage() {
   let menuItem = document.querySelector(".main-item");
   let modal = document.querySelectorAll(".popup");
   modal.forEach((el) => {
-    menuItem.addEventListener("click", function () {
-      if (el.style.display === "block") {
-        location.reload();
-      }
-    });
+    if(menuItem) {
+      menuItem.addEventListener("click", function () {
+        if (el.style.display === "block") {
+          location.reload();
+        }
+      });
+    }
   });
 })();
 
@@ -285,6 +334,24 @@ accordion(".header-card__mob .header-card");
   });
 })();
 
+(function iPhoneScroll() {
+  if (/iPhone/.test(navigator.userAgent)) {
+    document.querySelector(".footer").classList.add("iphone-mb-footer");
+  }
+})();
+
+(function setCopiwrite() {
+  var yearSpans = document.querySelectorAll('.currentYear');
+  var currentYear = new Date().getFullYear();
+  yearSpans.forEach(function(yearSpan) {
+      yearSpan.innerText = currentYear;
+  });
+})();
+
+
+
+// popups
+
 (function becomeMentorPopup() {
   const becomeMentorPopup = document.querySelector(".became-mentor-popup");
   const becomeMentorPopupLink = document.querySelector(".became-mentor");
@@ -292,11 +359,5 @@ accordion(".header-card__mob .header-card");
     becomeMentorPopupLink.addEventListener("click", () => {
       becomeMentorPopup.style.display = "block";
     });
-  }
-})();
-
-(function iPhoneScroll() {
-  if (/iPhone/.test(navigator.userAgent)) {
-    document.querySelector(".footer").classList.add("iphone-mb-footer");
   }
 })();
