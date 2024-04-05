@@ -1,4 +1,4 @@
-const footerHTML = `
+const footerCardHTML = `
 <footer class="footer">
   <div class="content-container">
     <div class="row">
@@ -259,7 +259,7 @@ function createTutors() {
     .replace('{{desc}}', tutor.desc)
     .replace('{{cource}}', tutor.cource)
     .replace('{{trigger}}', index)
-    .replace('{{footer}}', footerHTML);
+    .replace('{{footer}}', footerCardHTML);
 
     allTutorsHTML += html;
     allTutorPopUpsHTML += popupHtml;
@@ -472,7 +472,7 @@ function createFeedbacks() {
     .replace('{{cource}}', feedback.cource)
     .replace('{{trigger}}', index)
     .replace('{{tutor}}', feedback.tutor)
-    .replace('{{footer}}', footerHTML);
+    .replace('{{footer}}', footerCardHTML);
 
     allFeedbackHTML += html;
     allFeedbackPopUpsHTML += popupHtml;
