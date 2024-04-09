@@ -120,16 +120,12 @@
     max-width: 700px;
     margin: 0 auto 100px;
     background-color: #fff;
-    padding: 60px;
+    padding: 20px;
     border: 1px solid #0b2235;
     border-radius: 10px;
     box-sizing: border-box;
     position: relative;
 }
-  
-  .became-mentor-popup .popup-body {
-    padding: 60px;
-  }
   
   .popup-content {
     position: relative;
@@ -176,17 +172,20 @@
 }
 
 @media(min-width:576px) {
-    .popup .footer{
-        display: none;
-    }
+  .popup-body {
+    padding: 60px;
+  }
+  .popup .footer{
+      display: none;
+  }
     
-    .popup__name {
-      margin-top: 6px;
-    }
-    .popup .btn {
-        margin-top: 35px;
-        max-width: inherit;
-    }
+  .popup__name {
+    margin-top: 6px;
+  }
+  .popup .btn {
+      margin-top: 35px;
+      max-width: inherit;
+  }
 }
 
 @media(min-width:992px) {

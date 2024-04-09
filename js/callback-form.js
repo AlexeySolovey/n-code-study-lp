@@ -24,7 +24,7 @@ const sectionHTML = `
 </form>
 `;
 
-const callbackFormEl = document.getElementById('callbackForm');
+const callbackFormEl = document.getElementById('callbackSection');
 if(callbackFormEl) {
     callbackFormEl.innerHTML = sectionHTML;
 }

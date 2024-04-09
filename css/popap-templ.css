@@ -1,31 +1,22 @@
-.popup.popap-templ {
-    padding-left: 0;
-    padding-right: 0;
-    background-color: #fff;
-    padding-top: 55px;
-    display: none;
-    z-index: 10;
-}
-
-.popup.popap-templ select[name=tutor] {
+.popup select[name=tutor] {
     grid-area: tutor;
 }
 
-.popup.popap-templ label[for=rate] {
+.popup label[for=rate] {
     grid-area: rate;
 }
 
-.popup.popap-templ label[for=social] {
+.popup label[for=social] {
     grid-area: social;
 }
 
-.popup.popap-templ .popup-body {
+.popup .popup-body {
     max-width: 100%;
     border: none;
     border-radius: 0;
 }
 
-.popup.popap-templ .popup__title {
+.popup .popup__title {
     font-family: "Venus Rising", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -34,25 +25,21 @@
     margin-bottom: 40px;
 }
 
-.popup.popap-templ .form {
+.popup .form {
     display: flex;
     flex-direction: column;
 }
 
-.popup.popap-templ .form .form__btn {
+.popup .form .form__btn {
     margin-top: 20px;
 }
 
-.popup.popap-templ .back-link {
+.popup .back-link {
     display: block;
     margin-bottom: 40px;
 }
 
-.popup.popap-templ .popup__close {
-    display: none;
-}
-
-.popup.popap-templ .form-rate {
+.popup .form-rate {
     width: 100%;
     box-sizing: border-box;
     height: 32px;
@@ -66,23 +53,23 @@
 }
 
 @media(min-width:576px) {
-    .popup.popup.popap-templ .form-rate {
+    .popup .form-rate {
         height: 52px;
     }
 
-    .popup.popap-templ .popup__title{
+    .popup .popup__title{
         font-size: 24px;
     }
 }
 
 @media(min-width:992px) {
-    .popup.popup.popap-templ {
+    .popup {
         background-color: rgba(0, 0, 0, .5);
         padding-top: 50px;
         z-index: 99999;
     }
 
-    .popup.popup.popap-templ .popup__close {
+    .popup .popup__close {
         display: block;
         width: 20px;
         height: 20px;
@@ -90,33 +77,33 @@
         top: 40px;
     }
 
-    .popup.popup.popap-templ select[name=tutor] {
+    .popup select[name=tutor] {
         grid-area: tutor;
     }
 
-    .popup.popup.popap-templ .form textarea[name=comment] {
+    .popup .form textarea[name=comment] {
         height: auto;
         margin-bottom: 0;
     }
 
-    .popup.popup.popap-templ .popup-body {
+    .popup .popup-body {
         max-width: 700px;
         border: 1px solid #0b2235;
         border-radius: 10px;
         height: auto;
     }
 
-    .popup.popup.popap-templ .form {
+    .popup .form {
         display: grid;
         grid-template-areas: "name name course""phone email tutor""text text rate""text text social";
         margin-bottom: 0;
     }
 
-    .popup.popup.popap-templ .back-link {
+    .popup .back-link {
         display: none;
     }
 
-    .popup.popup.popap-templ .popup__title {
+    .popup .popup__title {
         text-align: center;
     }
 }

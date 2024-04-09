@@ -1,3 +1,5 @@
+const descLength = 190;
+
 const footerCardHTML = `
 <footer class="footer">
   <div class="content-container">
@@ -85,6 +87,12 @@ const tutorsList =
     desc: " Влад провів більше 4х років у програмуванні та працював над різними проектами. А ще, протягом приблизно півтора року, Влад ділиться своїми знаннями з молодшими розробниками (нашими студентами). Так що готуйтесь до крутих уроків разом з Владом! Основний стек технологій це JavaScript, TypeScript, Angular",
     imgUrl: "img/tutors/vlad.jpg",
     cource: "Front-End"
+  },
+  {
+    name: "Іван",
+    desc: "Іван присвятив свою кар'єру розробці програм на Python та має глибокі знання цієї мови. Має комерційний досвід 1 рік. Його практичний досвід у створенні різноманітних проектів робить його ідеальним наставником для наших студентів. Він завжди готовий допомогти учням зрозуміти складні концепції та розвивати свої навички програмування.",
+    imgUrl: "img/tutors/ivan_jarii.jpg",
+    cource: "Python"
   },
   {
     name: "Михайло",
@@ -244,7 +252,7 @@ function createTutors() {
     let allTutorsHTML = '';
 
     tutorsList.forEach((tutor, index) => {
-    const desc = tutor.desc.length > 200 ? `${tutor.desc.substring(0, 200)} ...` : tutor.desc;
+    const desc = tutor.desc.length > descLength ? `${tutor.desc.substring(0, descLength)} ...` : tutor.desc;
 
     const html = tutorItemHTML
     .replace('{{img}}', tutor.imgUrl)
@@ -301,7 +309,7 @@ const feedbackList =
     name: "Віктор",
     tutor: "Руслан",
     desc: 'Взагалі я вчусь в університеті, але можу поєднувати це з навчанням в N-Code. Це класно, мені підходить. Склали з репетитором зручний графік. Все цікаво, зрозуміло. Планую вчитися далі.',
-    imgUrl: "img/feedback/woman.svg",
+    imgUrl: "img/feedback/man.svg",
     cource: "Front-End"
   },
   {
@@ -455,7 +463,7 @@ function createFeedbacks() {
     let allFeedbackHTML = '';
 
     feedbackList.forEach((feedback, index) => {
-    const desc = feedback.desc.length > 200 ? `${feedback.desc.substring(0, 200)} ...` : feedback.desc;
+    const desc = feedback.desc.length > descLength ? `${feedback.desc.substring(0, descLength)} ...` : feedback.desc;
 
     const html = feedbackItemHTML
     .replace('{{img}}', feedback.imgUrl)
