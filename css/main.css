@@ -82,10 +82,6 @@ section {
   color: #FD460E;
 }
 
-.bg-dark .section-text {
-  color: #fff;
-}
-
 .page-wrapper {
   margin-top: 85px;
 }
@@ -148,29 +144,6 @@ section {
   margin-bottom: 20px;
 }
 
-.tutors .section-title,
-.feedback .section-title {
-  grid-area: none;
-  grid-row: inherit;
-  grid-column: inherit;
-}
-
-.section-text {
-  width: 25%;
-  padding-bottom: 40px;
-}
-
-@media screen and (max-width: 992px) {
-  .section-text {
-    width: 100%;
-  }
-}
-
-.section-content {
-  display: flex;
-  align-items: center;
-}
-
 .more-info-link {
   text-decoration: underline;
   color: #297abf;
@@ -206,7 +179,8 @@ section {
 
 .back-link {
   color: #297abf;
-  font-size: 11px;
+  font-size: 14px;
+  margin-bottom: 25px;
   cursor: pointer;
   position: relative;
   text-decoration: none;
@@ -388,13 +362,6 @@ section {
   }
 }
 
-.tutors .section-title {
-  max-width: 420px;
-  text-transform: uppercase;
-}
-
-
-
 @media(min-width:576px) {
   section {
     padding: 30px 20px;
@@ -426,97 +393,6 @@ section {
 
   .btn.mob_btn {
     display: none;
-  }
-}
-
-.faq .accordion {
-  margin-bottom: 20px;
-}
-
-.accordion {
-  display: grid;
-  row-gap: 10px;
-}
-
-.accordion__item {
-  border: 1px solid #dce7fc;
-  border-radius: 10px;
-  padding: 7.5px 15px;
-  font-size: 14px;
-  line-height: 120%;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.accordion__item.active .accordion__content {
-  padding-top: 10px;
-  border-top: .5px solid #dce7fc;
-  transition: .5s;
-}
-
-.accordion__item.active .accordion__header {
-  margin-bottom: 8px;
-}
-
-.accordion__item.active .accordion__header::after {
-  transform: rotate(180deg);
-  transition: .5s;
-}
-
-.accordion__content {
-  position: relative;
-  overflow: hidden;
-  font-size: 14px;
-  max-height: 0;
-  transition: .5s;
-}
-
-.accordion__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: calc(100% - 70px);
-}
-
-.accordion__header::after {
-  content: "";
-  position: absolute;
-  right: 30px;
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  background-image: url(../img/faq-arrow.svg);
-  background-repeat: no-repeat;
-  transition: .5s;
-}
-
-@media(min-width:576px) {
-  .accordion__item {
-    font-size: 16px;
-    padding: 28px 20px;
-  }
-
-  .accordion .accordion__content {
-    font-size: 16px;
-  }
-
-  .accordion__header::after {
-    width: 15px;
-    height: 15px;
-    right: 50px;
-    background-size: contain;
-  }
-}
-
-@media(min-width:992px) {
-
-  .faq .btn {
-    display: none;
-  }
-
-  .accordion__item {
-    line-height: 120%;
-    font-size: 24px;
   }
 }
 
@@ -690,7 +566,7 @@ section {
 @media(min-width:576px) {
   .form input,
   .form select {
-    height: 60px;
+    height: 40px;
     font-size: 16px;
   }
 
@@ -793,7 +669,7 @@ section {
 }
 
 .footer .col{
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 .footer__title {
@@ -933,11 +809,6 @@ section {
     display: block;
   }
 
-  .footer__logo{
-    width: 80px;
-    height: 100px;
-  }
-
   .footer__title {
     font-size: 24px;
     margin-bottom: 20px;
@@ -946,7 +817,7 @@ section {
   }
 
   .footer__list {
-    gap: 20px;
+    gap: 10px;
   }
 
   .footer__list li {
@@ -969,7 +840,6 @@ section {
 
   .footer__social {
     gap: 15px;
-    margin-top: 50px;
   }
 }
 
@@ -1118,58 +988,10 @@ ul.header-card__text {
   }
 }
 
-.consult {
-  display: none;
-}
-
-.consult .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-.consult__title {
-  margin-bottom: 97px;
-  max-width: 515px;
-}
-
-.consult__title h2 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 35px;
-  color: #297abf;
-  margin-bottom: 35px;
-}
-
-.consult__title p {
-  font-size: 16px;
-  line-height: 28px;
-}
-
-.consult__btn {
-  max-width: 469px;
-  margin-left: 0;
-}
-
-.consult__list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 498px;
-  font-size: 16px;
-  line-height: 28px;
-}
-
-@media(min-width:992px) {
-  .consult {
-    display: block;
-  }
-}
-
 .privacy-policy-link {
   position: absolute;
   top: 0;
-  left: 15%;
+  left: 10%;
   text-decoration: underline;
 }
 
