@@ -1,0 +1,282 @@
+.header {
+    padding: 15px 0;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 500ms;
+  }
+  
+  .header .container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "menu logo";
+    padding: 0 20px;
+    max-width: 1174px;
+    margin: 0 auto;
+    column-gap: 47px;
+  }
+  
+  .header .mob-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    height: 100vh;
+    transform: translateY(-100%);
+    transition: .3s;
+    padding: 30px 15px 0;
+  }
+  
+  .header .mob-menu .logo{
+    margin: 10px auto 0;
+  }
+  
+  .header .mob-menu.active {
+    transform: translateY(0);
+    transition: .3s;
+  }
+  
+  .header .mob-menu .menu__nav {
+    display: grid;
+    font-family: "Venus Rising";
+    font-size: 10px;
+    line-height: 12px;
+    padding-top: 40px;
+  }
+  
+  .header .mob-menu .menu__nav a {
+    color: #232523;
+  }
+  
+  .header .mob-menu .menu__nav li {
+    padding: 12px 0 10px 20px;
+    font-size: 14px;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+  
+  
+  .header .mob-menu .header__items {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+  
+  .header .mob-menu .header__items .btn{
+    margin: unset;
+    border-radius: 5px;
+    height: 30px;
+  }
+  
+  .header .mob-menu .header__items .login-btn{
+    width: 72px;
+    margin-right: 20px;
+  }
+  
+  .header .mob-menu .header__items .signup-btn{
+    width: 130px;
+  }
+  
+  .header .mob-menu .header__footer{
+    position: absolute;
+    bottom: 80px;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+  }
+  
+  @media screen and (min-width:576px){
+  .header .mob-menu .header__items .login-btn{
+    width: 50%
+  }
+  
+  .header .mob-menu .header__items .signup-btn{
+    width: 50%;
+    }
+  }
+  
+  .header.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(37, 36, 37, 0.04);
+  }
+  
+  .menu__nav {
+    display: none;
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    grid-area: menu;
+  }
+  
+  .logo {
+    grid-area: logo;
+    width: 24px;
+    height: 30px;
+    justify-self: end;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+    justify-content: flex-end;
+    order: 1;
+    position: relative;
+    z-index: 999999;
+    top: 0;
+    transition: top .3s;
+  }
+  
+  .hamburger-menu.active {
+    top: 25px;
+    transition: top .3s;
+    left: 10px;
+  }
+  
+  .hamburger-menu.active .hamburger::after {
+    top: 9px;
+    transform: rotate(45deg);
+    transition: .3s;
+  }
+  
+  .hamburger-menu.active .hamburger::before {
+    bottom: 9px;
+    transform: rotate(-45deg);
+    transition: .3s;
+  }
+  
+  .hamburger-menu.active .hamburger span {
+    display: none;
+  }
+  
+  .hamburger {
+    width: 30px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .hamburger::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: #000;
+    transition: .3s;
+    transform: translate(0);
+  }
+  
+  .hamburger::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    transition: .3s;
+    transform: translate(0);
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    border-radius: 100px;
+    position: relative;
+  }
+  
+  .header__items {
+    display: none;
+  }
+  
+  .header__items .signup-btn{
+    background-color: #FD460E;
+    border-color: #FD460E;
+    width: 170px;
+   }
+  
+  @media screen and (min-width:992px) {
+    .header .mob-menu .menu__nav{
+      display: none;
+    }
+    .hamburger-menu {
+      display: none;
+    }
+  
+    .menu {
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  
+    .menu__nav {
+      display: flex;
+      gap: 29px;
+      list-style: none;
+      font-family: "Venus Rising", sans-serif;
+      font-weight: 700;
+      width: 100%;
+    }
+  
+    .menu__item a {
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: #232523;
+    }
+  
+    .header .container {
+      grid-template-areas: "logo menu";
+    }
+  
+    .header .items-wrap {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+  
+    .logo {
+      width: 47px;
+      height: 60px;
+    }
+  
+    .header__items {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+  
+    .header__items .btn{
+      min-width: 100px;
+      width: 100%;
+      height: 30px;
+      padding: 4px 5px;
+      border-radius: 5px;
+      font-family: 'Venus Rising';
+      font-size: 15px;
+      border: none;
+    }
+  
+    .header__items .login-btn{
+      width: 100px;
+    }
+  
+    .header__items .signup-btn{
+     background-color: #FD460E;
+     width: 170px;
+    }
+  
+    .header__items .signup-btn:hover{
+      background-color: #24394A;
+    }
+  }
+  

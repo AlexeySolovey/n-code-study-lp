@@ -9,14 +9,13 @@
 
 .itc-slider {
   position: relative;
-  height: 270px;
   width: calc(100vw - 20px);
   margin: 0 auto;
 }
 
 .itc-slider-wrapper {
   overflow: hidden;
-  max-width: 600px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -67,9 +66,7 @@
   .slider-text{
     font-size: 16px;
   }
-}
 
-@media (min-width: 992px) {
   .itc-slider-btn {
     top: 40%;
     display: flex;
@@ -146,15 +143,11 @@
 }
 
 .itc-slider-indicators {
-  position: absolute;
-  right: 0;
-  bottom: -20px;
-  left: 0;
-  z-index: 15;
   display: flex;
   justify-content: center;
   margin: 0 15%;
   padding-left: 0;
+  padding-top: 10px;
   list-style: none;
 }
 
@@ -196,10 +189,8 @@
   right: 0;
 }
 
-@media screen and (max-width: 992px) {
-  .itc-slider-item.salary-slider {
-    height: 180px;
-  }
+.itc-slider-item.salary-slider {
+  height: inherit;
 }
 
 @media screen and (max-width: 576px) {
@@ -211,19 +202,9 @@
     max-width: calc(100% - 65px);
   }
 
-  .itc-slider.salary-slider {
-    height: 350px;
-  }
-
   .itc-slider-wrapper.salary-slider {
-    height: 400px;
     margin: 0;
     max-width: 100%;
-  }
-
-  .itc-slider-item.salary-slider {
-    height: 300px;
-    border: none;
   }
 }
 
@@ -257,4 +238,17 @@
 
 .itc-slider-btn-next.about-teaching-slider {
   right: 0;
+}
+
+/* bg-dark */
+.bg-dark .itc-slider-item{
+  background-color: #fff;
+}
+
+.bg-dark .itc-slider-indicator {
+  background-color: #fff;
+}
+
+.bg-dark .itc-slider-indicator-active {
+  background-color:#FD460E;
 }
