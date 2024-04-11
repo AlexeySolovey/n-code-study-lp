@@ -394,6 +394,7 @@
   color: white;
   text-transform: uppercase;
   margin-bottom: 32px;
+  margin-top: 0;
 }
 
 .teaching-content__subtitle {
@@ -563,11 +564,6 @@
 }
 
 /* faq */
-
-.faq .accordion {
-  margin-bottom: 20px;
-}
-
 .accordion {
   display: grid;
   row-gap: 10px;
