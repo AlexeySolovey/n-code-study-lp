@@ -168,7 +168,6 @@ function getApiUrl(type) {
       const url = getApiUrl("feedback");
 
       if (validEmailCallback && validPhoneCallback && name) {
-        debugger;
         fetch(url, options, {
           headers: {
             "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -176,11 +175,9 @@ function getApiUrl(type) {
         })
           .then(() => {
             alert("Запит успішно відправлено");
-            debugger;
             form.reset();
           })
           .catch((error) => {
-            debugger;
             alert("Сталася помилка при виконанні запиту", error);
           });
       } else {
@@ -269,7 +266,7 @@ if (emailInputCallback) {
 }
 if (phoneInputCallback) {
   phoneInputCallback.addEventListener("input", function () {
-    let validationPhone = /^(\+)?(?:[0-9] ?-?){6,14}[0-9]$/;
+    let validationPhone = /^\+?\d(\d|-(?!-)){6,14}[0-9]$/;
 
     validPhoneCallback = validationPhone.test(phoneInputCallback.value.trim());
 

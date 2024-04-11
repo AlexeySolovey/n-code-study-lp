@@ -1,5 +1,4 @@
 const sectionHTML = `
-<h2 class="section-title">Зворотній зв’язок</h2>
 <form class="form" id="callbackForm">
     <label class="required">
     <input maxlength="30" class="name" type="text" name="name" placeholder="Ім’я" required="required" title="будь ласка, заповніть це поле" />
@@ -24,7 +23,7 @@ const sectionHTML = `
 </form>
 `;
 
-const callbackFormEl = document.getElementById('callbackSection');
+const callbackFormEl = document.getElementById('callbackFormWrap');
 if(callbackFormEl) {
     callbackFormEl.innerHTML = sectionHTML;
 }
