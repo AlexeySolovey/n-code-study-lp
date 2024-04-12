@@ -102,7 +102,6 @@
     margin-top: 10px;
     font-size: 16px;
     overflow: hidden;
-    text-wrap: none;
     text-overflow: ellipsis;
   }
 }

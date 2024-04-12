@@ -265,7 +265,7 @@ section {
 .slider {
   padding-bottom: 140px;
   margin-bottom: 0  ;
-  background-image: url(../img/intro-background.png);
+  background-image: url(../img/intro-background.webp);
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
