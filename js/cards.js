@@ -200,7 +200,7 @@ const tutorItemHTML = `
   <div class="tutors-card__info">
     <p class="tutors-card__name">{{name}}</p>
     <p class="tutors-card__description">{{desc}}</p>
-    <a class="tutors-card__course-link more-info-link" href="" data-trigger="{{trigger}}">Опис повністю</a>
+    <span class="tutors-card__course-link more-info-link" href="" data-trigger="{{trigger}}">Опис повністю</span>
   </div>
 </div>
 `;
@@ -413,7 +413,7 @@ const feedbackItemHTML = `
         <h6 class="card__detail-h6">{{tutor}}</h6>
       </div>
     </div>
-    <a class="tutors-card__course-link more-info-link" data-trigger="{{trigger}}">Відгук повністю</a>
+    <span class="tutors-card__course-link more-info-link" data-trigger="{{trigger}}">Відгук повністю</span>
   </div>
 </div>
 `;
