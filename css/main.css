@@ -265,7 +265,7 @@ section {
 .slider {
   padding-bottom: 140px;
   margin-bottom: 0  ;
-  background-image: url(../img/intro-background.png);
+  background-image: url(../img/intro-background.webp);
   height: 50vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -517,8 +517,8 @@ section {
 
 .form .nice-select:after {
   border: none;
-  background-image: url(../img/faq-arrow.svg);
-  width: 10px;
+  background-image: url(../img/icons/arrow.svg);
+  width: 12px;
   height: 8px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -565,9 +565,7 @@ section {
   }
 
   .form .nice-select:after {
-    width: 20px;
-    height: 17px;
-    margin-top: -7px;
+    margin-top: -4px;
   }
 
   .form .nice-select .option {
@@ -607,11 +605,6 @@ section {
 
   .form .nice-select {
     font-size: 14px;
-  }
-
-  .form .nice-select:after {
-    width: 10px;
-    height: 8px;
   }
 }
 
@@ -831,7 +824,7 @@ section {
   width: 14px;
   height: 12px;
   display: inline-block;
-  background-image: url(../img/header-card-arrow.svg);
+  background-image: url(../img/icons/arrow.svg);
   background-repeat: no-repeat;
   transition: .5s;
 }

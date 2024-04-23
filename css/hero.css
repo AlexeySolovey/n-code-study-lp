@@ -449,7 +449,7 @@
 }
 
 .teaching-accordion-item.active .teaching-accordion-title svg {
-  rotate: 180deg; 
+  transform: rotate(180deg);
 }
 
 .teaching__list {
@@ -613,10 +613,10 @@
   content: "";
   position: absolute;
   right: 30px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 8px;
   display: inline-block;
-  background-image: url(../img/faq-arrow.svg);
+  background-image: url(../img/icons/arrow.svg);
   background-repeat: no-repeat;
   transition: .5s;
 }
@@ -632,10 +632,7 @@
   }
 
   .accordion__header::after {
-    width: 15px;
-    height: 15px;
-    right: 50px;
-    background-size: contain;
+    right: 40px;
   }
 }
 
@@ -647,5 +644,8 @@
 
   .accordion__item {
     font-size: 18px;
+  }
+  .accordion__header::after {
+    right: 55px;
   }
 }

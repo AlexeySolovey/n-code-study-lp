@@ -6,7 +6,7 @@ const popupGetTutorHtml = `
           <h2 class="popup__title">Стати репетитором</h2>
           <p class="popup__sub-title">Залиште Ваші контактні дані, і ми Вам обов'язково зателефонуємо!</p>
         </div>
-        <a class="back-link">Назад </a>
+        <span class="back-link">Назад </span>
         <form class="form" action="POST" id="mentorForm">
           <label class="required" for="name">
             <input class="name" type="text" id="name" name="name" placeholder="Ім’я та Прізвище" required="required" />

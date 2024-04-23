@@ -10,12 +10,52 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5df0151d-18fb-4d19-8ba1-b7330e64aab4" name="Default Changelist" comment="" />
+    <list default="true" id="5df0151d-18fb-4d19-8ba1-b7330e64aab4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/img/intro-background.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/anatolii.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/andrei_kl.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/andrian.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/andrii_gum.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/andrii_kiri.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/artem_kvitka.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/illia.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/ivan_jarii.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/jana.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/misha.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/oleksii.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/ruslan.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/sasha.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/sergii_mos.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/serhii_pol.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/vlad.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/tutors/yaroslav.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/intro-background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/anatolii.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/andrei_kl.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/andrian.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/andrii_gum.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/andrii_kiri.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/artem_kvitka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/illia.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/ivan_jarii.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/jana.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/misha.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/oleksii.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/ruslan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/sasha.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/sergii_mos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/serhii_pol.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/vlad.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/tutors/yaroslav.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/cards.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/cards.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,10 +95,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
