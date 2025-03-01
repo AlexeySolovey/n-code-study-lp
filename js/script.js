@@ -3,10 +3,10 @@
   const signupLink = document.querySelectorAll(".signup-btn");
 
   switch (window.location.host) {
-    case "n-code-dev.xyz":
-      loginLink.forEach((el) => (el.href = "https://my.n-code-dev.xyz/"));
+    case "n-code-dev.top":
+      loginLink.forEach((el) => (el.href = "https://my.n-code-dev.top/"));
       signupLink.forEach(
-        (el) => (el.href = "https://my.n-code-dev.xyz/uk/#/signup")
+        (el) => (el.href = "https://my.n-code-dev.top/uk/#/signup")
       );
       break;
     case "n-code-release.in.net":
@@ -126,8 +126,8 @@
 
 function getApiUrl(type) {
   switch (window.location.host) {
-    case "n-code-dev.xyz":
-      return `https://api.n-code-dev.xyz/api/emails/${type}`;
+    case "n-code-dev.top":
+      return `https://api.n-code-dev.top/api/emails/${type}`;
     case "n-code-release.in.net":
       return `https://api.n-code-release.in.net/api/emails/${type}`;
     case "n-code.study":
