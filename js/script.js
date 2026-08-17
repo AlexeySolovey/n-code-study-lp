@@ -161,6 +161,8 @@ function getApiUrl(type) {
       const url = getApiUrl("feedback");
 
       if (validEmailCallback && validPhoneCallback && name) {
+        btn.disabled = true;
+
         fetch(url, options, {
           headers: {
             "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -169,9 +171,18 @@ function getApiUrl(type) {
           .then(() => {
             alert("Запит успішно відправлено");
             form.reset();
+
+            validEmailCallback = false;
+            validPhoneCallback = false;
+            emailInputCallback.style.borderColor = "";
+            phoneInputCallback.style.borderColor = "";
+            resetWherefromSelect();
           })
           .catch((error) => {
             alert("Сталася помилка при виконанні запиту", error);
+          })
+          .finally(() => {
+            btn.disabled = false;
           });
       } else {
         alert(`Будь ласка, заповніть обов'язкові поля!`);
@@ -209,6 +220,8 @@ function getApiUrl(type) {
         formData.get("name") &&
         formData.get("attachment").name
       ) {
+        btn.disabled = true;
+
         fetch(url, options, {
           headers: {
             "Cache-Control": "no-cache, no-store, must-revalidate",
@@ -218,6 +231,12 @@ function getApiUrl(type) {
             alert("Запит успішно відправлено");
             form.reset();
 
+            validEmailMentor = false;
+            validPhoneMentor = false;
+            validFileMentor = false;
+            emailInputMentor.style.borderColor = "";
+            phoneInputMentor.style.borderColor = "";
+
             const placeholder = document.querySelector(
               ".became-mentor-popup .input-wrapper .placeholder"
             );
@@ -226,6 +245,9 @@ function getApiUrl(type) {
           })
           .catch((error) => {
             alert("Сталася помилка при виконанні запиту", error);
+          })
+          .finally(() => {
+            btn.disabled = false;
           });
       } else {
         alert(`Будь ласка, заповніть обов'язкові поля!`);
@@ -304,14 +326,24 @@ function accordion(selector) {
 accordion(".accordion__item");
 accordion(".header-card__mob .header-card");
 
+let wherefromNiceSelect = null;
+
+function resetWherefromSelect() {
+  if (!wherefromNiceSelect) return;
+
+  wherefromNiceSelect.update();
+
+  let selectsPlaceholder = document.querySelectorAll(".nice-select .current");
+  selectsPlaceholder[0].innerHTML = "Звідки Ви дізнались про N-Code?";
+}
+
 (function customSelect() {
   const wherefrom = document.getElementById("wherefrom");
 
   if (wherefrom) {
-    NiceSelect.bind(wherefrom);
+    wherefromNiceSelect = NiceSelect.bind(wherefrom);
 
-    let selectsPlaceholder = document.querySelectorAll(".nice-select .current");
-    selectsPlaceholder[0].innerHTML = "Звідки Ви дізнались про N-Code?";
+    resetWherefromSelect();
   }
 })();
 
