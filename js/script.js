@@ -1,37 +1,38 @@
+const DOMAIN_CONFIG = {
+  "n-code-dev.xyz": {
+    my: "https://my.n-code-dev.xyz",
+    api: "https://api.n-code-dev.xyz",
+  },
+  "n-code-release.in.net": {
+    my: "https://my.n-code-release.in.net",
+    api: "https://api.n-code-release.in.net",
+  },
+  "n-code.study": {
+    my: "https://my.n-code.study",
+    api: "https://api.n-code.study",
+  },
+  "n-code-test.in.net": {
+    my: "https://my.n-code-test.in.net",
+    api: "https://api.n-code-test.in.net",
+  },
+};
+
+function getCurrentDomainConfig() {
+  const host = window.location.host.replace(/^www\./, "");
+  return DOMAIN_CONFIG[host];
+}
+
 (function redirect() {
   const loginLink = document.querySelectorAll(".login-btn");
   const signupLink = document.querySelectorAll(".signup-btn");
+  const config = getCurrentDomainConfig();
 
-  switch (window.location.host) {
-    case "n-code-dev.xyz":
-      loginLink.forEach((el) => (el.href = "https://my.n-code-dev.xyz/"));
-      signupLink.forEach(
-        (el) => (el.href = "https://my.n-code-dev.xyz/uk/#/signup")
-      );
-      break;
-    case "n-code-release.in.net":
-      loginLink.forEach(
-        (el) => (el.href = "https://my.n-code-release.in.net/")
-      );
-      signupLink.forEach(
-        (el) => (el.href = "https://my.n-code-release.in.net/uk/#/signup")
-      );
-      break;
-    case "n-code.study":
-      loginLink.forEach((el) => (el.href = "https://my.n-code.study/"));
-      signupLink.forEach(
-        (el) => (el.href = "https://my.n-code.study/uk/#/signup")
-      );
-      break;
-    case "n-code-test.in.net":
-      loginLink.forEach((el) => (el.href = "https://my.n-code-test.in.net/"));
-      signupLink.forEach(
-        (el) => (el.href = "https://my.n-code-test.in.net/uk/#/signup")
-      );
-      break;
-    default:
-      loginLink.forEach((el) => (el.href = "#"));
-      signupLink.forEach((el) => (el.href = "#"));
+  if (config) {
+    loginLink.forEach((el) => (el.href = `${config.my}/`));
+    signupLink.forEach((el) => (el.href = `${config.my}/uk/#/signup`));
+  } else {
+    loginLink.forEach((el) => (el.href = "#"));
+    signupLink.forEach((el) => (el.href = "#"));
   }
 })();
 
@@ -125,18 +126,10 @@
 })();
 
 function getApiUrl(type) {
-  switch (window.location.host) {
-    case "n-code-dev.xyz":
-      return `https://api.n-code-dev.xyz/api/emails/${type}`;
-    case "n-code-release.in.net":
-      return `https://api.n-code-release.in.net/api/emails/${type}`;
-    case "n-code.study":
-      return `https://api.n-code.study/api/emails/${type}`;
-    case "n-code-test.in.net":
-      return `https://api.n-code-test.in.net/api/emails/${type}`;
-    default:
-      return `http://localhost:3022/api/emails/${type}`;
-  }
+  const config = getCurrentDomainConfig();
+  return config
+    ? `${config.api}/api/emails/${type}`
+    : `http://localhost:3022/api/emails/${type}`;
 }
 
 (function onSubmitCallBack() {
