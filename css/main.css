@@ -114,6 +114,15 @@ section {
   background: #FD460E;
 }
 
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.btn:disabled:hover {
+  background: rgba(11, 34, 53, .9);
+}
+
 .btn-orange {
   background: #FD460E;
 }
