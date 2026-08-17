@@ -36,6 +36,19 @@ function getCurrentDomainConfig() {
   }
 })();
 
+(function fixCallbackAnchorScroll() {
+  document.addEventListener("click", function (e) {
+    const link = e.target.closest('a[href="#callback-section"]');
+    if (!link) return;
+
+    const target = document.getElementById("callback-section");
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth" });
+  });
+})();
+
 (function motivationText() {
   const textEl = document.getElementById("motivation");
   const phrases = [
